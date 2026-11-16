@@ -8961,38 +8961,32 @@
       "retry_after": "2026-11-11T23:11:28.987711+00:00"
     },
     "4333:1:1": {
-      "at": "2026-11-06T13:44:46.089177+00:00",
-      "status": "deferred",
+      "at": "2026-11-16T21:29:42.233860+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "fr",
       "observed_language_probability": 0.9624583721160889,
       "observed_source_id": "33529210",
-      "elapsed_seconds": 163.46,
-      "consecutive_failures": 10,
-      "retry_after": "2026-11-07T13:47:29.545572+00:00"
+      "elapsed_seconds": 421.55,
+      "source_id": "33974112",
+      "queue_rank": 42700
     },
     "4333:1:2": {
-      "at": "2026-11-01T23:23:16.360807+00:00",
-      "status": "deferred",
+      "at": "2026-11-16T21:34:19.389172+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.8654687106609344,
+      "observed_language_probability": 0.8580428659915924,
       "observed_source_id": "33974108",
-      "elapsed_seconds": 199.36,
-      "consecutive_failures": 27,
-      "retry_after": "2026-11-02T23:26:35.725155+00:00"
+      "elapsed_seconds": 395.65,
+      "source_id": "33974108",
+      "queue_rank": 42701
     },
     "4333:1:3": {
       "at": "2026-11-06T17:59:02.158653+00:00",
@@ -1196559,52 +1196553,16 @@
       "retry_after": "2026-11-08T15:37:45.071276+00:00"
     },
     "2866:1:2": {
-      "at": "2026-11-08T15:22:45.076408+00:00",
+      "at": "2026-11-16T21:40:58.958043+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 15.01,
-      "search_evidence": [
-        {
-          "path": "/harlem-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 223374,
-          "boxes": 17,
-          "parsed_candidates": 17,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/harlem/s/-6",
-          "status": 200,
-          "response_bytes": 561716,
-          "boxes": 338,
-          "parsed_candidates": 212,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/harlem-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 223310,
-          "boxes": 17,
-          "parsed_candidates": 17,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/harlem/s/-6",
-          "status": 200,
-          "response_bytes": 561693,
-          "boxes": 338,
-          "parsed_candidates": 212,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T15:23:00.091032+00:00"
+      "elapsed_seconds": 53.2,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-17T21:41:52.162708+00:00"
     },
     "1841:1:4": {
       "at": "2026-11-08T21:49:57.472510+00:00",
@@ -1365223,9 +1365181,23 @@
       "elapsed_seconds": 641.47,
       "source_id": "35347320",
       "queue_rank": 42698
+    },
+    "2976:1:6": {
+      "at": "2026-11-16T21:26:23.298637+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9836550354957581,
+      "observed_source_id": "35347338",
+      "elapsed_seconds": 607.4,
+      "source_id": "35347338",
+      "queue_rank": 42699
     }
   },
-  "updated_at": "2026-11-16T21:35:24.315255+00:00",
+  "updated_at": "2026-11-16T21:41:55.971798+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1366220,86 +1366192,18 @@
       "queue_rank": 5281
     },
     "1491:2:9": {
-      "at": "2026-11-16T10:24:59.701074+00:00",
+      "at": "2026-11-16T21:34:52.491208+00:00",
       "status": "deferred",
+      "method": "source_repair",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "source_repair",
-      "source_repair_revision": 2,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 264.88,
-      "search_evidence": [
-        {
-          "path": "/wu-tang-americka-saga-s02e09/s/-6",
-          "status": 200,
-          "response_bytes": 216481,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/wu-tang-americka-saga/s/-6",
-          "status": 200,
-          "response_bytes": 247658,
-          "boxes": 26,
-          "parsed_candidates": 26,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/wu-tang-an-american-saga-s02e09/s/-6",
-          "status": 200,
-          "response_bytes": 216360,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/wu-tang-an-american-saga/s/-6",
-          "status": 200,
-          "response_bytes": 235257,
-          "boxes": 17,
-          "parsed_candidates": 17,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/wu-tang-americka-saga-s02e09/s/-6",
-          "status": 200,
-          "response_bytes": 216433,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/wu-tang-americka-saga/s/-6",
-          "status": 200,
-          "response_bytes": 247733,
-          "boxes": 26,
-          "parsed_candidates": 26,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/wu-tang-an-american-saga-s02e09/s/-6",
-          "status": 200,
-          "response_bytes": 216370,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/wu-tang-an-american-saga/s/-6",
-          "status": 200,
-          "response_bytes": 235254,
-          "boxes": 17,
-          "parsed_candidates": 17,
-          "heading_matches_query": true
-        }
-      ],
+      "elapsed_seconds": 124.58,
+      "source_repair_revision": 3,
       "repair_fingerprint": "8f9a9a3940d632ef58aadda8753a0154cb51c01ff60268cadfcaa90aa13f16f9",
-      "consecutive_failures": 204,
-      "retry_after": "2026-11-17T10:29:24.579575+00:00"
+      "consecutive_failures": 205,
+      "retry_after": "2026-11-17T21:40:56.972455+00:00"
     },
     "1820:2:11": {
       "at": "2026-10-10T21:57:53.696125+00:00",
@@ -1370203,16 +1370107,32 @@
     },
     "2976": {
       "misses": [],
-      "updated_at": "2026-11-16T21:34:52.481851+00:00"
+      "updated_at": "2026-11-16T21:40:56.660646+00:00"
+    },
+    "4333": {
+      "misses": [],
+      "updated_at": "2026-11-16T21:40:56.969228+00:00"
+    },
+    "1491": {
+      "misses": [
+        "1491:2:9"
+      ],
+      "updated_at": "2026-11-16T21:40:56.972504+00:00"
+    },
+    "2866": {
+      "misses": [
+        "2866:1:2"
+      ],
+      "updated_at": "2026-11-16T21:41:52.162745+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 7108,
+    "last_series": 2866,
     "last_series_order": [
       false,
       -7.2,
-      -6943,
-      7108
+      -6449,
+      2866
     ]
   },
   "czech_fallback_revision": 1
