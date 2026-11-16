@@ -9031,21 +9031,18 @@
       "queue_rank": 42705
     },
     "4333:1:6": {
-      "at": "2026-11-06T13:48:14.050397+00:00",
-      "status": "deferred",
+      "at": "2026-11-16T21:43:11.985116+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.9424428939819336,
+      "observed_language_probability": 0.9409618377685547,
       "observed_source_id": "33974098",
-      "elapsed_seconds": 166.65,
-      "consecutive_failures": 10,
-      "retry_after": "2026-11-07T13:51:00.704639+00:00"
+      "elapsed_seconds": 332.38,
+      "source_id": "33974098",
+      "queue_rank": 42706
     },
     "4333:1:7": {
       "at": "2026-10-18T08:00:29.797003+00:00",
@@ -13864,19 +13861,16 @@
       "queue_rank": 10151
     },
     "28:1:2": {
-      "at": "2026-11-16T16:39:25.484328+00:00",
+      "at": "2026-11-16T21:46:19.915463+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "saved_review_revision": 1,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "transient_original",
-      "elapsed_seconds": 215.75,
-      "consecutive_failures": 41,
-      "retry_after": "2026-11-16T22:43:01.239384+00:00"
+      "elapsed_seconds": 196.41,
+      "consecutive_failures": 42,
+      "retry_after": "2026-11-17T03:49:36.327516+00:00"
     },
     "28:1:3": {
       "at": "2026-10-04T13:21:14.757342+00:00",
@@ -1196621,84 +1196615,16 @@
       "queue_rank": 37055
     },
     "1253:1:1": {
-      "at": "2026-11-08T15:24:24.273378+00:00",
+      "at": "2026-11-16T21:49:00.721094+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 41.52,
-      "search_evidence": [
-        {
-          "path": "/na-lodi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202069,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/na-lodi/s/-6",
-          "status": 200,
-          "response_bytes": 472037,
-          "boxes": 213,
-          "parsed_candidates": 189,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-boat-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 204995,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-boat/s/-6",
-          "status": 200,
-          "response_bytes": 363955,
-          "boxes": 132,
-          "parsed_candidates": 93,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/na-lodi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202015,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/na-lodi/s/-6",
-          "status": 200,
-          "response_bytes": 472027,
-          "boxes": 213,
-          "parsed_candidates": 189,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-boat-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 204993,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-boat/s/-6",
-          "status": 200,
-          "response_bytes": 363899,
-          "boxes": 132,
-          "parsed_candidates": 93,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T15:25:05.790248+00:00"
+      "czech_fallback_revision": 1,
+      "reason": "transient_search",
+      "elapsed_seconds": 26.35,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-16T22:19:27.074888+00:00"
     },
     "1810:1:5": {
       "at": "2026-11-08T15:25:24.923923+00:00",
@@ -1365188,7 +1365114,7 @@
       "queue_rank": 42699
     }
   },
-  "updated_at": "2026-11-16T21:48:36.253014+00:00",
+  "updated_at": "2026-11-16T21:49:57.809045+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1366926,86 +1366852,18 @@
       "queue_rank": 6383
     },
     "1327:2:20": {
-      "at": "2026-11-16T10:49:20.070011+00:00",
+      "at": "2026-11-16T21:48:24.464453+00:00",
       "status": "deferred",
+      "method": "source_repair",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "source_repair",
-      "source_repair_revision": 2,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 52.57,
-      "search_evidence": [
-        {
-          "path": "/goldbergovi-s02e20/s/-6",
-          "status": 200,
-          "response_bytes": 216318,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/goldbergovi/s/-6",
-          "status": 200,
-          "response_bytes": 678815,
-          "boxes": 387,
-          "parsed_candidates": 387,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-goldbergs-s02e20/s/-6",
-          "status": 200,
-          "response_bytes": 216078,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-goldbergs/s/-6",
-          "status": 200,
-          "response_bytes": 234213,
-          "boxes": 16,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/goldbergovi-s02e20/s/-6",
-          "status": 200,
-          "response_bytes": 216309,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/goldbergovi/s/-6",
-          "status": 200,
-          "response_bytes": 678720,
-          "boxes": 387,
-          "parsed_candidates": 387,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-goldbergs-s02e20/s/-6",
-          "status": 200,
-          "response_bytes": 215961,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-goldbergs/s/-6",
-          "status": 200,
-          "response_bytes": 234273,
-          "boxes": 16,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        }
-      ],
+      "elapsed_seconds": 35.29,
+      "source_repair_revision": 3,
       "repair_fingerprint": "c007a5ae3aa0929e139c7a1b8f16cbcd143036bb767908f9ea11db48b4fc0152",
-      "consecutive_failures": 199,
-      "retry_after": "2026-11-17T10:50:12.644522+00:00"
+      "consecutive_failures": 200,
+      "retry_after": "2026-11-17T21:48:59.755398+00:00"
     },
     "1603:2:4": {
       "at": "2026-10-13T09:40:54.791847+00:00",
@@ -1370102,7 +1369960,7 @@
     },
     "4333": {
       "misses": [],
-      "updated_at": "2026-11-16T21:48:24.461635+00:00"
+      "updated_at": "2026-11-16T21:48:53.774042+00:00"
     },
     "1491": {
       "misses": [
@@ -1370119,15 +1369977,33 @@
     "4696": {
       "misses": [],
       "updated_at": "2026-11-16T21:43:10.719323+00:00"
+    },
+    "1327": {
+      "misses": [
+        "1327:2:20"
+      ],
+      "updated_at": "2026-11-16T21:48:59.755439+00:00"
+    },
+    "1253": {
+      "misses": [
+        "1253:1:1"
+      ],
+      "updated_at": "2026-11-16T21:49:27.074923+00:00"
+    },
+    "28": {
+      "misses": [
+        "28:1:2"
+      ],
+      "updated_at": "2026-11-16T21:49:36.327553+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 2866,
+    "last_series": 1253,
     "last_series_order": [
       false,
       -7.2,
-      -6449,
-      2866
+      -5985,
+      1253
     ]
   },
   "czech_fallback_revision": 1
