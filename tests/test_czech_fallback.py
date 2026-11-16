@@ -240,3 +240,41 @@ def test_subtitle_lookup_uses_owned_id_and_unfiltered_pages():
         {'episodes': upload}, 'a', entry, deadline=time.monotonic() + 300)
     assert actual.video_id == '15' and entry['listing_page'] == 3
     assert calls == [1, 3]
+
+
+@pytest.mark.parametrize('language', ['cs', 'en'])
+def test_requested_series_advances_after_a_verified_czech_accessible_sample(tmp_path, monkeypatch, language):
+    from sdilej_serialy.requested_series import RequestedSeries, PROBE_REVISION
+    ep, candidate, absence, row, _ = fixture()
+    if language == 'cs':
+        candidate = replace(candidate, audio_language='cs', language_tier=LanguageTier.CZECH_AUDIO)
+    provider = SimpleNamespace(last_outcome='verified_non_czech')
+    def discover(_):
+        provider.last_czech_absence = absence
+        return candidate
+    provider.discover_fresh = discover
+    monkeypatch.setattr(czech_fallback, 'discover_subtitled', lambda *_args, **_kw: candidate)
+    metadata = dict(ep.to_dict(), requested_probe=True)
+    record, selected, fatal = czech_fallback.inspect_episode(provider, (metadata, None, {}, []))
+    assert not fatal and selected and record['request_probe_revision'] == PROBE_REVISION
+    path = tmp_path / 'requested.json'
+    path.write_text(json.dumps(dict(schema_version=1, generation='test', series=[dict(series_id=99,
+        title='Český název', episodes=[dict(season=1, episode=n) for n in range(1, 5)])])))
+    requested = RequestedSeries(path, 'test', {ep.identity: record}, {ep.identity: selected})
+    assert requested.positive(99, 1)
+    assert requested.available(replace(ep, number=4).to_dict())
+
+
+def test_old_pending_targets_cannot_fill_the_new_upload_batch(tmp_path, monkeypatch):
+    from test_dual import setup_plan
+    from sdilej_serialy.dual import SharedState, account_batch
+    directory, plan, rows = setup_plan(tmp_path, monkeypatch, count=40)
+    state = SharedState(directory / 'state.json', {r['identity']: r['target_account'] for r in rows})
+    allocated = [r for r in rows if r['target_account'] == 'a'][:10]
+    for row in allocated:
+        state.data['episodes'][row['identity']] = dict(target_account='a',
+            prepared_target={'target_video_id': str(10000 + row['queue_rank'])})
+    result = account_batch(rows, state, set(), 'a', 5)
+    assert len(result) == 5
+    assert sum(row in allocated for row in result) == 1
+    assert sum(row not in allocated for row in result) == 4

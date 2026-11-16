@@ -4,7 +4,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from .models import Episode
-from .quality import SLOVAK_POLICY, upload_eligible
+from .quality import SLOVAK_POLICY, SUBTITLE_POLICIES, upload_eligible
 
 PROBE_REVISION = 1
 HINT_PROBE_REVISION = 1
@@ -85,7 +85,10 @@ class RequestedSeries:
             proof = row.get('requested_audio_check', {})
             if (proof.get('revision') == PROBE_REVISION and proof.get('identity') == identity
                     and proof.get('source_id') == row.get('selected', {}).get('source_id')
-                    and proof.get('audio_language') in ('cs', 'sk') and upload_eligible(row)):
+                    and (proof.get('audio_language') in ('cs', 'sk')
+                         or row.get('source_policy') in SUBTITLE_POLICIES
+                         and proof.get('audio_language') == row.get('selected', {}).get('audio_language'))
+                    and upload_eligible(row)):
                 return True
         return False
 

@@ -42,6 +42,18 @@ def account_batch(rows, state, blocked, alias, limit, fresh_sources=frozenset())
     ready = [r for r in eligible if not unavailable_retry(r)]
     if limit <= 2:
         return eligible[:limit]
+    allocated = [r for r in ready if state.data['episodes'].get(r['identity'], {}).get('prepared_target')]
+    fresh = [r for r in ready if not state.data['episodes'].get(r['identity'], {}).get('prepared_target')]
+    if fresh and allocated:
+        # A large processing backlog can otherwise fill every batch forever.
+        # Reserve one reconciliation per owner while admitting fresh episodes.
+        retry_rows = retries[:min(2, limit - 2)]
+        chosen = retry_rows + allocated[:1] + fresh[:limit - len(retry_rows) - 1]
+        identities = {r['identity'] for r in chosen}
+        if len(chosen) < limit:
+            chosen.extend(r for r in eligible if r['identity'] not in identities)
+            identities = {r['identity'] for r in chosen[:limit]}
+        return [r for r in eligible if r['identity'] in identities]
     # Repeated missing sources must not occupy every slot while fresh uploads
     # or receipted targets await processing. Keep owners and relative ranks.
     selected = {r['identity'] for r in retries[:2] + ready[:limit - min(2, len(retries))]}
