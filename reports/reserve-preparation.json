@@ -1,36 +1,35 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "43958440779",
-  "attempted_this_run": 3,
-  "prepared_this_run": 0,
-  "reserve_total": 34260,
-  "queue_total": 42695,
-  "updated_at": "2026-11-16T21:28:21.807388+00:00",
+  "attempted_this_run": 4,
+  "prepared_this_run": 1,
+  "reserve_total": 34261,
+  "queue_total": 42696,
+  "updated_at": "2026-11-16T21:29:54.250041+00:00",
   "workers": 4,
-  "elapsed_seconds": 538.83,
-  "prepared_per_hour": 0.0,
-  "available_this_run": 0,
-  "available_per_hour": 0.0,
+  "elapsed_seconds": 631.27,
+  "prepared_per_hour": 5.7,
+  "available_this_run": 1,
+  "available_per_hour": 5.7,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 42695,
+    "queue_total": 42696,
     "ready": 265,
     "ready_by_account": {
       "a": 184,
       "b": 81
     },
     "categories": {
-      "completed": 41540,
-      "allocated": 872,
+      "completed": 41541,
+      "allocated": 875,
       "failed": 12,
-      "in_flight": 3,
       "ready": 265,
       "language_review": 3
     },
     "completed_by_account": {
       "a": 20713,
-      "b": 20827
+      "b": 20828
     },
     "uploads_last_24h": 576,
     "uploads_per_hour_24h": 24.0,
@@ -40,11 +39,12 @@
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 105,
-      "b": 112
+      "a": 197,
+      "b": 148
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 6,
+      "prepared": 1,
       "no_english_czech_subtitles": 2
     }
   },
@@ -59,15 +59,22 @@
     ]
   },
   "cache": {
-    "search_miss": 32,
+    "search_miss": 33,
     "search_seconds": 431.94,
     "search_hit": 4,
-    "media_hit": 38,
+    "media_hit": 41,
     "audio_hit": 6,
-    "media_miss": 10,
-    "media_seconds": 25.28
+    "media_miss": 18,
+    "media_seconds": 46.73,
+    "audio_miss": 1,
+    "audio_seconds": 17.59
   },
-  "audio_pipeline": {},
+  "audio_pipeline": {
+    "sample_count": 1,
+    "download_seconds": 8.28,
+    "inference_wait_seconds": 0.0,
+    "inference_seconds": 9.31
+  },
   "productive_seasons": 223,
   "series_paused_this_run": 1,
   "saved_reviewed_this_run": 0,
@@ -78,7 +85,7 @@
     "deferred": 37
   },
   "statuses": {
-    "prepared": 34260,
+    "prepared": 34261,
     "deferred": 38729
   },
   "requested_series": [
