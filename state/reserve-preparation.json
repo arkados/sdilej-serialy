@@ -1365165,9 +1365165,23 @@
       "elapsed_seconds": 429.92,
       "source_id": "35336025",
       "queue_rank": 42710
+    },
+    "780:2:2": {
+      "at": "2026-11-16T21:51:06.711071+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9499508142471313,
+      "observed_source_id": "35441224",
+      "elapsed_seconds": 343.94,
+      "source_id": "35441224",
+      "queue_rank": 42711
     }
   },
-  "updated_at": "2026-11-16T21:56:53.411798+00:00",
+  "updated_at": "2026-11-16T21:58:15.108910+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1367003,86 +1367017,18 @@
       "queue_rank": 6696
     },
     "1553:1:15": {
-      "at": "2026-11-16T07:38:23.706425+00:00",
+      "at": "2026-11-16T21:56:47.251525+00:00",
       "status": "deferred",
+      "method": "source_repair",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "source_repair",
-      "source_repair_revision": 2,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 58.72,
-      "search_evidence": [
-        {
-          "path": "/fresh-prince-s01e15/s/-6",
-          "status": 200,
-          "response_bytes": 215990,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fresh-prince/s/-6",
-          "status": 200,
-          "response_bytes": 373165,
-          "boxes": 137,
-          "parsed_candidates": 127,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-fresh-prince-of-bel-air-s01e15/s/-6",
-          "status": 200,
-          "response_bytes": 216367,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-fresh-prince-of-bel-air/s/-6",
-          "status": 200,
-          "response_bytes": 236114,
-          "boxes": 17,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fresh-prince-s01e15/s/-6",
-          "status": 200,
-          "response_bytes": 216041,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fresh-prince/s/-6",
-          "status": 200,
-          "response_bytes": 373014,
-          "boxes": 137,
-          "parsed_candidates": 127,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-fresh-prince-of-bel-air-s01e15/s/-6",
-          "status": 200,
-          "response_bytes": 216283,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-fresh-prince-of-bel-air/s/-6",
-          "status": 200,
-          "response_bytes": 236157,
-          "boxes": 17,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        }
-      ],
+      "elapsed_seconds": 64.5,
+      "source_repair_revision": 3,
       "repair_fingerprint": "e8174774d282d4a1765ac49e2d18f5bc77d56e1a1e6ff3ef21185d2a7cfd599e",
-      "consecutive_failures": 94,
-      "retry_after": "2026-11-17T07:39:22.427897+00:00"
+      "consecutive_failures": 95,
+      "retry_after": "2026-11-17T21:57:51.757614+00:00"
     },
     "1553:1:16": {
       "at": "2026-11-16T10:52:01.524081+00:00",
@@ -1370053,15 +1369999,25 @@
     "3780": {
       "misses": [],
       "updated_at": "2026-11-16T21:50:35.673760+00:00"
+    },
+    "780": {
+      "misses": [],
+      "updated_at": "2026-11-16T21:57:08.921627+00:00"
+    },
+    "1553": {
+      "misses": [
+        "1553:1:15"
+      ],
+      "updated_at": "2026-11-16T21:57:51.757651+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 1253,
+    "last_series": 2947,
     "last_series_order": [
       false,
       -7.2,
-      -5985,
-      1253
+      -5721,
+      2947
     ]
   },
   "czech_fallback_revision": 1
