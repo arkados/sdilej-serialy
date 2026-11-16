@@ -1,0 +1,492 @@
+from types import SimpleNamespace
+
+import pytest
+import requests
+from sdilej_serialy.media.sdilej import SdilejError
+
+from sdilej_serialy.episodes import EpisodeSourceProvider
+from sdilej_serialy.search_health import CONTROL_URL, FALLBACK_URL, SearchHealth, SearchCircuit, SearchUnavailable
+from sdilej_serialy.source_audit import AuditProvider
+from sdilej_serialy.source_cache import SourceCache
+from test_episodes import episode
+
+POSITIVE = '<div class="videobox"><a href="/123/source.mp4">Source</a></div>'
+EMPTY = '<h1>Empty search</h1>'
+QUERY_URL = 'https://sdilej.cz/series/s/-6'
+
+
+def test_parallel_empty_queries_use_one_shared_positive_control():
+    from concurrent.futures import ThreadPoolExecutor
+    circuit = SearchCircuit()
+    sessions = [Session(lambda url: POSITIVE if url == CONTROL_URL else EMPTY) for _ in range(4)]
+    providers = [EpisodeSourceProvider(session, detector=object(), request_gap_seconds=0,
+                 session_factory=lambda: pytest.fail('Healthy backend'), search_circuit=circuit)
+                 for session in sessions]
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        assert list(pool.map(lambda p: p._search_page(QUERY_URL, 'Series')['candidates'], providers)) == [[], [], [], []]
+    assert sum(session.calls.count(CONTROL_URL) for session in sessions) == 1
+    assert circuit.snapshot()['control_requests'] == 1
+
+
+def test_control_diagnostics_distinguish_fallback_html_without_persisting_private_content():
+    html = '''<h1>Account private@example.test</h1><h2>Křišťálová koule říká: zkus to jinak!</h2>
+        <input type="password" value="private-password"><script>token="private-token"</script>
+        <a href="https://cdn.invalid/media?signature=private-signature">Private media</a>'''
+    response = SimpleNamespace(text=html, status_code=200,
+                               url=CONTROL_URL+'?token=private-query', headers={'Age':'123'})
+    circuit = SearchCircuit()
+    circuit.record_control(CONTROL_URL, response, 0, query='Teorie velkého třesku')
+    record = circuit.snapshot()['controls'][0]
+    assert record['fallback_notice_present'] and record['password_field_present']
+    assert not record['heading_matches_query'] and record['video_box_count'] == 0
+    assert record['cache_age_seconds'] == 123 and len(record['body_sha256']) == 64
+    for secret in ['private@example.test','private-password','private-token','private-signature','private-query']:
+        assert secret not in str(record)
+
+
+def test_control_diagnostics_show_real_results_and_explicit_request_limit_notices():
+    circuit = SearchCircuit()
+    response = SimpleNamespace(text='<h1>Teorie Velkeho Tresku</h1>'+POSITIVE, status_code=200)
+    circuit.record_control(CONTROL_URL, response, 1, query='Teorie velkého třesku')
+    first = circuit.snapshot()['controls'][0]
+    assert first['heading_matches_query'] and first['video_box_count'] == 1
+    assert not first['request_limit_notice_present'] and first['cache_age_seconds'] is None
+    response = SimpleNamespace(text='<h1>Too many requests</h1>', status_code=200,
+                               headers={'Age':'private-header'})
+    circuit.record_control(CONTROL_URL, response, 0, query='Teorie velkého třesku')
+    second = circuit.snapshot()['controls'][0]
+    assert second['request_limit_notice_present'] and not second['heading_matches_query']
+    assert second['body_sha256'] != first['body_sha256']
+    assert second['cache_age_seconds'] is None and 'private-header' not in str(second)
+
+
+def test_large_monotonic_timestamp_does_not_add_a_phantom_retry_second():
+    circuit = SearchCircuit(clock=lambda: 2 ** 22 - 1e-9)
+    assert circuit.failure() == 300
+    assert circuit.snapshot()['retry_seconds'] == 300
+
+
+def test_request_pacing_survives_restart_and_recovers_only_after_sustained_health():
+    now = [100]
+    circuit = SearchCircuit(clock=lambda: now[0])
+    assert circuit.request_gap() == 2
+    for _ in range(4):
+        circuit.failure()
+    assert circuit.request_gap() == 4
+    now[0] += 300
+    circuit.failure()
+    snapshot = circuit.snapshot()
+    assert snapshot['request_gap_seconds'] == 8
+    resumed = SearchCircuit(clock=lambda: now[0], restored=snapshot)
+    assert resumed.request_gap() == 8
+    now[0] += 1000
+    resumed.success()
+    assert resumed.request_gap() == 8
+    now[0] += 599
+    assert resumed.request_gap() == 8
+    now[0] += 1
+    assert resumed.request_gap() == 4
+    now[0] += 600
+    assert resumed.request_gap() == 2
+
+
+def test_shared_request_gate_uses_adaptive_pacing_without_ever_speeding_up(monkeypatch):
+    from sdilej_serialy import source_cache
+    now, delays, pace = [100], [], [8]
+    def sleep(seconds):
+        delays.append(seconds)
+        now[0] += seconds
+    monkeypatch.setattr(source_cache.time, 'monotonic', lambda: now[0])
+    monkeypatch.setattr(source_cache.time, 'sleep', sleep)
+    gate = source_cache.RequestGate(pace=lambda: pace[0])
+    gate.wait()
+    gate.wait()
+    pace[0] = 1
+    gate.wait()
+    gate.wait()
+    assert delays == [8, 8, 2]
+
+
+def test_repeated_failed_recovery_retires_only_current_runner_and_preserves_quiet_deadline():
+    now, wall = [100], [1800000000]
+    circuit = SearchCircuit(clock=lambda: now[0], wall_clock=lambda: wall[0], max_failed_cycles=2)
+    assert [circuit.failure() for _ in range(4)] == [300] * 4
+    assert not circuit.restart_required()
+    now[0] += 300
+    wall[0] += 300
+    assert circuit.failure() == 600
+    assert circuit.restart_required()
+    with pytest.raises(SearchUnavailable):
+        circuit.wait()
+    snapshot = circuit.snapshot()
+    delays = []
+    def sleep(seconds):
+        delays.append(seconds)
+        now[0] += seconds
+    fresh = SearchCircuit(clock=lambda: now[0], wall_clock=lambda: wall[0], sleep=sleep,
+                          restored=snapshot, max_failed_cycles=2)
+    assert not fresh.restart_required()
+    assert fresh.wait() and sum(delays) == 600
+    fresh.success()
+    assert fresh.snapshot()['status'] == 'healthy'
+    assert fresh.snapshot()['failed_cycles_this_run'] == 0
+
+
+def test_publisher_yields_after_failed_recovery_without_marking_unsearched_episodes(tmp_path, monkeypatch):
+    import json
+    from sdilej_serialy import replenish
+    from test_replenish import setup
+    directory, _, _ = setup(tmp_path, monkeypatch)
+    original = {name: (directory / name).read_bytes() for name in ('state.json', 'plan.json', 'manifest.jsonl')}
+    now, calls = [100], []
+    circuit = SearchCircuit(clock=lambda: now[0], max_failed_cycles=2)
+    def discover(episode):
+        calls.append(episode.identity)
+        circuit.failure()
+        now[0] += 300
+        circuit.failure()
+        raise SearchUnavailable('Failed control after recovery')
+    provider = SimpleNamespace(discover=discover, search_health=SimpleNamespace(circuit=circuit))
+    result = replenish.prepare(tmp_path, 'test', provider, runtime_minutes=0, maintain_reserve=True)
+    assert result['restart_required'] and calls == ['1:1:5']
+    state = json.loads((tmp_path / 'state/reserve-preparation.json').read_text())
+    assert set(state['episodes']) == {'1:1:5'}
+    assert state['episodes']['1:1:5']['reason'] == 'source_search_unavailable'
+    assert state['episodes']['1:1:5']['consecutive_failures'] == 0
+    report = json.loads((tmp_path / 'reports/reserve-preparation.json').read_text())
+    assert report['search_health']['restart_required']
+    for name, value in original.items():
+        assert (directory / name).read_bytes() == value
+
+
+def test_parallel_worker_retirement_drains_completed_results_and_stops_dispatch():
+    import threading
+    from sdilej_serialy.source_workers import inspected_results
+    release = threading.Event()
+    closed, submitted = [], []
+    provider = SimpleNamespace(fork_worker=lambda: SimpleNamespace(
+        session=SimpleNamespace(close=lambda: closed.append(True))))
+    stopped = [False]
+    def inspect(worker, item):
+        submitted.append(item)
+        release.wait(5)
+        return item
+    def items():
+        yield 1
+        yield 2
+        release.set()
+        yield 3
+        yield 4
+    # The stop flag can be raised by any shared worker while peers finish.
+    def stop():
+        if len(submitted) == 2:
+            stopped[0] = True
+            release.set()
+        return stopped[0]
+    result = list(inspected_results(items(), provider, inspect, workers=2, limit=4,
+                                   deadline=float('inf'), tick=lambda: None, stop=stop))
+    assert sorted(result) == [(1, 1), (2, 2)]
+    assert sorted(submitted) == [1, 2] and closed
+
+
+class Session:
+    def __init__(self, response):
+        self.response = response
+        self.calls = []
+        self.closed = False
+        self.headers, self.cookies = {}, {}
+
+    def get(self, url, **kwargs):
+        self.calls.append(url)
+        return SimpleNamespace(text=self.response(url), status_code=200, raise_for_status=lambda: None)
+
+    def close(self):
+        self.closed = True
+
+
+def test_empty_old_session_is_renewed_and_original_query_replayed_without_cached_control():
+    old, fresh = Session(lambda _: EMPTY), Session(lambda _: POSITIVE)
+    p = AuditProvider(old, detector=object(), request_gap_seconds=0, session_factory=lambda: fresh)
+    # Even an old in-memory empty page must not establish control health.
+    p.search_pages[CONTROL_URL] = SimpleNamespace(text=EMPTY)
+    page = p._search_page(QUERY_URL, 'Series')
+    assert [r['source_id'] for r in page['candidates']] == ['123']
+    assert old.closed and p.session is fresh
+    assert old.calls == [QUERY_URL, CONTROL_URL, FALLBACK_URL]
+    assert fresh.calls == [CONTROL_URL, QUERY_URL]
+
+
+def test_genuine_empty_query_is_allowed_only_after_positive_control_and_probe_is_bounded():
+    session = Session(lambda url: POSITIVE if url == CONTROL_URL else EMPTY)
+    p = EpisodeSourceProvider(session, detector=object(), request_gap_seconds=0,
+        session_factory=lambda: pytest.fail('Healthy search must not log in again'))
+    assert not p._search_page(QUERY_URL, 'Series')['candidates']
+    assert not p._search_page(QUERY_URL, 'Series')['candidates']
+    assert session.calls.count(CONTROL_URL) == 1
+
+
+def test_one_empty_control_series_cannot_block_a_healthy_search_backend():
+    session=Session(lambda url: POSITIVE if url==FALLBACK_URL else EMPTY)
+    p=EpisodeSourceProvider(session,detector=object(),request_gap_seconds=0,
+        session_factory=lambda: pytest.fail('A healthy alternative control must prevent reauthentication'))
+    assert not p._search_page(QUERY_URL,'Series')['candidates']
+    report=p.search_health.circuit.snapshot()
+    assert report['status']=='healthy'
+    assert [r['parsed_candidates'] for r in report['controls']]==[0,1]
+    assert session.calls==[QUERY_URL,CONTROL_URL,FALLBACK_URL]
+
+
+@pytest.mark.parametrize('status', [None, 502])
+def test_one_control_transport_failure_does_not_pause_all_workers(status):
+    def response(url):
+        if url == CONTROL_URL:
+            if status is None:
+                raise requests.Timeout('private-password signed-url')
+            result = requests.Response()
+            result.status_code = status
+            raise requests.HTTPError('private-password signed-url', response=result)
+        return POSITIVE if url == FALLBACK_URL else EMPTY
+    session = Session(response)
+    p = EpisodeSourceProvider(session, detector=object(), request_gap_seconds=0,
+        session_factory=lambda: pytest.fail('Healthy fallback must prevent a new login'))
+    assert not p._search_page(QUERY_URL, 'Series')['candidates']
+    report = p.search_health.circuit.snapshot()
+    assert report['status'] == 'healthy' and report['consecutive_failures'] == 0
+    assert report['control_requests'] == 2
+    assert report['controls'][0]['status'] == status
+    assert 'private-password' not in str(report) and 'signed-url' not in str(report)
+    assert session.calls == [QUERY_URL, CONTROL_URL, FALLBACK_URL]
+
+
+def test_explicit_control_throttle_never_probes_again_before_quiet_window():
+    def response(url):
+        if url == CONTROL_URL:
+            result = requests.Response()
+            result.status_code = 429
+            raise requests.HTTPError('private-token', response=result)
+        return EMPTY
+    session = Session(response)
+    p = EpisodeSourceProvider(session, detector=object(), request_gap_seconds=0,
+        session_factory=lambda: pytest.fail('Throttling must not trigger another login'))
+    with pytest.raises(SearchUnavailable):
+        p._search_page(QUERY_URL, 'Series')
+    report = p.search_health.circuit.snapshot()
+    assert report['status'] == 'paused' and report['controls'][0]['status'] == 429
+    assert session.calls == [QUERY_URL, CONTROL_URL]
+
+
+@pytest.mark.parametrize('notice', ['Too many requests', 'Příliš mnoho požadavků'])
+def test_http_200_request_limit_notice_also_starts_quiet_window_without_relogin(notice):
+    session = Session(lambda url: f'<h1>{notice}</h1>' if url == CONTROL_URL else EMPTY)
+    p = EpisodeSourceProvider(session, detector=object(), request_gap_seconds=0,
+        session_factory=lambda: pytest.fail('A request limit must not trigger reauthentication'))
+    with pytest.raises(SearchUnavailable):
+        p._search_page(QUERY_URL, 'Series')
+    report = p.search_health.circuit.snapshot()
+    assert report['status'] == 'paused' and report['controls'][0]['status'] == 200
+    assert report['controls'][0]['request_limit_notice_present']
+    assert session.calls == [QUERY_URL, CONTROL_URL]
+
+
+@pytest.mark.parametrize('status', [200, 429])
+def test_query_limit_overrides_recent_healthy_control_without_caching_absence(tmp_path, status):
+    def response(url):
+        if status == 429:
+            result = requests.Response()
+            result.status_code = status
+            raise requests.HTTPError('private-token', response=result)
+        return '<h1>Too many requests</h1>'
+    session = Session(response)
+    cache = SourceCache(tmp_path / 'cache.json')
+    circuit = SearchCircuit()
+    circuit.success()
+    p = EpisodeSourceProvider(session, detector=object(), request_gap_seconds=0, cache=cache,
+        session_factory=lambda: pytest.fail('A request limit must not cause reauthentication'),
+        search_circuit=circuit)
+    url = QUERY_URL + '?token=private-query'
+    with pytest.raises(SearchUnavailable):
+        p._search_page(url, 'Series')
+    report = circuit.snapshot()
+    assert report['status'] == 'paused' and report['consecutive_failures'] == 1
+    assert report['last_request_limit']['status'] == status
+    assert report['last_request_limit']['path'] == '/series/s/-6'
+    assert session.calls == [url] and not cache.entries
+    assert 'private-token' not in str(report) and 'private-query' not in str(report)
+
+
+def test_persistent_empty_control_is_transient_and_backs_off_without_repeated_logins(tmp_path):
+    old, fresh = Session(lambda _: EMPTY), Session(lambda _: EMPTY)
+    renewed, delays, now = [], [], [100]
+    def factory():
+        renewed.append(True)
+        return fresh
+    def sleep(seconds):
+        delays.append(seconds)
+        now[0] += seconds
+    cache = SourceCache(tmp_path / 'cache.json')
+    p = EpisodeSourceProvider(old, detector=object(), request_gap_seconds=0,
+                              session_factory=factory, cache=cache)
+    p.search_health = SearchHealth(clock=lambda: now[0], sleep=sleep)
+    assert p.discover(episode()) is None
+    assert p.last_outcome == 'source_search_unavailable'
+    assert len(renewed) == 1 and sum(delays) == 300 and max(delays) <= 30
+    assert not cache.entries
+
+
+def test_failed_reauthentication_keeps_old_client_and_never_logs_exception_text(capsys):
+    old = Session(lambda _: EMPTY)
+    def factory():
+        raise requests.Timeout('private-password signed-url')
+    p = EpisodeSourceProvider(old, detector=object(), request_gap_seconds=0, session_factory=factory)
+    with pytest.raises(SdilejError):
+        p._search_page(QUERY_URL, 'Series')
+    assert p.session is old and not old.closed
+    output = capsys.readouterr().out
+    assert 'retry_seconds=300' in output and 'private-password' not in output and 'signed-url' not in output
+
+
+def test_worker_copies_refresh_capability_but_uses_independent_cookies_and_health():
+    original = Session(lambda _: POSITIVE)
+    factory = lambda: Session(lambda _: POSITIVE)
+    p = EpisodeSourceProvider(original, detector=object(), session_factory=factory)
+    worker = p.fork_worker()
+    try:
+        assert worker.session_factory is factory
+        assert worker.session is not p.session and worker.search_health is not p.search_health
+        assert worker.search_health.circuit is p.search_health.circuit
+    finally:
+        worker.session.close()
+
+
+def test_audit_provider_never_retains_empty_broad_search_html():
+    session = Session(lambda _: EMPTY)
+    p = AuditProvider(session, detector=object(), request_gap_seconds=0)
+    p._get(QUERY_URL)
+    p._get(QUERY_URL)
+    assert session.calls == [QUERY_URL, QUERY_URL] and not p.search_pages
+
+
+def test_workers_share_one_quiet_window_that_escalates_and_recovers():
+    now, delays = [100], []
+    def sleep(seconds):
+        delays.append(seconds)
+        now[0] += seconds
+    circuit = SearchCircuit(clock=lambda: now[0], sleep=sleep)
+    assert [circuit.failure() for _ in range(4)] == [300]*4
+    assert circuit.snapshot()['consecutive_failures'] == 1
+    circuit.success()  # An earlier in-flight success cannot reopen requests.
+    assert circuit.snapshot()['status'] == 'paused'
+    first = EpisodeSourceProvider(Session(lambda _: EMPTY), detector=object(), session_factory=lambda: None,
+                                  search_circuit=circuit)
+    times = []
+    second = EpisodeSourceProvider(Session(lambda _: times.append(now[0]) or POSITIVE),
+        detector=object(), session_factory=lambda: None, request_gap_seconds=0,
+        search_circuit=circuit)
+    second._get(QUERY_URL)
+    assert times == [400] and sum(delays) == 300
+    assert first.search_health.circuit is second.search_health.circuit
+    assert circuit.failure() == 600
+    circuit.wait()
+    assert circuit.failure() == 900
+    circuit.wait()
+    assert circuit.failure() == 900
+    circuit.wait()
+    circuit.success()
+    assert circuit.snapshot()['status'] == 'healthy'
+    assert circuit.failure() == 300
+
+
+def test_shared_pause_forces_replay_of_an_empty_response_that_was_already_in_flight():
+    now = [100]
+    def sleep(seconds): now[0] += seconds
+    circuit = SearchCircuit(clock=lambda: now[0], sleep=sleep)
+    session = Session(lambda _: POSITIVE)
+    p = EpisodeSourceProvider(session, detector=object(), session_factory=lambda: None,
+                              search_circuit=circuit, request_gap_seconds=0)
+    p.search_health = SearchHealth(clock=lambda: now[0], sleep=sleep, circuit=circuit)
+    p.search_health.healthy_until = 160
+    circuit.failure()
+    assert p.search_health.verify_empty(p) is True
+    assert now[0] == 400 and session.calls == [CONTROL_URL]
+
+
+def test_search_pause_checkpoint_survives_job_restart_and_expires_by_wall_clock():
+    now, wall = [100], [1800000000]
+    circuit = SearchCircuit(clock=lambda: now[0], wall_clock=lambda: wall[0])
+    circuit.failure()
+    snapshot = circuit.snapshot()
+    now[0], wall[0] = 9000, wall[0]+120
+    resumed = SearchCircuit(clock=lambda: now[0], wall_clock=lambda: wall[0], restored=snapshot)
+    assert resumed.snapshot()['retry_seconds'] == 180
+    now[0] += 180
+    assert resumed.failure() == 600
+    wall[0] += 1000
+    expired = SearchCircuit(clock=lambda: now[0], wall_clock=lambda: wall[0], restored=snapshot)
+    assert expired.snapshot()['retry_seconds'] == 0
+
+
+def test_publisher_checkpoints_shared_search_pause_without_changing_target_history(tmp_path, monkeypatch):
+    import json
+    from sdilej_serialy import replenish
+    from test_replenish import setup
+    directory, _, _ = setup(tmp_path, monkeypatch)
+    target = (directory/'state.json').read_bytes()
+    circuit = SearchCircuit()
+    circuit.failure()
+    provider = SimpleNamespace(discover=lambda _: None, search_health=SimpleNamespace(circuit=circuit))
+    replenish.prepare(tmp_path,'test',provider,runtime_minutes=0)
+    report = json.loads((tmp_path/'reports/reserve-preparation.json').read_text())
+    assert report['search_health']['status'] == 'paused'
+    assert report['search_health']['resume_after']
+    assert (directory/'state.json').read_bytes() == target
+
+
+def test_restored_pause_is_observed_before_source_login(monkeypatch):
+    from sdilej_serialy import episodes
+    now, calls = [100], []
+    def sleep(seconds): now[0] += seconds
+    circuit = SearchCircuit(clock=lambda: now[0], sleep=sleep)
+    circuit.failure()
+    monkeypatch.setattr(episodes,'login_with_retry',lambda *a: calls.append(now[0]) or Session(lambda _: POSITIVE))
+    p = EpisodeSourceProvider.authenticated('source@example.test','test',detector=object(),search_circuit=circuit)
+    assert calls == [400]
+    p.session.close()
+
+
+def test_shared_search_outage_does_not_increment_episode_or_series_failure_counts(tmp_path, monkeypatch):
+    import json
+    from sdilej_serialy import replenish
+    from test_replenish import setup
+    setup(tmp_path,monkeypatch)
+    path=tmp_path/'state/reserve-preparation.json'
+    path.parent.mkdir(exist_ok=True)
+    path.write_text(json.dumps(dict(schema_version=1,episodes={
+        '1:1:5':dict(status='deferred',consecutive_failures=2)},series_discovery={})))
+    circuit = SearchCircuit()
+    circuit.failure()
+    provider=SimpleNamespace(discover=lambda _:None,last_outcome='source_search_unavailable',
+                             search_health=SimpleNamespace(circuit=circuit))
+    replenish.prepare(tmp_path,'test',provider,runtime_minutes=0)
+    state=json.loads(path.read_text())
+    assert state['episodes']['1:1:5']['consecutive_failures']==2
+    assert state['episodes']['1:1:6']['consecutive_failures']==0
+    assert not state['series_discovery']
+    from datetime import datetime
+    deadlines=[datetime.fromisoformat(state['episodes'][i]['retry_after']) for i in ('1:1:5','1:1:6')]
+    assert abs((deadlines[0]-deadlines[1]).total_seconds()) < 1
+
+
+def test_backend_outage_is_not_a_checked_season_sample_or_a_used_extra_hint_budget(tmp_path):
+    from sdilej_serialy.requested_series import RequestedSeries
+    from test_requested_series import request_plan
+    from test_dual import source
+    path=tmp_path/'requests.json'
+    request_plan(path)
+    records={f'1:1:{n}':dict(request_probe_revision=1,request_hint_probe_revision=1,
+                            reason='source_search_unavailable') for n in range(1,7)}
+    gate=RequestedSeries(path,'test',records,{})
+    assert not gate.checked('1:1:1')
+    assert not gate.available(dict(source()['episode'],season=2))
+    assert gate.available(source()['episode'])
+    assert not gate.extra_samples[1,1]
+    assert gate.report()[0]['seasons'][0]['status']=='sampling'

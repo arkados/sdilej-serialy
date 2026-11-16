@@ -1,0 +1,274 @@
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+from types import SimpleNamespace
+
+import pytest
+
+from sdilej_serialy.audio_pipeline import PipelinedLanguageDetector
+from sdilej_serialy.episodes import EpisodeSourceProvider
+from sdilej_serialy.media.language import LanguageDetectionError
+from sdilej_serialy.media.models import Candidate, MatchTier
+from test_episodes import episode
+
+
+def test_provider_overlaps_sample_downloads_but_serializes_one_model(monkeypatch):
+    detector = PipelinedLanguageDetector()
+    barrier = threading.Barrier(4)
+    lock = threading.Lock()
+    paths, offsets = [], []
+    active, peak = [0], [0]
+
+    def extract(url, offset, sample):
+        with lock:
+            paths.append(sample)
+            offsets.append(offset)
+        sample.write_bytes(b'audio')
+        # This fails if the provider still holds the old whole-detect lock.
+        barrier.wait(timeout=3)
+
+    def transcribe(path, **kwargs):
+        assert Path(path).read_bytes() == b'audio'
+        assert kwargs == dict(beam_size=1, vad_filter=True)
+        with lock:
+            active[0] += 1
+            peak[0] = max(peak[0], active[0])
+        time.sleep(.02)
+        with lock:
+            active[0] -= 1
+        return iter(()), SimpleNamespace(language='cs', language_probability=.99)
+
+    monkeypatch.setattr(detector, '_extract', extract)
+    monkeypatch.setattr(detector, '_load_model', lambda: SimpleNamespace(transcribe=transcribe))
+    import requests
+    provider = EpisodeSourceProvider(requests.Session(), detector=detector)
+    providers = [provider] + [provider.fork_worker() for _ in range(3)]
+    try:
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            result = list(pool.map(lambda p: p._verify_language(episode(), Candidate(
+                '123', 'detail', 'title', sample_url='https://signed.invalid/secret')), providers))
+        assert all(r.audio_language == 'cs' and r.language_probability == .99 for r in result)
+        assert peak[0] == 1 and len(set(paths)) == 4
+        assert offsets == [180] * 4 and detector.seconds == 75
+        assert not any(path.exists() for path in paths)
+        assert detector.metrics()['sample_count'] == 4
+        assert detector.metrics()['inference_wait_seconds'] > 0
+        assert 'secret' not in str(detector.metrics())
+    finally:
+        for p in providers:
+            p.session.close()
+
+
+def test_consensus_keeps_sdk_offsets_votes_and_confidence(monkeypatch):
+    detector = PipelinedLanguageDetector()
+    offsets = []
+    monkeypatch.setattr(detector, '_detect_at', lambda url, offset: offsets.append(offset) or ('cs', .9))
+    assert detector.detect_consensus('sample', 1600, initial=('en', .8), preferred_language='cs') == ('cs', .9)
+    assert offsets == [400, 800, 1200]
+
+
+@pytest.mark.parametrize('duration', [420, 2535, None])
+def test_weak_filename_preference_does_not_hide_confident_slovak_majority(monkeypatch, duration):
+    detector = PipelinedLanguageDetector()
+    samples = iter([('sk', .6167), ('sk', .7867), ('cs', .6267)])
+    monkeypatch.setattr(detector, '_detect_at', lambda *a: next(samples))
+    language, confidence = detector.detect_consensus(
+        'sample', duration, initial=('sk', .7415), preferred_language='cs')
+    assert language == 'sk'
+    assert confidence == pytest.approx((.7415 + .6167 + .7867) / 3)
+    assert confidence >= .65
+
+
+@pytest.mark.parametrize('confidence,expected', [(.649, 'sk'), (.65, 'cs')])
+def test_czech_preference_requires_the_publication_threshold(monkeypatch, confidence, expected):
+    detector = PipelinedLanguageDetector()
+    samples = iter([('sk', .9), ('sk', .9), ('cs', confidence)])
+    monkeypatch.setattr(detector, '_detect_at', lambda *a: next(samples))
+    language, probability = detector.detect_consensus(
+        'sample', 2000, initial=('sk', .9), preferred_language='cs')
+    assert language == expected and probability >= .65
+
+
+def test_weak_majority_still_cannot_pass_provider_language_verification(monkeypatch):
+    detector = PipelinedLanguageDetector()
+    monkeypatch.setattr(detector, '_detect_at', lambda *a: ('cs', .63))
+    provider = EpisodeSourceProvider(None, detector=detector)
+    with pytest.raises(LanguageDetectionError, match='confidence'):
+        provider._verify_language(episode(), Candidate('1', 'url', 'title',
+            filename='Episode CZ dabing.mkv', sample_url='sample', duration_sec=2500))
+
+
+def test_unanimous_slovak_samples_recover_a_real_deferred_original(monkeypatch):
+    detector = PipelinedLanguageDetector()
+    samples = iter([('sk', .91827154), ('sk', .52921146), ('sk', .65585202), ('sk', .44218436)])
+    offsets = []
+    def detect(url, offset):
+        offsets.append(offset)
+        return next(samples)
+    monkeypatch.setattr(detector, '_detect_at', detect)
+    candidate = Candidate('34609528', 'detail', 'Episode CZ', filename='Episode CZ.mp4',
+        sample_url='original', width=1920, height=1080, duration_sec=2513, size_bytes=2188564363,
+        match_tier=MatchTier.STRONG)
+    provider = EpisodeSourceProvider(None, detector=detector)
+    monkeypatch.setattr(provider, 'search', lambda _: [candidate])
+    monkeypatch.setattr(provider, '_inspect', lambda _episode, row: row)
+    selected = provider.discover_fresh(episode())
+    assert selected.audio_language == 'sk'
+    assert selected.language_probability == pytest.approx((.91827154 + .65585202) / 2)
+    assert selected._language_selection['czech_search_complete']
+    assert selected._language_selection['czech_found'] is False
+    assert offsets == [180, 628, 1256, 1884]
+
+
+@pytest.mark.parametrize('samples', [
+    [('sk', .92), ('sk', .64), ('sk', .44), ('sk', .30)],  # Only one clear sample.
+    [('sk', .92), ('sk', .65), ('sk', .25), ('en', .40)],  # Conflicting language.
+    [('sk', .64), ('sk', .64), ('sk', .64), ('sk', .64)],  # No clear samples.
+    [('sk', .92), ('sk', .649), ('sk', .40), ('sk', .30)],  # No rounded threshold.
+])
+def test_unclear_or_conflicting_consensus_stays_below_acceptance(monkeypatch, samples):
+    detector = PipelinedLanguageDetector()
+    remaining = iter(samples[1:])
+    monkeypatch.setattr(detector, '_detect_at', lambda *a: next(remaining, ('sk', .30)))
+    language, confidence = detector.detect_consensus('sample', 2513, initial=samples[0], preferred_language='cs')
+    assert language == 'sk' and confidence < .65
+
+
+@pytest.mark.parametrize('extra,accepted,expected_offsets', [
+    ([('sk', .85)], True, [628, 1256, 1884, 1005]),
+    ([('sk', .40), ('sk', .85)], True, [628, 1256, 1884, 1005, 1507]),
+    ([('sk', .40), ('sk', .50)], False, [628, 1256, 1884, 1005, 1507]),
+    ([('en', .90)], False, [628, 1256, 1884, 1005]),
+])
+def test_single_clear_unanimous_vote_gets_bounded_new_evidence(monkeypatch, extra, accepted, expected_offsets):
+    detector = PipelinedLanguageDetector()
+    samples = iter([('sk', .529), ('sk', .64), ('sk', .442)] + extra)
+    offsets = []
+    def detect(url, offset):
+        offsets.append(offset)
+        return next(samples)
+    monkeypatch.setattr(detector, '_detect_at', detect)
+    language, confidence = detector.detect_consensus('sample', 2513, initial=('sk', .918), preferred_language='cs')
+    assert language == 'sk' and (confidence >= .65) is accepted
+    assert offsets == expected_offsets
+
+
+def test_additional_consensus_samples_never_reuse_a_short_episode_position(monkeypatch):
+    detector = PipelinedLanguageDetector()
+    offsets = []
+    def detect(url, offset):
+        offsets.append(offset)
+        assert 0 <= offset <= 25
+        return 'sk', .4
+    monkeypatch.setattr(detector, '_detect_at', detect)
+    language, confidence = detector.detect_consensus('sample', 100, initial=('sk', .9), preferred_language='cs')
+    assert language == 'sk' and confidence < .65
+    assert offsets == [0, 12]
+
+
+@pytest.mark.parametrize('duration,expected', [(240, [60, 120, 165, 96, 144]), (100, [25, 0, 12])])
+def test_retry_sample_cannot_be_counted_twice_to_approve_a_language(monkeypatch, duration, expected):
+    detector = PipelinedLanguageDetector()
+    initial = min(60, duration - detector.seconds)
+    offsets = []
+    def detect(url, offset):
+        offsets.append(offset)
+        return 'sk', .9 if offset == initial else .4
+    monkeypatch.setattr(detector, '_detect_at', detect)
+    provider = EpisodeSourceProvider(None, detector=detector)
+    with pytest.raises(LanguageDetectionError, match='confidence'):
+        provider.verify_language_retry(episode(), Candidate('1', 'detail', 'Episode CZ',
+            filename='Episode CZ.mp4', sample_url='original', duration_sec=duration))
+    assert offsets == expected
+    assert len(offsets) == len(set(offsets))
+
+
+def test_consensus_allows_search_to_reach_the_next_czech_original(monkeypatch):
+    detector = PipelinedLanguageDetector()
+    first = Candidate('1', 'detail-1', 'Episode CZ', filename='Episode CZ.mp4',
+        sample_url='first', width=1280, height=720, duration_sec=2535, size_bytes=500000000,
+        match_tier=MatchTier.STRONG)
+    second = Candidate('2', 'detail-2', 'Episode CZ dabing', filename='Episode CZ dabing.mkv',
+        sample_url='second', width=720, height=576, duration_sec=2417, size_bytes=522785178,
+        match_tier=MatchTier.STRONG)
+    samples = iter([('sk', .7415), ('sk', .6167), ('sk', .7867), ('cs', .6267)])
+    checked = []
+    def detect(url, offset):
+        checked.append(url)
+        return next(samples) if url == 'first' else ('cs', .974)
+    monkeypatch.setattr(detector, '_detect_at', detect)
+    provider = EpisodeSourceProvider(None, detector=detector)
+    monkeypatch.setattr(provider, 'search', lambda _: [first, second])
+    monkeypatch.setattr(provider, '_inspect', lambda _episode, candidate: candidate)
+    selected = provider.discover(episode())
+    assert selected.source_id == '2' and selected.audio_language == 'cs'
+    assert selected.language_probability >= .65
+    assert checked == ['first'] * 4 + ['second']
+
+
+@pytest.mark.parametrize('duration,expected', [(420, [105, 210, 315]), (100, [0, 12]), (30, [])])
+def test_short_episode_consensus_never_seeks_past_end_or_duplicates_initial(monkeypatch, duration, expected):
+    detector = PipelinedLanguageDetector()
+    offsets = []
+    def detect(url, offset):
+        assert 0 <= offset < duration
+        assert offset + min(detector.seconds, duration) <= duration
+        offsets.append(offset)
+        return 'cs', .95
+    monkeypatch.setattr(detector, '_detect_at', detect)
+    initial = detector.detect_for_duration('sample', duration)
+    initial_offset = offsets.pop()
+    assert initial_offset == min(180, max(0, duration - 75))
+    assert detector.detect_consensus('sample', duration, initial=initial, preferred_language='cs') == ('cs', .95)
+    assert offsets == expected
+    assert initial_offset not in offsets and len(set(offsets)) == len(offsets)
+
+
+def test_short_episode_provider_rechecks_disagreement_inside_real_duration(monkeypatch):
+    detector = PipelinedLanguageDetector()
+    offsets = []
+    def detect(url, offset):
+        offsets.append(offset)
+        assert offset + 75 <= 420
+        return ('en', .8) if offset == 180 else ('cs', .9)
+    monkeypatch.setattr(detector, '_detect_at', detect)
+    provider = EpisodeSourceProvider(None, detector=detector)
+    result = provider._verify_language(episode(), Candidate('1', 'url', 'title',
+        filename='Episode CZ dabing.mkv', sample_url='sample', duration_sec=420))
+    assert result.audio_language == 'cs' and result.language_probability == .9
+    assert offsets == [180, 105, 210, 315]
+
+
+def test_failed_download_never_loads_model_or_leaks_sample(monkeypatch):
+    detector = PipelinedLanguageDetector()
+    paths = []
+    def extract(url, offset, path):
+        paths.append(path)
+        path.write_bytes(b'partial')
+        raise LanguageDetectionError('ffmpeg failed')
+    monkeypatch.setattr(detector, '_extract', extract)
+    monkeypatch.setattr(detector, '_load_model', lambda: pytest.fail('No complete sample'))
+    with pytest.raises(LanguageDetectionError):
+        detector.detect('signed-url')
+    assert not paths[0].exists()
+    assert detector.metrics()['failures'] == 1
+    assert detector.metrics()['sample_count'] == 1
+
+
+def test_extraction_uses_original_and_sdk_decoder_limits(tmp_path, monkeypatch):
+    from sdilej_serialy import audio_pipeline
+    commands = []
+    def run(command, **kwargs):
+        commands.append((command, kwargs))
+        Path(command[-1]).write_bytes(b'audio')
+        return SimpleNamespace(returncode=0)
+    monkeypatch.setattr(audio_pipeline.subprocess, 'run', run)
+    monkeypatch.setenv('WHISPER_FFMPEG_TIMEOUT_SECONDS', '130')
+    detector = PipelinedLanguageDetector()
+    detector._extract('original', 180, tmp_path / 'sample.wav')
+    command, kwargs = commands[0]
+    for option, value in [('-ss', '180'), ('-t', '75'), ('-i', 'original'),
+                          ('-ac', '1'), ('-ar', '16000'), ('-rw_timeout', '130000000')]:
+        assert command[command.index(option) + 1] == value
+    assert kwargs['timeout'] == 130 and kwargs['capture_output']

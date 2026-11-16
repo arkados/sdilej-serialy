@@ -1,0 +1,233 @@
+"""Positive search evidence is a dispatch hint, never upload authorization."""
+import re
+import time
+from collections import defaultdict, deque
+from datetime import datetime, timedelta
+
+from sdilej_serialy.media.models import MatchTier
+
+from .episodes import EPISODE_CODE_RE, episode_match, normalize, series_aliases
+from .models import Episode
+from .source_workers import DISPATCH_WAIT
+from .language_hints import audio_language_hint, search_hint_rank
+
+
+class CandidateIndex:
+    def __init__(self, catalog):
+        self.aliases = defaultdict(list)
+        self.hints = {}
+        self.dubbed_hints = set()
+        self.recovered_hints = set()
+        self.seen = set()
+        for metadata in catalog:
+            episode = Episode.from_dict(metadata)
+            for alias in {normalize(a) for a in series_aliases(episode)}:
+                self.aliases[alias, episode.season, episode.number].append(episode)
+
+    def observe(self, candidates):
+        for row in candidates:
+            marker = (row['source_id'], row['title'])
+            if marker in self.seen:
+                continue
+            self.seen.add(marker)
+            matches = list(EPISODE_CODE_RE.finditer(row['title']))
+            if len(matches) != 1:
+                continue
+            match = matches[0]
+            code = int(match['season'] or match['sx']), int(match['episode'] or match['ex'])
+            prefix = normalize(row['title'][:match.start()])
+            words = re.sub(r'\b(?:19|20)\d{2}\b', ' ', prefix).split()
+            # Match only known alias prefixes, then apply the exact existing
+            # sequel/range/episode guards. Avoid comparing every result with
+            # thousands of unrelated S01E01 catalog rows.
+            for end in range(1, len(words) + 1):
+                for episode in self.aliases.get((' '.join(words[:end]), *code), ()):
+                    tier, evidence = episode_match(episode, row['title'])
+                    if tier not in (MatchTier.STRONG, MatchTier.SOLID):
+                        continue
+                    if evidence.get('single_episode_suffix'):
+                        self.recovered_hints.add(episode.identity)
+                    hint = audio_language_hint(row['title'])
+                    rank = search_hint_rank(row['title'])
+                    if hint in ('cs', 'sk'):
+                        self.dubbed_hints.add(episode.identity)
+                    self.hints[episode.identity] = min(rank, self.hints.get(episode.identity, 3))
+
+    def rank(self, identity):
+        return self.hints.get(identity, 3)
+
+
+def series_probe_allowed(row, paused, index=None, records=None, *, urgent=False):
+    """A series-wide miss cannot disprove a different exact dubbed source."""
+    if row['series_id'] not in paused:
+        return True
+    identity = Episode.from_dict(row).identity
+    return (urgent and index is not None and identity in index.dubbed_hints
+            and (records or {}).get(identity, {}).get('consecutive_failures', 0) < 3)
+
+
+def hinted_transport_retry(identity, index, records):
+    """Dispatch evidence only: a dubbed hit whose original was not inspected."""
+    return (index.rank(identity) == 0 and records.get(identity, {}).get('reason') in (
+        'transient_original', 'transient_search', 'source_search_unavailable'))
+
+
+def indexed_order(catalog, fresh_ids, paused, index, refresh, progress, *,
+                  productive_seasons=None, records=None, available=None, clock=time.monotonic,
+                  wait_for_changes=False, urgent=False):
+    """Eight fresh probes (up to six prioritized) and two due retries per round.
+
+    All lanes share one pending set. The exploration cursor survives restarts;
+    publishing/selection still belongs to the existing single producer.
+    """
+    pending = {Episode.from_dict(row).identity: row for row in catalog}
+    productive_seasons = productive_seasons if productive_seasons is not None else set()
+    records = records if records is not None else {}
+    positions = {identity: n for n, identity in enumerate(pending)}
+    series_orders = {}
+    for identity, row in pending.items():
+        # A legacy empty search can join the fresh lane when a peer discovers
+        # its exact source. Its exploration cursor needs the same stable order.
+        series_orders[row['series_id']] = (row.get('imdb_rating') is None, -(row.get('imdb_rating') or 0),
+                                          -(row.get('imdb_votes') or 0), row['series_id'])
+    groups, series, retries = defaultdict(deque), deque(), deque()
+    hinted, productive, dubbed_retries = deque(), deque(), deque()
+    refreshed = float('-inf')
+
+    def exploration_lanes():
+        # take() skips paused rows without deleting them from pending. Rebuild
+        # every lane so an expired pause can restore even an unhinted episode.
+        lanes = defaultdict(deque)
+        for identity, row in pending.items():
+            if identity in fresh_ids:
+                lanes[row['series_id']].append(identity)
+        order = list(lanes)
+        cursor = progress.get('last_series')
+        if cursor in order:
+            position = order.index(cursor) + 1
+            order = order[position:] + order[:position]
+        elif progress.get('last_series_order'):
+            anchor = tuple(progress['last_series_order'])
+            order = ([s for s in order if series_orders[s] > anchor]
+                     + [s for s in order if series_orders[s] <= anchor])
+        return lanes, deque(order)
+
+    def productive_identity(identity):
+        row = pending[identity]
+        return (row['series_id'], row['season']) in productive_seasons
+
+    def retry_priority(identity):
+        failures = records.get(identity, {}).get('consecutive_failures', 0)
+        return (not (urgent and hinted_transport_retry(identity, index, records)),
+                failures >= 3, not productive_identity(identity), index.rank(identity),
+                failures, positions[identity])
+
+    def take(lane):
+        while lane:
+            identity = lane.popleft()
+            row = pending.get(identity)
+            if (row is not None and series_probe_allowed(row, paused, index, records, urgent=urgent)
+                    and (available is None or available(row))):
+                del pending[identity]
+                return row
+
+    def explore():
+        while series:
+            series_id = series.popleft()
+            row = take(groups[series_id])
+            if groups[series_id]:
+                series.append(series_id)
+            if row is not None:
+                progress['last_series'] = series_id
+                progress['last_series_order'] = list(series_orders[series_id])
+                return row
+
+    while pending:
+        if clock() - refreshed >= 60:
+            refresh()
+            groups, series = exploration_lanes()
+            # A filename/search hit must not smuggle a due retry into the
+            # fresh lane. Otherwise old CZ hints can consume all six slots
+            # even after dozens of failed speech/original checks.
+            hinted = deque(sorted((i for i in pending if i in fresh_ids and index.rank(i) < 2),
+                                  key=lambda i: (index.rank(i), positions[i])))
+            productive = deque(sorted((i for i in pending if i in fresh_ids
+                                        and productive_identity(i) and index.rank(i) != 2),
+                                       key=lambda i: (index.rank(i), positions[i])))
+            retries = deque(sorted((i for i in pending if i not in fresh_ids), key=retry_priority))
+            dubbed_retries = deque(sorted((i for i in pending if i not in fresh_ids
+                and i in index.dubbed_hints), key=retry_priority)) if urgent else deque()
+            refreshed = clock()
+        emitted = hinted_count = dubbed_count = 0
+        for _ in range(2):
+            row = take(dubbed_retries)
+            if row is None:
+                break
+            emitted += 1
+            dubbed_count += 1
+            yield row
+        # Restore recently proven Czech seasons to the production scheduler,
+        # not only its cache-less fallback. Keep room for other indexed hints,
+        # unexplored series and bounded due retries in every round.
+        for lane, budget in ((productive, 4), (hinted, 6)):
+            for _ in range(min(budget, 6 - dubbed_count - hinted_count)):
+                row = take(lane)
+                if row is None:
+                    break
+                emitted += 1
+                hinted_count += 1
+                yield row
+        # Unused hint slots go to exploration, not more repeated old failures.
+        for _ in range(8 - dubbed_count - hinted_count):
+            row = explore()
+            if row is None:
+                break
+            emitted += 1
+            yield row
+        for _ in range(2):
+            row = take(retries)
+            if row is None:
+                break
+            emitted += 1
+            yield row
+        if not emitted:
+            if not wait_for_changes:
+                return
+            yield DISPATCH_WAIT
+            refreshed = float('-inf')
+
+
+def paused_series(records, now):
+    return {int(key) for key, value in records.items()
+            if value.get('retry_after') and datetime.fromisoformat(value['retry_after']) > now}
+
+
+def release_expired_pauses(records, paused, now):
+    """Release only elapsed pauses, preserving explicit/version-specific unpauses."""
+    expired = {series_id for series_id in paused
+               if records.get(str(series_id), {}).get('retry_after')
+               and datetime.fromisoformat(records[str(series_id)]['retry_after']) <= now}
+    paused.difference_update(expired)
+    return expired
+
+
+def record_series_result(records, episode, result, now):
+    """A bounded scheduling cooldown, never a verdict on unsearched episodes."""
+    if result.get('reason') == 'source_search_unavailable':
+        return
+    key = str(episode.series_id)
+    previous = records.get(key, {})
+    if result['status'] == 'prepared':
+        records[key] = dict(misses=[], updated_at=now.isoformat())
+        return
+    # A completed pause gives the series a new small probe budget.
+    expired = (previous.get('retry_after')
+               and datetime.fromisoformat(previous['retry_after']) <= now)
+    misses = [] if expired else list(previous.get('misses', []))
+    if episode.identity not in misses:
+        misses.append(episode.identity)
+    record = dict(misses=misses[-3:], updated_at=now.isoformat())
+    if len(misses) >= 3:
+        minutes = 240 if result.get('reason') in ('no_matches', 'verified_non_czech', 'no_acceptable_original') else 30
+        record['retry_after'] = (now + timedelta(minutes=minutes)).isoformat()
+    records[key] = record

@@ -1,0 +1,297 @@
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import tempfile
+import threading
+import time
+from datetime import timedelta
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any, Callable
+
+from sdilej_serialy.media.models import Candidate
+from sdilej_serialy.media import prehrajto
+
+from .episodes import EpisodeSourceProvider, display_name
+from .models import Episode
+from .target import existing_episode, episode_key
+from .quality import QUALITY_POLICY, upload_eligible
+
+
+TARGET_EMAIL = "legacy-target@example.invalid"
+_TARGET_LOGIN_LOCK = threading.RLock()
+
+
+def now_iso() -> str:
+    return datetime.now(UTC).isoformat()
+
+
+def atomic_json(path: Path, value: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    descriptor, temporary_name = tempfile.mkstemp(prefix=f".{path.name}.", dir=path.parent)
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8") as output:
+            json.dump(value, output, ensure_ascii=False, indent=2)
+            output.write("\n")
+            output.flush()
+            os.fsync(output.fileno())
+        os.replace(temporary_name, path)
+    finally:
+        if os.path.exists(temporary_name):
+            os.unlink(temporary_name)
+
+
+class EpisodeState:
+    def __init__(self, path: Path, *, on_save=None):
+        self.path = path
+        self.on_save = on_save
+        self._lock = threading.RLock()
+        if path.exists():
+            self.data = json.loads(path.read_text(encoding="utf-8"))
+        else:
+            self.data = {"schema_version": 1, "episodes": {}}
+        if self.data.get("schema_version") != 1:
+            raise RuntimeError("Unsupported episode state schema")
+        self.data.setdefault("episodes", {})
+
+    def row(self, episode: Episode) -> dict:
+        with self._lock:
+            return self.data["episodes"].setdefault(episode.identity, {})
+
+    def uploaded(self, episode: Episode) -> bool:
+        with self._lock:
+            return bool(self.data['episodes'].get(episode.identity, {}).get("upload", {}).get("target_video_id"))
+
+    def inspected(self, episode: Episode) -> None:
+        with self._lock:
+            self.row(episode)['last_inspected_at'] = now_iso()
+            self.save()
+
+    def tracked_identities(self) -> set[str]:
+        with self._lock:
+            return set(self.data["episodes"])
+
+    def retry_deferred_identities(self) -> set[str]:
+        """Persisted backoff: 15 minutes, up to 60 for repeated unavailable sources."""
+        now = datetime.now(UTC)
+        def retry_minutes(row):
+            consecutive = 0
+            for attempt in reversed(row.get('attempts', [])):
+                if attempt['error'] != 'SourceUnavailable':
+                    break
+                consecutive += 1
+            return 15 * 2 ** min(max(consecutive - 1, 0), 2)
+        with self._lock:
+            return {
+                identity for identity, row in self.data['episodes'].items()
+                if row.get('attempts')
+                and datetime.fromisoformat(row['attempts'][-1]['at']) > now - timedelta(minutes=retry_minutes(row))
+                and not row.get('upload')
+            }
+
+    def save(self) -> None:
+        with self._lock:
+            self.data["updated_at"] = now_iso()
+            atomic_json(self.path, self.data)
+            if self.on_save:
+                self.on_save(self.path)
+
+    def claim(self, episode: Episode, worker_id: str, *, lease_hours: int = 6) -> bool:
+        with self._lock:
+            if episode.identity in self.retry_deferred_identities():
+                return False
+            row = self.row(episode)
+            key = episode_key(f"{episode.series_title} {episode.code}")
+            row["episode_key"] = key
+            for identity, other in self.data["episodes"].items():
+                if identity == episode.identity:
+                    continue
+                other_key = other.get("episode_key") or episode_key(other.get("upload", {}).get("display_name", ""))
+                if other_key != key:
+                    continue
+                if other.get("upload", {}).get("target_video_id"):
+                    row["upload"] = dict(other["upload"])
+                    self.save()
+                    return False
+                if other.get("claim") or other.get("prepared_target"):
+                    return False
+            if row.get("upload", {}).get("target_video_id"):
+                return False
+            existing = row.get("claim") or {}
+            expiry = existing.get("lease_expires_at")
+            if expiry and datetime.fromisoformat(expiry) > datetime.now(UTC):
+                return False
+            row["claim"] = {
+                "worker_id": worker_id,
+                "run_id": os.environ.get("GITHUB_RUN_ID"),
+                "claimed_at": now_iso(),
+                "lease_expires_at": (datetime.now(UTC) + timedelta(hours=lease_hours)).isoformat(),
+            }
+            self.save()
+            return True
+
+    def release_orphaned_claims(self) -> int:
+        """A new serialized Actions run may safely release prior-run leases."""
+        current_run = os.environ.get("GITHUB_RUN_ID")
+        if not current_run:
+            return 0
+        with self._lock:
+            released = 0
+            for row in self.data["episodes"].values():
+                claim = row.get("claim") or {}
+                if claim and claim.get("run_id") != current_run:
+                    row.pop("claim", None)
+                    released += 1
+            if released:
+                self.save()
+            return released
+
+    def prepared(self, episode: Episode, candidate: Candidate, name: str) -> None:
+        with self._lock:
+            self.row(episode)["source"] = {
+                "source_id": candidate.source_id,
+                "source_url": candidate.url,
+                "source_title": candidate.title,
+                "source_filename": candidate.filename,
+                "size_bytes": candidate.size_bytes,
+                "duration_sec": candidate.duration_sec,
+                "width": candidate.width,
+                "height": candidate.height,
+                "audio_language": candidate.audio_language,
+                "language_probability": candidate.language_probability,
+                "language_tier": candidate.language_tier.name.lower(),
+                "match_evidence": candidate.match_evidence,
+                "display_name": name,
+                "prepared_at": now_iso(),
+            }
+            self.save()
+
+    def success(self, episode: Episode, video_id: str, name: str) -> None:
+        with self._lock:
+            row = self.row(episode)
+            row["upload"] = {"target_video_id": str(video_id), "display_name": name, "uploaded_at": now_iso()}
+            row.pop("prepared_target", None)
+            row.pop("transfer_receipt", None)
+            row.pop("claim", None)
+            self.save()
+
+    def failure(self, episode: Episode, error: Exception) -> None:
+        with self._lock:
+            row = self.row(episode)
+            row.setdefault("attempts", []).append({"at": now_iso(), "error": type(error).__name__})
+            row["attempts"] = row["attempts"][-3:]
+            # An uncertain target must never be replaced by another upload.
+            row.pop("claim", None)
+            self.save()
+
+
+def plan_sha(rows: list[dict]) -> str:
+    stable = [
+        {
+            "episode_id": row["episode"]["episode_id"],
+            "identity": row["identity"],
+            "source_id": row["selected"]["source_id"],
+            "source_url": row["selected"]["url"],
+            "display_name": row["display_name"],
+        }
+        for row in rows
+    ]
+    payload = json.dumps(stable, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def build_plan(
+    episodes: list[Episode],
+    provider: EpisodeSourceProvider,
+    state: EpisodeState,
+    limit: int,
+    *,
+    on_prepared: Callable[[dict], None] | None = None,
+    on_inspected: Callable[[Episode], None] | None = None,
+    deadline_monotonic: float | None = None,
+) -> list[dict]:
+    rows: list[dict] = []
+    for episode in episodes:
+        if deadline_monotonic is not None and time.monotonic() >= deadline_monotonic:
+            break
+        if state.uploaded(episode):
+            continue
+        candidate = provider.discover(episode)
+        if on_inspected:
+            on_inspected(episode)
+        if candidate is None:
+            continue
+        name = display_name(episode, candidate)
+        state.prepared(episode, candidate, name)
+        row = {
+            "episode": episode.to_dict(),
+            "identity": episode.identity,
+            "selected": candidate.to_dict(),
+            "display_name": name,
+            "quality_policy": QUALITY_POLICY,
+        }
+        rows.append(row)
+        if on_prepared:
+            on_prepared(row)
+        if len(rows) >= limit:
+            break
+    return rows
+
+
+def target_session(email: str, password: str, *, expected_email: str = TARGET_EMAIL):
+    if email.strip().casefold() != expected_email.strip().casefold():
+        raise RuntimeError(f"Refusing target account other than {expected_email}")
+    # The uploader is shared with the film pipeline. Its account guard is set
+    # for this process only; secrets stay external to the repository.
+    from .auth import target_login_with_retry
+    # The dependency uses a module-level account guard. Serialize logins and
+    # restore it before another account logs in; sessions themselves are separate.
+    with _TARGET_LOGIN_LOCK:
+        previous = prehrajto.EXPECTED_EMAIL
+        try:
+            prehrajto.EXPECTED_EMAIL = expected_email.strip().casefold()
+            from .resilience import retry_target_reads
+            return retry_target_reads(target_login_with_retry(prehrajto.login, email, password))
+        finally:
+            prehrajto.EXPECTED_EMAIL = previous
+
+
+def upload_plan(rows: list[dict], state: EpisodeState, source_email: str, source_password: str, target_email: str, target_password: str) -> int:
+    source_provider = EpisodeSourceProvider.authenticated(source_email, source_password)
+    target = target_session(target_email, target_password)
+    uploaded = 0
+    for row in rows:
+        episode = Episode.from_dict(row["episode"])
+        if not upload_eligible(row):
+            continue
+        if not state.claim(episode, "pilot"):
+            continue
+        candidate = Candidate.from_dict(row["selected"])
+        try:
+            known = existing_episode(target, row["display_name"],
+                                     state.row(episode).get('prepared_target', {}).get('target_video_id'))
+            if known:
+                state.success(episode, known, row["display_name"])
+                uploaded += 1
+                continue
+            if state.row(episode).get("prepared_target"):
+                raise RuntimeError("Existing upload requires reconciliation")
+            state.row(episode)["prepared_target"] = {"creation_intent": True}
+            state.save()
+            refreshed = source_provider.refresh(candidate, session=source_provider.session)
+            if refreshed.source_id != candidate.source_id or refreshed.url != candidate.url:
+                raise RuntimeError("Source identity changed before upload")
+
+            def record_prepared(video_id: str, size: int) -> None:
+                state.row(episode)["prepared_target"] = {"target_video_id": video_id, "size_bytes": size, "at": now_iso()}
+                state.save()
+
+            result = prehrajto.relay_upload(target, source_provider.session, refreshed, row["display_name"], episode.description, on_prepared=record_prepared)
+            state.success(episode, result.video_id, row["display_name"])
+            uploaded += 1
+        except Exception as error:
+            state.failure(episode, error)
+            raise
+    return uploaded

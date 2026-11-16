@@ -1,0 +1,94 @@
+name: source-quality-audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      identity:
+        description: Optional single series:season:episode identity
+        required: false
+        default: ''
+      force:
+        description: Recheck already reviewed SD/720p entries
+        type: boolean
+        default: false
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sdilej-serialy-source-preparation
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    if: vars.QUALITY_AUDIT_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      QUALITY_AUDIT_ENABLED: ${{ vars.QUALITY_AUDIT_ENABLED }}
+      DUAL_GENERATION: ${{ vars.DUAL_GENERATION }}
+      AUDIT_IDENTITY: ${{ inputs.identity }}
+      AUDIT_FORCE: ${{ inputs.force }}
+      SOURCE_PREPARATION_ENABLED: ${{ vars.SOURCE_PREPARATION_ENABLED }}
+      HF_HOME: /tmp/huggingface
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Give replenishment priority when the unused reserve is low
+        id: reserve
+        shell: bash
+        run: |
+          set -euo pipefail
+          pip install .
+          python -m sdilej_serialy.migration --generation "$DUAL_GENERATION"
+          [[ "$DUAL_GENERATION" =~ ^[a-z0-9][a-z0-9-]{0,63}$ ]]
+          if [[ "$SOURCE_PREPARATION_ENABLED" != true || -n "$AUDIT_IDENTITY" ]]; then
+            echo 'needed=true' >> "$GITHUB_OUTPUT"
+          else
+            reserve_needed=$(python -m sdilej_serialy.reserve --generation "$DUAL_GENERATION" --decision audit)
+            echo "needed=$reserve_needed" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/cache@v4
+        if: steps.reserve.outputs.needed == 'true'
+        with:
+          path: ${{ env.HF_HOME }}
+          key: whisper-small-${{ runner.os }}-v1
+      - name: Install original-media and language inspection tools
+        if: steps.reserve.outputs.needed == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes ffmpeg
+          pip install ".[whisper]"
+          python -m sdilej_serialy.audio_check
+      - name: Configure durable audit checkpoints
+        if: steps.reserve.outputs.needed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Review saved SD and 720p originals with one source worker
+        if: steps.reserve.outputs.needed == 'true'
+        shell: bash
+        env:
+          SDILEJ_EMAIL: ${{ secrets.SDILEJ_EMAIL }}
+          SDILEJ_PASSWORD: ${{ secrets.SDILEJ_PASSWORD }}
+        run: |
+          set -euo pipefail
+          [[ "$DUAL_GENERATION" =~ ^[a-z0-9][a-z0-9-]{0,63}$ ]]
+          audit_runtime=300
+          if [[ "$SOURCE_PREPARATION_ENABLED" == true ]]; then audit_runtime=60; fi
+          audit_options=(--generation "$DUAL_GENERATION" --persist-git-state --limit 500 --runtime-minutes "$audit_runtime")
+          if [[ -n "$AUDIT_IDENTITY" ]]; then
+            [[ "$AUDIT_IDENTITY" =~ ^[0-9]+:[0-9]+:[0-9]+$ ]]
+            audit_options+=(--identity "$AUDIT_IDENTITY")
+          fi
+          if [[ "$AUDIT_FORCE" == true ]]; then
+            audit_options+=(--force)
+          fi
+          python -m sdilej_serialy.source_audit "${audit_options[@]}"

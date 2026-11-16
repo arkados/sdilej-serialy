@@ -1,0 +1,61 @@
+name: test
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'state/**'
+      - 'reports/**'
+      - 'recovery/**'
+      - 'dual/**'
+      - 'manifests/**'
+      - 'backlog/**'
+      - 'audit/**'
+
+jobs:
+  preserved-history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install .
+      - name: Verify frozen account ownership and every preserved target ID
+        run: python -m sdilej_serialy.migration --generation pair-2026-09-25
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install audio and subtitle inspection tests
+        run: |
+          sudo python3 scripts/configure_ubuntu_mirrors.py
+          sudo apt-get -o Acquire::Retries=2 update
+          sudo apt-get -o Acquire::Retries=2 install -y --no-install-recommends ffmpeg tesseract-ocr tesseract-ocr-ces tesseract-ocr-eng fonts-dejavu-core
+          pip install ".[test,visual]"
+      - run: pytest
+
+  whisper-runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      HF_HOME: /tmp/huggingface
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.HF_HOME }}
+          key: whisper-small-${{ runner.os }}-v1
+      - run: pip install ".[whisper]"
+      - run: python -m sdilej_serialy.audio_check

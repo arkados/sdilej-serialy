@@ -1,0 +1,119 @@
+name: prepare-source-reserve
+
+on:
+  workflow_dispatch:
+    inputs:
+      identity:
+        description: Optional series:season:episode checks, comma-separated (up to 50)
+        required: false
+        default: ''
+  schedule:
+    - cron: '9,39 * * * *'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sdilej-serialy-source-preparation
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    if: vars.SOURCE_PREPARATION_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      HF_HOME: /tmp/huggingface
+      SOURCE_PREPARATION_ENABLED: ${{ vars.SOURCE_PREPARATION_ENABLED }}
+      DUAL_GENERATION: ${{ vars.DUAL_GENERATION }}
+      PREPARATION_IDENTITY: ${{ inputs.identity }}
+      SOURCE_DISCOVERY_WORKERS: ${{ vars.SOURCE_DISCOVERY_WORKERS || '2' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Check actual unused reserve before loading Whisper
+        id: reserve
+        shell: bash
+        run: |
+          set -euo pipefail
+          pip install .
+          python -m sdilej_serialy.migration --generation "$DUAL_GENERATION"
+          [[ "$DUAL_GENERATION" =~ ^[a-z0-9][a-z0-9-]{0,63}$ ]]
+          if [[ -n "$PREPARATION_IDENTITY" ]]; then
+            echo 'needed=true' >> "$GITHUB_OUTPUT"
+          else
+            reserve_needed=$(python -m sdilej_serialy.reserve --generation "$DUAL_GENERATION" --decision prepare)
+            echo "needed=$reserve_needed" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check authenticated original download access
+        id: source_access
+        if: steps.reserve.outputs.needed == 'true'
+        env:
+          SDILEJ_EMAIL: ${{ secrets.SDILEJ_EMAIL }}
+          SDILEJ_PASSWORD: ${{ secrets.SDILEJ_PASSWORD }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python -m sdilej_serialy.source_access
+      - uses: actions/cache@v4
+        if: steps.reserve.outputs.needed == 'true' && steps.source_access.outputs.available == 'true'
+        with:
+          path: ${{ env.HF_HOME }}
+          key: whisper-small-${{ runner.os }}-v1
+      - name: Install original-media and Czech audio inspection tools
+        if: steps.reserve.outputs.needed == 'true' && steps.source_access.outputs.available == 'true'
+        timeout-minutes: 10
+        run: |
+          # Azure's regional mirror repeatedly downloaded below 60 kB/s and
+          # exhausted the setup deadline before discovery could start.
+          for mirror_file in /etc/apt/apt-mirrors*.txt /etc/apt/sources.list /etc/apt/sources.list.d/ubuntu.sources; do
+            if [ -f "$mirror_file" ]; then
+              sudo sed -i -E 's#https?://azure[.]archive[.]ubuntu[.]com/ubuntu#https://archive.ubuntu.com/ubuntu#g' "$mirror_file"
+            fi
+          done
+          sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update
+          sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 install --yes --no-install-recommends ffmpeg tesseract-ocr tesseract-ocr-ces tesseract-ocr-eng
+          pip install ".[whisper,visual]"
+          python -m sdilej_serialy.audio_check
+      - name: Configure durable preparation checkpoints
+        if: steps.reserve.outputs.needed == 'true' && steps.source_access.outputs.available == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Fill missing aired episode metadata before source discovery
+        if: steps.reserve.outputs.needed == 'true' && steps.source_access.outputs.available == 'true' && inputs.identity == ''
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: python -m sdilej_serialy.catalog_refresh --persist-git-state
+      - name: Prepare new originals from cached catalog and append reserve
+        if: steps.reserve.outputs.needed == 'true' && steps.source_access.outputs.available == 'true'
+        shell: bash
+        env:
+          SDILEJ_EMAIL: ${{ secrets.SDILEJ_EMAIL }}
+          SDILEJ_PASSWORD: ${{ secrets.SDILEJ_PASSWORD }}
+        run: |
+          set -euo pipefail
+          [[ "$DUAL_GENERATION" =~ ^[a-z0-9][a-z0-9-]{0,63}$ ]]
+          preparation_options=(--generation "$DUAL_GENERATION" --limit 500 --runtime-minutes 110 --persist-git-state --workers "$SOURCE_DISCOVERY_WORKERS" --checkpoint-batch 5 --maintain-reserve)
+          if [[ -n "$PREPARATION_IDENTITY" ]]; then
+            [[ "$PREPARATION_IDENTITY" =~ ^[0-9]+:[0-9]+:[0-9]+(,[0-9]+:[0-9]+:[0-9]+)*$ ]]
+            IFS=',' read -ra requested_identities <<< "$PREPARATION_IDENTITY"
+            (( ${#requested_identities[@]} <= 50 ))
+            for identity in "${requested_identities[@]}"; do
+              preparation_options+=(--identity "$identity")
+            done
+          fi
+          python -m sdilej_serialy.replenish "${preparation_options[@]}"
+      - name: Hand off completed preparation without waiting for cron
+        if: success() && steps.reserve.outputs.needed == 'true' && steps.source_access.outputs.available == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DUAL_ENABLED: ${{ vars.DUAL_ENABLED }}
+          DUAL_FULL_ENABLED: ${{ vars.DUAL_FULL_ENABLED }}
+        run: python -m sdilej_serialy.supervise --generation "$DUAL_GENERATION" --handoff source --apply

@@ -1,0 +1,410 @@
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import re
+import subprocess
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+from collections import deque
+from pathlib import Path
+
+from .catalog import fetch_episode_rows, load_jsonl, prepare_episodes, readonly_connection, write_jsonl_gzip
+from .continuous import upload_continuously, uploaded_identities
+from .episodes import EpisodeSourceProvider
+from .git_state import GitCheckpointPersister
+from .manifest import SourceManifest
+from .models import Episode
+from .pipeline import EpisodeState, build_plan, plan_sha, upload_plan
+from .quality import QUALITY_POLICY
+from .target import episode_key
+
+
+ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path(__file__).resolve().parents[2])).resolve()
+
+
+def require_env(name: str) -> str:
+    value = os.environ.get(name)
+    if not value:
+        raise SystemExit(f"{name} is required")
+    return value
+
+
+def export_catalog(args) -> int:
+    connection = readonly_connection(require_env("DATABASE_URL"))
+    try:
+        rows = prepare_episodes(fetch_episode_rows(connection))
+        connection.rollback()
+    finally:
+        connection.close()
+    # A targeted pilot must not first be discarded by the general top-series
+    # limit.  Apply its identity filters before the optional broad ranking cap.
+    if args.series_id:
+        rows = [row for row in rows if row["series_id"] == args.series_id]
+    if args.season is not None:
+        rows = [row for row in rows if row["season"] == args.season]
+    if args.episode is not None:
+        rows = [row for row in rows if row["episode"] == args.episode]
+    if args.series_limit and not args.series_id:
+        rows = [row for row in rows if row["series_priority_rank"] <= args.series_limit]
+    if args.episode_limit:
+        rows = rows[: args.episode_limit]
+    write_jsonl_gzip(args.out, rows)
+    print(f"exported_episodes={len(rows)} output={args.out}")
+    return 0
+
+
+def prepare(args) -> int:
+    episodes = [Episode.from_dict(row) for row in load_jsonl(args.backlog)]
+    state = EpisodeState(args.state)
+    provider = EpisodeSourceProvider.authenticated(require_env("SDILEJ_EMAIL"), require_env("SDILEJ_PASSWORD"))
+    rows = build_plan(episodes, provider, state, args.limit)
+    document = {"schema_version": 1, "created_at": __import__("datetime").datetime.now(__import__("datetime").UTC).isoformat(), "rows": rows}
+    document["sha256"] = plan_sha(rows)
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    args.out.write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"prepared={len(rows)} plan_sha={document['sha256']} output={args.out}")
+    return 0
+
+
+def prepare_queue(args) -> int:
+    episodes = [Episode.from_dict(row) for row in load_jsonl(args.backlog)]
+    state = EpisodeState(args.state)
+    manifest = SourceManifest(args.manifest)
+    source_email = require_env("SDILEJ_EMAIL")
+    source_password = require_env("SDILEJ_PASSWORD")
+    if args.limit < 1:
+        raise ValueError("--limit must be at least 1")
+    if not 1 <= args.workers <= 2:
+        raise ValueError("--workers must be between 1 and 2")
+    if not 0 <= args.runtime_minutes <= 330:
+        raise ValueError("--runtime-minutes must be between 0 and 330")
+    providers = [
+        EpisodeSourceProvider.authenticated(source_email, source_password)
+        for _ in range(args.workers)
+    ]
+    persister = GitCheckpointPersister(ROOT, (args.manifest,)) if args.persist_git_state else None
+    inspected: set[str] = set()
+    inspected_lock = threading.Lock()
+    deadline = time.monotonic() + args.runtime_minutes * 60 if args.runtime_minutes else None
+    last_scan_checkpoint = time.monotonic()
+
+    def persist_prepared(row: dict) -> None:
+        manifest.add(row)
+        manifest.save()
+        if persister:
+            persister(args.state)
+
+    def mark_inspected(episode: Episode) -> None:
+        nonlocal last_scan_checkpoint
+        with inspected_lock:
+            inspected.add(episode.identity)
+            state.inspected(episode)
+            print(f'source_inspected={episode.identity}', flush=True)
+            if persister and time.monotonic() - last_scan_checkpoint >= 60:
+                persister(args.state)
+                last_scan_checkpoint = time.monotonic()
+
+    def prepare_batch(candidates: list[Episode]) -> list[dict]:
+        worker_count = min(len(providers), args.limit, len(candidates))
+        base_limit, extra = divmod(args.limit, worker_count)
+
+        def prepare_worker(index: int) -> list[dict]:
+            worker_limit = base_limit + (1 if index < extra else 0)
+            return build_plan(
+                candidates[index::worker_count],
+                providers[index],
+                state,
+                worker_limit,
+                on_prepared=persist_prepared,
+                on_inspected=mark_inspected,
+                deadline_monotonic=deadline,
+            )
+
+        if worker_count == 1:
+            return prepare_worker(0)
+        with ThreadPoolExecutor(max_workers=worker_count) as executor:
+            batches = executor.map(prepare_worker, range(worker_count))
+            return [row for batch in batches for row in batch]
+
+    rows: list[dict] = []
+    while True:
+        known = manifest.identities()
+        upload_path = ROOT / 'state' / 'episodes.json'
+        uploads = json.loads(upload_path.read_text())['episodes'] if upload_path.exists() else {}
+        occupied_keys = {episode_key(r.get('upload', {}).get('display_name', ''))
+                         for r in uploads.values() if r.get('upload')}
+        recheck = {identity for identity, row in manifest.rows.items()
+                   if row.get('quality_policy') != QUALITY_POLICY
+                   and not any(uploads.get(identity, {}).get(k) for k in ('upload', 'claim', 'prepared_target'))
+                   and episode_key(row.get('display_name', '')) not in occupied_keys}
+        with inspected_lock:
+            candidates = [
+                episode
+                for episode in episodes
+                if (episode.identity not in known or episode.identity in recheck) and episode.identity not in inspected
+            ]
+        candidates = fair_source_order(candidates, recheck, state.data['episodes'])
+        if recheck:
+            print(f'sources_pending_review={len(recheck)}', flush=True)
+        if candidates:
+            # A continuous batch must be bounded by inspections, not only by
+            # successful discoveries. Otherwise sparse/foreign-only series
+            # can occupy a worker for hours while subsequent available
+            # episodes wait for the next scheduling round.
+            if deadline is not None:
+                candidates = candidates[:args.limit]
+            rows.extend(prepare_batch(candidates))
+        if deadline is None or time.monotonic() >= deadline:
+            break
+        if not candidates:
+            # Every missing episode was inspected during this run. Retry the
+            # unresolved set after a short pause instead of spinning hot.
+            with inspected_lock:
+                inspected.clear()
+            time.sleep(min(5.0, max(0.0, deadline - time.monotonic())))
+    state.save()
+    manifest.save()
+    if persister:
+        persister(args.state)
+    print(f"prepared={len(rows)} queue_size={len(manifest.identities())} manifest={args.manifest}")
+    return 0
+
+
+def fair_source_order(episodes, recheck, scan_rows):
+    """Alternate fresh backlog and stale reviews, oldest actual attempt first.
+
+    Empty legacy state rows are not proof that discovery ever ran. Persisted
+    attempt timestamps prevent the same failures monopolizing every restart.
+    """
+    def attempted(episode):
+        row = scan_rows.get(episode.identity, {})
+        return row.get('last_inspected_at') or row.get('source', {}).get('prepared_at', '')
+    def rotate_series(items):
+        # A long foreign-only or slow series must not occupy both workers
+        # for hours. Keep oldest-attempt/catalog order within each series,
+        # but give every other series a turn before its next episode.
+        groups = {}
+        for item in sorted(items, key=attempted):
+            groups.setdefault(item.series_id, deque()).append(item)
+        active = deque(groups.values())
+        result = []
+        while active:
+            group = active.popleft()
+            result.append(group.popleft())
+            if group:
+                active.append(group)
+        return result
+
+    fresh = rotate_series(e for e in episodes if e.identity not in recheck)
+    stale = rotate_series(e for e in episodes if e.identity in recheck)
+    result = []
+    for index in range(max(len(fresh), len(stale))):
+        if index < len(fresh):
+            result.append(fresh[index])
+        if index < len(stale):
+            result.append(stale[index])
+    return result
+
+
+def upload(args) -> int:
+    document = json.loads(args.plan.read_text(encoding="utf-8"))
+    rows = document.get("rows") or []
+    actual = plan_sha(rows)
+    if document.get("sha256") != actual or args.approved_sha != actual:
+        raise SystemExit("Plan SHA does not match the reviewed plan")
+    count = upload_plan(rows, EpisodeState(args.state), require_env("SDILEJ_EMAIL"), require_env("SDILEJ_PASSWORD"), require_env("PREHRAJTO_EMAIL"), require_env("PREHRAJTO_PASSWORD"))
+    print(f"uploaded={count} plan_sha={actual}")
+    return 0
+
+
+def continuous(args) -> int:
+    if os.environ.get("CONTINUOUS_ENABLED") != "true":
+        raise SystemExit("Continuous mode requires CONTINUOUS_ENABLED=true")
+    persister = GitCheckpointPersister(ROOT, (args.report,)) if args.persist_git_state else None
+    state = EpisodeState(args.state, on_save=persister)
+    manifest = SourceManifest(args.manifest)
+    rows = manifest.pending(uploaded_identities(state) | state.retry_deferred_identities(), limit=args.limit)
+
+    def refill_rows() -> list[dict]:
+        payload = (
+            persister.read_remote_file(str(args.manifest.resolve().relative_to(ROOT.resolve())))
+            if persister
+            else args.manifest.read_text(encoding="utf-8")
+        )
+        merged = manifest.merge_jsonl(payload)
+        if merged:
+            print(f"verified_sources_refreshed={merged}", flush=True)
+        return manifest.pending(uploaded_identities(state) | state.retry_deferred_identities(), limit=args.limit)
+
+    result = upload_continuously(
+        rows,
+        state,
+        workers=args.workers,
+        source_email=require_env("SDILEJ_EMAIL"),
+        source_password=require_env("SDILEJ_PASSWORD"),
+        target_email=require_env("PREHRAJTO_EMAIL"),
+        target_password=require_env("PREHRAJTO_PASSWORD"),
+        refill_rows=refill_rows,
+    )
+    args.report.parent.mkdir(parents=True, exist_ok=True)
+    args.report.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if persister:
+        persister(args.state)
+    print("continuous=" + json.dumps(result, ensure_ascii=False))
+    return 0
+
+
+def prepare_restore(args) -> int:
+    from .recovery import prepare_recovery
+    commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    plan = prepare_recovery(ROOT, args.generation, args.history, args.manifest, commit)
+    print(json.dumps(plan))
+    return 0
+
+
+def restore(args) -> int:
+    from sdilej_serialy.media import prehrajto
+    from .recovery import load_recovery
+    from .pipeline import atomic_json, now_iso, target_session
+
+    if os.environ.get('RECOVERY_ENABLED') != 'true':
+        raise SystemExit('Recovery requires RECOVERY_ENABLED=true')
+    if args.limit < 1 or not 1 <= args.workers <= 6:
+        raise ValueError('Invalid recovery limit or worker count')
+    directory, plan, manifest = load_recovery(ROOT, args.generation)
+    report_path = directory / 'report.json'
+    persister = GitCheckpointPersister(ROOT, (report_path,)) if args.persist_git_state else None
+    state = EpisodeState(directory / 'state.json', on_save=persister)
+    if args.mode == 'full' and not state.data.get('pilot_verified_at'):
+        raise RuntimeError('A completed recovery pilot is required before full replay')
+    target = target_session(require_env('PREHRAJTO_EMAIL'), require_env('PREHRAJTO_PASSWORD'))
+    count = prehrajto.uploaded_video_count(target)
+    if count is None:
+        raise RuntimeError('Cannot verify target account statistics')
+    if not state.data.get('target_initialized_at'):
+        if count != 0 or state.data['episodes']:
+            raise RuntimeError('Initial recovery must start with an empty account and new state')
+        state.data['target_initialized_at'] = now_iso()
+        state.save()
+    elif count == 0 and any(r.get('upload') or r.get('prepared_target') for r in state.data['episodes'].values()):
+        raise RuntimeError('Target appears empty again; refusing to mix account generations')
+    rows = manifest.pending(uploaded_identities(state) | state.retry_deferred_identities(),
+                            limit=plan['selected_count'] if args.mode == 'pilot' else args.limit)
+    if args.mode == 'pilot':
+        rows = sorted(rows, key=lambda r: (r['selected'].get('height', 0) < 1080,
+                                          r['selected']['size_bytes'], r['identity']))[:args.limit]
+    result = upload_continuously(
+        rows, state, workers=args.workers,
+        source_email=require_env('SDILEJ_EMAIL'), source_password=require_env('SDILEJ_PASSWORD'),
+        target_email=require_env('PREHRAJTO_EMAIL'), target_password=require_env('PREHRAJTO_PASSWORD'),
+        require_original_size=True,
+    ) if rows else {'queued': 0, 'uploaded_or_reconciled': 0}
+    completed = uploaded_identities(state)
+    result.update(generation=args.generation, total=plan['selected_count'],
+                  completed=len(completed), remaining=plan['selected_count'] - len(completed))
+    atomic_json(report_path, result)
+    if persister:
+        persister(state.path)
+    print('recovery=' + json.dumps(result))
+    return 0
+
+
+def verify_recovery(args) -> int:
+    from sdilej_serialy.media import prehrajto
+    from .pipeline import now_iso, target_session
+    from .recovery import load_recovery
+    from .target import listing_rows
+
+    directory, plan, manifest = load_recovery(ROOT, args.generation)
+    persister = GitCheckpointPersister(ROOT) if args.persist_git_state else None
+    state = EpisodeState(directory / 'state.json', on_save=persister)
+    uploads = [r['upload'] for r in state.data['episodes'].values() if r.get('upload')]
+    if len(uploads) < 2 or any(r.get('claim') or r.get('prepared_target') for r in state.data['episodes'].values()):
+        raise RuntimeError('Pilot requires two completed uploads and no uncertain transfers')
+    target = target_session(require_env('PREHRAJTO_EMAIL'), require_env('PREHRAJTO_PASSWORD'))
+    count = prehrajto.uploaded_video_count(target)
+    if count is None or count < len(uploads):
+        raise RuntimeError('Target statistics do not confirm pilot uploads')
+    for upload in uploads:
+        # The pilot contains only a few videos: every matching target must be
+        # unique, including videos still undergoing target-side transcoding.
+        query = re.match(r'^(.*?\s+S\d+E\d+)', upload['display_name'])[1]
+        query = re.sub(r'\*+', ' ', query)
+        response = target.get(prehrajto.BASE_URL + '/profil/nahrana-videa',
+                              params={'searchPhrase': query}, timeout=30)
+        response.raise_for_status()
+        matches = [r for r in listing_rows(response.text)
+                   if r['key'] == episode_key(upload['display_name'])]
+        if len(matches) != 1 or matches[0]['id'] != upload['target_video_id']:
+            raise RuntimeError('Pilot target missing or duplicated')
+    state.data['pilot_verified_at'] = now_iso()
+    state.data['pilot_target_count'] = count
+    state.save()
+    print(f'pilot_verified={len(uploads)} target_count={count} generation={args.generation}')
+    return 0
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    commands = parser.add_subparsers(dest="command", required=True)
+    export = commands.add_parser("export-catalog")
+    export.add_argument("--out", type=Path, default=ROOT / "backlog" / "series-episodes.jsonl.gz")
+    export.add_argument("--series-limit", type=int)
+    export.add_argument("--series-id", type=int)
+    export.add_argument("--season", type=int)
+    export.add_argument("--episode", type=int)
+    export.add_argument("--episode-limit", type=int)
+    export.set_defaults(func=export_catalog)
+    prepare_cmd = commands.add_parser("prepare")
+    prepare_cmd.add_argument("--backlog", type=Path, default=ROOT / "backlog" / "series-episodes.jsonl.gz")
+    prepare_cmd.add_argument("--out", type=Path, default=ROOT / "plans" / "pilot-plan.json")
+    prepare_cmd.add_argument("--state", type=Path, default=ROOT / "state" / "episodes.json")
+    prepare_cmd.add_argument("--limit", type=int, default=1)
+    prepare_cmd.set_defaults(func=prepare)
+    queue_cmd = commands.add_parser("prepare-queue")
+    queue_cmd.add_argument("--backlog", type=Path, default=ROOT / "backlog" / "series-episodes.jsonl.gz")
+    queue_cmd.add_argument("--state", type=Path, default=ROOT / "state" / "source-scan.json")
+    queue_cmd.add_argument("--manifest", type=Path, default=ROOT / "manifests" / "selected-episodes.jsonl")
+    queue_cmd.add_argument("--limit", type=int, default=20)
+    queue_cmd.add_argument("--workers", type=int, default=1)
+    queue_cmd.add_argument("--runtime-minutes", type=int, default=0)
+    queue_cmd.add_argument("--persist-git-state", action="store_true")
+    queue_cmd.set_defaults(func=prepare_queue)
+    upload_cmd = commands.add_parser("upload")
+    upload_cmd.add_argument("--plan", type=Path, default=ROOT / "plans" / "pilot-plan.json")
+    upload_cmd.add_argument("--state", type=Path, default=ROOT / "state" / "episodes.json")
+    upload_cmd.add_argument("--approved-sha", required=True)
+    upload_cmd.set_defaults(func=upload)
+    continuous_cmd = commands.add_parser("continuous")
+    continuous_cmd.add_argument("--state", type=Path, default=ROOT / "state" / "episodes.json")
+    continuous_cmd.add_argument("--manifest", type=Path, default=ROOT / "manifests" / "selected-episodes.jsonl")
+    continuous_cmd.add_argument("--report", type=Path, default=ROOT / "reports" / "continuous.json")
+    continuous_cmd.add_argument("--limit", type=int, default=50)
+    continuous_cmd.add_argument("--workers", type=int, default=int(os.environ.get("UPLOAD_WORKERS", "1")))
+    continuous_cmd.add_argument("--persist-git-state", action="store_true")
+    continuous_cmd.set_defaults(func=continuous)
+    restore_plan_cmd = commands.add_parser('prepare-recovery')
+    restore_plan_cmd.add_argument('--generation', required=True)
+    restore_plan_cmd.add_argument('--history', type=Path, default=ROOT / 'state' / 'episodes.json')
+    restore_plan_cmd.add_argument('--manifest', type=Path, default=ROOT / 'manifests' / 'selected-episodes.jsonl')
+    restore_plan_cmd.set_defaults(func=prepare_restore)
+    restore_cmd = commands.add_parser('restore')
+    restore_cmd.add_argument('--generation', required=True)
+    restore_cmd.add_argument('--mode', choices=('pilot', 'full'), default='pilot')
+    restore_cmd.add_argument('--workers', type=int, default=1)
+    restore_cmd.add_argument('--limit', type=int, default=2)
+    restore_cmd.add_argument('--persist-git-state', action='store_true')
+    restore_cmd.set_defaults(func=restore)
+    verify_cmd = commands.add_parser('verify-recovery')
+    verify_cmd.add_argument('--generation', required=True)
+    verify_cmd.add_argument('--persist-git-state', action='store_true')
+    verify_cmd.set_defaults(func=verify_recovery)
+    args = parser.parse_args()
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
