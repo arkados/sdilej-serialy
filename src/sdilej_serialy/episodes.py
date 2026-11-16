@@ -170,6 +170,20 @@ def display_name(episode: Episode, candidate: Candidate) -> str:
     return title + " CZ titulky"
 
 
+def native_czech_name(row, metadata):
+    """Normalize a new transfer's label without rewriting its frozen queue row."""
+    info = metadata.get(str(row['episode']['series_id']), {})
+    if (info.get('status') != 'verified' or info.get('original_language') != 'cs'
+            or row['selected'].get('audio_language') != 'cs'):
+        return row
+    episode = Episode.from_dict(row['episode'])
+    if episode.original_language not in (None, 'cs'):
+        return row
+    episode = replace(episode, original_language='cs')
+    return dict(row, episode=dict(row['episode'], original_language='cs'),
+                display_name=display_name(episode, Candidate.from_dict(row['selected'])))
+
+
 class EpisodeSourceProvider:
     """Find, verify and later refresh stable episode detail URLs.
 

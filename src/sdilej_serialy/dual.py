@@ -348,6 +348,8 @@ def _run(root, generation, mode, limit_per_account=25, persist=False, idle_refil
     if mode == 'full' and not state.data.get('pilot_verified_at'):
         raise RuntimeError('A verified four-episode pilot is required')
     creds = credentials(plan)
+    metadata_path = root / 'state/series-metadata.json'
+    series_metadata = json.loads(metadata_path.read_text()) if metadata_path.exists() else {}
     source_email, source_password = os.environ.get('SDILEJ_EMAIL'), os.environ.get('SDILEJ_PASSWORD')
     if not source_email or not source_password:
         raise RuntimeError('Source credentials are required')
@@ -387,7 +389,9 @@ def _run(root, generation, mode, limit_per_account=25, persist=False, idle_refil
 
         def select_source(row):
             repaired = repair_feed.select(row)
-            return repaired if repaired.get('source_repair') else upgrade_feed.select(row)
+            selected = repaired if repaired.get('source_repair') else upgrade_feed.select(row)
+            from .episodes import native_czech_name
+            return native_czech_name(selected, series_metadata)
 
         def account_worker(alias):
             email, password = creds[alias]

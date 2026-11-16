@@ -278,3 +278,16 @@ def test_old_pending_targets_cannot_fill_the_new_upload_batch(tmp_path, monkeypa
     assert len(result) == 5
     assert sum(row in allocated for row in result) == 1
     assert sum(row not in allocated for row in result) == 4
+
+
+def test_frozen_native_czech_backlog_gets_the_correct_new_label_without_rewriting_its_row():
+    from sdilej_serialy.episodes import native_czech_name
+    ep, candidate, absence, row, _ = fixture()
+    row['episode'].pop('original_language')
+    row['selected'].update(audio_language='cs', language_tier='czech_audio')
+    row['display_name'] = 'Český název S01E01 1080p CZ Dabing'
+    original = deepcopy(row)
+    result = native_czech_name(row, {'99': {'status': 'verified', 'original_language': 'cs'}})
+    assert result['display_name'] == 'Český název S01E01 1080p'
+    assert result['identity'] == row['identity'] and result['selected'] == row['selected']
+    assert row == original
