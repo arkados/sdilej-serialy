@@ -1365195,7 +1365195,7 @@
       "queue_rank": 42695
     }
   },
-  "updated_at": "2026-11-16T21:04:45.430077+00:00",
+  "updated_at": "2026-11-16T21:06:14.550353+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1370112,9 +1370112,30 @@
       "retry_after": "2026-11-10T14:22:56.669477+00:00",
       "source_id": "34144086",
       "queue_rank": 38166
+    },
+    "411:1:1": {
+      "at": "2026-11-16T20:58:13.778234+00:00",
+      "status": "deferred",
+      "method": "source_repair",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_english_czech_subtitles",
+      "elapsed_seconds": 419.1,
+      "source_repair_revision": 3,
+      "repair_fingerprint": "8ac857f56ad53acd63ec00ecf7899ce716dafe54a6b4b500857d3b48196d8779",
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-16T21:35:12.903665+00:00"
     }
   },
-  "series_discovery": {},
+  "series_discovery": {
+    "411": {
+      "misses": [
+        "411:1:1"
+      ],
+      "updated_at": "2026-11-16T21:05:12.903707+00:00"
+    }
+  },
   "discovery_progress": {
     "last_series": 7108,
     "last_series_order": [
