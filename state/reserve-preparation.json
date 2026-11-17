@@ -528539,22 +528539,19 @@
       "queue_rank": 30665
     },
     "2685:2:1": {
-      "at": "2026-10-27T20:01:40.530413+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T22:02:31.809679+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 1,
+      "czech_fallback_revision": 1,
       "request_probe_revision": 1,
-      "method": "discovery",
-      "reason": "verified_non_czech",
-      "observed_audio_language": "en",
-      "observed_language_probability": 0.983860969543457,
-      "observed_source_id": "35170212",
-      "elapsed_seconds": 56.26,
-      "consecutive_failures": 3,
-      "retry_after": "2026-10-28T20:02:37.789126+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.966624915599823,
+      "observed_source_id": "35442807",
+      "elapsed_seconds": 81.95,
+      "source_id": "35442807",
+      "queue_rank": 43070
     },
     "2661:3:3": {
       "at": "2026-10-29T10:22:56.049674+00:00",
@@ -1201992,84 +1201989,16 @@
       "queue_rank": 37053
     },
     "9746:1:1": {
-      "at": "2026-11-08T22:47:28.300394+00:00",
+      "at": "2026-11-17T22:02:32.837676+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 45.42,
-      "search_evidence": [
-        {
-          "path": "/moje-chuva-upirka-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202144,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/moje-chuva-upirka/s/-6",
-          "status": 200,
-          "response_bytes": 205514,
-          "boxes": 4,
-          "parsed_candidates": 4,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/my-babysitter-s-a-vampire-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202292,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/my-babysitter-s-a-vampire/s/-6",
-          "status": 200,
-          "response_bytes": 202184,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/moje-chuva-upirka-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202106,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/moje-chuva-upirka/s/-6",
-          "status": 200,
-          "response_bytes": 205505,
-          "boxes": 4,
-          "parsed_candidates": 4,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/my-babysitter-s-a-vampire-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202388,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/my-babysitter-s-a-vampire/s/-6",
-          "status": 200,
-          "response_bytes": 202101,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T22:48:13.717916+00:00"
+      "elapsed_seconds": 59.34,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T22:03:49.647007+00:00"
     },
     "4314:1:1": {
       "at": "2026-11-08T22:47:29.186173+00:00",
@@ -1366399,7 +1366328,7 @@
       "queue_rank": 43069
     }
   },
-  "updated_at": "2026-11-17T22:03:27.566899+00:00",
+  "updated_at": "2026-11-17T22:04:53.785431+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1371919,6 +1371848,16 @@
         "3584:1:1"
       ],
       "updated_at": "2026-11-17T22:01:03.221562+00:00"
+    },
+    "9746": {
+      "misses": [
+        "9746:1:1"
+      ],
+      "updated_at": "2026-11-17T22:03:49.647035+00:00"
+    },
+    "2685": {
+      "misses": [],
+      "updated_at": "2026-11-17T22:03:53.761994+00:00"
     }
   },
   "discovery_progress": {
