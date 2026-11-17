@@ -5,9 +5,9 @@
   "prepared_this_run": 0,
   "reserve_total": 34373,
   "queue_total": 42808,
-  "updated_at": "2026-11-17T07:33:09.438557+00:00",
+  "updated_at": "2026-11-17T07:34:41.040590+00:00",
   "workers": 4,
-  "elapsed_seconds": 66.97,
+  "elapsed_seconds": 158.58,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -15,33 +15,31 @@
   "target_stock": 3000,
   "stock": {
     "queue_total": 42808,
-    "ready": 5,
+    "ready": 0,
     "ready_by_account": {
-      "a": 4,
-      "b": 1
+      "a": 0,
+      "b": 0
     },
     "categories": {
-      "completed": 41911,
-      "allocated": 876,
+      "completed": 41919,
+      "allocated": 874,
       "failed": 12,
-      "language_review": 3,
-      "in_flight": 1,
-      "ready": 5
+      "language_review": 3
     },
     "completed_by_account": {
-      "a": 20949,
-      "b": 20962
+      "a": 20954,
+      "b": 20965
     },
-    "uploads_last_24h": 594,
-    "uploads_per_hour_24h": 24.75,
-    "stock_hours_24h": 0.2
+    "uploads_last_24h": 599,
+    "uploads_per_hour_24h": 24.96,
+    "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "buffered",
+    "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1624,
-      "b": 674
+      "a": 123,
+      "b": 446
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 2,
@@ -63,9 +61,11 @@
     ]
   },
   "cache": {
-    "search_miss": 11,
-    "search_seconds": 165.76,
-    "search_hit": 2
+    "search_miss": 15,
+    "search_seconds": 313.7,
+    "search_hit": 4,
+    "media_miss": 2,
+    "media_seconds": 7.91
   },
   "audio_pipeline": {},
   "productive_seasons": 186,
