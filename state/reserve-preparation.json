@@ -270938,16 +270938,18 @@
       "retry_after": "2026-10-17T04:42:43.173458+00:00"
     },
     "702:1:7": {
-      "at": "2026-11-17T12:45:20.850264+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T13:28:57.694600+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "inconclusive_audio",
-      "elapsed_seconds": 927.01,
-      "consecutive_failures": 9,
-      "retry_after": "2026-11-18T13:05:40.973669+00:00"
+      "observed_audio_language": "en",
+      "observed_language_probability": 0.8835047880808512,
+      "observed_source_id": "28225118",
+      "elapsed_seconds": 484.41,
+      "source_id": "28225118",
+      "queue_rank": 42892
     },
     "1628:1:5": {
       "at": "2026-10-16T23:08:41.470268+00:00",
@@ -1199312,18 +1199314,18 @@
       "queue_rank": 36871
     },
     "1:1:1": {
-      "at": "2026-11-16T13:32:00.287373+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T13:32:22.174968+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "transient_original",
-      "elapsed_seconds": 35.53,
-      "consecutive_failures": 20,
-      "retry_after": "2026-11-16T19:32:38.779128+00:00"
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9834833145141602,
+      "observed_source_id": "34296650",
+      "elapsed_seconds": 254.69,
+      "source_id": "34296650",
+      "queue_rank": 42891
     },
     "8734:1:1": {
       "at": "2026-11-17T13:10:41.997665+00:00",
@@ -1363153,7 +1363155,7 @@
       "retry_after": "2026-11-17T21:35:48.123259+00:00"
     },
     "153:2:4": {
-      "at": "2026-11-17T09:16:15.495819+00:00",
+      "at": "2026-11-17T13:35:38.681306+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
@@ -1363163,12 +1363165,12 @@
       "observed_language_probability": 0.8869695663452148,
       "observed_source_id": "34904969",
       "reason": "inconclusive_subtitles",
-      "elapsed_seconds": 148.03,
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-17T13:18:43.523110+00:00"
+      "elapsed_seconds": 80.86,
+      "consecutive_failures": 4,
+      "retry_after": "2026-11-17T21:36:59.545696+00:00"
     },
     "153:2:5": {
-      "at": "2026-11-17T09:23:38.525090+00:00",
+      "at": "2026-11-17T13:35:49.153248+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
@@ -1363178,9 +1363180,9 @@
       "observed_language_probability": 0.8523700833320618,
       "observed_source_id": "34904972",
       "reason": "inconclusive_subtitles",
-      "elapsed_seconds": 153.47,
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-17T13:31:22.697966+00:00"
+      "elapsed_seconds": 82.7,
+      "consecutive_failures": 4,
+      "retry_after": "2026-11-17T21:37:11.852748+00:00"
     },
     "153:2:6": {
       "at": "2026-11-17T10:42:09.480093+00:00",
@@ -1364638,7 +1364640,7 @@
       "queue_rank": 42890
     }
   },
-  "updated_at": "2026-11-17T13:36:17.421490+00:00",
+  "updated_at": "2026-11-17T13:37:30.458663+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1369464,10 +1369466,12 @@
     },
     "153": {
       "misses": [
-        "153:2:2",
-        "153:2:3"
+        "153:2:3",
+        "153:2:4",
+        "153:2:5"
       ],
-      "updated_at": "2026-11-17T13:35:48.123300+00:00"
+      "updated_at": "2026-11-17T13:37:11.852774+00:00",
+      "retry_after": "2026-11-17T14:07:11.852774+00:00"
     },
     "3708": {
       "misses": [],
@@ -1369817,10 +1369821,8 @@
       "retry_after": "2026-11-17T13:16:49.682057+00:00"
     },
     "702": {
-      "misses": [
-        "702:1:8"
-      ],
-      "updated_at": "2026-11-17T13:23:33.898250+00:00"
+      "misses": [],
+      "updated_at": "2026-11-17T13:37:02.448760+00:00"
     },
     "8766": {
       "misses": [
@@ -1369867,6 +1369869,10 @@
         "1653:1:1"
       ],
       "updated_at": "2026-11-17T13:35:37.855206+00:00"
+    },
+    "1": {
+      "misses": [],
+      "updated_at": "2026-11-17T13:36:36.865464+00:00"
     }
   },
   "discovery_progress": {
