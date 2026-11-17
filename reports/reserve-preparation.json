@@ -1,57 +1,57 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44131094334",
-  "attempted_this_run": 27,
-  "prepared_this_run": 15,
-  "reserve_total": 34528,
-  "queue_total": 42963,
-  "updated_at": "2026-11-17T17:41:38.883866+00:00",
+  "attempted_this_run": 32,
+  "prepared_this_run": 16,
+  "reserve_total": 34529,
+  "queue_total": 42964,
+  "updated_at": "2026-11-17T17:43:03.766046+00:00",
   "workers": 4,
-  "elapsed_seconds": 2598.44,
-  "prepared_per_hour": 20.78,
-  "available_this_run": 15,
-  "available_per_hour": 20.78,
+  "elapsed_seconds": 2683.32,
+  "prepared_per_hour": 21.47,
+  "available_this_run": 16,
+  "available_per_hour": 21.47,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 42963,
-    "ready": 9,
+    "queue_total": 42964,
+    "ready": 10,
     "ready_by_account": {
       "a": 6,
-      "b": 3
+      "b": 4
     },
     "categories": {
-      "completed": 42062,
-      "allocated": 877,
+      "completed": 42065,
+      "allocated": 874,
       "failed": 12,
       "language_review": 3,
-      "ready": 9
+      "ready": 10
     },
     "completed_by_account": {
-      "a": 21024,
-      "b": 21038
+      "a": 21026,
+      "b": 21039
     },
-    "uploads_last_24h": 540,
-    "uploads_per_hour_24h": 22.5,
-    "stock_hours_24h": 0.4
+    "uploads_last_24h": 543,
+    "uploads_per_hour_24h": 22.62,
+    "stock_hours_24h": 0.44
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1961,
-      "b": 104
+      "a": 130,
+      "b": 123
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 7,
-      "inconclusive_audio": 2,
+      "inconclusive_audio": 4,
       "no_acceptable_original": 1,
-      "prepared": 15,
-      "source_search_unavailable": 1,
+      "prepared": 16,
+      "transient_search": 2,
       "no_english_czech_subtitles": 2
     }
   },
-  "indexed_candidates_in_scan": 1571,
+  "indexed_candidates_in_scan": 1586,
   "discovery_progress": {
     "last_series": 5339,
     "last_series_order": [
@@ -62,22 +62,22 @@
     ]
   },
   "cache": {
-    "search_miss": 126,
-    "search_seconds": 2072.86,
+    "search_miss": 151,
+    "search_seconds": 2231.83,
     "search_hit": 10,
     "media_miss": 111,
-    "media_seconds": 586.68,
-    "media_hit": 140,
-    "audio_miss": 25,
-    "audio_seconds": 671.87,
-    "audio_hit": 3
+    "media_seconds": 590.55,
+    "media_hit": 143,
+    "audio_miss": 26,
+    "audio_seconds": 937.01,
+    "audio_hit": 5
   },
   "audio_pipeline": {
-    "sample_count": 34,
-    "download_seconds": 595.25,
+    "sample_count": 38,
+    "download_seconds": 855.37,
     "inference_wait_seconds": 0.0,
-    "inference_seconds": 76.49,
-    "failures": 2
+    "inference_seconds": 81.5,
+    "failures": 4
   },
   "productive_seasons": 186,
   "series_paused_this_run": 1,
@@ -89,7 +89,7 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 34528,
+    "prepared": 34529,
     "deferred": 38692
   },
   "requested_series": [
@@ -2893,7 +2893,7 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 11,
+    "control_requests": 12,
     "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
@@ -2902,9 +2902,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724021,
+        "response_bytes": 723994,
         "parsed_candidates": 412,
-        "body_sha256": "1163b3dc606210cf1a157277fb7759a2ad3b52ce31a56192ebc80c8f76680821",
+        "body_sha256": "ed7fcb269215ff2e47b77442c50d41c42b25cc20ccdfd21d0cabd37c2ae25abd",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2913,7 +2913,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-17T17:41:20.872016+00:00"
+        "checked_at": "2026-11-17T17:42:52.388126+00:00"
       }
     ]
   }
