@@ -5,27 +5,28 @@
   "prepared_this_run": 14,
   "reserve_total": 34481,
   "queue_total": 42916,
-  "updated_at": "2026-11-17T15:19:22.696036+00:00",
+  "updated_at": "2026-11-17T15:21:01.397905+00:00",
   "workers": 4,
-  "elapsed_seconds": 4309.44,
-  "prepared_per_hour": 11.7,
+  "elapsed_seconds": 4408.14,
+  "prepared_per_hour": 11.43,
   "available_this_run": 14,
-  "available_per_hour": 11.7,
+  "available_per_hour": 11.43,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 42916,
-    "ready": 3,
+    "ready": 2,
     "ready_by_account": {
       "a": 1,
-      "b": 2
+      "b": 1
     },
     "categories": {
       "completed": 42024,
       "allocated": 874,
       "failed": 12,
       "language_review": 3,
-      "ready": 3
+      "in_flight": 1,
+      "ready": 2
     },
     "completed_by_account": {
       "a": 21007,
@@ -33,21 +34,21 @@
     },
     "uploads_last_24h": 508,
     "uploads_per_hour_24h": 21.17,
-    "stock_hours_24h": 0.14
+    "stock_hours_24h": 0.09
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 113,
-      "b": 211
+      "a": 212,
+      "b": 309
     },
     "preparation_outcomes_last_hour": {
       "inconclusive_subtitles": 2,
       "inconclusive_audio": 1,
-      "prepared": 10,
       "no_english_czech_subtitles": 3,
-      "no_matches": 1
+      "no_matches": 1,
+      "prepared": 9
     }
   },
   "indexed_candidates_in_scan": 1276,
@@ -62,18 +63,18 @@
   },
   "cache": {
     "search_miss": 130,
-    "search_seconds": 2557.28,
+    "search_seconds": 2561.36,
     "search_hit": 14,
     "media_hit": 80,
-    "media_miss": 107,
-    "media_seconds": 741.02,
-    "audio_miss": 47,
+    "media_miss": 130,
+    "media_seconds": 833.58,
+    "audio_miss": 48,
     "audio_hit": 34,
     "audio_seconds": 1016.35
   },
   "audio_pipeline": {
-    "sample_count": 79,
-    "download_seconds": 828.57,
+    "sample_count": 80,
+    "download_seconds": 835.59,
     "inference_wait_seconds": 4.08,
     "inference_seconds": 182.76
   },
