@@ -204,12 +204,43 @@
       "identity": "1410:2:37",
       "account": "b",
       "target_video_id": "31105839",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 8,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e37-vanocni-prazdniny-phinease-a-ferba-1080p-cz-titulky-titulky-cekaji-mkv/8c1d582db68a90cf",
-      "checked_at": "2026-11-17T13:45:21.893912+00:00",
-      "retry_after": "2026-11-17T14:00:21.893936+00:00"
+      "checked_at": "2026-11-17T22:39:33.778712+00:00",
+      "retry_after": "2026-11-17T22:54:33.778725+00:00",
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      }
     },
     "31105881": {
       "identity": "1410:2:57",
@@ -776,5 +807,5 @@
       "retry_after": "2026-11-17T22:52:29.065424+00:00"
     }
   },
-  "updated_at": "2026-11-17T22:37:55.793459+00:00"
+  "updated_at": "2026-11-17T22:39:33.778734+00:00"
 }
