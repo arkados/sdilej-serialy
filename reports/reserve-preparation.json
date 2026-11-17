@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44063118923",
-  "attempted_this_run": 0,
+  "attempted_this_run": 1,
   "prepared_this_run": 0,
   "reserve_total": 34394,
   "queue_total": 42829,
-  "updated_at": "2026-11-17T10:24:16.537216+00:00",
+  "updated_at": "2026-11-17T10:25:52.941917+00:00",
   "workers": 4,
-  "elapsed_seconds": 158.93,
+  "elapsed_seconds": 255.33,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -15,42 +15,41 @@
   "target_stock": 3000,
   "stock": {
     "queue_total": 42829,
-    "ready": 2,
+    "ready": 0,
     "ready_by_account": {
-      "a": 2,
+      "a": 0,
       "b": 0
     },
     "categories": {
       "completed": 41937,
-      "allocated": 874,
+      "allocated": 875,
       "failed": 12,
       "language_review": 3,
-      "ready": 2,
-      "in_flight": 1
+      "in_flight": 2
     },
     "completed_by_account": {
       "a": 20963,
       "b": 20974
     },
-    "uploads_last_24h": 522,
-    "uploads_per_hour_24h": 21.75,
-    "stock_hours_24h": 0.09
+    "uploads_last_24h": 519,
+    "uploads_per_hour_24h": 21.62,
+    "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "buffered",
+    "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 612,
-      "b": 448
+      "a": 709,
+      "b": 544
     },
     "preparation_outcomes_last_hour": {
       "source_search_unavailable": 4,
       "transient_original": 7,
-      "transient_search": 2,
       "prepared": 5,
       "no_matches": 6,
-      "inconclusive_subtitles": 3,
-      "inconclusive_audio": 1
+      "inconclusive_subtitles": 4,
+      "inconclusive_audio": 1,
+      "transient_search": 1
     }
   },
   "indexed_candidates_in_scan": 554,
@@ -64,11 +63,13 @@
     ]
   },
   "cache": {
-    "search_miss": 17,
-    "search_seconds": 395.61,
-    "search_hit": 2,
-    "media_hit": 2,
-    "audio_hit": 1
+    "search_miss": 19,
+    "search_seconds": 448.92,
+    "search_hit": 3,
+    "media_hit": 4,
+    "audio_hit": 2,
+    "media_miss": 2,
+    "media_seconds": 7.72
   },
   "audio_pipeline": {},
   "productive_seasons": 179,
