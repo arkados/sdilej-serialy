@@ -1196893,84 +1196893,16 @@
       "queue_rank": 37000
     },
     "8129:1:1": {
-      "at": "2026-11-08T15:36:09.733141+00:00",
+      "at": "2026-11-17T01:33:30.030139+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 65.33,
-      "search_evidence": [
-        {
-          "path": "/domu-se-nevracej-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202071,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/domu-se-nevracej/s/-6",
-          "status": 200,
-          "response_bytes": 212755,
-          "boxes": 9,
-          "parsed_candidates": 9,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/don-t-come-home-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202111,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/don-t-come-home/s/-6",
-          "status": 200,
-          "response_bytes": 212649,
-          "boxes": 10,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/domu-se-nevracej-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202164,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/domu-se-nevracej/s/-6",
-          "status": 200,
-          "response_bytes": 212650,
-          "boxes": 9,
-          "parsed_candidates": 9,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/don-t-come-home-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202080,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/don-t-come-home/s/-6",
-          "status": 200,
-          "response_bytes": 212557,
-          "boxes": 10,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T15:37:27.312320+00:00"
+      "elapsed_seconds": 126.35,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T01:35:36.384473+00:00"
     },
     "459:1:1": {
       "at": "2026-11-08T15:36:08.967826+00:00",
@@ -1365137,9 +1365069,23 @@
       "elapsed_seconds": 368.6,
       "source_id": "24695767",
       "queue_rank": 42728
+    },
+    "459:2:1": {
+      "at": "2026-11-17T01:33:26.461035+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9384948015213013,
+      "observed_source_id": "31189976",
+      "elapsed_seconds": 131.55,
+      "source_id": "31189976",
+      "queue_rank": 42729
     }
   },
-  "updated_at": "2026-11-17T01:34:27.526641+00:00",
+  "updated_at": "2026-11-17T01:36:10.441858+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1369960,6 +1369906,16 @@
         "1301:1:5"
       ],
       "updated_at": "2026-11-17T00:59:57.335019+00:00"
+    },
+    "8129": {
+      "misses": [
+        "8129:1:1"
+      ],
+      "updated_at": "2026-11-17T01:35:36.384505+00:00"
+    },
+    "459": {
+      "misses": [],
+      "updated_at": "2026-11-17T01:35:38.008804+00:00"
     }
   },
   "discovery_progress": {
