@@ -1197802,52 +1197802,16 @@
       "queue_rank": 36721
     },
     "6315:1:1": {
-      "at": "2026-11-08T16:38:54.309408+00:00",
+      "at": "2026-11-17T06:57:42.024155+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 70.81,
-      "search_evidence": [
-        {
-          "path": "/traffic-light-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202082,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/traffic-light/s/-6",
-          "status": 200,
-          "response_bytes": 202136,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/traffic-light-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202025,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/traffic-light/s/-6",
-          "status": 200,
-          "response_bytes": 202134,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T16:40:08.498974+00:00"
+      "elapsed_seconds": 126.87,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T06:59:48.895315+00:00"
     },
     "4064:1:4": {
       "at": "2026-11-08T18:49:58.203074+00:00",
@@ -1365150,7 +1365114,7 @@
       "queue_rank": 42797
     }
   },
-  "updated_at": "2026-11-17T06:58:43.873920+00:00",
+  "updated_at": "2026-11-17T07:00:24.846308+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1370071,6 +1370035,12 @@
     "9840": {
       "misses": [],
       "updated_at": "2026-11-17T06:57:39.563221+00:00"
+    },
+    "6315": {
+      "misses": [
+        "6315:1:1"
+      ],
+      "updated_at": "2026-11-17T06:59:48.895349+00:00"
     }
   },
   "discovery_progress": {
