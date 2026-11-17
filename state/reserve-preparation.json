@@ -755008,21 +755008,19 @@
       "retry_after": "2026-11-17T07:36:26.221738+00:00"
     },
     "1410:5:13": {
-      "at": "2026-11-16T00:41:37.372138+00:00",
+      "at": "2026-11-17T05:04:35.395095+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.9890930652618408,
+      "observed_language_probability": 0.9888041615486145,
       "observed_source_id": "34450642",
-      "elapsed_seconds": 88.24,
-      "consecutive_failures": 5,
-      "retry_after": "2026-11-17T00:50:31.309237+00:00"
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 881.75,
+      "consecutive_failures": 6,
+      "retry_after": "2026-11-18T05:23:43.188896+00:00"
     },
     "1255:1:37": {
       "at": "2026-10-28T07:05:58.672327+00:00",
@@ -1196588,16 +1196586,19 @@
       "queue_rank": 36681
     },
     "5873:1:1": {
-      "at": "2026-11-17T02:42:15.316965+00:00",
+      "at": "2026-11-17T05:14:16.210229+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 317.41,
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-17T02:57:32.723072+00:00"
+      "observed_audio_language": "ko",
+      "observed_language_probability": 0.9940899014472961,
+      "observed_source_id": "24398664",
+      "reason": "no_english_czech_subtitles",
+      "elapsed_seconds": 291.59,
+      "consecutive_failures": 4,
+      "retry_after": "2026-11-17T09:23:43.189147+00:00"
     },
     "1841:1:2": {
       "at": "2026-11-16T16:51:12.428388+00:00",
@@ -1197140,16 +1197141,18 @@
       "queue_rank": 37011
     },
     "274:1:1": {
-      "at": "2026-11-17T02:42:01.495719+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T05:13:10.654499+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 331.23,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-17T02:57:32.723075+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9325396418571472,
+      "observed_source_id": "34825748",
+      "elapsed_seconds": 339.07,
+      "source_id": "34825748",
+      "queue_rank": 42782
     },
     "1844:1:1": {
       "at": "2026-11-08T15:47:49.908504+00:00",
@@ -1197520,84 +1197523,16 @@
       "queue_rank": 36713
     },
     "557:1:1": {
-      "at": "2026-11-08T16:01:08.802933+00:00",
+      "at": "2026-11-17T05:12:56.034019+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 50.43,
-      "search_evidence": [
-        {
-          "path": "/velka-sestka-baymax-se-vraci-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202380,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/velka-sestka-baymax-se-vraci/s/-6",
-          "status": 200,
-          "response_bytes": 202209,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/big-hero-6-the-series-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202319,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/big-hero-6-the-series/s/-6",
-          "status": 200,
-          "response_bytes": 219713,
-          "boxes": 12,
-          "parsed_candidates": 12,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/velka-sestka-baymax-se-vraci-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202338,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/velka-sestka-baymax-se-vraci/s/-6",
-          "status": 200,
-          "response_bytes": 202166,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/big-hero-6-the-series-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202284,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/big-hero-6-the-series/s/-6",
-          "status": 200,
-          "response_bytes": 219684,
-          "boxes": 12,
-          "parsed_candidates": 12,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T16:01:59.234010+00:00"
+      "elapsed_seconds": 329.44,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T05:23:43.189006+00:00"
     },
     "9804:1:8": {
       "at": "2026-11-08T16:00:25.928444+00:00",
@@ -1365115,7 +1365050,7 @@
       "queue_rank": 42781
     }
   },
-  "updated_at": "2026-11-17T05:14:34.363024+00:00",
+  "updated_at": "2026-11-17T05:24:47.285299+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1369903,7 +1369838,7 @@
       "misses": [
         "5873:1:1"
       ],
-      "updated_at": "2026-11-17T00:40:36.874686+00:00"
+      "updated_at": "2026-11-17T05:23:43.189156+00:00"
     },
     "2947": {
       "misses": [
@@ -1369933,12 +1369868,9 @@
     },
     "1410": {
       "misses": [
-        "1410:1:16",
-        "1410:5:10",
-        "1410:5:11"
+        "1410:5:13"
       ],
-      "updated_at": "2026-11-17T03:35:10.268122+00:00",
-      "retry_after": "2026-11-17T04:05:10.268122+00:00"
+      "updated_at": "2026-11-17T05:23:43.188938+00:00"
     },
     "9670": {
       "misses": [
@@ -1370053,6 +1369985,16 @@
     "362": {
       "misses": [],
       "updated_at": "2026-11-17T05:13:10.016072+00:00"
+    },
+    "557": {
+      "misses": [
+        "557:1:1"
+      ],
+      "updated_at": "2026-11-17T05:23:43.189018+00:00"
+    },
+    "274": {
+      "misses": [],
+      "updated_at": "2026-11-17T05:23:43.189101+00:00"
     }
   },
   "discovery_progress": {
