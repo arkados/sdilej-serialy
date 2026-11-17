@@ -738,12 +738,43 @@
       "identity": "1778:1:1",
       "account": "b",
       "target_video_id": "31110920",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 5,
       "detail_url": "https://prehraj.to/konflikti-s01e01-1-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/c90ce3317753287f",
-      "checked_at": "2026-11-17T13:46:54.961549+00:00",
-      "retry_after": "2026-11-17T14:01:54.961568+00:00"
+      "checked_at": "2026-11-17T22:51:31.925447+00:00",
+      "retry_after": "2026-11-17T23:06:31.925463+00:00",
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      }
     },
     "31111854": {
       "identity": "1341:1:1",
@@ -931,5 +962,5 @@
       "retry_after": "2026-11-17T22:52:29.065424+00:00"
     }
   },
-  "updated_at": "2026-11-17T22:48:26.659312+00:00"
+  "updated_at": "2026-11-17T22:51:31.925474+00:00"
 }
