@@ -1198778,84 +1198778,16 @@
       "retry_after": "2026-11-18T11:44:40.192605+00:00"
     },
     "9456:1:1": {
-      "at": "2026-11-08T17:36:38.812436+00:00",
+      "at": "2026-11-17T11:51:37.877245+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 24.72,
-      "search_evidence": [
-        {
-          "path": "/rise-mumii-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201989,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/rise-mumii/s/-6",
-          "status": 200,
-          "response_bytes": 202459,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kingdom-of-the-mummies-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202227,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kingdom-of-the-mummies/s/-6",
-          "status": 200,
-          "response_bytes": 202033,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/rise-mumii-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202058,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/rise-mumii/s/-6",
-          "status": 200,
-          "response_bytes": 202333,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kingdom-of-the-mummies-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202247,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kingdom-of-the-mummies/s/-6",
-          "status": 200,
-          "response_bytes": 202128,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T17:37:03.529124+00:00"
+      "elapsed_seconds": 143.83,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T11:54:07.188300+00:00"
     },
     "745:1:8": {
       "at": "2026-11-08T20:55:15.266453+00:00",
@@ -1364973,9 +1364905,23 @@
       "elapsed_seconds": 222.44,
       "source_id": "31371577",
       "queue_rank": 42850
+    },
+    "358:1:2": {
+      "at": "2026-11-17T11:51:38.702654+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9636570811271667,
+      "observed_source_id": "13891182",
+      "elapsed_seconds": 183.42,
+      "source_id": "13891182",
+      "queue_rank": 42851
     }
   },
-  "updated_at": "2026-11-17T11:54:00.618903+00:00",
+  "updated_at": "2026-11-17T11:55:11.616514+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1370081,6 +1370027,16 @@
         "9061:1:2"
       ],
       "updated_at": "2026-11-17T11:46:22.937492+00:00"
+    },
+    "9456": {
+      "misses": [
+        "9456:1:1"
+      ],
+      "updated_at": "2026-11-17T11:54:07.188331+00:00"
+    },
+    "358": {
+      "misses": [],
+      "updated_at": "2026-11-17T11:54:42.119804+00:00"
     }
   },
   "discovery_progress": {
