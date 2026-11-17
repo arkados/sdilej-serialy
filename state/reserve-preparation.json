@@ -1200029,16 +1200029,19 @@
       "queue_rank": 36831
     },
     "1559:1:2": {
-      "at": "2026-11-17T14:30:57.469673+00:00",
+      "at": "2026-11-17T16:05:51.458718+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "inconclusive_audio",
-      "elapsed_seconds": 911.19,
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-17T18:46:08.655834+00:00"
+      "observed_audio_language": "es",
+      "observed_language_probability": 0.9936123490333557,
+      "observed_source_id": "27868868",
+      "reason": "no_english_czech_subtitles",
+      "elapsed_seconds": 490.28,
+      "consecutive_failures": 4,
+      "retry_after": "2026-11-17T20:16:32.547246+00:00"
     },
     "1123:1:2": {
       "at": "2026-11-08T19:52:29.548379+00:00",
@@ -1200110,84 +1200113,16 @@
       "queue_rank": 36839
     },
     "3139:1:1": {
-      "at": "2026-11-08T19:54:24.863857+00:00",
+      "at": "2026-11-17T16:16:34.663356+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 19.83,
-      "search_evidence": [
-        {
-          "path": "/pomsta-s-chuti-tresni-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202555,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pomsta-s-chuti-tresni/s/-6",
-          "status": 200,
-          "response_bytes": 217604,
-          "boxes": 13,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/brand-new-cherry-flavor-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202191,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/brand-new-cherry-flavor/s/-6",
-          "status": 200,
-          "response_bytes": 205426,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pomsta-s-chuti-tresni-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202543,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pomsta-s-chuti-tresni/s/-6",
-          "status": 200,
-          "response_bytes": 217496,
-          "boxes": 13,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/brand-new-cherry-flavor-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202278,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/brand-new-cherry-flavor/s/-6",
-          "status": 200,
-          "response_bytes": 205384,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T19:54:55.170210+00:00"
+      "elapsed_seconds": 52.02,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T16:17:26.679604+00:00"
     },
     "3541:1:1": {
       "at": "2026-11-08T19:54:09.107264+00:00",
@@ -1365072,9 +1365007,37 @@
       "elapsed_seconds": 47.87,
       "source_id": "12475491",
       "queue_rank": 42934
+    },
+    "1342:2:2": {
+      "at": "2026-11-17T16:11:52.706628+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9549551606178284,
+      "observed_source_id": "14389934",
+      "elapsed_seconds": 170.34,
+      "source_id": "14389934",
+      "queue_rank": 42935
+    },
+    "1342:2:3": {
+      "at": "2026-11-17T16:11:53.747125+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9714064002037048,
+      "observed_source_id": "29917874",
+      "elapsed_seconds": 172.43,
+      "source_id": "29917874",
+      "queue_rank": 42936
     }
   },
-  "updated_at": "2026-11-17T16:12:55.730962+00:00",
+  "updated_at": "2026-11-17T16:17:30.665369+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1369675,21 +1369638,21 @@
       "queue_rank": 42401
     },
     "153:2:1": {
-      "at": "2026-11-17T10:21:41.043128+00:00",
+      "at": "2026-11-17T16:11:52.707026+00:00",
       "status": "deferred",
       "method": "source_repair",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "observed_audio_language": "sk",
-      "observed_language_probability": 0.7540479898452759,
+      "observed_language_probability": 0.7536468505859375,
       "observed_source_id": "34904958",
       "reason": "inconclusive_subtitles",
-      "elapsed_seconds": 218.89,
+      "elapsed_seconds": 63.05,
       "source_repair_revision": 3,
       "repair_fingerprint": "97dbce72adb523876e9abc850019459b89189d844d115cd8df5838f352a0c232",
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-17T14:25:19.952729+00:00"
+      "consecutive_failures": 4,
+      "retry_after": "2026-11-18T00:16:32.568703+00:00"
     }
   },
   "series_discovery": {
@@ -1369902,9 +1369865,11 @@
     "153": {
       "misses": [
         "153:2:7",
-        "153:2:8"
+        "153:2:8",
+        "153:2:1"
       ],
-      "updated_at": "2026-11-17T14:42:48.865204+00:00"
+      "updated_at": "2026-11-17T16:16:32.568738+00:00",
+      "retry_after": "2026-11-17T16:46:32.568738+00:00"
     },
     "3708": {
       "misses": [],
@@ -1370324,7 +1370289,7 @@
       "misses": [
         "1559:1:2"
       ],
-      "updated_at": "2026-11-17T14:46:08.655861+00:00"
+      "updated_at": "2026-11-17T16:16:32.547285+00:00"
     },
     "1123": {
       "misses": [],
@@ -1370366,16 +1370331,22 @@
     },
     "1342": {
       "misses": [],
-      "updated_at": "2026-11-17T15:58:15.690450+00:00"
+      "updated_at": "2026-11-17T16:16:32.568900+00:00"
+    },
+    "3139": {
+      "misses": [
+        "3139:1:1"
+      ],
+      "updated_at": "2026-11-17T16:17:26.679638+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 5607,
+    "last_series": 3139,
     "last_series_order": [
       false,
       -7.1,
-      -26248,
-      5607
+      -22746,
+      3139
     ]
   },
   "czech_fallback_revision": 1
