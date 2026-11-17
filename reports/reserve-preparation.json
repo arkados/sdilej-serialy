@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44154816758",
-  "attempted_this_run": 0,
+  "attempted_this_run": 1,
   "prepared_this_run": 0,
   "reserve_total": 34575,
   "queue_total": 43010,
-  "updated_at": "2026-11-17T19:21:25.793711+00:00",
+  "updated_at": "2026-11-17T19:22:50.538217+00:00",
   "workers": 4,
-  "elapsed_seconds": 367.89,
+  "elapsed_seconds": 452.63,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -15,40 +15,41 @@
   "target_stock": 3000,
   "stock": {
     "queue_total": 43010,
-    "ready": 5,
+    "ready": 4,
     "ready_by_account": {
-      "a": 5,
+      "a": 4,
       "b": 0
     },
     "categories": {
-      "completed": 42114,
-      "allocated": 876,
+      "completed": 42115,
+      "allocated": 875,
       "failed": 12,
       "language_review": 3,
-      "ready": 5
+      "in_flight": 1,
+      "ready": 4
     },
     "completed_by_account": {
-      "a": 21048,
+      "a": 21049,
       "b": 21066
     },
-    "uploads_last_24h": 592,
-    "uploads_per_hour_24h": 24.67,
-    "stock_hours_24h": 0.2
+    "uploads_last_24h": 593,
+    "uploads_per_hour_24h": 24.71,
+    "stock_hours_24h": 0.16
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1274,
-      "b": 723
+      "a": 81,
+      "b": 808
     },
     "preparation_outcomes_last_hour": {
       "source_search_unavailable": 3,
-      "prepared": 28,
-      "transient_original": 1,
+      "prepared": 25,
       "inconclusive_audio": 2,
       "inconclusive_subtitles": 2,
       "no_acceptable_original": 1,
+      "no_english_czech_subtitles": 1,
       "transient_search": 1
     }
   },
@@ -63,10 +64,12 @@
     ]
   },
   "cache": {
-    "search_miss": 24,
-    "search_seconds": 712.81,
-    "media_hit": 9,
-    "audio_hit": 1
+    "search_miss": 26,
+    "search_seconds": 758.81,
+    "media_hit": 10,
+    "audio_hit": 2,
+    "media_miss": 4,
+    "media_seconds": 68.57
   },
   "audio_pipeline": {},
   "productive_seasons": 193,
