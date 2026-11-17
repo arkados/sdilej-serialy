@@ -780,12 +780,43 @@
       "identity": "1341:1:1",
       "account": "b",
       "target_video_id": "31111854",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 5,
       "detail_url": "https://prehraj.to/constantine-s01e01-1-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/d7052c4b891d3ac3",
-      "checked_at": "2026-11-17T13:47:05.305687+00:00",
-      "retry_after": "2026-11-17T14:02:05.305704+00:00"
+      "checked_at": "2026-11-17T22:53:28.354554+00:00",
+      "retry_after": "2026-11-17T23:08:28.354571+00:00",
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      }
     },
     "31113338": {
       "identity": "1301:1:7",
@@ -962,5 +993,5 @@
       "retry_after": "2026-11-17T22:52:29.065424+00:00"
     }
   },
-  "updated_at": "2026-11-17T22:51:31.925474+00:00"
+  "updated_at": "2026-11-17T22:53:28.354582+00:00"
 }
