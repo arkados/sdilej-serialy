@@ -1197661,84 +1197661,16 @@
       "queue_rank": 37032
     },
     "5678:1:2": {
-      "at": "2026-11-08T16:07:44.784686+00:00",
+      "at": "2026-11-17T06:09:23.724859+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 40.3,
-      "search_evidence": [
-        {
-          "path": "/komplicove-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 202104,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/komplicove/s/-6",
-          "status": 200,
-          "response_bytes": 216773,
-          "boxes": 13,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/inside-men-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 207322,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/inside-men/s/-6",
-          "status": 200,
-          "response_bytes": 304792,
-          "boxes": 80,
-          "parsed_candidates": 78,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/komplicove-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 201941,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/komplicove/s/-6",
-          "status": 200,
-          "response_bytes": 216760,
-          "boxes": 13,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/inside-men-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 207328,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/inside-men/s/-6",
-          "status": 200,
-          "response_bytes": 304778,
-          "boxes": 80,
-          "parsed_candidates": 78,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T16:08:25.082962+00:00"
+      "elapsed_seconds": 104.21,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T06:11:07.937718+00:00"
     },
     "4064:1:1": {
       "at": "2026-11-08T16:07:54.688527+00:00",
@@ -1365120,9 +1365052,24 @@
       "elapsed_seconds": 106.23,
       "consecutive_failures": 1,
       "retry_after": "2026-11-17T07:09:22.982044+00:00"
+    },
+    "153:2:6": {
+      "at": "2026-11-17T06:08:25.916129+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "sk",
+      "observed_language_probability": 0.8184417486190796,
+      "observed_source_id": "34904976",
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 122.56,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-17T07:10:49.216958+00:00"
     }
   },
-  "updated_at": "2026-11-17T06:10:19.861781+00:00",
+  "updated_at": "2026-11-17T06:11:53.247378+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1369952,12 +1369899,12 @@
     },
     "153": {
       "misses": [
-        "153:2:3",
         "153:2:4",
-        "153:2:5"
+        "153:2:5",
+        "153:2:6"
       ],
-      "updated_at": "2026-11-17T06:09:22.982074+00:00",
-      "retry_after": "2026-11-17T06:39:22.982074+00:00"
+      "updated_at": "2026-11-17T06:10:49.216985+00:00",
+      "retry_after": "2026-11-17T06:40:49.216985+00:00"
     },
     "3708": {
       "misses": [],
@@ -1370012,15 +1369959,21 @@
     "1778": {
       "misses": [],
       "updated_at": "2026-11-17T05:37:01.066548+00:00"
+    },
+    "5678": {
+      "misses": [
+        "5678:1:2"
+      ],
+      "updated_at": "2026-11-17T06:11:07.937745+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 5678,
+    "last_series": 4064,
     "last_series_order": [
       false,
       -7.2,
-      -2940,
-      5678
+      -2757,
+      4064
     ]
   },
   "czech_fallback_revision": 1
