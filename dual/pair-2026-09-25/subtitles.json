@@ -246,12 +246,43 @@
       "identity": "1410:2:57",
       "account": "b",
       "target_video_id": "31105881",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 8,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e57-carodej-ze-zeme-los-1080p-cz-titulky-titulky-cekaji-mkv/966112d2f32a085c",
-      "checked_at": "2026-11-17T13:45:34.917291+00:00",
-      "retry_after": "2026-11-17T14:00:34.917308+00:00"
+      "checked_at": "2026-11-17T22:41:18.740536+00:00",
+      "retry_after": "2026-11-17T22:56:18.740551+00:00",
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      }
     },
     "31106737": {
       "identity": "1629:1:2",
@@ -807,5 +838,5 @@
       "retry_after": "2026-11-17T22:52:29.065424+00:00"
     }
   },
-  "updated_at": "2026-11-17T22:39:33.778734+00:00"
+  "updated_at": "2026-11-17T22:41:18.740560+00:00"
 }
