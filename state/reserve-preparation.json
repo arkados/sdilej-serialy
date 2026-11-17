@@ -176408,16 +176408,18 @@
       "queue_rank": 18721
     },
     "1410:2:37": {
-      "at": "2026-11-17T00:53:28.037167+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T01:35:37.477760+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 373.56,
-      "consecutive_failures": 44,
-      "retry_after": "2026-11-17T01:09:41.599139+00:00"
+      "observed_audio_language": "en",
+      "observed_language_probability": 0.9978851675987244,
+      "observed_source_id": "34451453",
+      "elapsed_seconds": 277.08,
+      "source_id": "34451453",
+      "queue_rank": 42732
     },
     "1410:2:15": {
       "at": "2026-10-12T16:32:36.183097+00:00",
@@ -1365113,7 +1365115,7 @@
       "queue_rank": 42731
     }
   },
-  "updated_at": "2026-11-17T01:39:08.491390+00:00",
+  "updated_at": "2026-11-17T01:40:27.641634+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1366975,86 +1366977,18 @@
       "retry_after": "2026-11-18T00:53:20.627542+00:00"
     },
     "1553:2:13": {
-      "at": "2026-11-16T11:14:55.128306+00:00",
+      "at": "2026-11-17T01:37:35.845942+00:00",
       "status": "deferred",
+      "method": "source_repair",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "source_repair",
-      "source_repair_revision": 2,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 336.79,
-      "search_evidence": [
-        {
-          "path": "/fresh-prince-s02e13/s/-6",
-          "status": 200,
-          "response_bytes": 215974,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fresh-prince/s/-6",
-          "status": 200,
-          "response_bytes": 373104,
-          "boxes": 137,
-          "parsed_candidates": 127,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-fresh-prince-of-bel-air-s02e13/s/-6",
-          "status": 200,
-          "response_bytes": 216260,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-fresh-prince-of-bel-air/s/-6",
-          "status": 200,
-          "response_bytes": 236173,
-          "boxes": 17,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fresh-prince-s02e13/s/-6",
-          "status": 200,
-          "response_bytes": 215978,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fresh-prince/s/-6",
-          "status": 200,
-          "response_bytes": 373047,
-          "boxes": 137,
-          "parsed_candidates": 127,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-fresh-prince-of-bel-air-s02e13/s/-6",
-          "status": 200,
-          "response_bytes": 216423,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-fresh-prince-of-bel-air/s/-6",
-          "status": 200,
-          "response_bytes": 236150,
-          "boxes": 17,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        }
-      ],
+      "elapsed_seconds": 136.09,
+      "source_repair_revision": 3,
       "repair_fingerprint": "3b9d253dd960f1d7cf1d4e3cc881535c8bc2526431d03eb9cd9be78c5eae2a0f",
-      "consecutive_failures": 85,
-      "retry_after": "2026-11-17T11:20:31.925342+00:00"
+      "consecutive_failures": 86,
+      "retry_after": "2026-11-18T01:39:51.934580+00:00"
     },
     "1553:2:15": {
       "at": "2026-11-16T11:28:07.913570+00:00",
@@ -1369875,9 +1369809,11 @@
     "1553": {
       "misses": [
         "1553:1:15",
-        "1553:1:16"
+        "1553:1:16",
+        "1553:2:13"
       ],
-      "updated_at": "2026-11-17T00:53:20.627573+00:00"
+      "updated_at": "2026-11-17T01:39:51.934604+00:00",
+      "retry_after": "2026-11-17T05:39:51.934604+00:00"
     },
     "1629": {
       "misses": [],
@@ -1369915,7 +1369851,7 @@
     },
     "1410": {
       "misses": [],
-      "updated_at": "2026-11-17T01:33:24.079807+00:00"
+      "updated_at": "2026-11-17T01:40:14.736316+00:00"
     },
     "9670": {
       "misses": [
