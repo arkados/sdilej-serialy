@@ -1202298,84 +1202298,16 @@
       "queue_rank": 37086
     },
     "2784:1:1": {
-      "at": "2026-11-08T23:17:09.657352+00:00",
+      "at": "2026-11-17T23:06:36.433623+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 42.98,
-      "search_evidence": [
-        {
-          "path": "/u-raven-doma-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202182,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/u-raven-doma/s/-6",
-          "status": 200,
-          "response_bytes": 201859,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/raven-s-home-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201980,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/raven-s-home/s/-6",
-          "status": 200,
-          "response_bytes": 201869,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/u-raven-doma-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202039,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/u-raven-doma/s/-6",
-          "status": 200,
-          "response_bytes": 201800,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/raven-s-home-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201933,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/raven-s-home/s/-6",
-          "status": 200,
-          "response_bytes": 201863,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T23:17:52.634047+00:00"
+      "elapsed_seconds": 56.36,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T23:07:32.798337+00:00"
     },
     "316:1:2": {
       "at": "2026-11-08T23:34:37.085796+00:00",
@@ -1202443,21 +1202375,18 @@
       "queue_rank": 37091
     },
     "3261:1:1": {
-      "at": "2026-11-08T23:53:07.351046+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T23:06:39.486576+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.8302760869264603,
+      "observed_language_probability": 0.8219276666641235,
       "observed_source_id": "25977096",
-      "elapsed_seconds": 98.54,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T00:00:29.403471+00:00"
+      "elapsed_seconds": 95.16,
+      "source_id": "25977096",
+      "queue_rank": 43094
     },
     "800:1:1": {
       "at": "2026-11-09T00:00:30.121447+00:00",
@@ -1366644,7 +1366573,7 @@
       "queue_rank": 43093
     }
   },
-  "updated_at": "2026-11-17T23:07:13.325442+00:00",
+  "updated_at": "2026-11-17T23:08:34.196504+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1372222,6 +1372151,16 @@
     "3479": {
       "misses": [],
       "updated_at": "2026-11-17T23:04:49.963834+00:00"
+    },
+    "2784": {
+      "misses": [
+        "2784:1:1"
+      ],
+      "updated_at": "2026-11-17T23:07:32.798374+00:00"
+    },
+    "3261": {
+      "misses": [],
+      "updated_at": "2026-11-17T23:08:16.138364+00:00"
     }
   },
   "discovery_progress": {
