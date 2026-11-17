@@ -1197298,84 +1197298,16 @@
       "queue_rank": 37353
     },
     "5758:1:1": {
-      "at": "2026-11-08T15:54:08.443719+00:00",
+      "at": "2026-11-17T03:41:58.108507+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 56.81,
-      "search_evidence": [
-        {
-          "path": "/to-ti-preju-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201971,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/to-ti-preju/s/-6",
-          "status": 200,
-          "response_bytes": 201870,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/i-love-that-for-you-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202107,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/i-love-that-for-you/s/-6",
-          "status": 200,
-          "response_bytes": 207156,
-          "boxes": 4,
-          "parsed_candidates": 4,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/to-ti-preju-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201966,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/to-ti-preju/s/-6",
-          "status": 200,
-          "response_bytes": 201822,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/i-love-that-for-you-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202191,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/i-love-that-for-you/s/-6",
-          "status": 200,
-          "response_bytes": 207177,
-          "boxes": 4,
-          "parsed_candidates": 4,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T15:55:05.258222+00:00"
+      "elapsed_seconds": 98.71,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T03:43:36.818369+00:00"
     },
     "2750:1:2": {
       "at": "2026-11-08T19:36:20.269144+00:00",
@@ -1197391,18 +1197323,18 @@
       "queue_rank": 36816
     },
     "974:1:1": {
-      "at": "2026-11-08T15:53:55.736422+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T03:40:19.125451+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "transient_original",
-      "elapsed_seconds": 147.24,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-08T16:11:22.976301+00:00"
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8778374791145325,
+      "observed_source_id": "31261523",
+      "elapsed_seconds": 220.55,
+      "source_id": "31261523",
+      "queue_rank": 42766
     },
     "2750:1:3": {
       "at": "2026-11-08T19:36:30.018641+00:00",
@@ -1365022,7 +1364954,7 @@
       "queue_rank": 42765
     }
   },
-  "updated_at": "2026-11-17T03:43:01.407041+00:00",
+  "updated_at": "2026-11-17T03:44:26.516481+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1369929,6 +1369861,16 @@
         "2704:1:1"
       ],
       "updated_at": "2026-11-17T03:35:10.268510+00:00"
+    },
+    "5758": {
+      "misses": [
+        "5758:1:1"
+      ],
+      "updated_at": "2026-11-17T03:43:36.818401+00:00"
+    },
+    "974": {
+      "misses": [],
+      "updated_at": "2026-11-17T03:43:59.678623+00:00"
     }
   },
   "discovery_progress": {
