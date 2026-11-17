@@ -398118,16 +398118,16 @@
       "retry_after": "2026-11-15T08:01:15.941885+00:00"
     },
     "1221:1:9": {
-      "at": "2026-11-17T19:57:20.787813+00:00",
+      "at": "2026-11-17T22:49:32.639467+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 348.8,
-      "consecutive_failures": 15,
-      "retry_after": "2026-11-18T20:06:10.214032+00:00"
+      "elapsed_seconds": 339.17,
+      "consecutive_failures": 16,
+      "retry_after": "2026-11-18T23:00:04.983815+00:00"
     },
     "919:1:9": {
       "at": "2026-10-21T05:09:42.756385+00:00",
@@ -1202208,84 +1202208,16 @@
       "queue_rank": 37075
     },
     "3476:1:1": {
-      "at": "2026-11-08T23:11:49.698954+00:00",
+      "at": "2026-11-17T23:00:06.024121+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 52.19,
-      "search_evidence": [
-        {
-          "path": "/hlubina-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215853,
-          "boxes": 11,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hlubina/s/-6",
-          "status": 200,
-          "response_bytes": 438043,
-          "boxes": 230,
-          "parsed_candidates": 180,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/abyss-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201790,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/abyss/s/-6",
-          "status": 200,
-          "response_bytes": 359734,
-          "boxes": 129,
-          "parsed_candidates": 112,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hlubina-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215879,
-          "boxes": 11,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hlubina/s/-6",
-          "status": 200,
-          "response_bytes": 438182,
-          "boxes": 230,
-          "parsed_candidates": 180,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/abyss-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201909,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/abyss/s/-6",
-          "status": 200,
-          "response_bytes": 359795,
-          "boxes": 129,
-          "parsed_candidates": 112,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T23:12:41.887130+00:00"
+      "elapsed_seconds": 56.95,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T23:01:02.976832+00:00"
     },
     "4568:1:1": {
       "at": "2026-11-08T23:11:50.602360+00:00",
@@ -1366530,9 +1366462,51 @@
       "elapsed_seconds": 139.05,
       "source_id": "35240768",
       "queue_rank": 43081
+    },
+    "188:1:8": {
+      "at": "2026-11-17T22:49:36.489123+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9795587658882141,
+      "observed_source_id": "12597509",
+      "elapsed_seconds": 206.95,
+      "source_id": "12597509",
+      "queue_rank": 43082
+    },
+    "188:1:11": {
+      "at": "2026-11-17T22:51:01.585184+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9320948719978333,
+      "observed_source_id": "35240954",
+      "elapsed_seconds": 91.23,
+      "source_id": "35240954",
+      "queue_rank": 43083
+    },
+    "4407:1:2": {
+      "at": "2026-11-17T22:51:55.195375+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9655202627182007,
+      "observed_source_id": "17659112",
+      "elapsed_seconds": 52.77,
+      "source_id": "17659112",
+      "queue_rank": 43084
     }
   },
-  "updated_at": "2026-11-17T22:52:07.117987+00:00",
+  "updated_at": "2026-11-17T23:01:09.473401+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1371658,9 +1371632,11 @@
     "1221": {
       "misses": [
         "1221:1:1",
-        "1221:1:6"
+        "1221:1:6",
+        "1221:1:9"
       ],
-      "updated_at": "2026-11-17T22:40:35.613936+00:00"
+      "updated_at": "2026-11-17T23:00:04.983854+00:00",
+      "retry_after": "2026-11-17T23:30:04.983854+00:00"
     },
     "3494": {
       "misses": [],
@@ -1371969,7 +1371945,7 @@
     },
     "188": {
       "misses": [],
-      "updated_at": "2026-11-17T22:51:54.175566+00:00"
+      "updated_at": "2026-11-17T23:00:04.984033+00:00"
     },
     "7642": {
       "misses": [
@@ -1372088,15 +1372064,25 @@
         "9770:1:1"
       ],
       "updated_at": "2026-11-17T22:49:31.630379+00:00"
+    },
+    "4407": {
+      "misses": [],
+      "updated_at": "2026-11-17T23:00:04.984098+00:00"
+    },
+    "3476": {
+      "misses": [
+        "3476:1:1"
+      ],
+      "updated_at": "2026-11-17T23:01:02.976859+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 4407,
+    "last_series": 3476,
     "last_series_order": [
       false,
       -7.1,
-      -4882,
-      4407
+      -4832,
+      3476
     ]
   },
   "czech_fallback_revision": 1
