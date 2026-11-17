@@ -372049,21 +372049,18 @@
       "retry_after": "2026-10-22T23:13:24.047857+00:00"
     },
     "1410:2:13": {
-      "at": "2026-10-29T07:40:57.622023+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T02:21:39.207142+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.9963797926902771,
+      "observed_language_probability": 0.9971810579299927,
       "observed_source_id": "34451554",
-      "elapsed_seconds": 30.68,
-      "consecutive_failures": 3,
-      "retry_after": "2026-10-30T07:41:28.300762+00:00"
+      "elapsed_seconds": 90.65,
+      "source_id": "34451554",
+      "queue_rank": 42741
     },
     "2263:1:7": {
       "at": "2026-10-20T15:04:02.202484+00:00",
@@ -1197032,84 +1197029,16 @@
       "queue_rank": 36699
     },
     "5071:1:1": {
-      "at": "2026-11-08T15:41:41.964275+00:00",
+      "at": "2026-11-17T02:21:39.864328+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 42.7,
-      "search_evidence": [
-        {
-          "path": "/pribeh-lodi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202453,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pribeh-lodi/s/-6",
-          "status": 200,
-          "response_bytes": 216739,
-          "boxes": 14,
-          "parsed_candidates": 8,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/boat-story-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201995,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/boat-story/s/-6",
-          "status": 200,
-          "response_bytes": 202859,
-          "boxes": 2,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pribeh-lodi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202366,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pribeh-lodi/s/-6",
-          "status": 200,
-          "response_bytes": 216728,
-          "boxes": 14,
-          "parsed_candidates": 8,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/boat-story-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201978,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/boat-story/s/-6",
-          "status": 200,
-          "response_bytes": 202910,
-          "boxes": 2,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T15:42:32.626612+00:00"
+      "elapsed_seconds": 44.99,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T02:29:57.958207+00:00"
     },
     "2868:1:7": {
       "at": "2026-11-08T21:54:31.713564+00:00",
@@ -1365006,9 +1364935,37 @@
       "elapsed_seconds": 493.57,
       "consecutive_failures": 1,
       "retry_after": "2026-11-17T03:21:39.207037+00:00"
+    },
+    "459:2:3": {
+      "at": "2026-11-17T02:20:49.539101+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9317131042480469,
+      "observed_source_id": "31228448",
+      "elapsed_seconds": 61.26,
+      "source_id": "31228448",
+      "queue_rank": 42740
+    },
+    "3516:1:2": {
+      "at": "2026-11-17T02:29:58.598885+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9794834852218628,
+      "observed_source_id": "31256194",
+      "elapsed_seconds": 52.62,
+      "source_id": "31256194",
+      "queue_rank": 42742
     }
   },
-  "updated_at": "2026-11-17T02:21:48.794328+00:00",
+  "updated_at": "2026-11-17T02:30:54.667757+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1369634,6 +1369591,23 @@
       "retry_after": "2026-11-17T03:10:21.324717+00:00",
       "source_id": "34058336",
       "queue_rank": 42387
+    },
+    "684:2:3": {
+      "at": "2026-11-17T02:18:05.595197+00:00",
+      "status": "prepared",
+      "method": "source_repair",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "en",
+      "observed_language_probability": 0.9976389408111572,
+      "observed_source_id": "34058338",
+      "elapsed_seconds": 264.01,
+      "source_repair_revision": 3,
+      "repair_fingerprint": "99750204ba61e8a0b130fcee82eb79b41cf4e4135e38a36a468542b330dda959",
+      "retry_after": "2026-11-17T03:29:57.753884+00:00",
+      "source_id": "34058338",
+      "queue_rank": 42389
     }
   },
   "series_discovery": {
@@ -1369759,11 +1369733,8 @@
       "updated_at": "2026-11-17T01:33:24.079913+00:00"
     },
     "1410": {
-      "misses": [
-        "1410:2:64",
-        "1410:5:6"
-      ],
-      "updated_at": "2026-11-17T01:49:01.245204+00:00"
+      "misses": [],
+      "updated_at": "2026-11-17T02:29:57.958089+00:00"
     },
     "9670": {
       "misses": [
@@ -1369791,20 +1369762,30 @@
     },
     "459": {
       "misses": [],
-      "updated_at": "2026-11-17T02:18:05.594944+00:00"
+      "updated_at": "2026-11-17T02:29:57.754066+00:00"
     },
     "684": {
       "misses": [],
-      "updated_at": "2026-11-17T02:10:21.324761+00:00"
+      "updated_at": "2026-11-17T02:29:57.753935+00:00"
+    },
+    "5071": {
+      "misses": [
+        "5071:1:1"
+      ],
+      "updated_at": "2026-11-17T02:29:57.958228+00:00"
+    },
+    "3516": {
+      "misses": [],
+      "updated_at": "2026-11-17T02:30:51.222505+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 5071,
+    "last_series": 3516,
     "last_series_order": [
       false,
       -7.2,
-      -4861,
-      5071
+      -4799,
+      3516
     ]
   },
   "czech_fallback_revision": 1
