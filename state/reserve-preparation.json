@@ -1198306,18 +1198306,18 @@
       "queue_rank": 36809
     },
     "4138:1:1": {
-      "at": "2026-11-08T17:07:34.448237+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T09:56:37.958013+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "transient_original",
-      "elapsed_seconds": 111.02,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-08T17:24:25.471601+00:00"
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8862690329551697,
+      "observed_source_id": "26795887",
+      "elapsed_seconds": 103.66,
+      "source_id": "26795887",
+      "queue_rank": 42825
     },
     "8237:1:1": {
       "at": "2026-11-17T09:22:51.474546+00:00",
@@ -1198374,84 +1198374,16 @@
       "queue_rank": 36810
     },
     "9415:1:1": {
-      "at": "2026-11-08T17:11:25.123063+00:00",
+      "at": "2026-11-17T09:56:38.948952+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 20.15,
-      "search_evidence": [
-        {
-          "path": "/jak-obehrat-wall-street-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202227,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jak-obehrat-wall-street/s/-6",
-          "status": 200,
-          "response_bytes": 202065,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/gaming-wall-st-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201992,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/gaming-wall-st/s/-6",
-          "status": 200,
-          "response_bytes": 201894,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jak-obehrat-wall-street-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202214,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jak-obehrat-wall-street/s/-6",
-          "status": 200,
-          "response_bytes": 202021,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/gaming-wall-st-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201990,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/gaming-wall-st/s/-6",
-          "status": 200,
-          "response_bytes": 201975,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T17:11:45.275677+00:00"
+      "elapsed_seconds": 141.95,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T09:59:00.900348+00:00"
     },
     "1224:1:5": {
       "at": "2026-11-08T17:11:14.117154+00:00",
@@ -1365281,7 +1365213,7 @@
       "retry_after": "2026-11-18T09:56:37.957869+00:00"
     }
   },
-  "updated_at": "2026-11-17T09:57:32.678420+00:00",
+  "updated_at": "2026-11-17T09:59:11.555122+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1370267,6 +1370199,16 @@
       ],
       "updated_at": "2026-11-17T09:56:37.957894+00:00",
       "retry_after": "2026-11-17T13:56:37.957894+00:00"
+    },
+    "4138": {
+      "misses": [],
+      "updated_at": "2026-11-17T09:58:21.622118+00:00"
+    },
+    "9415": {
+      "misses": [
+        "9415:1:1"
+      ],
+      "updated_at": "2026-11-17T09:59:00.900376+00:00"
     }
   },
   "discovery_progress": {
