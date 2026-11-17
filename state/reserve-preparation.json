@@ -176831,21 +176831,19 @@
       "retry_after": "2026-11-18T05:35:23.937119+00:00"
     },
     "1410:5:18": {
-      "at": "2026-11-12T10:10:58.354528+00:00",
+      "at": "2026-11-17T06:20:54.564877+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.9899827837944031,
+      "observed_language_probability": 0.9897632598876953,
       "observed_source_id": "34450611",
-      "elapsed_seconds": 88.75,
-      "consecutive_failures": 13,
-      "retry_after": "2026-11-13T10:12:42.195623+00:00"
+      "reason": "transient_search",
+      "elapsed_seconds": 105.75,
+      "consecutive_failures": 14,
+      "retry_after": "2026-11-17T12:24:36.988453+00:00"
     },
     "2209:6:14": {
       "at": "2026-10-12T16:45:46.232598+00:00",
@@ -1197716,98 +1197714,30 @@
       "queue_rank": 37022
     },
     "6570:1:1": {
-      "at": "2026-11-08T16:11:31.162571+00:00",
+      "at": "2026-11-17T06:20:55.287769+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 29.58,
-      "search_evidence": [
-        {
-          "path": "/posledni-deti-na-zemi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 186050,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/posledni-deti-na-zemi/s/-6",
-          "status": 200,
-          "response_bytes": 185903,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-last-kids-on-earth-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 186071,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-last-kids-on-earth/s/-6",
-          "status": 200,
-          "response_bytes": 185924,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/posledni-deti-na-zemi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 186050,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/posledni-deti-na-zemi/s/-6",
-          "status": 200,
-          "response_bytes": 185903,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-last-kids-on-earth-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 186071,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-last-kids-on-earth/s/-6",
-          "status": 200,
-          "response_bytes": 185924,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-09T16:12:00.739503+00:00"
+      "elapsed_seconds": 60.11,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T06:24:36.988547+00:00"
     },
     "9840:1:1": {
-      "at": "2026-11-08T16:12:01.459583+00:00",
-      "status": "deferred",
+      "at": "2026-11-17T06:20:56.011489+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 29.04,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-08T16:17:30.499841+00:00"
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9545667171478271,
+      "observed_source_id": "32395067",
+      "elapsed_seconds": 72.8,
+      "source_id": "32395067",
+      "queue_rank": 42792
     },
     "1844:1:20": {
       "at": "2026-11-08T22:16:59.782994+00:00",
@@ -1365141,9 +1365071,23 @@
       "elapsed_seconds": 37.19,
       "source_id": "31256202",
       "queue_rank": 42791
+    },
+    "3516:1:4": {
+      "at": "2026-11-17T06:20:56.851548+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.815466026465098,
+      "observed_source_id": "31256207",
+      "elapsed_seconds": 96.87,
+      "source_id": "31256207",
+      "queue_rank": 42793
     }
   },
-  "updated_at": "2026-11-17T06:21:59.736915+00:00",
+  "updated_at": "2026-11-17T06:25:41.470434+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1369892,9 +1369836,10 @@
     },
     "1410": {
       "misses": [
-        "1410:5:16"
+        "1410:5:16",
+        "1410:5:18"
       ],
-      "updated_at": "2026-11-17T06:20:54.565338+00:00"
+      "updated_at": "2026-11-17T06:24:36.988483+00:00"
     },
     "9670": {
       "misses": [
@@ -1369939,7 +1369884,7 @@
     },
     "3516": {
       "misses": [],
-      "updated_at": "2026-11-17T06:20:54.565251+00:00"
+      "updated_at": "2026-11-17T06:24:36.988729+00:00"
     },
     "5872": {
       "misses": [
@@ -1370051,6 +1369996,16 @@
         "9752:1:1"
       ],
       "updated_at": "2026-11-17T06:15:08.499426+00:00"
+    },
+    "6570": {
+      "misses": [
+        "6570:1:1"
+      ],
+      "updated_at": "2026-11-17T06:24:36.988558+00:00"
+    },
+    "9840": {
+      "misses": [],
+      "updated_at": "2026-11-17T06:24:36.988622+00:00"
     }
   },
   "discovery_progress": {
