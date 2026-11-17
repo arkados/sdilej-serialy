@@ -13863,16 +13863,16 @@
       "queue_rank": 10151
     },
     "28:1:2": {
-      "at": "2026-11-17T18:58:44.004159+00:00",
+      "at": "2026-11-17T19:15:23.369304+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 376.91,
-      "consecutive_failures": 59,
-      "retry_after": "2026-11-17T19:15:00.915925+00:00"
+      "reason": "transient_original",
+      "elapsed_seconds": 554.22,
+      "consecutive_failures": 60,
+      "retry_after": "2026-11-18T01:24:37.592348+00:00"
     },
     "28:1:3": {
       "at": "2026-10-04T13:21:14.757342+00:00",
@@ -13884,16 +13884,16 @@
       "queue_rank": 10152
     },
     "28:1:4": {
-      "at": "2026-11-17T18:58:47.558844+00:00",
+      "at": "2026-11-17T19:15:26.237930+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 373.36,
-      "consecutive_failures": 59,
-      "retry_after": "2026-11-17T19:15:00.915917+00:00"
+      "reason": "transient_original",
+      "elapsed_seconds": 528.07,
+      "consecutive_failures": 60,
+      "retry_after": "2026-11-18T01:24:14.310439+00:00"
     },
     "28:1:5": {
       "at": "2026-10-04T13:22:02.637112+00:00",
@@ -1188626,46 +1188626,16 @@
       "queue_rank": 36523
     },
     "1101:1:3": {
-      "at": "2026-11-17T18:58:44.976333+00:00",
+      "at": "2026-11-17T19:15:24.137272+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "error": {
-        "type": "SearchUnavailable",
-        "frames": [
-          {
-            "file": "episodes.py",
-            "function": "_inspect",
-            "line": 356
-          },
-          {
-            "file": "source_audit.py",
-            "function": "_get",
-            "line": 118
-          },
-          {
-            "file": "episodes.py",
-            "function": "_get",
-            "line": 244
-          },
-          {
-            "file": "search_health.py",
-            "function": "wait",
-            "line": 202
-          },
-          {
-            "file": "search_health.py",
-            "function": "wait",
-            "line": 84
-          }
-        ]
-      },
-      "elapsed_seconds": 382.09,
-      "consecutive_failures": 28,
-      "retry_after": "2026-11-17T19:15:00.915919+00:00"
+      "reason": "transient_original",
+      "elapsed_seconds": 577.36,
+      "consecutive_failures": 29,
+      "retry_after": "2026-11-18T01:25:01.501915+00:00"
     },
     "2119:1:1": {
       "at": "2026-11-08T07:56:48.059192+00:00",
@@ -1365113,7 +1365083,7 @@
       "queue_rank": 42936
     },
     "3541:1:2": {
-      "at": "2026-11-17T17:03:48.746957+00:00",
+      "at": "2026-11-17T19:22:31.819299+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
@@ -1365123,9 +1365093,9 @@
       "observed_language_probability": 0.8789512515068054,
       "observed_source_id": "29487682",
       "reason": "no_english_czech_subtitles",
-      "elapsed_seconds": 232.91,
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-17T18:07:52.461234+00:00"
+      "elapsed_seconds": 111.2,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-17T21:24:23.020918+00:00"
     },
     "1342:2:4": {
       "at": "2026-11-17T16:18:54.215794+00:00",
@@ -1365955,7 +1365925,7 @@
       "queue_rank": 43010
     }
   },
-  "updated_at": "2026-11-17T19:24:06.074518+00:00",
+  "updated_at": "2026-11-17T19:25:17.197199+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1370644,7 +1370614,7 @@
         "28:1:2",
         "28:1:4"
       ],
-      "updated_at": "2026-11-17T17:06:31.208992+00:00"
+      "updated_at": "2026-11-17T19:24:37.592372+00:00"
     },
     "3780": {
       "misses": [],
@@ -1371265,7 +1371235,7 @@
       "misses": [
         "3541:1:2"
       ],
-      "updated_at": "2026-11-17T17:07:52.461271+00:00"
+      "updated_at": "2026-11-17T19:24:23.020943+00:00"
     },
     "254": {
       "misses": [],
@@ -1371384,6 +1371354,12 @@
     "1880": {
       "misses": [],
       "updated_at": "2026-11-17T18:46:19.877295+00:00"
+    },
+    "1101": {
+      "misses": [
+        "1101:1:3"
+      ],
+      "updated_at": "2026-11-17T19:25:01.501941+00:00"
     }
   },
   "discovery_progress": {
