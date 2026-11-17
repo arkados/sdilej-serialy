@@ -835,12 +835,43 @@
       "identity": "1410:2:64",
       "account": "b",
       "target_video_id": "31113745",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 4,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e64-horska-draha-muzikal-1080p-cz-titulky-titulky-cekaji-mkv/864ac3e6270807e6",
-      "checked_at": "2026-11-17T13:47:28.094645+00:00",
-      "retry_after": "2026-11-17T14:02:28.094663+00:00"
+      "checked_at": "2026-11-17T22:55:21.045428+00:00",
+      "retry_after": "2026-11-17T23:10:21.045445+00:00",
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      }
     },
     "31116415": {
       "identity": "1341:1:7",
@@ -993,5 +1024,5 @@
       "retry_after": "2026-11-17T22:52:29.065424+00:00"
     }
   },
-  "updated_at": "2026-11-17T22:53:28.354582+00:00"
+  "updated_at": "2026-11-17T22:55:21.045455+00:00"
 }
