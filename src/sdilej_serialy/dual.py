@@ -29,6 +29,18 @@ from .resilience import error_evidence, receipt_matches, transient_http
 ACCOUNTS = ('a', 'b')
 
 
+def batch_retry_delay(accounts, minimum=60):
+    """Give source checkpoints a quiet window when reconciliation makes no progress."""
+    for result in accounts.values():
+        if result.get('uploaded_or_reconciled', 0):
+            return minimum
+        before, after = result.get('target_video_count_before'), result.get('target_video_count_after')
+        # Accepted uploads still processing are useful progress too.
+        if isinstance(before, int) and isinstance(after, int) and after > before:
+            return minimum
+    return max(minimum, 300)
+
+
 def account_batch(rows, state, blocked, alias, limit, fresh_sources=frozenset()):
     eligible = [r for r in rows if r['target_account'] == alias and r['identity'] not in blocked
                 and (r.get('source_policy') != SLOVAK_POLICY or r['identity'] in fresh_sources
@@ -469,6 +481,8 @@ def _run(root, generation, mode, limit_per_account=25, persist=False, idle_refil
         report['retry_delay_seconds'] = retry_delay_seconds
         report['stop_claiming_at'] = stop_claiming_at
         report['claim_deadline_reached'] = claim_deadline is not None and time.monotonic() >= claim_deadline
+        if not report['transient_pause'] and not report['claim_deadline_reached']:
+            report['retry_delay_seconds'] = batch_retry_delay(results, retry_delay_seconds)
         report['pending_confirmation'] = sum(bool(r.get('prepared_target')) for r in state.data['episodes'].values())
         atomic_json(report_path, report)
         if persister:

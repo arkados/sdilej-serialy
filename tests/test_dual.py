@@ -349,3 +349,17 @@ def test_real_workers_never_exceed_two_per_account(tmp_path, monkeypatch):
     assert len({c[1] for c in calls}) == 4
     assert {c[1] for c in calls if c[0] == 'a'} == {'101', '103'}
     assert {c[1] for c in calls if c[0] == 'b'} == {'102', '104'}
+@pytest.mark.parametrize('accounts,minimum,expected', [
+    ({}, 60, 300),
+    ({'a': {'uploaded_or_reconciled': 0, 'target_video_count_before': 10,
+            'target_video_count_after': 10}}, 60, 300),
+    ({'a': {'uploaded_or_reconciled': 1}}, 60, 60),
+    ({'a': {'uploaded_or_reconciled': 0, 'target_video_count_before': 10,
+            'target_video_count_after': 11}}, 60, 60),
+    ({'a': {'uploaded_or_reconciled': 0, 'target_video_count_before': 10,
+            'target_video_count_after': None}}, 60, 300),
+    ({'b': {'uploaded_or_reconciled': 1}}, 300, 300),
+])
+def test_idle_confirmation_batches_leave_room_for_source_publication(accounts, minimum, expected):
+    from sdilej_serialy.dual import batch_retry_delay
+    assert batch_retry_delay(accounts, minimum) == expected
