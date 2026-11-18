@@ -1,52 +1,52 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44327243236",
-  "attempted_this_run": 11,
+  "attempted_this_run": 12,
   "prepared_this_run": 7,
   "reserve_total": 34884,
   "queue_total": 43319,
-  "updated_at": "2026-11-18T15:20:27.559618+00:00",
+  "updated_at": "2026-11-18T15:22:28.172034+00:00",
   "workers": 4,
-  "elapsed_seconds": 2145.84,
-  "prepared_per_hour": 11.74,
+  "elapsed_seconds": 2266.45,
+  "prepared_per_hour": 11.12,
   "available_this_run": 7,
-  "available_per_hour": 11.74,
+  "available_per_hour": 11.12,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 43319,
-    "ready": 1,
+    "ready": 0,
     "ready_by_account": {
-      "a": 1,
+      "a": 0,
       "b": 0
     },
     "categories": {
-      "completed": 42428,
+      "completed": 42429,
       "allocated": 875,
       "failed": 12,
-      "language_review": 3,
-      "ready": 1
+      "language_review": 3
     },
     "completed_by_account": {
       "a": 21209,
-      "b": 21219
+      "b": 21220
     },
-    "uploads_last_24h": 404,
-    "uploads_per_hour_24h": 16.83,
-    "stock_hours_24h": 0.06
+    "uploads_last_24h": 405,
+    "uploads_per_hour_24h": 16.88,
+    "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "buffered",
+    "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 255,
-      "b": 571
+      "a": 375,
+      "b": 139
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 2,
       "inconclusive_subtitles": 1,
       "inconclusive_audio": 1,
-      "prepared": 7
+      "prepared": 7,
+      "no_english_czech_subtitles": 1
     }
   },
   "indexed_candidates_in_scan": 1158,
@@ -60,14 +60,14 @@
     ]
   },
   "cache": {
-    "search_miss": 73,
-    "search_seconds": 1968.93,
+    "search_miss": 79,
+    "search_seconds": 2146.28,
     "media_miss": 34,
     "media_seconds": 275.76,
-    "media_hit": 54,
+    "media_hit": 59,
     "audio_miss": 11,
     "audio_seconds": 341.14,
-    "audio_hit": 10
+    "audio_hit": 12
   },
   "audio_pipeline": {
     "sample_count": 23,
@@ -86,7 +86,7 @@
   },
   "statuses": {
     "prepared": 34884,
-    "deferred": 38669
+    "deferred": 38670
   },
   "requested_series": [
     {
