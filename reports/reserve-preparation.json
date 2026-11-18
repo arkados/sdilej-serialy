@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
-  "run_id": "44216836476",
-  "attempted_this_run": 33,
-  "prepared_this_run": 9,
+  "run_id": "44223484892",
+  "attempted_this_run": 0,
+  "prepared_this_run": 0,
   "reserve_total": 34729,
   "queue_total": 43164,
-  "updated_at": "2026-11-18T02:27:42.088917+00:00",
+  "updated_at": "2026-11-18T02:37:42.097956+00:00",
   "workers": 4,
-  "elapsed_seconds": 2626.32,
-  "prepared_per_hour": 12.34,
-  "available_this_run": 9,
-  "available_per_hour": 12.34,
+  "elapsed_seconds": 69.02,
+  "prepared_per_hour": 0.0,
+  "available_this_run": 0,
+  "available_per_hour": 0.0,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -30,20 +30,20 @@
       "a": 21132,
       "b": 21143
     },
-    "uploads_last_24h": 532,
-    "uploads_per_hour_24h": 22.17,
+    "uploads_last_24h": 524,
+    "uploads_per_hour_24h": 21.83,
     "stock_hours_24h": 0.0
   },
   "health": {
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 230,
-      "b": 165
+      "a": 830,
+      "b": 765
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 4,
-      "source_search_unavailable": 7,
+      "source_search_unavailable": 5,
       "inconclusive_audio": 3,
       "inconclusive_subtitles": 6,
       "no_matches": 4,
@@ -51,7 +51,7 @@
       "prepared": 9
     }
   },
-  "indexed_candidates_in_scan": 1549,
+  "indexed_candidates_in_scan": 1368,
   "discovery_progress": {
     "last_series": 6469,
     "last_series_order": [
@@ -62,24 +62,13 @@
     ]
   },
   "cache": {
-    "search_miss": 152,
-    "search_seconds": 3436.22,
-    "media_hit": 106,
-    "audio_hit": 44,
-    "media_miss": 24,
-    "media_seconds": 313.08,
-    "audio_miss": 20,
-    "audio_seconds": 406.58,
-    "search_hit": 4
+    "search_miss": 11,
+    "search_seconds": 161.42,
+    "search_hit": 2
   },
-  "audio_pipeline": {
-    "sample_count": 43,
-    "download_seconds": 249.78,
-    "inference_wait_seconds": 23.04,
-    "inference_seconds": 133.58
-  },
-  "productive_seasons": 197,
-  "series_paused_this_run": 0,
+  "audio_pipeline": {},
+  "productive_seasons": 196,
+  "series_paused_this_run": 1,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
   "repaired_this_run": 0,
@@ -2887,48 +2876,15 @@
     }
   ],
   "search_health": {
-    "status": "paused",
+    "status": "probe_due",
     "consecutive_failures": 2,
-    "retry_seconds": 511,
-    "failed_cycles_this_run": 2,
-    "control_requests": 14,
+    "retry_seconds": 0,
+    "failed_cycles_this_run": 0,
+    "control_requests": 0,
     "request_gap_seconds": 8,
-    "restart_required": true,
+    "restart_required": false,
     "last_request_limit": null,
-    "resume_after": "2026-11-18T02:36:13.140258+00:00",
-    "controls": [
-      {
-        "path": "/teorie-velkeho-tresku/s/-6",
-        "status": 200,
-        "response_bytes": 188633,
-        "parsed_candidates": 0,
-        "body_sha256": "7e38219f6f5416db24750efb801a174122975c98be4a473d4539dda1ebe80bff",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/teorie-velkeho-tresku/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-18T02:26:05.697478+00:00"
-      },
-      {
-        "path": "/doktor-martin/s/-6",
-        "status": 200,
-        "response_bytes": 188465,
-        "parsed_candidates": 0,
-        "body_sha256": "83d0be591f95f13e68cf04825ef1c05bdca33ddfcfc72f1f2cf94f4f6714d583",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/doktor-martin/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-18T02:26:13.140188+00:00"
-      }
-    ]
+    "resume_after": null,
+    "controls": []
   }
 }
