@@ -1204291,84 +1204291,16 @@
       "queue_rank": 37245
     },
     "7139:1:1": {
-      "at": "2026-11-09T03:51:21.680833+00:00",
+      "at": "2026-11-18T03:56:23.994128+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 35.47,
-      "search_evidence": [
-        {
-          "path": "/prolomit-kod-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201988,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/prolomit-kod/s/-6",
-          "status": 200,
-          "response_bytes": 202064,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cracking-the-code-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202135,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cracking-the-code/s/-6",
-          "status": 200,
-          "response_bytes": 201945,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/prolomit-kod-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202004,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/prolomit-kod/s/-6",
-          "status": 200,
-          "response_bytes": 202127,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cracking-the-code-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202215,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cracking-the-code/s/-6",
-          "status": 200,
-          "response_bytes": 201899,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T03:51:57.146931+00:00"
+      "elapsed_seconds": 58.71,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T03:57:22.702439+00:00"
     },
     "8134:1:1": {
       "at": "2026-11-09T03:51:23.117309+00:00",
@@ -1366396,9 +1366328,51 @@
       "elapsed_seconds": 35.87,
       "source_id": "35472745",
       "queue_rank": 43196
+    },
+    "5146:1:15": {
+      "at": "2026-11-18T03:47:34.097947+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9819837808609009,
+      "observed_source_id": "35472747",
+      "elapsed_seconds": 58.25,
+      "source_id": "35472747",
+      "queue_rank": 43197
+    },
+    "5146:1:16": {
+      "at": "2026-11-18T03:48:09.954013+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.931402862071991,
+      "observed_source_id": "35472750",
+      "elapsed_seconds": 70.95,
+      "source_id": "35472750",
+      "queue_rank": 43198
+    },
+    "5146:1:17": {
+      "at": "2026-11-18T03:48:27.886803+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8047749400138855,
+      "observed_source_id": "35472751",
+      "elapsed_seconds": 30.06,
+      "source_id": "35472751",
+      "queue_rank": 43199
     }
   },
-  "updated_at": "2026-11-18T03:48:36.394563+00:00",
+  "updated_at": "2026-11-18T03:57:28.694411+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1371901,7 +1371875,7 @@
     },
     "5146": {
       "misses": [],
-      "updated_at": "2026-11-18T03:48:08.939576+00:00"
+      "updated_at": "2026-11-18T03:56:23.988959+00:00"
     },
     "4326": {
       "misses": [
@@ -1372232,15 +1372206,21 @@
         "7474:1:1"
       ],
       "updated_at": "2026-11-18T03:42:47.683553+00:00"
+    },
+    "7139": {
+      "misses": [
+        "7139:1:1"
+      ],
+      "updated_at": "2026-11-18T03:57:22.702465+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 7474,
+    "last_series": 4627,
     "last_series_order": [
       false,
       -7.1,
-      -70,
-      7474
+      -58,
+      4627
     ]
   },
   "czech_fallback_revision": 1
