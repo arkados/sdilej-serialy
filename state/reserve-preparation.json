@@ -1207496,84 +1207496,16 @@
       "queue_rank": 37489
     },
     "6517:1:4": {
-      "at": "2026-11-09T12:09:42.917719+00:00",
+      "at": "2026-11-18T20:22:36.777282+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 46.22,
-      "search_evidence": [
-        {
-          "path": "/vrazdy-bez-hranic-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 202514,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vrazdy-bez-hranic/s/-6",
-          "status": 200,
-          "response_bytes": 224822,
-          "boxes": 17,
-          "parsed_candidates": 17,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-team-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 211010,
-          "boxes": 7,
-          "parsed_candidates": 7,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-team/s/-6",
-          "status": 200,
-          "response_bytes": 464262,
-          "boxes": 206,
-          "parsed_candidates": 198,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vrazdy-bez-hranic-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 202575,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vrazdy-bez-hranic/s/-6",
-          "status": 200,
-          "response_bytes": 224796,
-          "boxes": 17,
-          "parsed_candidates": 17,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-team-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 210985,
-          "boxes": 7,
-          "parsed_candidates": 7,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-team/s/-6",
-          "status": 200,
-          "response_bytes": 464319,
-          "boxes": 206,
-          "parsed_candidates": 198,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T12:10:29.138211+00:00"
+      "elapsed_seconds": 42.29,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T20:23:19.066989+00:00"
     },
     "110:1:4": {
       "at": "2026-11-09T12:11:41.238977+00:00",
@@ -1360409,16 +1360341,16 @@
       "queue_rank": 42816
     },
     "274:1:6": {
-      "at": "2026-11-18T18:40:08.710565+00:00",
+      "at": "2026-11-18T20:17:17.243769+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 422.78,
-      "consecutive_failures": 21,
-      "retry_after": "2026-11-19T18:47:41.254426+00:00"
+      "elapsed_seconds": 206.02,
+      "consecutive_failures": 22,
+      "retry_after": "2026-11-19T20:22:35.131005+00:00"
     },
     "274:1:7": {
       "at": "2026-11-18T16:29:18.622296+00:00",
@@ -1368428,9 +1368360,51 @@
       "elapsed_seconds": 88.07,
       "source_id": "17778942",
       "queue_rank": 43420
+    },
+    "5482:1:7": {
+      "at": "2026-11-18T20:18:49.229948+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9685729742050171,
+      "observed_source_id": "17784501",
+      "elapsed_seconds": 133.29,
+      "source_id": "17784501",
+      "queue_rank": 43421
+    },
+    "5482:1:9": {
+      "at": "2026-11-18T20:19:56.987740+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9309343099594116,
+      "observed_source_id": "22949431",
+      "elapsed_seconds": 100.87,
+      "source_id": "22949431",
+      "queue_rank": 43422
+    },
+    "304:1:3": {
+      "at": "2026-11-18T20:20:22.117144+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9802348613739014,
+      "observed_source_id": "32470824",
+      "elapsed_seconds": 174.81,
+      "source_id": "32470824",
+      "queue_rank": 43423
     }
   },
-  "updated_at": "2026-11-18T20:20:31.060931+00:00",
+  "updated_at": "2026-11-18T20:23:22.706716+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1373333,7 +1373307,7 @@
         "274:1:6",
         "274:1:7"
       ],
-      "updated_at": "2026-11-18T18:47:41.254438+00:00"
+      "updated_at": "2026-11-18T20:22:35.131054+00:00"
     },
     "2466": {
       "misses": [],
@@ -1374498,11 +1374472,11 @@
     },
     "5482": {
       "misses": [],
-      "updated_at": "2026-11-18T20:20:21.277120+00:00"
+      "updated_at": "2026-11-18T20:22:35.131183+00:00"
     },
     "304": {
       "misses": [],
-      "updated_at": "2026-11-18T15:12:53.884725+00:00"
+      "updated_at": "2026-11-18T20:23:16.926833+00:00"
     },
     "1750": {
       "misses": [
@@ -1374680,15 +1374654,21 @@
     "2297": {
       "misses": [],
       "updated_at": "2026-11-18T20:18:48.384757+00:00"
+    },
+    "6517": {
+      "misses": [
+        "6517:1:4"
+      ],
+      "updated_at": "2026-11-18T20:23:19.067016+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 2297,
+    "last_series": 6517,
     "last_series_order": [
       false,
       -7,
-      -3502,
-      2297
+      -3343,
+      6517
     ]
   },
   "czech_fallback_revision": 1

@@ -1,81 +1,82 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44387206500",
-  "attempted_this_run": 14,
-  "prepared_this_run": 7,
-  "reserve_total": 34985,
-  "queue_total": 43420,
-  "updated_at": "2026-11-18T20:20:32.322584+00:00",
+  "attempted_this_run": 19,
+  "prepared_this_run": 10,
+  "reserve_total": 34988,
+  "queue_total": 43423,
+  "updated_at": "2026-11-18T20:23:23.963367+00:00",
   "workers": 4,
-  "elapsed_seconds": 798.71,
-  "prepared_per_hour": 31.55,
-  "available_this_run": 7,
-  "available_per_hour": 31.55,
+  "elapsed_seconds": 970.35,
+  "prepared_per_hour": 37.1,
+  "available_this_run": 10,
+  "available_per_hour": 37.1,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 43420,
-    "ready": 9,
+    "queue_total": 43423,
+    "ready": 10,
     "ready_by_account": {
-      "a": 4,
-      "b": 5
+      "a": 6,
+      "b": 4
     },
     "categories": {
-      "completed": 42519,
-      "allocated": 877,
+      "completed": 42522,
+      "allocated": 876,
       "failed": 12,
       "language_review": 3,
-      "ready": 9
+      "ready": 10
     },
     "completed_by_account": {
-      "a": 21255,
-      "b": 21264
+      "a": 21256,
+      "b": 21266
     },
-    "uploads_last_24h": 377,
-    "uploads_per_hour_24h": 15.71,
-    "stock_hours_24h": 0.57
+    "uploads_last_24h": 379,
+    "uploads_per_hour_24h": 15.79,
+    "stock_hours_24h": 0.63
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 444,
-      "b": 646
+      "a": 210,
+      "b": 142
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 5,
-      "prepared": 26,
+      "prepared": 29,
       "inconclusive_subtitles": 8,
-      "no_matches": 8,
-      "no_english_czech_subtitles": 1
+      "no_matches": 9,
+      "no_english_czech_subtitles": 1,
+      "inconclusive_audio": 1
     }
   },
   "indexed_candidates_in_scan": 1104,
   "discovery_progress": {
-    "last_series": 2297,
+    "last_series": 6517,
     "last_series_order": [
       false,
       -7,
-      -3502,
-      2297
+      -3343,
+      6517
     ]
   },
   "cache": {
-    "search_miss": 80,
-    "search_seconds": 370.97,
+    "search_miss": 102,
+    "search_seconds": 489.23,
     "media_hit": 45,
-    "media_miss": 55,
-    "media_seconds": 671.83,
-    "audio_miss": 11,
-    "audio_seconds": 398.28,
+    "media_miss": 72,
+    "media_seconds": 760.04,
+    "audio_miss": 15,
+    "audio_seconds": 541.89,
     "search_hit": 6,
     "audio_hit": 3
   },
   "audio_pipeline": {
-    "sample_count": 25,
-    "download_seconds": 393.85,
+    "sample_count": 32,
+    "download_seconds": 468.23,
     "inference_wait_seconds": 0.72,
-    "inference_seconds": 56.72,
+    "inference_seconds": 72.86,
     "failures": 1
   },
   "productive_seasons": 163,
@@ -88,7 +89,7 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 34985,
+    "prepared": 34988,
     "deferred": 38669
   },
   "requested_series": [
@@ -2887,7 +2888,7 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 1,
+    "control_requests": 2,
     "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
@@ -2896,9 +2897,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724048,
+        "response_bytes": 724027,
         "parsed_candidates": 412,
-        "body_sha256": "c694c61cde5a5b6f4ce6c6cf38295ce48479cd30470ce399f5952874a52e2452",
+        "body_sha256": "18d3ed8580903a06f4b83e6fdd015f8378b4e0d9507db07395bef49841c0344b",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2907,7 +2908,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-18T20:16:12.891992+00:00"
+        "checked_at": "2026-11-18T20:22:43.142591+00:00"
       }
     ]
   }
