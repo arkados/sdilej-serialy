@@ -13866,16 +13866,16 @@
       "queue_rank": 10151
     },
     "28:1:2": {
-      "at": "2026-11-18T11:22:43.013634+00:00",
+      "at": "2026-11-18T12:48:58.602222+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "transient_original",
-      "elapsed_seconds": 502.04,
-      "consecutive_failures": 68,
-      "retry_after": "2026-11-18T17:31:05.049279+00:00"
+      "elapsed_seconds": 225.23,
+      "consecutive_failures": 69,
+      "retry_after": "2026-11-18T18:52:51.986872+00:00"
     },
     "28:1:3": {
       "at": "2026-10-04T13:21:14.757342+00:00",
@@ -1205670,52 +1205670,16 @@
       "queue_rank": 37347
     },
     "10444:1:1": {
-      "at": "2026-11-09T07:23:49.594741+00:00",
+      "at": "2026-11-18T12:52:20.250295+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 26.95,
-      "search_evidence": [
-        {
-          "path": "/the-tonight-show-starring-jimmy-fallon-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202649,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-tonight-show-starring-jimmy-fallon/s/-6",
-          "status": 200,
-          "response_bytes": 202427,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-tonight-show-starring-jimmy-fallon-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202554,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-tonight-show-starring-jimmy-fallon/s/-6",
-          "status": 200,
-          "response_bytes": 202455,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T07:24:16.541145+00:00"
+      "elapsed_seconds": 22.31,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T12:52:51.986965+00:00"
     },
     "10507:1:5": {
       "at": "2026-11-09T07:25:23.033265+00:00",
@@ -1367185,9 +1367149,23 @@
       "elapsed_seconds": 41.42,
       "source_id": "33758687",
       "queue_rank": 43279
+    },
+    "1189:1:13": {
+      "at": "2026-11-18T12:52:13.534954+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8804562091827393,
+      "observed_source_id": "22461008",
+      "elapsed_seconds": 60.49,
+      "source_id": "22461008",
+      "queue_rank": 43280
     }
   },
-  "updated_at": "2026-11-18T12:52:37.084698+00:00",
+  "updated_at": "2026-11-18T12:53:56.745817+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1371870,7 +1371848,7 @@
       "misses": [
         "28:1:2"
       ],
-      "updated_at": "2026-11-18T11:31:05.049305+00:00"
+      "updated_at": "2026-11-18T12:52:51.986902+00:00"
     },
     "3780": {
       "misses": [],
@@ -1373093,7 +1373071,7 @@
     },
     "1189": {
       "misses": [],
-      "updated_at": "2026-11-18T12:12:41.026703+00:00"
+      "updated_at": "2026-11-18T12:53:14.026134+00:00"
     },
     "651": {
       "misses": [],
@@ -1373156,15 +1373134,21 @@
     "7506": {
       "misses": [],
       "updated_at": "2026-11-18T12:50:33.292057+00:00"
+    },
+    "10444": {
+      "misses": [
+        "10444:1:1"
+      ],
+      "updated_at": "2026-11-18T12:52:51.986978+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 10444,
+    "last_series": 3286,
     "last_series_order": [
       false,
       -7,
-      -20396,
-      10444
+      -19467,
+      3286
     ]
   },
   "czech_fallback_revision": 1
