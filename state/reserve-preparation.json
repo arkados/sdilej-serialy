@@ -237075,21 +237075,18 @@
       "queue_rank": 22366
     },
     "1388:1:2": {
-      "at": "2026-11-02T11:32:14.489288+00:00",
-      "status": "deferred",
+      "at": "2026-11-18T17:08:13.301447+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.9723246097564697,
+      "observed_language_probability": 0.9721682071685791,
       "observed_source_id": "32024810",
-      "elapsed_seconds": 164.95,
-      "consecutive_failures": 4,
-      "retry_after": "2026-11-03T11:34:59.440335+00:00"
+      "elapsed_seconds": 256.64,
+      "source_id": "32024810",
+      "queue_rank": 43360
     },
     "52:4:8": {
       "at": "2026-10-15T01:07:02.464869+00:00",
@@ -1206602,84 +1206599,16 @@
       "queue_rank": 37418
     },
     "1674:1:1": {
-      "at": "2026-11-09T09:16:00.333461+00:00",
+      "at": "2026-11-18T17:12:08.806659+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 45.21,
-      "search_evidence": [
-        {
-          "path": "/nebezpecny-flirt-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202128,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nebezpecny-flirt/s/-6",
-          "status": 200,
-          "response_bytes": 216840,
-          "boxes": 15,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/eye-candy-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201921,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/eye-candy/s/-6",
-          "status": 200,
-          "response_bytes": 206135,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nebezpecny-flirt-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202060,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nebezpecny-flirt/s/-6",
-          "status": 200,
-          "response_bytes": 216802,
-          "boxes": 15,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/eye-candy-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201898,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/eye-candy/s/-6",
-          "status": 200,
-          "response_bytes": 206028,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T09:16:45.539026+00:00"
+      "elapsed_seconds": 41.12,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T17:12:49.930225+00:00"
     },
     "6056:1:1": {
       "at": "2026-11-09T09:15:50.390031+00:00",
@@ -1367929,9 +1367858,49 @@
       "elapsed_seconds": 223.89,
       "source_id": "34899106",
       "queue_rank": 43357
+    },
+    "660:1:5": {
+      "at": "2026-11-18T17:08:05.609209+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9778352379798889,
+      "observed_source_id": "34899118",
+      "elapsed_seconds": 234.04,
+      "source_id": "34899118",
+      "queue_rank": 43358
+    },
+    "2037:2:1": {
+      "at": "2026-11-18T17:11:17.470648+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9510943293571472,
+      "observed_source_id": "30014814",
+      "elapsed_seconds": 39.19,
+      "source_id": "30014814",
+      "queue_rank": 43359
+    },
+    "314:1:2": {
+      "at": "2026-11-18T17:12:09.670619+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 42.03,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-19T17:12:51.704444+00:00"
     }
   },
-  "updated_at": "2026-11-18T17:11:47.897244+00:00",
+  "updated_at": "2026-11-18T17:12:56.795074+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1373923,7 +1373892,7 @@
     },
     "660": {
       "misses": [],
-      "updated_at": "2026-11-18T17:11:15.941759+00:00"
+      "updated_at": "2026-11-18T17:12:07.967576+00:00"
     },
     "2735": {
       "misses": [
@@ -1374035,15 +1374004,35 @@
     "2060": {
       "misses": [],
       "updated_at": "2026-11-18T17:08:03.962052+00:00"
+    },
+    "2037": {
+      "misses": [],
+      "updated_at": "2026-11-18T17:12:07.967657+00:00"
+    },
+    "1388": {
+      "misses": [],
+      "updated_at": "2026-11-18T17:12:30.258672+00:00"
+    },
+    "1674": {
+      "misses": [
+        "1674:1:1"
+      ],
+      "updated_at": "2026-11-18T17:12:49.930254+00:00"
+    },
+    "314": {
+      "misses": [
+        "314:1:2"
+      ],
+      "updated_at": "2026-11-18T17:12:51.704472+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 6056,
+    "last_series": 314,
     "last_series_order": [
       false,
       -7,
-      -8212,
-      6056
+      -7765,
+      314
     ]
   },
   "czech_fallback_revision": 1
