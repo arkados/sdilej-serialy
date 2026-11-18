@@ -1,57 +1,57 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44327243236",
-  "attempted_this_run": 27,
-  "prepared_this_run": 16,
-  "reserve_total": 34893,
-  "queue_total": 43328,
-  "updated_at": "2026-11-18T15:55:42.357164+00:00",
+  "attempted_this_run": 32,
+  "prepared_this_run": 20,
+  "reserve_total": 34897,
+  "queue_total": 43332,
+  "updated_at": "2026-11-18T15:56:52.952845+00:00",
   "workers": 4,
-  "elapsed_seconds": 4260.64,
-  "prepared_per_hour": 13.52,
-  "available_this_run": 16,
-  "available_per_hour": 13.52,
+  "elapsed_seconds": 4331.23,
+  "prepared_per_hour": 16.62,
+  "available_this_run": 20,
+  "available_per_hour": 16.62,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 43328,
-    "ready": 4,
+    "queue_total": 43332,
+    "ready": 8,
     "ready_by_account": {
-      "a": 2,
-      "b": 2
+      "a": 4,
+      "b": 4
     },
     "categories": {
-      "completed": 42433,
-      "allocated": 876,
+      "completed": 42434,
+      "allocated": 875,
       "failed": 12,
       "language_review": 3,
-      "ready": 4
+      "ready": 8
     },
     "completed_by_account": {
-      "a": 21210,
+      "a": 21211,
       "b": 21223
     },
     "uploads_last_24h": 400,
     "uploads_per_hour_24h": 16.67,
-    "stock_hours_24h": 0.24
+    "stock_hours_24h": 0.48
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1969,
-      "b": 251
+      "a": 92,
+      "b": 322
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 3,
-      "no_matches": 2,
+      "no_matches": 3,
       "inconclusive_audio": 1,
       "inconclusive_subtitles": 1,
-      "prepared": 12,
+      "prepared": 16,
       "no_english_czech_subtitles": 1
     }
   },
-  "indexed_candidates_in_scan": 1215,
+  "indexed_candidates_in_scan": 1224,
   "discovery_progress": {
     "last_series": 8002,
     "last_series_order": [
@@ -62,23 +62,23 @@
     ]
   },
   "cache": {
-    "search_miss": 148,
-    "search_seconds": 3729.33,
-    "media_miss": 85,
-    "media_seconds": 538.15,
-    "media_hit": 72,
-    "audio_miss": 25,
-    "audio_seconds": 486.68,
-    "audio_hit": 14,
+    "search_miss": 166,
+    "search_seconds": 3835.77,
+    "media_miss": 89,
+    "media_seconds": 561.47,
+    "media_hit": 73,
+    "audio_miss": 26,
+    "audio_seconds": 550.19,
+    "audio_hit": 15,
     "search_hit": 4
   },
   "audio_pipeline": {
-    "sample_count": 34,
-    "download_seconds": 411.61,
-    "inference_wait_seconds": 1.33,
-    "inference_seconds": 73.61
+    "sample_count": 38,
+    "download_seconds": 464.72,
+    "inference_wait_seconds": 3.01,
+    "inference_seconds": 82.34
   },
-  "productive_seasons": 180,
+  "productive_seasons": 183,
   "series_paused_this_run": 4,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
@@ -88,7 +88,7 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 34893,
+    "prepared": 34897,
     "deferred": 38670
   },
   "requested_series": [
@@ -2891,7 +2891,7 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 8,
+    "control_requests": 9,
     "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
@@ -2900,9 +2900,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724175,
+        "response_bytes": 724004,
         "parsed_candidates": 412,
-        "body_sha256": "892704384d582013262fe6aeced60ea977100c35fc48eef30d90cd7af98e3766",
+        "body_sha256": "3196932c935155b75e73cd1a371ff392307163f065fd71e6ef9ffc431ff33e0b",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2911,7 +2911,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-18T15:54:44.441362+00:00"
+        "checked_at": "2026-11-18T15:56:17.201823+00:00"
       }
     ]
   }
