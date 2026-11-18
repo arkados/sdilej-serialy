@@ -2,6 +2,11 @@ name: pipeline-health
 
 on:
   workflow_dispatch:
+    inputs:
+      delay_seconds:
+        description: Delay a scheduled supervision pass (0 to 600 seconds)
+        type: string
+        default: '0'
   schedule:
     - cron: '7,17,27,37,47,57 * * * *'
   workflow_run:
@@ -21,8 +26,17 @@ jobs:
   check:
     if: vars.SOURCE_PREPARATION_ENABLED == 'true' || vars.DUAL_ENABLED == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
+      - name: Wait before a recurring supervision pass
+        env:
+          DELAY_SECONDS: ${{ inputs.delay_seconds || '0' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$DELAY_SECONDS" =~ ^(0|[1-9][0-9]{0,2})$ ]]
+          [[ "$DELAY_SECONDS" -le 600 ]]
+          sleep "$DELAY_SECONDS"
       - uses: actions/checkout@v4
         with:
           ref: main
@@ -39,3 +53,22 @@ jobs:
           DUAL_FULL_ENABLED: ${{ vars.DUAL_FULL_ENABLED }}
           DUAL_GENERATION: ${{ vars.DUAL_GENERATION }}
         run: python -m sdilej_serialy.supervise --generation "$DUAL_GENERATION" --apply
+      - name: Schedule supervision independently of cron and bot events
+        if: always() && !cancelled()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          pending=$(gh run list --repo "$GITHUB_REPOSITORY" \
+            --workflow pipeline-health.yml --limit 30 --json databaseId,status |
+            jq --arg current "$GITHUB_RUN_ID" \
+              '[.[] | select((.databaseId | tostring) != $current) |
+                select(.status == "queued" or .status == "pending" or
+                       .status == "requested" or .status == "waiting")] | length')
+          if [[ "$pending" -eq 0 ]]; then
+            gh workflow run pipeline-health.yml --repo "$GITHUB_REPOSITORY" \
+              --ref main -f delay_seconds=600
+          else
+            echo 'Another supervision pass is already queued'
+          fi

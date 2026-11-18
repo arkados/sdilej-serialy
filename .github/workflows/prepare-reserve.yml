@@ -117,3 +117,10 @@ jobs:
           DUAL_ENABLED: ${{ vars.DUAL_ENABLED }}
           DUAL_FULL_ENABLED: ${{ vars.DUAL_FULL_ENABLED }}
         run: python -m sdilej_serialy.supervise --generation "$DUAL_GENERATION" --handoff source --apply
+      - name: Ensure deferred or failed preparation returns to supervision
+        if: always() && !cancelled() && vars.SOURCE_PREPARATION_ENABLED == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh workflow run pipeline-health.yml --repo "$GITHUB_REPOSITORY"
+          --ref main
