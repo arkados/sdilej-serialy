@@ -298970,14 +298970,18 @@
       "retry_after": "2026-10-24T14:27:25.039575+00:00"
     },
     "1628:2:7": {
-      "at": "2026-10-18T12:28:56.072924+00:00",
-      "status": "deferred",
-      "preparation_revision": 4,
+      "at": "2026-11-18T00:56:43.659580+00:00",
+      "status": "prepared",
       "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 57.55,
-      "consecutive_failures": 1,
-      "retry_after": "2026-10-19T12:29:53.622796+00:00"
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9544528722763062,
+      "observed_source_id": "29271745",
+      "elapsed_seconds": 78.3,
+      "source_id": "29271745",
+      "queue_rank": 43129
     },
     "3680:1:4": {
       "at": "2026-10-18T12:29:07.925079+00:00",
@@ -1203070,84 +1203074,16 @@
       "queue_rank": 37146
     },
     "6423:1:1": {
-      "at": "2026-11-09T02:13:57.289147+00:00",
+      "at": "2026-11-18T00:56:48.589724+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 60.08,
-      "search_evidence": [
-        {
-          "path": "/navrat-kralovny-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202024,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/navrat-kralovny/s/-6",
-          "status": 200,
-          "response_bytes": 204872,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/queen-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 246100,
-          "boxes": 35,
-          "parsed_candidates": 35,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/queen/s/-6",
-          "status": 200,
-          "response_bytes": 486793,
-          "boxes": 305,
-          "parsed_candidates": 114,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/navrat-kralovny-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202050,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/navrat-kralovny/s/-6",
-          "status": 200,
-          "response_bytes": 204971,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/queen-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 246062,
-          "boxes": 35,
-          "parsed_candidates": 35,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/queen/s/-6",
-          "status": 200,
-          "response_bytes": 486832,
-          "boxes": 305,
-          "parsed_candidates": 114,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T02:15:11.758968+00:00"
+      "elapsed_seconds": 37.95,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T00:57:26.537905+00:00"
     },
     "298:1:5": {
       "at": "2026-11-09T02:13:01.107252+00:00",
@@ -1366641,9 +1366577,23 @@
       "elapsed_seconds": 177.66,
       "source_id": "34400515",
       "queue_rank": 43127
+    },
+    "146:1:6": {
+      "at": "2026-11-18T00:53:24.439801+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9460892081260681,
+      "observed_source_id": "33444449",
+      "elapsed_seconds": 263.36,
+      "source_id": "33444449",
+      "queue_rank": 43128
     }
   },
-  "updated_at": "2026-11-18T00:56:59.025454+00:00",
+  "updated_at": "2026-11-18T00:58:23.755724+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1372126,7 +1372076,7 @@
     },
     "146": {
       "misses": [],
-      "updated_at": "2026-11-18T00:56:47.850548+00:00"
+      "updated_at": "2026-11-18T00:57:47.796760+00:00"
     },
     "4931": {
       "misses": [],
@@ -1372241,10 +1372191,8 @@
       "updated_at": "2026-11-17T23:09:45.720647+00:00"
     },
     "1628": {
-      "misses": [
-        "1628:1:4"
-      ],
-      "updated_at": "2026-11-17T23:23:25.099050+00:00"
+      "misses": [],
+      "updated_at": "2026-11-18T00:58:01.963853+00:00"
     },
     "4742": {
       "misses": [
@@ -1372309,15 +1372257,21 @@
         "1745:1:1"
       ],
       "updated_at": "2026-11-18T00:53:22.658885+00:00"
+    },
+    "6423": {
+      "misses": [
+        "6423:1:1"
+      ],
+      "updated_at": "2026-11-18T00:57:26.537936+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 6423,
+    "last_series": 1978,
     "last_series_order": [
       false,
       -7.1,
-      -1811,
-      6423
+      -1537,
+      1978
     ]
   },
   "czech_fallback_revision": 1
