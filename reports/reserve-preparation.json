@@ -1,52 +1,52 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44387206500",
-  "attempted_this_run": 0,
-  "prepared_this_run": 0,
-  "reserve_total": 34978,
-  "queue_total": 43413,
-  "updated_at": "2026-11-18T20:08:21.006245+00:00",
+  "attempted_this_run": 4,
+  "prepared_this_run": 1,
+  "reserve_total": 34979,
+  "queue_total": 43414,
+  "updated_at": "2026-11-18T20:13:05.015444+00:00",
   "workers": 4,
-  "elapsed_seconds": 67.39,
-  "prepared_per_hour": 0.0,
-  "available_this_run": 0,
-  "available_per_hour": 0.0,
+  "elapsed_seconds": 351.4,
+  "prepared_per_hour": 10.24,
+  "available_this_run": 1,
+  "available_per_hour": 10.24,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 43413,
-    "ready": 8,
+    "queue_total": 43414,
+    "ready": 4,
     "ready_by_account": {
-      "a": 4,
-      "b": 4
+      "a": 2,
+      "b": 2
     },
     "categories": {
-      "completed": 42516,
-      "allocated": 874,
+      "completed": 42517,
+      "allocated": 878,
       "failed": 12,
       "language_review": 3,
-      "ready": 8
+      "ready": 4
     },
     "completed_by_account": {
       "a": 21253,
-      "b": 21263
+      "b": 21264
     },
-    "uploads_last_24h": 381,
-    "uploads_per_hour_24h": 15.88,
-    "stock_hours_24h": 0.5
+    "uploads_last_24h": 380,
+    "uploads_per_hour_24h": 15.83,
+    "stock_hours_24h": 0.25
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 703,
-      "b": 1031
+      "a": 987,
+      "b": 198
     },
     "preparation_outcomes_last_hour": {
-      "prepared": 22,
-      "inconclusive_subtitles": 8,
+      "transient_original": 4,
+      "prepared": 21,
+      "inconclusive_subtitles": 6,
       "no_matches": 8,
-      "transient_original": 1,
       "no_english_czech_subtitles": 1
     }
   },
@@ -61,12 +61,21 @@
     ]
   },
   "cache": {
-    "search_miss": 16,
-    "search_seconds": 104.04,
-    "media_hit": 5,
-    "media_miss": 1
+    "search_miss": 34,
+    "search_seconds": 206.62,
+    "media_hit": 29,
+    "media_miss": 11,
+    "media_seconds": 267.17,
+    "audio_miss": 1,
+    "audio_seconds": 11.97,
+    "search_hit": 6
   },
-  "audio_pipeline": {},
+  "audio_pipeline": {
+    "sample_count": 1,
+    "download_seconds": 8.42,
+    "inference_wait_seconds": 0.0,
+    "inference_seconds": 3.54
+  },
   "productive_seasons": 162,
   "series_paused_this_run": 2,
   "saved_reviewed_this_run": 0,
@@ -77,8 +86,8 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 34978,
-    "deferred": 38670
+    "prepared": 34979,
+    "deferred": 38669
   },
   "requested_series": [
     {
