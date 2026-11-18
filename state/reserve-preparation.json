@@ -1206305,52 +1206305,16 @@
       "queue_rank": 37397
     },
     "6799:1:1": {
-      "at": "2026-11-09T08:47:11.047827+00:00",
+      "at": "2026-11-18T15:33:32.793453+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 15.05,
-      "search_evidence": [
-        {
-          "path": "/the-nine-lives-of-chloe-king-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202318,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-nine-lives-of-chloe-king/s/-6",
-          "status": 200,
-          "response_bytes": 202249,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-nine-lives-of-chloe-king-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202369,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-nine-lives-of-chloe-king/s/-6",
-          "status": 200,
-          "response_bytes": 202180,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T08:47:26.095427+00:00"
+      "elapsed_seconds": 114.73,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T15:35:27.525335+00:00"
     },
     "906:1:1": {
       "at": "2026-11-09T08:47:13.177014+00:00",
@@ -1367533,9 +1367497,23 @@
       "elapsed_seconds": 264.39,
       "source_id": "24985818",
       "queue_rank": 43322
+    },
+    "3086:1:3": {
+      "at": "2026-11-18T15:21:23.477124+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.666305661201477,
+      "observed_source_id": "34772930",
+      "elapsed_seconds": 798.9,
+      "source_id": "34772930",
+      "queue_rank": 43323
     }
   },
-  "updated_at": "2026-11-18T15:34:19.389035+00:00",
+  "updated_at": "2026-11-18T15:35:40.780822+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1373491,7 +1373469,7 @@
     },
     "3086": {
       "misses": [],
-      "updated_at": "2026-11-18T12:11:29.158253+00:00"
+      "updated_at": "2026-11-18T15:34:42.380347+00:00"
     },
     "1726": {
       "misses": [],
@@ -1373591,6 +1373569,12 @@
         "1750:1:2"
       ],
       "updated_at": "2026-11-18T15:21:22.748764+00:00"
+    },
+    "6799": {
+      "misses": [
+        "6799:1:1"
+      ],
+      "updated_at": "2026-11-18T15:35:27.525370+00:00"
     }
   },
   "discovery_progress": {
