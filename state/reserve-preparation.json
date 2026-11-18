@@ -1178521,18 +1178521,18 @@
       "queue_rank": 36018
     },
     "3481:1:4": {
-      "at": "2026-11-16T12:48:58.678465+00:00",
-      "status": "deferred",
+      "at": "2026-11-18T01:08:20.186244+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "transient_original",
-      "elapsed_seconds": 41.9,
-      "consecutive_failures": 12,
-      "retry_after": "2026-11-16T18:50:45.899704+00:00"
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9792681932449341,
+      "observed_source_id": "31838604",
+      "elapsed_seconds": 76.6,
+      "source_id": "31838604",
+      "queue_rank": 43136
     },
     "3481:1:6": {
       "at": "2026-11-07T19:30:35.334519+00:00",
@@ -1203246,21 +1203246,19 @@
       "queue_rank": 37158
     },
     "6745:1:1": {
-      "at": "2026-11-09T02:27:26.611998+00:00",
+      "at": "2026-11-18T01:08:20.936703+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "fr",
-      "observed_language_probability": 0.9620844125747681,
+      "observed_language_probability": 0.9540080030759176,
       "observed_source_id": "32215830",
-      "elapsed_seconds": 84.56,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T02:28:51.168129+00:00"
+      "reason": "transient_search",
+      "elapsed_seconds": 93.27,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-18T01:39:54.202069+00:00"
     },
     "3780:1:2": {
       "at": "2026-11-09T02:28:52.026589+00:00",
@@ -1203328,84 +1203326,16 @@
       "queue_rank": 37164
     },
     "10050:1:1": {
-      "at": "2026-11-09T02:33:54.490755+00:00",
+      "at": "2026-11-18T01:08:21.683396+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 54.03,
-      "search_evidence": [
-        {
-          "path": "/tajemstvi-hunterovych-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202231,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tajemstvi-hunterovych/s/-6",
-          "status": 200,
-          "response_bytes": 202078,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hunter-street-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202581,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hunter-street/s/-6",
-          "status": 200,
-          "response_bytes": 221630,
-          "boxes": 14,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tajemstvi-hunterovych-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202191,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tajemstvi-hunterovych/s/-6",
-          "status": 200,
-          "response_bytes": 202144,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hunter-street-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202538,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hunter-street/s/-6",
-          "status": 200,
-          "response_bytes": 221700,
-          "boxes": 14,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T02:34:51.156157+00:00"
+      "elapsed_seconds": 59.0,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T01:09:36.736189+00:00"
     },
     "698:1:3": {
       "at": "2026-11-09T02:41:52.734243+00:00",
@@ -1366667,7 +1366597,7 @@
       "queue_rank": 43135
     }
   },
-  "updated_at": "2026-11-18T01:09:23.289980+00:00",
+  "updated_at": "2026-11-18T01:10:41.648459+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1372345,6 +1372275,22 @@
     "1978": {
       "misses": [],
       "updated_at": "2026-11-18T00:58:57.247147+00:00"
+    },
+    "10050": {
+      "misses": [
+        "10050:1:1"
+      ],
+      "updated_at": "2026-11-18T01:09:36.736232+00:00"
+    },
+    "3481": {
+      "misses": [],
+      "updated_at": "2026-11-18T01:09:37.480221+00:00"
+    },
+    "6745": {
+      "misses": [
+        "6745:1:1"
+      ],
+      "updated_at": "2026-11-18T01:09:54.202097+00:00"
     }
   },
   "discovery_progress": {
