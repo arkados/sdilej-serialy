@@ -1202575,84 +1202575,16 @@
       "queue_rank": 37113
     },
     "5544:1:3": {
-      "at": "2026-11-09T00:32:33.173596+00:00",
+      "at": "2026-11-18T00:18:59.458259+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 52.44,
-      "search_evidence": [
-        {
-          "path": "/milacci-ameriky-roztleskavacky-dallas-cowboys-s01e03/s/-6",
-          "status": 200,
-          "response_bytes": 202714,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/milacci-ameriky-roztleskavacky-dallas-cowboys/s/-6",
-          "status": 200,
-          "response_bytes": 186405,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/america-s-sweethearts-dallas-cowboys-cheerleaders-s01e03/s/-6",
-          "status": 200,
-          "response_bytes": 186636,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/america-s-sweethearts-dallas-cowboys-cheerleaders/s/-6",
-          "status": 200,
-          "response_bytes": 186489,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/milacci-ameriky-roztleskavacky-dallas-cowboys-s01e03/s/-6",
-          "status": 200,
-          "response_bytes": 186552,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/milacci-ameriky-roztleskavacky-dallas-cowboys/s/-6",
-          "status": 200,
-          "response_bytes": 186405,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/america-s-sweethearts-dallas-cowboys-cheerleaders-s01e03/s/-6",
-          "status": 200,
-          "response_bytes": 186636,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/america-s-sweethearts-dallas-cowboys-cheerleaders/s/-6",
-          "status": 200,
-          "response_bytes": 186489,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T00:33:25.616170+00:00"
+      "elapsed_seconds": 40.42,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T00:19:39.882890+00:00"
     },
     "661:1:4": {
       "at": "2026-11-09T00:29:58.770389+00:00",
@@ -1366659,9 +1366591,23 @@
       "elapsed_seconds": 58.56,
       "source_id": "35335045",
       "queue_rank": 43109
+    },
+    "1614:1:19": {
+      "at": "2026-11-18T00:18:36.139819+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9704895615577698,
+      "observed_source_id": "35335046",
+      "elapsed_seconds": 89.43,
+      "source_id": "35335046",
+      "queue_rank": 43110
     }
   },
-  "updated_at": "2026-11-18T00:19:18.566062+00:00",
+  "updated_at": "2026-11-18T00:20:37.157407+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1372124,7 +1372070,7 @@
     },
     "1614": {
       "misses": [],
-      "updated_at": "2026-11-18T00:18:34.597838+00:00"
+      "updated_at": "2026-11-18T00:20:05.569660+00:00"
     },
     "5135": {
       "misses": [
@@ -1372281,15 +1372227,21 @@
     "197": {
       "misses": [],
       "updated_at": "2026-11-18T00:12:50.718673+00:00"
+    },
+    "5544": {
+      "misses": [
+        "5544:1:3"
+      ],
+      "updated_at": "2026-11-18T00:19:39.882920+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 5544,
+    "last_series": 175,
     "last_series_order": [
       false,
       -7.1,
-      -3731,
-      5544
+      -3718,
+      175
     ]
   },
   "czech_fallback_revision": 1
