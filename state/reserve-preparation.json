@@ -1206382,84 +1206382,16 @@
       "queue_rank": 37402
     },
     "4701:1:1": {
-      "at": "2026-11-09T08:50:59.521451+00:00",
+      "at": "2026-11-18T15:58:42.803803+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 55.55,
-      "search_evidence": [
-        {
-          "path": "/agatha-christie-proc-nepozadali-evanse-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 203207,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/agatha-christie-proc-nepozadali-evanse/s/-6",
-          "status": 200,
-          "response_bytes": 210870,
-          "boxes": 8,
-          "parsed_candidates": 4,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/why-didn-t-they-ask-evans-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202238,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/why-didn-t-they-ask-evans/s/-6",
-          "status": 200,
-          "response_bytes": 202087,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/agatha-christie-proc-nepozadali-evanse-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 203238,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/agatha-christie-proc-nepozadali-evanse/s/-6",
-          "status": 200,
-          "response_bytes": 210868,
-          "boxes": 8,
-          "parsed_candidates": 4,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/why-didn-t-they-ask-evans-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202345,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/why-didn-t-they-ask-evans/s/-6",
-          "status": 200,
-          "response_bytes": 202101,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T08:51:55.071880+00:00"
+      "elapsed_seconds": 14.76,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T16:12:35.705386+00:00"
     },
     "8002:1:1": {
       "at": "2026-11-09T08:50:29.734059+00:00",
@@ -1367679,9 +1367611,63 @@
       "elapsed_seconds": 51.36,
       "source_id": "33758667",
       "queue_rank": 43335
+    },
+    "1726:4:6": {
+      "at": "2026-11-18T15:57:51.439171+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9546240568161011,
+      "observed_source_id": "33758669",
+      "elapsed_seconds": 65.69,
+      "source_id": "33758669",
+      "queue_rank": 43336
+    },
+    "1726:4:12": {
+      "at": "2026-11-18T15:57:52.201441+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.958034873008728,
+      "observed_source_id": "24987278",
+      "elapsed_seconds": 68.18,
+      "source_id": "24987278",
+      "queue_rank": 43337
+    },
+    "1726:6:4": {
+      "at": "2026-11-18T15:58:01.308107+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9545632004737854,
+      "observed_source_id": "28525377",
+      "elapsed_seconds": 61.33,
+      "source_id": "28525377",
+      "queue_rank": 43338
+    },
+    "442:1:2": {
+      "at": "2026-11-18T16:12:36.447387+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 23.25,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-19T16:12:59.698316+00:00"
     }
   },
-  "updated_at": "2026-11-18T15:58:56.462089+00:00",
+  "updated_at": "2026-11-18T16:13:03.325303+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1373641,7 +1373627,7 @@
     },
     "1726": {
       "misses": [],
-      "updated_at": "2026-11-18T15:58:42.065683+00:00"
+      "updated_at": "2026-11-18T16:12:35.705333+00:00"
     },
     "1151": {
       "misses": [],
@@ -1373755,15 +1373741,27 @@
     "906": {
       "misses": [],
       "updated_at": "2026-11-18T15:56:48.381949+00:00"
+    },
+    "4701": {
+      "misses": [
+        "4701:1:1"
+      ],
+      "updated_at": "2026-11-18T16:12:35.705404+00:00"
+    },
+    "442": {
+      "misses": [
+        "442:1:2"
+      ],
+      "updated_at": "2026-11-18T16:12:59.698348+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 4701,
+    "last_series": 442,
     "last_series_order": [
       false,
       -7,
-      -10180,
-      4701
+      -9318,
+      442
     ]
   },
   "czech_fallback_revision": 1
