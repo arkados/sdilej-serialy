@@ -1203762,84 +1203762,16 @@
       "queue_rank": 37198
     },
     "6469:1:1": {
-      "at": "2026-11-09T03:18:12.141859+00:00",
+      "at": "2026-11-18T02:17:25.301398+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 41.0,
-      "search_evidence": [
-        {
-          "path": "/mamotata-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201895,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mamotata/s/-6",
-          "status": 200,
-          "response_bytes": 244357,
-          "boxes": 34,
-          "parsed_candidates": 34,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mapa-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 287027,
-          "boxes": 68,
-          "parsed_candidates": 67,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mapa/s/-6",
-          "status": 200,
-          "response_bytes": 328358,
-          "boxes": 127,
-          "parsed_candidates": 89,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mamotata-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201913,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mamotata/s/-6",
-          "status": 200,
-          "response_bytes": 244271,
-          "boxes": 34,
-          "parsed_candidates": 34,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mapa-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 286998,
-          "boxes": 68,
-          "parsed_candidates": 67,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mapa/s/-6",
-          "status": 200,
-          "response_bytes": 328349,
-          "boxes": 127,
-          "parsed_candidates": 89,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T03:18:53.144760+00:00"
+      "elapsed_seconds": 43.75,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-19T02:18:31.588246+00:00"
     },
     "1798:1:1": {
       "at": "2026-11-09T03:20:33.081348+00:00",
@@ -1366655,9 +1366587,37 @@
       "elapsed_seconds": 38.47,
       "source_id": "35432120",
       "queue_rank": 43162
+    },
+    "1107:3:8": {
+      "at": "2026-11-18T02:17:22.277191+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9838535785675049,
+      "observed_source_id": "33554212",
+      "elapsed_seconds": 47.03,
+      "source_id": "33554212",
+      "queue_rank": 43163
+    },
+    "1107:3:9": {
+      "at": "2026-11-18T02:17:23.290521+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9707716703414917,
+      "observed_source_id": "33554213",
+      "elapsed_seconds": 50.04,
+      "source_id": "33554213",
+      "queue_rank": 43164
     }
   },
-  "updated_at": "2026-11-18T02:18:08.344386+00:00",
+  "updated_at": "2026-11-18T02:19:35.891257+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1372340,7 +1372300,7 @@
     },
     "1107": {
       "misses": [],
-      "updated_at": "2026-11-18T02:17:21.284954+00:00"
+      "updated_at": "2026-11-18T02:18:31.588180+00:00"
     },
     "1497": {
       "misses": [
@@ -1372398,6 +1372358,12 @@
     "10508": {
       "misses": [],
       "updated_at": "2026-11-18T02:18:02.778414+00:00"
+    },
+    "6469": {
+      "misses": [
+        "6469:1:1"
+      ],
+      "updated_at": "2026-11-18T02:18:31.588268+00:00"
     }
   },
   "discovery_progress": {
