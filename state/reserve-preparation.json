@@ -448748,21 +448748,19 @@
       "retry_after": "2026-10-23T05:58:55.107595+00:00"
     },
     "1549:7:16": {
-      "at": "2026-11-12T02:30:07.908148+00:00",
+      "at": "2026-11-19T17:54:42.086218+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.9970946460962296,
+      "observed_language_probability": 0.9973352253437042,
       "observed_source_id": "33347967",
-      "elapsed_seconds": 195.67,
-      "consecutive_failures": 5,
-      "retry_after": "2026-11-13T02:33:23.575960+00:00"
+      "reason": "transient_original",
+      "elapsed_seconds": 523.77,
+      "consecutive_failures": 6,
+      "retry_after": "2026-11-20T00:03:25.856104+00:00"
     },
     "106:2:7": {
       "at": "2026-11-11T01:34:05.715374+00:00",
@@ -459876,21 +459874,16 @@
       "retry_after": "2026-10-23T10:20:18.415783+00:00"
     },
     "1549:7:17": {
-      "at": "2026-11-13T14:54:34.604112+00:00",
+      "at": "2026-11-19T17:57:27.287006+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
-      "observed_audio_language": "en",
-      "observed_language_probability": 0.9979224056005478,
-      "observed_source_id": "33347981",
-      "elapsed_seconds": 297.99,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 334.6,
       "consecutive_failures": 6,
-      "retry_after": "2026-11-14T14:59:32.595117+00:00"
+      "retry_after": "2026-11-19T18:04:19.797440+00:00"
     },
     "616:2:7": {
       "at": "2026-10-22T10:19:45.230022+00:00",
@@ -463401,21 +463394,16 @@
       "retry_after": "2026-11-05T04:12:18.827809+00:00"
     },
     "1549:7:18": {
-      "at": "2026-11-13T15:30:18.316147+00:00",
+      "at": "2026-11-19T17:57:28.446227+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
-      "observed_audio_language": "en",
-      "observed_language_probability": 0.9657979607582092,
-      "observed_source_id": "33320687",
-      "elapsed_seconds": 169.46,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 374.03,
       "consecutive_failures": 5,
-      "retry_after": "2026-11-14T15:33:07.777727+00:00"
+      "retry_after": "2026-11-19T18:13:42.478144+00:00"
     },
     "844:2:6": {
       "at": "2026-11-14T18:03:11.929482+00:00",
@@ -1214669,52 +1214657,16 @@
       "queue_rank": 37973
     },
     "2034:1:18": {
-      "at": "2026-11-10T04:28:05.114265+00:00",
+      "at": "2026-11-19T17:57:54.888271+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 6.58,
-      "search_evidence": [
-        {
-          "path": "/ncis-hawai-i-s01e18/s/-6",
-          "status": 200,
-          "response_bytes": 202195,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": false
-        },
-        {
-          "path": "/ncis-hawai-i/s/-6",
-          "status": 200,
-          "response_bytes": 236846,
-          "boxes": 33,
-          "parsed_candidates": 33,
-          "heading_matches_query": false
-        },
-        {
-          "path": "/ncis-hawai-i-s01e18/s/-6",
-          "status": 200,
-          "response_bytes": 202005,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": false
-        },
-        {
-          "path": "/ncis-hawai-i/s/-6",
-          "status": 200,
-          "response_bytes": 236846,
-          "boxes": 33,
-          "parsed_candidates": 33,
-          "heading_matches_query": false
-        }
-      ],
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 347.59,
       "consecutive_failures": 1,
-      "retry_after": "2026-11-11T04:28:11.690150+00:00"
+      "retry_after": "2026-11-19T18:13:42.478140+00:00"
     },
     "114:1:4": {
       "at": "2026-11-10T14:16:56.800444+00:00",
@@ -1370787,9 +1370739,21 @@
       "elapsed_seconds": 154.7,
       "source_id": "26116009",
       "queue_rank": 43892
+    },
+    "2824:1:2": {
+      "at": "2026-11-19T18:03:20.939977+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 21.54,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-19T18:13:42.478139+00:00"
     }
   },
-  "updated_at": "2026-11-19T18:02:54.506455+00:00",
+  "updated_at": "2026-11-19T18:03:46.793135+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1377991,8 +1377955,10 @@
       "updated_at": "2026-11-19T16:59:19.936016+00:00"
     },
     "1549": {
-      "misses": [],
-      "updated_at": "2026-11-19T17:57:26.148401+00:00"
+      "misses": [
+        "1549:7:16"
+      ],
+      "updated_at": "2026-11-19T18:03:25.856132+00:00"
     },
     "1413": {
       "misses": [
@@ -1378026,12 +1377992,12 @@
     }
   },
   "discovery_progress": {
-    "last_series": 2034,
+    "last_series": 2824,
     "last_series_order": [
       false,
       -6.8,
-      -11966,
-      2034
+      -11386,
+      2824
     ]
   },
   "czech_fallback_revision": 1
