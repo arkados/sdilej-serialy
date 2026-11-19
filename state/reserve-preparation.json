@@ -1209824,84 +1209824,16 @@
       "queue_rank": 37641
     },
     "177:1:1": {
-      "at": "2026-11-09T17:35:02.672105+00:00",
+      "at": "2026-11-19T03:46:46.537452+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 23.02,
-      "search_evidence": [
-        {
-          "path": "/mr-bean-animovane-pribehy-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202874,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mr-bean-animovane-pribehy/s/-6",
-          "status": 200,
-          "response_bytes": 279897,
-          "boxes": 51,
-          "parsed_candidates": 51,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mr-bean-the-animated-series-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202355,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mr-bean-the-animated-series/s/-6",
-          "status": 200,
-          "response_bytes": 203852,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mr-bean-animovane-pribehy-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202916,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mr-bean-animovane-pribehy/s/-6",
-          "status": 200,
-          "response_bytes": 279784,
-          "boxes": 51,
-          "parsed_candidates": 51,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mr-bean-the-animated-series-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 186176,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mr-bean-the-animated-series/s/-6",
-          "status": 200,
-          "response_bytes": 186029,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T17:35:31.004416+00:00"
+      "elapsed_seconds": 39.92,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-20T03:47:26.457215+00:00"
     },
     "2568:1:1": {
       "at": "2026-11-09T17:35:06.159201+00:00",
@@ -1369059,9 +1368991,37 @@
       "elapsed_seconds": 217.79,
       "source_id": "34669946",
       "queue_rank": 43568
+    },
+    "43:1:9": {
+      "at": "2026-11-19T03:42:22.338493+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9578477144241333,
+      "observed_source_id": "34669944",
+      "elapsed_seconds": 263.16,
+      "source_id": "34669944",
+      "queue_rank": 43569
+    },
+    "4131:1:3": {
+      "at": "2026-11-19T03:44:11.678243+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.965898334980011,
+      "observed_source_id": "34626145",
+      "elapsed_seconds": 163.05,
+      "source_id": "34626145",
+      "queue_rank": 43570
     }
   },
-  "updated_at": "2026-11-19T03:46:09.163903+00:00",
+  "updated_at": "2026-11-19T03:47:34.868501+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1375578,11 +1375538,11 @@
     },
     "43": {
       "misses": [],
-      "updated_at": "2026-11-19T03:46:01.145870+00:00"
+      "updated_at": "2026-11-19T03:46:45.500569+00:00"
     },
     "4131": {
       "misses": [],
-      "updated_at": "2026-11-19T02:58:05.858817+00:00"
+      "updated_at": "2026-11-19T03:46:54.730717+00:00"
     },
     "1370": {
       "misses": [],
@@ -1375623,15 +1375583,21 @@
         "1323:1:1"
       ],
       "updated_at": "2026-11-19T03:41:30.096445+00:00"
+    },
+    "177": {
+      "misses": [
+        "177:1:1"
+      ],
+      "updated_at": "2026-11-19T03:47:26.457251+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 3055,
+    "last_series": 177,
     "last_series_order": [
       false,
       -6.9,
-      -18689,
-      3055
+      -17806,
+      177
     ]
   },
   "czech_fallback_revision": 1
