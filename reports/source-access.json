@@ -1,6 +1,36 @@
 {
-  "checked_at": "2026-11-19T22:22:05.616435+00:00",
-  "run_id": "44627836495",
-  "status": "active",
-  "available": true
+  "checked_at": "2026-11-19T23:50:52.487777+00:00",
+  "run_id": "44640964680",
+  "status": "check_failed",
+  "error": {
+    "type": "ChunkedEncodingError",
+    "frames": [
+      {
+        "file": "sessions.py",
+        "function": "send",
+        "line": 805
+      },
+      {
+        "file": "sessions.py",
+        "function": "resolve_redirects",
+        "line": 292
+      },
+      {
+        "file": "sessions.py",
+        "function": "send",
+        "line": 827
+      },
+      {
+        "file": "models.py",
+        "function": "content",
+        "line": 1042
+      },
+      {
+        "file": "models.py",
+        "function": "generate",
+        "line": 939
+      }
+    ]
+  },
+  "available": false
 }
