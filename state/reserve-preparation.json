@@ -231449,16 +231449,16 @@
       "retry_after": "2026-11-20T00:59:38.197508+00:00"
     },
     "9667:1:11": {
-      "at": "2026-11-19T00:04:33.761255+00:00",
+      "at": "2026-11-19T01:05:40.995465+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 224.38,
-      "consecutive_failures": 17,
-      "retry_after": "2026-11-20T00:08:18.141052+00:00"
+      "elapsed_seconds": 179.87,
+      "consecutive_failures": 18,
+      "retry_after": "2026-11-20T01:08:47.897731+00:00"
     },
     "9667:1:12": {
       "at": "2026-11-16T13:36:41.556696+00:00",
@@ -323750,21 +323750,18 @@
       "queue_rank": 30294
     },
     "1388:4:4": {
-      "at": "2026-11-09T10:32:17.523505+00:00",
-      "status": "deferred",
+      "at": "2026-11-19T00:59:36.275385+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.8259716480970383,
+      "observed_language_probability": 0.8235722854733467,
       "observed_source_id": "33551981",
-      "elapsed_seconds": 831.99,
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-10T10:46:09.511628+00:00"
+      "elapsed_seconds": 590.7,
+      "source_id": "33551981",
+      "queue_rank": 43526
     },
     "3532:1:6": {
       "at": "2026-10-19T12:39:25.656816+00:00",
@@ -1209118,84 +1209115,16 @@
       "queue_rank": 37594
     },
     "9426:1:1": {
-      "at": "2026-11-09T16:02:20.616514+00:00",
+      "at": "2026-11-19T01:08:48.987276+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 59.61,
-      "search_evidence": [
-        {
-          "path": "/tajna-bomba-adolfa-hitlera-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202310,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tajna-bomba-adolfa-hitlera/s/-6",
-          "status": 200,
-          "response_bytes": 202362,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hitler-s-secret-bomb-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202136,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hitler-s-secret-bomb/s/-6",
-          "status": 200,
-          "response_bytes": 201987,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tajna-bomba-adolfa-hitlera-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202275,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tajna-bomba-adolfa-hitlera/s/-6",
-          "status": 200,
-          "response_bytes": 202401,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hitler-s-secret-bomb-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202161,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hitler-s-secret-bomb/s/-6",
-          "status": 200,
-          "response_bytes": 201993,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T16:03:20.225780+00:00"
+      "elapsed_seconds": 56.68,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-20T01:09:45.664407+00:00"
     },
     "8170:1:5": {
       "at": "2026-11-09T16:02:44.254163+00:00",
@@ -1368864,7 +1368793,7 @@
       "queue_rank": 43525
     }
   },
-  "updated_at": "2026-11-19T01:08:31.219905+00:00",
+  "updated_at": "2026-11-19T01:09:52.717168+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1374060,12 +1373989,12 @@
     },
     "9667": {
       "misses": [
-        "9667:1:7",
         "9667:1:10",
-        "9667:1:9"
+        "9667:1:9",
+        "9667:1:11"
       ],
-      "updated_at": "2026-11-19T01:07:49.632590+00:00",
-      "retry_after": "2026-11-19T01:37:49.632590+00:00"
+      "updated_at": "2026-11-19T01:08:47.897772+00:00",
+      "retry_after": "2026-11-19T01:38:47.897772+00:00"
     },
     "702": {
       "misses": [
@@ -1375004,7 +1374933,7 @@
     },
     "1388": {
       "misses": [],
-      "updated_at": "2026-11-19T01:05:39.975643+00:00"
+      "updated_at": "2026-11-19T01:09:27.289896+00:00"
     },
     "1674": {
       "misses": [
@@ -1375337,15 +1375266,21 @@
         "9391:1:1"
       ],
       "updated_at": "2026-11-19T01:02:49.237680+00:00"
+    },
+    "9426": {
+      "misses": [
+        "9426:1:1"
+      ],
+      "updated_at": "2026-11-19T01:09:45.664440+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 9391,
+    "last_series": 8170,
     "last_series_order": [
       false,
       -7,
-      -28,
-      9391
+      -12,
+      8170
     ]
   },
   "czech_fallback_revision": 1
