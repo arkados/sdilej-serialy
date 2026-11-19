@@ -1212654,84 +1212654,16 @@
       "queue_rank": 37834
     },
     "241:2:1": {
-      "at": "2026-11-10T00:22:44.736661+00:00",
+      "at": "2026-11-19T11:07:48.070091+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 56.16,
-      "search_evidence": [
-        {
-          "path": "/prihody-dracka-soptika-s02e01/s/-6",
-          "status": 200,
-          "response_bytes": 202282,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/prihody-dracka-soptika/s/-6",
-          "status": 200,
-          "response_bytes": 229520,
-          "boxes": 23,
-          "parsed_candidates": 20,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/grisu-il-draghetto-s02e01/s/-6",
-          "status": 200,
-          "response_bytes": 202158,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/grisu-il-draghetto/s/-6",
-          "status": 200,
-          "response_bytes": 201943,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/prihody-dracka-soptika-s02e01/s/-6",
-          "status": 200,
-          "response_bytes": 202240,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/prihody-dracka-soptika/s/-6",
-          "status": 200,
-          "response_bytes": 229602,
-          "boxes": 23,
-          "parsed_candidates": 20,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/grisu-il-draghetto-s02e01/s/-6",
-          "status": 200,
-          "response_bytes": 202126,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/grisu-il-draghetto/s/-6",
-          "status": 200,
-          "response_bytes": 201894,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T00:23:40.897485+00:00"
+      "elapsed_seconds": 45.69,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-20T11:10:48.642132+00:00"
     },
     "10127:1:1": {
       "at": "2026-11-10T00:23:41.595070+00:00",
@@ -1369816,9 +1369748,52 @@
       "elapsed_seconds": 128.6,
       "source_id": "33837266",
       "queue_rank": 43759
+    },
+    "1823:4:1": {
+      "at": "2026-11-19T11:05:40.361465+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9821208119392395,
+      "observed_source_id": "22408319",
+      "elapsed_seconds": 140.82,
+      "source_id": "22408319",
+      "queue_rank": 43760
+    },
+    "1823:4:2": {
+      "at": "2026-11-19T11:07:37.341852+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9162815809249878,
+      "observed_source_id": "33734350",
+      "elapsed_seconds": 93.51,
+      "source_id": "33734350",
+      "queue_rank": 43761
+    },
+    "3398:1:2": {
+      "at": "2026-11-19T11:07:45.878535+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "sk",
+      "observed_language_probability": 0.763988196849823,
+      "observed_source_id": "34511787",
+      "reason": "no_english_czech_subtitles",
+      "elapsed_seconds": 93.88,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-19T11:40:48.642071+00:00"
     }
   },
-  "updated_at": "2026-11-19T11:08:01.960548+00:00",
+  "updated_at": "2026-11-19T11:11:54.051585+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1376694,7 +1376669,7 @@
     },
     "1823": {
       "misses": [],
-      "updated_at": "2026-11-19T11:07:47.210043+00:00"
+      "updated_at": "2026-11-19T11:10:48.642026+00:00"
     },
     "4644": {
       "misses": [
@@ -1376787,6 +1376762,18 @@
         "10509:1:1"
       ],
       "updated_at": "2026-11-19T11:02:48.772575+00:00"
+    },
+    "3398": {
+      "misses": [
+        "3398:1:2"
+      ],
+      "updated_at": "2026-11-19T11:10:48.642086+00:00"
+    },
+    "241": {
+      "misses": [
+        "241:2:1"
+      ],
+      "updated_at": "2026-11-19T11:10:48.642142+00:00"
     }
   },
   "discovery_progress": {
