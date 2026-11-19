@@ -157778,14 +157778,18 @@
       "retry_after": "2026-10-12T18:07:32.341811+00:00"
     },
     "195:1:8": {
-      "at": "2026-10-16T03:22:17.923424+00:00",
-      "status": "deferred",
-      "preparation_revision": 4,
+      "at": "2026-11-19T01:16:59.110397+00:00",
+      "status": "prepared",
       "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 31.61,
-      "consecutive_failures": 2,
-      "retry_after": "2026-10-17T03:22:49.534388+00:00"
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9754510521888733,
+      "observed_source_id": "34514506",
+      "elapsed_seconds": 427.47,
+      "source_id": "34514506",
+      "queue_rank": 43532
     },
     "108:5:2": {
       "at": "2026-10-11T18:09:26.393348+00:00",
@@ -1368654,9 +1368658,33 @@
       "elapsed_seconds": 156.57,
       "source_id": "33529878",
       "queue_rank": 43528
+    },
+    "2037:2:4": {
+      "at": "2026-11-19T01:17:00.162607+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 395.04,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-19T01:33:35.204972+00:00"
+    },
+    "1753:1:7": {
+      "at": "2026-11-19T01:18:38.514199+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 296.69,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-19T01:33:35.204969+00:00"
     }
   },
-  "updated_at": "2026-11-19T01:23:02.685437+00:00",
+  "updated_at": "2026-11-19T01:24:15.539073+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1375159,7 +1375187,7 @@
     },
     "195": {
       "misses": [],
-      "updated_at": "2026-11-19T01:16:35.729548+00:00"
+      "updated_at": "2026-11-19T01:24:06.575972+00:00"
     }
   },
   "discovery_progress": {
