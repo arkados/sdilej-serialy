@@ -1208575,52 +1208575,16 @@
       "retry_after": "2026-11-19T23:55:50.001786+00:00"
     },
     "9048:1:1": {
-      "at": "2026-11-09T14:12:35.537572+00:00",
+      "at": "2026-11-19T00:02:44.125032+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 8.97,
-      "search_evidence": [
-        {
-          "path": "/american-cartel-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202148,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/american-cartel/s/-6",
-          "status": 200,
-          "response_bytes": 203808,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/american-cartel-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202157,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/american-cartel/s/-6",
-          "status": 200,
-          "response_bytes": 203691,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T14:12:44.506481+00:00"
+      "elapsed_seconds": 32.58,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-20T00:03:16.708751+00:00"
     },
     "1111:1:5": {
       "at": "2026-11-09T14:12:03.463324+00:00",
@@ -1368837,9 +1368801,65 @@
       "elapsed_seconds": 220.95,
       "source_id": "30972361",
       "queue_rank": 43492
+    },
+    "318:1:8": {
+      "at": "2026-11-19T00:01:32.517223+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9681091904640198,
+      "observed_source_id": "12655692",
+      "elapsed_seconds": 70.01,
+      "source_id": "12655692",
+      "queue_rank": 43494
+    },
+    "318:1:5": {
+      "at": "2026-11-18T23:59:12.302405+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9833546280860901,
+      "observed_source_id": "21096529",
+      "elapsed_seconds": 213.8,
+      "source_id": "21096529",
+      "queue_rank": 43495
+    },
+    "318:1:7": {
+      "at": "2026-11-19T00:01:31.083883+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9777860045433044,
+      "observed_source_id": "30972366",
+      "elapsed_seconds": 92.03,
+      "source_id": "30972366",
+      "queue_rank": 43496
+    },
+    "318:1:6": {
+      "at": "2026-11-19T00:01:08.534507+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9537943601608276,
+      "observed_source_id": "34998245",
+      "elapsed_seconds": 132.01,
+      "source_id": "34998245",
+      "queue_rank": 43497
     }
   },
-  "updated_at": "2026-11-19T00:02:34.430410+00:00",
+  "updated_at": "2026-11-19T00:03:24.585501+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1375031,7 +1375051,7 @@
     },
     "318": {
       "misses": [],
-      "updated_at": "2026-11-18T23:52:24.241962+00:00"
+      "updated_at": "2026-11-19T00:03:20.548254+00:00"
     },
     "3175": {
       "misses": [],
@@ -1375238,15 +1375258,21 @@
         "9668:1:1"
       ],
       "updated_at": "2026-11-18T23:55:50.001813+00:00"
+    },
+    "9048": {
+      "misses": [
+        "9048:1:1"
+      ],
+      "updated_at": "2026-11-19T00:03:16.708778+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 9668,
+    "last_series": 6580,
     "last_series_order": [
       false,
       -7,
-      -203,
-      9668
+      -115,
+      6580
     ]
   },
   "czech_fallback_revision": 1
