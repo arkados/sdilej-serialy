@@ -5,9 +5,9 @@
   "prepared_this_run": 0,
   "reserve_total": 35264,
   "queue_total": 43699,
-  "updated_at": "2026-11-19T09:12:18.956776+00:00",
+  "updated_at": "2026-11-19T09:13:43.236532+00:00",
   "workers": 4,
-  "elapsed_seconds": 235.93,
+  "elapsed_seconds": 320.21,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -15,42 +15,41 @@
   "target_stock": 3000,
   "stock": {
     "queue_total": 43699,
-    "ready": 12,
+    "ready": 11,
     "ready_by_account": {
       "a": 5,
-      "b": 7
+      "b": 6
     },
     "categories": {
-      "completed": 42795,
+      "completed": 42796,
       "allocated": 876,
       "failed": 12,
       "language_review": 3,
       "in_flight": 1,
-      "ready": 12
+      "ready": 11
     },
     "completed_by_account": {
       "a": 21394,
-      "b": 21401
+      "b": 21402
     },
-    "uploads_last_24h": 432,
-    "uploads_per_hour_24h": 18.0,
-    "stock_hours_24h": 0.67
+    "uploads_last_24h": 431,
+    "uploads_per_hour_24h": 17.96,
+    "stock_hours_24h": 0.61
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 128,
-      "b": 91
+      "a": 212,
+      "b": 101
     },
     "preparation_outcomes_last_hour": {
       "no_acceptable_original": 1,
-      "prepared": 20,
+      "prepared": 17,
       "transient_original": 1,
       "inconclusive_subtitles": 8,
       "source_search_unavailable": 4,
-      "no_matches": 7,
-      "no_english_czech_subtitles": 1
+      "no_matches": 7
     }
   },
   "indexed_candidates_in_scan": 1376,
@@ -66,11 +65,18 @@
   "cache": {
     "search_miss": 18,
     "search_seconds": 526.08,
-    "media_miss": 2,
-    "media_seconds": 8.64,
-    "media_hit": 2
+    "media_miss": 3,
+    "media_seconds": 15.94,
+    "media_hit": 7,
+    "audio_miss": 2,
+    "audio_seconds": 10.72
   },
-  "audio_pipeline": {},
+  "audio_pipeline": {
+    "sample_count": 4,
+    "download_seconds": 31.27,
+    "inference_wait_seconds": 0.0,
+    "inference_seconds": 8.56
+  },
   "productive_seasons": 189,
   "series_paused_this_run": 1,
   "saved_reviewed_this_run": 0,
