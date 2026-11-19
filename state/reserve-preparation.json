@@ -1370135,16 +1370135,18 @@
       "queue_rank": 43829
     },
     "2530:1:26": {
-      "at": "2026-11-19T15:00:57.619458+00:00",
-      "status": "deferred",
+      "at": "2026-11-19T15:17:34.090630+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 373.93,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-19T15:17:11.546417+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9592992067337036,
+      "observed_source_id": "35404220",
+      "elapsed_seconds": 587.72,
+      "source_id": "35404220",
+      "queue_rank": 43833
     },
     "438:1:3": {
       "at": "2026-11-19T15:20:06.927491+00:00",
@@ -1370187,9 +1370189,21 @@
       "elapsed_seconds": 346.62,
       "source_id": "33875426",
       "queue_rank": 43832
+    },
+    "432:1:5": {
+      "at": "2026-11-19T15:26:42.962848+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 78.09,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-20T15:28:01.056379+00:00"
     }
   },
-  "updated_at": "2026-11-19T15:27:24.135628+00:00",
+  "updated_at": "2026-11-19T15:29:02.121702+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1377031,7 +1377045,7 @@
     },
     "2530": {
       "misses": [],
-      "updated_at": "2026-11-19T15:00:54.792233+00:00"
+      "updated_at": "2026-11-19T15:27:57.631087+00:00"
     },
     "2482": {
       "misses": [
@@ -1377292,6 +1377306,12 @@
     "1417": {
       "misses": [],
       "updated_at": "2026-11-19T15:00:54.792402+00:00"
+    },
+    "432": {
+      "misses": [
+        "432:1:5"
+      ],
+      "updated_at": "2026-11-19T15:28:01.056406+00:00"
     }
   },
   "discovery_progress": {
