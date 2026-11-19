@@ -5,27 +5,27 @@
   "prepared_this_run": 2,
   "reserve_total": 35493,
   "queue_total": 43928,
-  "updated_at": "2026-11-19T20:39:08.772734+00:00",
+  "updated_at": "2026-11-19T20:40:38.480864+00:00",
   "workers": 4,
-  "elapsed_seconds": 665.56,
-  "prepared_per_hour": 10.82,
+  "elapsed_seconds": 755.27,
+  "prepared_per_hour": 9.53,
   "available_this_run": 2,
-  "available_per_hour": 10.82,
+  "available_per_hour": 9.53,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 43928,
-    "ready": 2,
+    "ready": 1,
     "ready_by_account": {
-      "a": 1,
+      "a": 0,
       "b": 1
     },
     "categories": {
       "completed": 43033,
-      "allocated": 878,
+      "allocated": 879,
       "failed": 12,
       "language_review": 3,
-      "ready": 2
+      "ready": 1
     },
     "completed_by_account": {
       "a": 21510,
@@ -33,14 +33,14 @@
     },
     "uploads_last_24h": 507,
     "uploads_per_hour_24h": 21.12,
-    "stock_hours_24h": 0.09
+    "stock_hours_24h": 0.05
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 148,
-      "b": 229
+      "a": 237,
+      "b": 318
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 3,
@@ -66,15 +66,15 @@
     "search_miss": 36,
     "search_seconds": 1006.11,
     "search_hit": 3,
-    "media_miss": 17,
-    "media_seconds": 131.78,
-    "audio_miss": 2,
+    "media_miss": 27,
+    "media_seconds": 166.09,
+    "audio_miss": 3,
     "media_hit": 3,
     "audio_seconds": 30.32
   },
   "audio_pipeline": {
-    "sample_count": 2,
-    "download_seconds": 21.86,
+    "sample_count": 3,
+    "download_seconds": 33.35,
     "inference_wait_seconds": 0.0,
     "inference_seconds": 8.45
   },
@@ -2888,7 +2888,7 @@
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
     "control_requests": 1,
-    "request_gap_seconds": 8,
+    "request_gap_seconds": 4.0,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
