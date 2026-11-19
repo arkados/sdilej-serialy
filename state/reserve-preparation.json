@@ -148593,18 +148593,46 @@
       "retry_after": "2026-11-19T12:10:35.450514+00:00"
     },
     "183:1:5": {
-      "at": "2026-11-15T09:15:38.819065+00:00",
+      "at": "2026-11-19T07:03:22.783782+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "no_acceptable_original",
-      "elapsed_seconds": 436.78,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "error": {
+        "type": "SearchUnavailable",
+        "frames": [
+          {
+            "file": "episodes.py",
+            "function": "_inspect",
+            "line": 356
+          },
+          {
+            "file": "source_audit.py",
+            "function": "_get",
+            "line": 118
+          },
+          {
+            "file": "episodes.py",
+            "function": "_get",
+            "line": 244
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 202
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 84
+          }
+        ]
+      },
+      "elapsed_seconds": 534.85,
       "consecutive_failures": 7,
-      "retry_after": "2026-11-16T09:24:39.148307+00:00"
+      "retry_after": "2026-11-19T07:21:59.974317+00:00"
     },
     "183:1:6": {
       "at": "2026-11-12T07:11:42.992102+00:00",
@@ -189070,16 +189098,16 @@
       "queue_rank": 19362
     },
     "5009:1:4": {
-      "at": "2026-11-19T01:02:50.870336+00:00",
+      "at": "2026-11-19T07:06:04.939036+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "transient_original",
-      "elapsed_seconds": 143.02,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 355.04,
       "consecutive_failures": 16,
-      "retry_after": "2026-11-19T07:05:13.888278+00:00"
+      "retry_after": "2026-11-19T07:21:59.974313+00:00"
     },
     "560:8:4": {
       "at": "2026-10-13T02:17:46.095112+00:00",
@@ -1211046,52 +1211074,16 @@
       "queue_rank": 37718
     },
     "6802:1:4": {
-      "at": "2026-11-09T19:25:56.271733+00:00",
+      "at": "2026-11-19T07:06:03.226115+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 19.53,
-      "search_evidence": [
-        {
-          "path": "/ironside-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 217570,
-          "boxes": 13,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ironside/s/-6",
-          "status": 200,
-          "response_bytes": 321867,
-          "boxes": 130,
-          "parsed_candidates": 77,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ironside-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 217475,
-          "boxes": 13,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ironside/s/-6",
-          "status": 200,
-          "response_bytes": 321916,
-          "boxes": 130,
-          "parsed_candidates": 77,
-          "heading_matches_query": true
-        }
-      ],
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 356.75,
       "consecutive_failures": 1,
-      "retry_after": "2026-11-10T19:26:15.799776+00:00"
+      "retry_after": "2026-11-19T07:21:59.974317+00:00"
     },
     "1920:1:2": {
       "at": "2026-11-09T19:25:51.031732+00:00",
@@ -1369649,7 +1369641,7 @@
       "retry_after": "2026-11-20T07:06:03.221090+00:00"
     }
   },
-  "updated_at": "2026-11-19T07:11:00.565686+00:00",
+  "updated_at": "2026-11-19T07:12:29.315659+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
