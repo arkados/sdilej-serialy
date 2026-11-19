@@ -1213286,84 +1213286,16 @@
       "queue_rank": 37874
     },
     "8792:1:1": {
-      "at": "2026-11-10T01:49:47.711563+00:00",
+      "at": "2026-11-19T13:46:53.143235+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 42.09,
-      "search_evidence": [
-        {
-          "path": "/tvari-v-tvar-zralokum-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202231,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tvari-v-tvar-zralokum/s/-6",
-          "status": 200,
-          "response_bytes": 202509,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/shark-squad-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202002,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/shark-squad/s/-6",
-          "status": 200,
-          "response_bytes": 201951,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tvari-v-tvar-zralokum-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202211,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tvari-v-tvar-zralokum/s/-6",
-          "status": 200,
-          "response_bytes": 202536,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/shark-squad-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201990,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/shark-squad/s/-6",
-          "status": 200,
-          "response_bytes": 201853,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T01:50:29.804552+00:00"
+      "elapsed_seconds": 31.06,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-20T13:48:54.652290+00:00"
     },
     "6072:1:8": {
       "at": "2026-11-10T01:49:47.144571+00:00",
@@ -1369939,9 +1369871,35 @@
       "elapsed_seconds": 43.84,
       "source_id": "12309249",
       "queue_rank": 43806
+    },
+    "2530:1:9": {
+      "at": "2026-11-19T13:46:41.182171+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9334869980812073,
+      "observed_source_id": "35002250",
+      "elapsed_seconds": 55.05,
+      "source_id": "35002250",
+      "queue_rank": 43807
+    },
+    "2998:1:2": {
+      "at": "2026-11-19T13:46:57.725085+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 16.48,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-20T13:48:54.652398+00:00"
     }
   },
-  "updated_at": "2026-11-19T13:47:18.335554+00:00",
+  "updated_at": "2026-11-19T13:49:59.174079+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1376776,7 +1376734,7 @@
     },
     "2530": {
       "misses": [],
-      "updated_at": "2026-11-19T13:46:56.690844+00:00"
+      "updated_at": "2026-11-19T13:48:54.652199+00:00"
     },
     "2482": {
       "misses": [
@@ -1376987,6 +1376945,18 @@
         "8133:1:1"
       ],
       "updated_at": "2026-11-19T13:40:54.042581+00:00"
+    },
+    "8792": {
+      "misses": [
+        "8792:1:1"
+      ],
+      "updated_at": "2026-11-19T13:48:54.652314+00:00"
+    },
+    "2998": {
+      "misses": [
+        "2998:1:2"
+      ],
+      "updated_at": "2026-11-19T13:48:54.652411+00:00"
     }
   },
   "discovery_progress": {
