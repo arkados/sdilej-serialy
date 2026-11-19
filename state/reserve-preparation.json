@@ -1215906,84 +1215906,16 @@
       "retry_after": "2026-11-11T06:23:32.985776+00:00"
     },
     "3242:1:1": {
-      "at": "2026-11-10T06:22:40.434019+00:00",
+      "at": "2026-11-19T22:11:48.368826+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 56.3,
-      "search_evidence": [
-        {
-          "path": "/morske-panny-z-ostrova-mako-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202367,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/morske-panny-z-ostrova-mako/s/-6",
-          "status": 200,
-          "response_bytes": 202141,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mako-island-of-secrets-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202179,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mako-island-of-secrets/s/-6",
-          "status": 200,
-          "response_bytes": 202072,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/morske-panny-z-ostrova-mako-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202302,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/morske-panny-z-ostrova-mako/s/-6",
-          "status": 200,
-          "response_bytes": 202183,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mako-island-of-secrets-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202182,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mako-island-of-secrets/s/-6",
-          "status": 200,
-          "response_bytes": 202087,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T06:23:36.739064+00:00"
+      "elapsed_seconds": 54.92,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-20T22:12:43.286526+00:00"
     },
     "2376:1:2": {
       "at": "2026-11-10T06:27:45.558336+00:00",
@@ -1371510,9 +1371442,51 @@
       "elapsed_seconds": 26.37,
       "source_id": "21377731",
       "queue_rank": 43953
+    },
+    "781:1:2": {
+      "at": "2026-11-19T22:08:52.511019+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9851229786872864,
+      "observed_source_id": "33262589",
+      "elapsed_seconds": 169.98,
+      "source_id": "33262589",
+      "queue_rank": 43954
+    },
+    "1407:2:4": {
+      "at": "2026-11-19T22:10:26.570827+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8640825748443604,
+      "observed_source_id": "33972808",
+      "elapsed_seconds": 70.86,
+      "source_id": "33972808",
+      "queue_rank": 43955
+    },
+    "1407:2:5": {
+      "at": "2026-11-19T22:10:27.401743+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9835270047187805,
+      "observed_source_id": "33972821",
+      "elapsed_seconds": 72.41,
+      "source_id": "33972821",
+      "queue_rank": 43956
     }
   },
-  "updated_at": "2026-11-19T22:11:30.617378+00:00",
+  "updated_at": "2026-11-19T22:12:51.330783+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1378642,7 +1378616,7 @@
     },
     "1407": {
       "misses": [],
-      "updated_at": "2026-11-19T22:08:51.677293+00:00"
+      "updated_at": "2026-11-19T22:11:45.786469+00:00"
     },
     "145": {
       "misses": [],
@@ -1378819,15 +1378793,25 @@
     "9046": {
       "misses": [],
       "updated_at": "2026-11-19T22:08:51.677344+00:00"
+    },
+    "781": {
+      "misses": [],
+      "updated_at": "2026-11-19T22:11:45.786336+00:00"
+    },
+    "3242": {
+      "misses": [
+        "3242:1:1"
+      ],
+      "updated_at": "2026-11-19T22:12:43.286558+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 781,
+    "last_series": 2347,
     "last_series_order": [
       false,
       -6.8,
-      -5961,
-      781
+      -5787,
+      2347
     ]
   },
   "czech_fallback_revision": 1
