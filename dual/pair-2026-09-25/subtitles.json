@@ -831,12 +831,34 @@
       "identity": "1184:2:6",
       "account": "b",
       "target_video_id": "31120744",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 27,
       "detail_url": "https://prehraj.to/falling-skies-s02e06-navrat-1080p-cz-titulky-titulky-cekaji-mkv/a5ccf66b74a5264a",
-      "checked_at": "2026-11-18T22:19:27.164024+00:00",
-      "retry_after": "2026-11-18T22:34:27.164040+00:00"
+      "checked_at": "2026-11-19T13:46:35.177196+00:00",
+      "retry_after": "2026-11-19T14:01:35.177210+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31121377": {
       "identity": "1184:2:2",
@@ -1103,5 +1125,5 @@
       "retry_after": "2026-11-19T13:57:59.127663+00:00"
     }
   },
-  "updated_at": "2026-11-19T13:46:14.820689+00:00"
+  "updated_at": "2026-11-19T13:46:35.177218+00:00"
 }
