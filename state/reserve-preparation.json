@@ -1212930,84 +1212930,16 @@
       "retry_after": "2026-11-11T01:09:39.239289+00:00"
     },
     "378:1:1": {
-      "at": "2026-11-10T01:06:27.497363+00:00",
+      "at": "2026-11-19T11:27:57.326061+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 303.94,
-      "search_evidence": [
-        {
-          "path": "/v-divocine-s-bearem-gryllsem-vyzva-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202428,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/v-divocine-s-bearem-gryllsem-vyzva/s/-6",
-          "status": 200,
-          "response_bytes": 202375,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/running-wild-with-bear-grylls-the-challenge-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202689,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/running-wild-with-bear-grylls-the-challenge/s/-6",
-          "status": 200,
-          "response_bytes": 202473,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/v-divocine-s-bearem-gryllsem-vyzva-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202456,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/v-divocine-s-bearem-gryllsem-vyzva/s/-6",
-          "status": 200,
-          "response_bytes": 202321,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/running-wild-with-bear-grylls-the-challenge-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202599,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/running-wild-with-bear-grylls-the-challenge/s/-6",
-          "status": 200,
-          "response_bytes": 202567,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T01:11:31.440246+00:00"
+      "elapsed_seconds": 52.85,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-20T11:28:50.174682+00:00"
     },
     "582:1:5": {
       "at": "2026-11-10T01:16:29.283825+00:00",
@@ -1369825,9 +1369757,49 @@
       "elapsed_seconds": 53.44,
       "source_id": "26371362",
       "queue_rank": 43766
+    },
+    "1823:4:7": {
+      "at": "2026-11-19T11:25:43.980960+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9477807879447937,
+      "observed_source_id": "33837300",
+      "elapsed_seconds": 102.14,
+      "source_id": "33837300",
+      "queue_rank": 43767
+    },
+    "1823:4:8": {
+      "at": "2026-11-19T11:25:57.884303+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "transient_original",
+      "elapsed_seconds": 106.89,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-19T11:42:55.589191+00:00"
+    },
+    "1823:4:9": {
+      "at": "2026-11-19T11:26:53.211241+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9068503379821777,
+      "observed_source_id": "33734383",
+      "elapsed_seconds": 94.87,
+      "source_id": "33734383",
+      "queue_rank": 43768
     }
   },
-  "updated_at": "2026-11-19T11:27:29.542865+00:00",
+  "updated_at": "2026-11-19T11:29:00.808809+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1376703,7 +1376675,7 @@
     },
     "1823": {
       "misses": [],
-      "updated_at": "2026-11-19T11:23:21.609801+00:00"
+      "updated_at": "2026-11-19T11:28:28.077767+00:00"
     },
     "4644": {
       "misses": [
@@ -1376818,15 +1376790,21 @@
     "4774": {
       "misses": [],
       "updated_at": "2026-11-19T11:24:15.907547+00:00"
+    },
+    "378": {
+      "misses": [
+        "378:1:1"
+      ],
+      "updated_at": "2026-11-19T11:28:50.174708+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 4774,
+    "last_series": 378,
     "last_series_order": [
       false,
       -6.9,
-      -178,
-      4774
+      -168,
+      378
     ]
   },
   "czech_fallback_revision": 1
