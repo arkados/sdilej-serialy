@@ -1209680,18 +1209680,16 @@
       "retry_after": "2026-11-20T03:39:16.461158+00:00"
     },
     "1323:1:1": {
-      "at": "2026-11-09T17:20:23.654134+00:00",
+      "at": "2026-11-19T03:39:17.454973+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_acceptable_original",
-      "elapsed_seconds": 227.58,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T17:24:11.233681+00:00"
+      "elapsed_seconds": 132.64,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-20T03:41:30.096418+00:00"
     },
     "4323:1:2": {
       "at": "2026-11-09T23:10:11.538702+00:00",
@@ -1369005,9 +1369003,23 @@
       "elapsed_seconds": 219.23,
       "source_id": "34671654",
       "queue_rank": 43564
+    },
+    "43:1:6": {
+      "at": "2026-11-19T03:37:35.381414+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9785030484199524,
+      "observed_source_id": "34671657",
+      "elapsed_seconds": 248.06,
+      "source_id": "34671657",
+      "queue_rank": 43565
     }
   },
-  "updated_at": "2026-11-19T03:40:20.424842+00:00",
+  "updated_at": "2026-11-19T03:41:51.428614+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1375524,7 +1375536,7 @@
     },
     "43": {
       "misses": [],
-      "updated_at": "2026-11-19T03:37:54.785490+00:00"
+      "updated_at": "2026-11-19T03:41:43.444515+00:00"
     },
     "4131": {
       "misses": [],
@@ -1375563,6 +1375575,12 @@
         "6228:1:1"
       ],
       "updated_at": "2026-11-19T03:39:16.461190+00:00"
+    },
+    "1323": {
+      "misses": [
+        "1323:1:1"
+      ],
+      "updated_at": "2026-11-19T03:41:30.096445+00:00"
     }
   },
   "discovery_progress": {
