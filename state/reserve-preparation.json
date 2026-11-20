@@ -1206513,16 +1206513,16 @@
       "queue_rank": 37429
     },
     "5012:1:1": {
-      "at": "2026-11-20T04:42:59.638229+00:00",
+      "at": "2026-11-20T05:41:39.973522+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 320.79,
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-20T04:58:20.423402+00:00"
+      "reason": "no_acceptable_original",
+      "elapsed_seconds": 18.3,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-21T05:41:58.269500+00:00"
     },
     "599:1:1": {
       "at": "2026-11-09T09:33:01.900283+00:00",
@@ -1217124,16 +1217124,16 @@
       "queue_rank": 38154
     },
     "4157:1:1": {
-      "at": "2026-11-20T04:42:30.951517+00:00",
+      "at": "2026-11-20T05:41:09.104828+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 349.47,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-20T04:58:20.423411+00:00"
+      "reason": "no_matches",
+      "elapsed_seconds": 30.01,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T05:41:39.110448+00:00"
     },
     "2086:1:1": {
       "at": "2026-11-10T09:03:56.251198+00:00",
@@ -1217383,84 +1217383,16 @@
       "queue_rank": 38238
     },
     "2705:1:21": {
-      "at": "2026-11-10T09:59:19.751606+00:00",
+      "at": "2026-11-20T05:40:26.093457+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 125.47,
-      "search_evidence": [
-        {
-          "path": "/jsi-muj-zivot-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 201985,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jsi-muj-zivot/s/-6",
-          "status": 200,
-          "response_bytes": 219514,
-          "boxes": 14,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/you-are-the-one-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 202116,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/you-are-the-one/s/-6",
-          "status": 200,
-          "response_bytes": 201960,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jsi-muj-zivot-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 202053,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jsi-muj-zivot/s/-6",
-          "status": 200,
-          "response_bytes": 219541,
-          "boxes": 14,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/you-are-the-one-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 202096,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/you-are-the-one/s/-6",
-          "status": 200,
-          "response_bytes": 201965,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T10:01:25.218561+00:00"
+      "elapsed_seconds": 26.67,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T05:41:08.226878+00:00"
     },
     "2256:1:8": {
       "at": "2026-11-10T11:45:29.426199+00:00",
@@ -1371703,7 +1371635,7 @@
       "queue_rank": 44071
     }
   },
-  "updated_at": "2026-11-20T05:40:36.970547+00:00",
+  "updated_at": "2026-11-20T05:42:14.180420+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1377845,7 +1377777,7 @@
       "misses": [
         "5012:1:1"
       ],
-      "updated_at": "2026-11-18T17:40:43.502726+00:00"
+      "updated_at": "2026-11-20T05:41:58.269531+00:00"
     },
     "203": {
       "misses": [],
@@ -1379236,6 +1379168,18 @@
         "6531:1:1"
       ],
       "updated_at": "2026-11-20T05:38:11.659660+00:00"
+    },
+    "2705": {
+      "misses": [
+        "2705:1:21"
+      ],
+      "updated_at": "2026-11-20T05:41:08.226913+00:00"
+    },
+    "4157": {
+      "misses": [
+        "4157:1:1"
+      ],
+      "updated_at": "2026-11-20T05:41:39.110474+00:00"
     }
   },
   "discovery_progress": {
