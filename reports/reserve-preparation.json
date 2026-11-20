@@ -1,55 +1,56 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44757122247",
-  "attempted_this_run": 18,
-  "prepared_this_run": 6,
-  "reserve_total": 35781,
-  "queue_total": 44216,
-  "updated_at": "2026-11-20T15:44:35.170926+00:00",
+  "attempted_this_run": 22,
+  "prepared_this_run": 9,
+  "reserve_total": 35784,
+  "queue_total": 44219,
+  "updated_at": "2026-11-20T15:47:51.798788+00:00",
   "workers": 4,
-  "elapsed_seconds": 3194.34,
-  "prepared_per_hour": 6.76,
-  "available_this_run": 6,
-  "available_per_hour": 6.76,
+  "elapsed_seconds": 3390.97,
+  "prepared_per_hour": 9.55,
+  "available_this_run": 9,
+  "available_per_hour": 9.55,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 44216,
-    "ready": 3,
+    "queue_total": 44219,
+    "ready": 6,
     "ready_by_account": {
-      "a": 1,
-      "b": 2
+      "a": 3,
+      "b": 3
     },
     "categories": {
-      "completed": 43319,
-      "allocated": 879,
+      "completed": 43320,
+      "allocated": 878,
       "failed": 12,
       "language_review": 3,
-      "ready": 3
+      "ready": 6
     },
     "completed_by_account": {
-      "a": 21653,
+      "a": 21654,
       "b": 21666
     },
-    "uploads_last_24h": 377,
-    "uploads_per_hour_24h": 15.71,
-    "stock_hours_24h": 0.19
+    "uploads_last_24h": 378,
+    "uploads_per_hour_24h": 15.75,
+    "stock_hours_24h": 0.38
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 192,
-      "b": 1106
+      "a": 96,
+      "b": 1301
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 7,
       "no_acceptable_original": 1,
+      "no_english_czech_subtitles": 1,
       "inconclusive_audio": 4,
-      "prepared": 6
+      "prepared": 9
     }
   },
-  "indexed_candidates_in_scan": 1238,
+  "indexed_candidates_in_scan": 1348,
   "discovery_progress": {
     "last_series": 1116,
     "last_series_order": [
@@ -60,22 +61,23 @@
     ]
   },
   "cache": {
-    "search_miss": 68,
-    "search_seconds": 1570.72,
+    "search_miss": 92,
+    "search_seconds": 1788.3,
     "search_hit": 8,
-    "media_hit": 82,
-    "media_miss": 84,
-    "media_seconds": 465.35,
-    "audio_miss": 16,
-    "audio_seconds": 437.18
+    "media_hit": 91,
+    "media_miss": 92,
+    "media_seconds": 495.71,
+    "audio_miss": 19,
+    "audio_seconds": 475.2,
+    "audio_hit": 2
   },
   "audio_pipeline": {
-    "sample_count": 40,
-    "download_seconds": 314.94,
+    "sample_count": 43,
+    "download_seconds": 343.76,
     "inference_wait_seconds": 2.34,
-    "inference_seconds": 119.87
+    "inference_seconds": 129.06
   },
-  "productive_seasons": 188,
+  "productive_seasons": 190,
   "series_paused_this_run": 2,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
@@ -85,7 +87,7 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 35781,
+    "prepared": 35784,
     "deferred": 38671
   },
   "requested_series": [
@@ -2889,8 +2891,8 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 2,
-    "request_gap_seconds": 4.0,
+    "control_requests": 3,
+    "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
@@ -2898,9 +2900,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 723996,
+        "response_bytes": 723932,
         "parsed_candidates": 412,
-        "body_sha256": "fea67a24a6941f1a748c39942854ce4322f4b8b5cf4f8973b4eac083cfa8122c",
+        "body_sha256": "626ee7dcd610bf5a0446db02e91fa29b96c871fc0067635e4d5632c6a1c77b34",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2909,7 +2911,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-20T15:44:12.955707+00:00"
+        "checked_at": "2026-11-20T15:46:51.015321+00:00"
       }
     ]
   }
