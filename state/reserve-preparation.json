@@ -1217975,84 +1217975,16 @@
       "queue_rank": 38170
     },
     "8243:1:1": {
-      "at": "2026-11-10T10:23:04.229318+00:00",
+      "at": "2026-11-20T08:02:19.795262+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 34.96,
-      "search_evidence": [
-        {
-          "path": "/orlando-bloom-na-hrane-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 204232,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/orlando-bloom-na-hrane/s/-6",
-          "status": 200,
-          "response_bytes": 208544,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/orlando-bloom-to-the-edge-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202326,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/orlando-bloom-to-the-edge/s/-6",
-          "status": 200,
-          "response_bytes": 202098,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/orlando-bloom-na-hrane-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 204196,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/orlando-bloom-na-hrane/s/-6",
-          "status": 200,
-          "response_bytes": 208486,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/orlando-bloom-to-the-edge-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202311,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/orlando-bloom-to-the-edge/s/-6",
-          "status": 200,
-          "response_bytes": 202213,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T10:23:39.186699+00:00"
+      "elapsed_seconds": 48.8,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T08:03:08.592361+00:00"
     },
     "429:1:1": {
       "at": "2026-11-10T10:23:08.466880+00:00",
@@ -1371778,9 +1371710,51 @@
       "elapsed_seconds": 50.3,
       "source_id": "30687251",
       "queue_rank": 44110
+    },
+    "5642:1:4": {
+      "at": "2026-11-20T08:01:07.472943+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9663886427879333,
+      "observed_source_id": "30687213",
+      "elapsed_seconds": 62.41,
+      "source_id": "30687213",
+      "queue_rank": 44111
+    },
+    "5642:1:7": {
+      "at": "2026-11-20T08:01:09.961264+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9308775067329407,
+      "observed_source_id": "30687269",
+      "elapsed_seconds": 66.05,
+      "source_id": "30687269",
+      "queue_rank": 44112
+    },
+    "5642:1:5": {
+      "at": "2026-11-20T08:01:08.305463+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9501340389251709,
+      "observed_source_id": "30687233",
+      "elapsed_seconds": 83.96,
+      "source_id": "30687233",
+      "queue_rank": 44113
     }
   },
-  "updated_at": "2026-11-20T08:02:03.312603+00:00",
+  "updated_at": "2026-11-20T08:03:24.430036+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379219,7 +1379193,7 @@
     },
     "5642": {
       "misses": [],
-      "updated_at": "2026-11-20T08:01:59.431800+00:00"
+      "updated_at": "2026-11-20T08:02:32.268614+00:00"
     },
     "1502": {
       "misses": [
@@ -1379410,15 +1379384,21 @@
         "2013:1:3"
       ],
       "updated_at": "2026-11-20T07:46:34.854861+00:00"
+    },
+    "8243": {
+      "misses": [
+        "8243:1:1"
+      ],
+      "updated_at": "2026-11-20T08:03:08.592389+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 2013,
+    "last_series": 8466,
     "last_series_order": [
       false,
       -6.8,
-      -168,
-      2013
+      -98,
+      8466
     ]
   },
   "czech_fallback_revision": 1
