@@ -1219044,84 +1219044,16 @@
       "queue_rank": 38252
     },
     "4855:1:1": {
-      "at": "2026-11-10T12:00:47.519965+00:00",
+      "at": "2026-11-20T11:51:36.556291+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 54.28,
-      "search_evidence": [
-        {
-          "path": "/raven-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 208442,
-          "boxes": 6,
-          "parsed_candidates": 6,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/raven/s/-6",
-          "status": 200,
-          "response_bytes": 311887,
-          "boxes": 113,
-          "parsed_candidates": 80,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/that-s-so-raven-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202094,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/that-s-so-raven/s/-6",
-          "status": 200,
-          "response_bytes": 202014,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/raven-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 208518,
-          "boxes": 6,
-          "parsed_candidates": 6,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/raven/s/-6",
-          "status": 200,
-          "response_bytes": 311827,
-          "boxes": 113,
-          "parsed_candidates": 80,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/that-s-so-raven-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202016,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/that-s-so-raven/s/-6",
-          "status": 200,
-          "response_bytes": 202022,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T12:01:41.796489+00:00"
+      "elapsed_seconds": 36.48,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T11:52:13.033446+00:00"
     },
     "1626:1:1": {
       "at": "2026-11-10T16:35:11.293135+00:00",
@@ -1372407,7 +1372339,7 @@
       "queue_rank": 44179
     }
   },
-  "updated_at": "2026-11-20T11:51:15.406503+00:00",
+  "updated_at": "2026-11-20T11:52:41.915356+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1380173,15 +1380105,21 @@
     "1897": {
       "misses": [],
       "updated_at": "2026-11-20T11:49:11.536778+00:00"
+    },
+    "4855": {
+      "misses": [
+        "4855:1:1"
+      ],
+      "updated_at": "2026-11-20T11:52:13.033477+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 1626,
+    "last_series": 4855,
     "last_series_order": [
       false,
       -6.7,
-      -24776,
-      1626
+      -23544,
+      4855
     ]
   },
   "czech_fallback_revision": 1
