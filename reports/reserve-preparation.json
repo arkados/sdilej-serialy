@@ -1,46 +1,46 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44653566167",
-  "attempted_this_run": 6,
-  "prepared_this_run": 4,
-  "reserve_total": 35577,
-  "queue_total": 44012,
-  "updated_at": "2026-11-20T02:16:58.441468+00:00",
+  "attempted_this_run": 10,
+  "prepared_this_run": 8,
+  "reserve_total": 35581,
+  "queue_total": 44016,
+  "updated_at": "2026-11-20T02:24:56.307478+00:00",
   "workers": 4,
-  "elapsed_seconds": 588.08,
-  "prepared_per_hour": 24.49,
-  "available_this_run": 4,
-  "available_per_hour": 24.49,
+  "elapsed_seconds": 1065.94,
+  "prepared_per_hour": 27.02,
+  "available_this_run": 8,
+  "available_per_hour": 27.02,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 44012,
-    "ready": 4,
+    "queue_total": 44016,
+    "ready": 6,
     "ready_by_account": {
-      "a": 2,
-      "b": 2
+      "a": 3,
+      "b": 3
     },
     "categories": {
-      "completed": 43116,
+      "completed": 43118,
       "allocated": 877,
       "failed": 12,
       "language_review": 3,
-      "ready": 4
+      "ready": 6
     },
     "completed_by_account": {
-      "a": 21552,
-      "b": 21564
+      "a": 21553,
+      "b": 21565
     },
-    "uploads_last_24h": 519,
-    "uploads_per_hour_24h": 21.62,
-    "stock_hours_24h": 0.18
+    "uploads_last_24h": 513,
+    "uploads_per_hour_24h": 21.38,
+    "stock_hours_24h": 0.28
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 854,
-      "b": 881
+      "a": 366,
+      "b": 327
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 2,
@@ -50,36 +50,36 @@
       "source_search_unavailable": 1,
       "source_already_assigned": 2,
       "no_matches": 6,
-      "prepared": 13,
+      "prepared": 17,
       "no_english_czech_subtitles": 1
     }
   },
   "indexed_candidates_in_scan": 982,
   "discovery_progress": {
-    "last_series": 136,
+    "last_series": 236,
     "last_series_order": [
       false,
       -6.8,
-      -3404,
-      136
+      -3007,
+      236
     ]
   },
   "cache": {
-    "search_miss": 36,
-    "search_seconds": 858.59,
-    "search_hit": 6,
-    "media_miss": 9,
-    "media_seconds": 146.59,
-    "audio_miss": 6,
-    "audio_seconds": 67.71,
+    "search_miss": 55,
+    "search_seconds": 1230.7,
+    "search_hit": 9,
+    "media_miss": 13,
+    "media_seconds": 160.75,
+    "audio_miss": 10,
+    "audio_seconds": 110.62,
     "media_hit": 5,
     "audio_hit": 2
   },
   "audio_pipeline": {
-    "sample_count": 6,
-    "download_seconds": 45.96,
+    "sample_count": 10,
+    "download_seconds": 77.21,
     "inference_wait_seconds": 2.09,
-    "inference_seconds": 19.67
+    "inference_seconds": 31.32
   },
   "productive_seasons": 179,
   "series_paused_this_run": 1,
@@ -91,7 +91,7 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 35577,
+    "prepared": 35581,
     "deferred": 38665
   },
   "requested_series": [
@@ -2897,8 +2897,8 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 2,
-    "request_gap_seconds": 8,
+    "control_requests": 4,
+    "request_gap_seconds": 4.0,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
@@ -2906,9 +2906,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 723962,
+        "response_bytes": 724138,
         "parsed_candidates": 412,
-        "body_sha256": "2f0e5c833e6e8b69010a9392a5598cbe134bdbba75726507eaa0db3eb0e2a86e",
+        "body_sha256": "59c6b29762e18e38b834459fa92f6e54f41cb2b7333a544eadcdd40fd971d741",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2917,7 +2917,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-20T02:12:28.682852+00:00"
+        "checked_at": "2026-11-20T02:24:12.952485+00:00"
       }
     ]
   }
