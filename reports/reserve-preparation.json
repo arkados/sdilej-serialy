@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44786233411",
-  "attempted_this_run": 0,
+  "attempted_this_run": 3,
   "prepared_this_run": 0,
   "reserve_total": 35805,
   "queue_total": 44240,
-  "updated_at": "2026-11-20T17:49:23.326993+00:00",
+  "updated_at": "2026-11-20T17:51:00.004979+00:00",
   "workers": 4,
-  "elapsed_seconds": 158.36,
+  "elapsed_seconds": 255.04,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -38,12 +38,13 @@
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1033,
-      "b": 1125
+      "a": 1128,
+      "b": 1220
     },
     "preparation_outcomes_last_hour": {
+      "transient_original": 5,
       "no_acceptable_original": 1,
-      "transient_original": 3,
+      "inconclusive_subtitles": 1,
       "inconclusive_audio": 1,
       "prepared": 9,
       "no_matches": 1
@@ -60,14 +61,19 @@
     ]
   },
   "cache": {
-    "search_miss": 24,
-    "search_seconds": 133.53,
-    "media_miss": 3,
-    "media_hit": 22,
-    "media_seconds": 120.07,
-    "audio_hit": 3
+    "search_miss": 32,
+    "search_seconds": 164.9,
+    "media_miss": 12,
+    "media_hit": 31,
+    "media_seconds": 271.99,
+    "audio_hit": 3,
+    "audio_miss": 1
   },
-  "audio_pipeline": {},
+  "audio_pipeline": {
+    "sample_count": 1,
+    "download_seconds": 10.69,
+    "inference_wait_seconds": 0.0
+  },
   "productive_seasons": 184,
   "series_paused_this_run": 1,
   "saved_reviewed_this_run": 0,
