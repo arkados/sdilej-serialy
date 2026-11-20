@@ -1216830,16 +1216830,16 @@
       "queue_rank": 38133
     },
     "4353:1:1": {
-      "at": "2026-11-20T03:18:50.024655+00:00",
+      "at": "2026-11-20T04:05:17.474207+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 337.81,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-20T03:35:30.031883+00:00"
+      "reason": "no_matches",
+      "elapsed_seconds": 12.23,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T04:20:19.770187+00:00"
     },
     "2187:1:2": {
       "at": "2026-11-10T08:21:03.030821+00:00",
@@ -1250297,18 +1250297,19 @@
       "retry_after": "2026-11-18T01:45:31.798477+00:00"
     },
     "662:1:5": {
-      "at": "2026-11-13T04:57:44.372504+00:00",
+      "at": "2026-11-20T04:04:45.728545+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "elapsed_seconds": 181.62,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9690030217170715,
+      "observed_source_id": "34077005",
+      "elapsed_seconds": 57.47,
       "reason": "source_already_assigned",
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-14T05:01:04.068976+00:00"
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-21T04:20:19.770115+00:00"
     },
     "662:1:6": {
       "at": "2026-11-12T03:56:46.076278+00:00",
@@ -1358596,16 +1358597,16 @@
       "queue_rank": 43099
     },
     "4742:1:4": {
-      "at": "2026-11-20T03:18:51.064667+00:00",
+      "at": "2026-11-20T04:20:19.769774+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 336.77,
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-20T03:35:30.031955+00:00"
+      "reason": "no_matches",
+      "elapsed_seconds": 56.89,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-21T04:21:16.661502+00:00"
     },
     "1614:1:11": {
       "at": "2026-11-18T00:01:29.238812+00:00",
@@ -1371656,9 +1371657,23 @@
       "elapsed_seconds": 38.2,
       "source_id": "30775416",
       "queue_rank": 44046
+    },
+    "9939:1:54": {
+      "at": "2026-11-20T04:04:33.937696+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9872360825538635,
+      "observed_source_id": "30775422",
+      "elapsed_seconds": 48.7,
+      "source_id": "30775422",
+      "queue_rank": 44048
     }
   },
-  "updated_at": "2026-11-20T04:05:22.367226+00:00",
+  "updated_at": "2026-11-20T04:21:24.838998+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1377248,7 +1377263,7 @@
       "misses": [
         "4742:1:4"
       ],
-      "updated_at": "2026-11-19T00:04:54.102262+00:00"
+      "updated_at": "2026-11-20T04:21:16.661526+00:00"
     },
     "7860": {
       "misses": [
@@ -1378861,7 +1378876,7 @@
     },
     "9939": {
       "misses": [],
-      "updated_at": "2026-11-20T04:04:33.205922+00:00"
+      "updated_at": "2026-11-20T04:20:19.769647+00:00"
     },
     "5542": {
       "misses": [],
@@ -1379138,6 +1379153,18 @@
         "6845:1:1"
       ],
       "updated_at": "2026-11-20T04:05:17.697264+00:00"
+    },
+    "662": {
+      "misses": [
+        "662:1:5"
+      ],
+      "updated_at": "2026-11-20T04:20:19.770130+00:00"
+    },
+    "4353": {
+      "misses": [
+        "4353:1:1"
+      ],
+      "updated_at": "2026-11-20T04:20:19.770196+00:00"
     }
   },
   "discovery_progress": {
