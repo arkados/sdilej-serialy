@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44808505647",
-  "attempted_this_run": 0,
+  "attempted_this_run": 1,
   "prepared_this_run": 0,
   "reserve_total": 35858,
   "queue_total": 44293,
-  "updated_at": "2026-11-20T20:17:56.170060+00:00",
+  "updated_at": "2026-11-20T20:21:20.270847+00:00",
   "workers": 4,
-  "elapsed_seconds": 67.74,
+  "elapsed_seconds": 271.84,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -21,27 +21,26 @@
       "b": 3
     },
     "categories": {
-      "completed": 43390,
-      "allocated": 880,
+      "completed": 43394,
+      "allocated": 878,
       "failed": 12,
       "language_review": 3,
-      "in_flight": 2,
       "ready": 6
     },
     "completed_by_account": {
-      "a": 21689,
-      "b": 21701
+      "a": 21691,
+      "b": 21703
     },
-    "uploads_last_24h": 362,
-    "uploads_per_hour_24h": 15.08,
-    "stock_hours_24h": 0.4
+    "uploads_last_24h": 366,
+    "uploads_per_hour_24h": 15.25,
+    "stock_hours_24h": 0.39
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 561,
-      "b": 568
+      "a": 574,
+      "b": 592
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 4,
@@ -51,7 +50,7 @@
       "no_acceptable_original": 2,
       "prepared": 19,
       "source_already_assigned": 2,
-      "inconclusive_subtitles": 4,
+      "inconclusive_subtitles": 5,
       "source_search_unavailable": 3
     }
   },
@@ -66,11 +65,22 @@
     ]
   },
   "cache": {
-    "search_miss": 10,
-    "search_seconds": 130.17,
-    "search_hit": 1
+    "search_miss": 18,
+    "search_seconds": 409.24,
+    "search_hit": 2,
+    "media_miss": 5,
+    "media_seconds": 14.46,
+    "audio_miss": 1,
+    "audio_seconds": 9.3,
+    "media_hit": 2,
+    "audio_hit": 1
   },
-  "audio_pipeline": {},
+  "audio_pipeline": {
+    "sample_count": 1,
+    "download_seconds": 4.39,
+    "inference_wait_seconds": 0.0,
+    "inference_seconds": 4.91
+  },
   "productive_seasons": 187,
   "series_paused_this_run": 2,
   "saved_reviewed_this_run": 0,
