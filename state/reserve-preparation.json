@@ -1221990,84 +1221990,16 @@
       "queue_rank": 38474
     },
     "8523:1:1": {
-      "at": "2026-11-10T16:55:48.596380+00:00",
+      "at": "2026-11-20T23:50:14.002612+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 49.05,
-      "search_evidence": [
-        {
-          "path": "/jsem-hvezda-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 204716,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jsem-hvezda/s/-6",
-          "status": 200,
-          "response_bytes": 237369,
-          "boxes": 25,
-          "parsed_candidates": 24,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/superstar-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 204801,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/superstar/s/-6",
-          "status": 200,
-          "response_bytes": 430552,
-          "boxes": 195,
-          "parsed_candidates": 190,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jsem-hvezda-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 204761,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jsem-hvezda/s/-6",
-          "status": 200,
-          "response_bytes": 237195,
-          "boxes": 25,
-          "parsed_candidates": 24,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/superstar-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 204745,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/superstar/s/-6",
-          "status": 200,
-          "response_bytes": 430538,
-          "boxes": 195,
-          "parsed_candidates": 190,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T16:56:37.642323+00:00"
+      "elapsed_seconds": 59.43,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T23:51:13.429408+00:00"
     },
     "4248:1:1": {
       "at": "2026-11-10T16:55:44.484119+00:00",
@@ -1373716,9 +1373648,23 @@
       "elapsed_seconds": 105.93,
       "source_id": "35257821",
       "queue_rank": 44361
+    },
+    "4303:1:4": {
+      "at": "2026-11-20T23:49:27.275272+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.978502631187439,
+      "observed_source_id": "35257830",
+      "elapsed_seconds": 116.16,
+      "source_id": "35257830",
+      "queue_rank": 44362
     }
   },
-  "updated_at": "2026-11-20T23:50:31.281183+00:00",
+  "updated_at": "2026-11-20T23:51:51.648952+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381720,7 +1381666,7 @@
     },
     "4303": {
       "misses": [],
-      "updated_at": "2026-11-20T23:50:13.144568+00:00"
+      "updated_at": "2026-11-20T23:51:23.446269+00:00"
     },
     "6967": {
       "misses": [],
@@ -1381871,15 +1381817,21 @@
         "4248:1:3"
       ],
       "updated_at": "2026-11-20T23:46:59.087432+00:00"
+    },
+    "8523": {
+      "misses": [
+        "8523:1:1"
+      ],
+      "updated_at": "2026-11-20T23:51:13.429442+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 8523,
+    "last_series": 9777,
     "last_series_order": [
       false,
       -6.7,
-      -952,
-      8523
+      -745,
+      9777
     ]
   },
   "czech_fallback_revision": 1
