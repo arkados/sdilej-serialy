@@ -27095,14 +27095,16 @@
       "retry_after": "2026-10-20T00:12:19.122797+00:00"
     },
     "1264:1:1": {
-      "at": "2026-10-19T04:47:49.951395+00:00",
+      "at": "2026-11-20T08:06:55.189431+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 130.95,
-      "consecutive_failures": 36,
-      "retry_after": "2026-10-19T05:50:00.906220+00:00"
+      "elapsed_seconds": 144.11,
+      "consecutive_failures": 37,
+      "retry_after": "2026-11-21T08:09:19.304016+00:00"
     },
     "1264:1:2": {
       "at": "2026-10-03T03:12:46.588523+00:00",
@@ -1218129,84 +1218131,16 @@
       "queue_rank": 38180
     },
     "9148:1:1": {
-      "at": "2026-11-10T10:33:53.305029+00:00",
+      "at": "2026-11-20T08:08:22.322094+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 30.64,
-      "search_evidence": [
-        {
-          "path": "/toni-porodni-asistent-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202236,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toni-porodni-asistent/s/-6",
-          "status": 200,
-          "response_bytes": 201979,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toni-mannlich-hebamme-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202180,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toni-mannlich-hebamme/s/-6",
-          "status": 200,
-          "response_bytes": 201997,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toni-porodni-asistent-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202207,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toni-porodni-asistent/s/-6",
-          "status": 200,
-          "response_bytes": 202063,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toni-mannlich-hebamme-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202148,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toni-mannlich-hebamme/s/-6",
-          "status": 200,
-          "response_bytes": 202068,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T10:34:23.949123+00:00"
+      "elapsed_seconds": 36.27,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T08:08:58.596874+00:00"
     },
     "5090:1:10": {
       "at": "2026-11-10T10:33:34.609652+00:00",
@@ -1371712,9 +1371646,37 @@
       "elapsed_seconds": 59.17,
       "source_id": "29433944",
       "queue_rank": 44115
+    },
+    "738:1:6": {
+      "at": "2026-11-20T08:06:54.354240+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9805039167404175,
+      "observed_source_id": "13020694",
+      "elapsed_seconds": 74.84,
+      "source_id": "13020694",
+      "queue_rank": 44116
+    },
+    "738:1:5": {
+      "at": "2026-11-20T08:06:53.497897+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.95163494348526,
+      "observed_source_id": "29434018",
+      "elapsed_seconds": 104.47,
+      "source_id": "29434018",
+      "queue_rank": 44117
     }
   },
-  "updated_at": "2026-11-20T08:07:55.609369+00:00",
+  "updated_at": "2026-11-20T08:09:26.062975+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1378418,7 +1378380,7 @@
     },
     "738": {
       "misses": [],
-      "updated_at": "2026-11-20T08:07:51.821394+00:00"
+      "updated_at": "2026-11-20T08:08:37.969892+00:00"
     },
     "4072": {
       "misses": [],
@@ -1379354,15 +1379316,27 @@
         "8466:1:1"
       ],
       "updated_at": "2026-11-20T08:06:51.817988+00:00"
+    },
+    "9148": {
+      "misses": [
+        "9148:1:1"
+      ],
+      "updated_at": "2026-11-20T08:08:58.596901+00:00"
+    },
+    "1264": {
+      "misses": [
+        "1264:1:1"
+      ],
+      "updated_at": "2026-11-20T08:09:19.304042+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 8466,
+    "last_series": 208,
     "last_series_order": [
       false,
       -6.8,
-      -98,
-      8466
+      -68,
+      208
     ]
   },
   "czech_fallback_revision": 1
