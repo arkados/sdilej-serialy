@@ -1217255,52 +1217255,16 @@
       "queue_rank": 38162
     },
     "461:1:1": {
-      "at": "2026-11-10T09:18:38.904723+00:00",
+      "at": "2026-11-20T05:18:18.091382+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 32.73,
-      "search_evidence": [
-        {
-          "path": "/barbie-dreamhouse-adventures-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202270,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/barbie-dreamhouse-adventures/s/-6",
-          "status": 200,
-          "response_bytes": 204248,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/barbie-dreamhouse-adventures-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202396,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/barbie-dreamhouse-adventures/s/-6",
-          "status": 200,
-          "response_bytes": 204185,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T09:19:11.636014+00:00"
+      "elapsed_seconds": 127.05,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T05:20:25.144200+00:00"
     },
     "735:1:8": {
       "at": "2026-11-10T12:33:20.070375+00:00",
@@ -1371672,7 +1371636,7 @@
       "queue_rank": 44065
     }
   },
-  "updated_at": "2026-11-20T05:19:21.186242+00:00",
+  "updated_at": "2026-11-20T05:21:00.696783+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379189,15 +1379153,21 @@
     "2086": {
       "misses": [],
       "updated_at": "2026-11-20T04:42:58.928556+00:00"
+    },
+    "461": {
+      "misses": [
+        "461:1:1"
+      ],
+      "updated_at": "2026-11-20T05:20:25.144227+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 461,
+    "last_series": 6531,
     "last_series_order": [
       false,
       -6.8,
       -984,
-      461
+      6531
     ]
   },
   "czech_fallback_revision": 1
