@@ -1221034,28 +1221034,18 @@
       "queue_rank": 38422
     },
     "6967:1:1": {
-      "at": "2026-11-10T15:23:20.453889+00:00",
-      "status": "deferred",
+      "at": "2026-11-20T20:38:09.305286+00:00",
+      "status": "prepared",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "transient_search",
-      "elapsed_seconds": 51.35,
-      "search_evidence": [
-        {
-          "path": "/huste-mraky-vzestup-a-pad-firmy-juul-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202467,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-10T15:41:08.240608+00:00"
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "en",
+      "observed_language_probability": 0.994915246963501,
+      "observed_source_id": "34840482",
+      "elapsed_seconds": 395.92,
+      "source_id": "34840482",
+      "queue_rank": 44301
     },
     "3933:1:1": {
       "at": "2026-11-10T15:26:08.949519+00:00",
@@ -1373562,9 +1373552,49 @@
       "elapsed_seconds": 381.16,
       "source_id": "29503961",
       "queue_rank": 44298
+    },
+    "5921:1:8": {
+      "at": "2026-11-20T20:38:07.530084+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9804267883300781,
+      "observed_source_id": "22739959",
+      "elapsed_seconds": 164.39,
+      "source_id": "22739959",
+      "queue_rank": 44299
+    },
+    "1468:1:3": {
+      "at": "2026-11-20T20:38:08.405183+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9902196526527405,
+      "observed_source_id": "24603338",
+      "elapsed_seconds": 308.83,
+      "source_id": "24603338",
+      "queue_rank": 44300
+    },
+    "3933:1:5": {
+      "at": "2026-11-20T20:38:10.171412+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 253.95,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-21T20:45:50.134192+00:00"
     }
   },
-  "updated_at": "2026-11-20T20:39:10.708358+00:00",
+  "updated_at": "2026-11-20T20:46:54.340535+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381467,11 +1381497,11 @@
     },
     "5921": {
       "misses": [],
-      "updated_at": "2026-11-20T17:16:22.781346+00:00"
+      "updated_at": "2026-11-20T20:45:49.885732+00:00"
     },
     "1468": {
       "misses": [],
-      "updated_at": "2026-11-20T17:53:39.090954+00:00"
+      "updated_at": "2026-11-20T20:45:49.885823+00:00"
     },
     "4472": {
       "misses": [
@@ -1381572,6 +1381602,16 @@
     "4303": {
       "misses": [],
       "updated_at": "2026-11-20T20:00:20.656777+00:00"
+    },
+    "6967": {
+      "misses": [],
+      "updated_at": "2026-11-20T20:45:50.134068+00:00"
+    },
+    "3933": {
+      "misses": [
+        "3933:1:5"
+      ],
+      "updated_at": "2026-11-20T20:45:50.134214+00:00"
     }
   },
   "discovery_progress": {
