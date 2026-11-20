@@ -1,32 +1,30 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44739622829",
-  "attempted_this_run": 21,
+  "attempted_this_run": 23,
   "prepared_this_run": 9,
   "reserve_total": 35765,
   "queue_total": 44200,
-  "updated_at": "2026-11-20T14:09:34.146293+00:00",
+  "updated_at": "2026-11-20T14:12:25.782909+00:00",
   "workers": 4,
-  "elapsed_seconds": 4409.37,
-  "prepared_per_hour": 7.35,
+  "elapsed_seconds": 4581.01,
+  "prepared_per_hour": 7.07,
   "available_this_run": 9,
-  "available_per_hour": 7.35,
+  "available_per_hour": 7.07,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 44200,
-    "ready": 3,
+    "ready": 0,
     "ready_by_account": {
-      "a": 2,
-      "b": 1
+      "a": 0,
+      "b": 0
     },
     "categories": {
       "completed": 43304,
-      "allocated": 878,
-      "failed": 11,
-      "in_flight": 1,
-      "language_review": 3,
-      "ready": 3
+      "allocated": 881,
+      "failed": 12,
+      "language_review": 3
     },
     "completed_by_account": {
       "a": 21645,
@@ -34,18 +32,18 @@
     },
     "uploads_last_24h": 387,
     "uploads_per_hour_24h": 16.12,
-    "stock_hours_24h": 0.19
+    "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "buffered",
+    "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 575,
-      "b": 188
+      "a": 746,
+      "b": 360
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 6,
-      "inconclusive_audio": 1,
+      "transient_original": 7,
+      "inconclusive_audio": 2,
       "prepared": 8
     }
   },
@@ -60,22 +58,22 @@
     ]
   },
   "cache": {
-    "search_miss": 92,
-    "search_seconds": 2395.19,
+    "search_miss": 96,
+    "search_seconds": 2437.11,
     "search_hit": 8,
-    "media_miss": 117,
-    "media_seconds": 516.78,
-    "audio_miss": 17,
-    "audio_seconds": 405.51,
-    "media_hit": 63,
+    "media_miss": 118,
+    "media_seconds": 518.3,
+    "audio_miss": 18,
+    "audio_seconds": 645.69,
+    "media_hit": 72,
     "audio_hit": 5
   },
   "audio_pipeline": {
-    "sample_count": 19,
-    "download_seconds": 350.99,
+    "sample_count": 21,
+    "download_seconds": 591.17,
     "inference_wait_seconds": 0.0,
     "inference_seconds": 54.48,
-    "failures": 2
+    "failures": 4
   },
   "productive_seasons": 188,
   "series_paused_this_run": 1,
