@@ -1221347,84 +1221347,16 @@
       "queue_rank": 38442
     },
     "3580:1:1": {
-      "at": "2026-11-10T15:44:16.675698+00:00",
+      "at": "2026-11-20T21:59:48.385672+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 28.92,
-      "search_evidence": [
-        {
-          "path": "/holky-z-autobusu-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202334,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/holky-z-autobusu/s/-6",
-          "status": 200,
-          "response_bytes": 214552,
-          "boxes": 10,
-          "parsed_candidates": 10,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-girls-on-the-bus-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202154,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-girls-on-the-bus/s/-6",
-          "status": 200,
-          "response_bytes": 201999,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/holky-z-autobusu-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202346,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/holky-z-autobusu/s/-6",
-          "status": 200,
-          "response_bytes": 214517,
-          "boxes": 10,
-          "parsed_candidates": 10,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-girls-on-the-bus-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202217,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-girls-on-the-bus/s/-6",
-          "status": 200,
-          "response_bytes": 202044,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T15:44:45.593806+00:00"
+      "elapsed_seconds": 19.69,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T22:00:08.080816+00:00"
     },
     "3395:2:29": {
       "at": "2026-11-10T15:44:17.608688+00:00",
@@ -1373740,9 +1373672,51 @@
       "elapsed_seconds": 53.68,
       "source_id": "28623728",
       "queue_rank": 44316
+    },
+    "2170:1:6": {
+      "at": "2026-11-20T21:57:52.514704+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9648247361183167,
+      "observed_source_id": "28623718",
+      "elapsed_seconds": 69.76,
+      "source_id": "28623718",
+      "queue_rank": 44317
+    },
+    "2170:1:8": {
+      "at": "2026-11-20T21:58:47.991600+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.949636697769165,
+      "observed_source_id": "28623743",
+      "elapsed_seconds": 58.76,
+      "source_id": "28623743",
+      "queue_rank": 44318
+    },
+    "3439:1:3": {
+      "at": "2026-11-20T21:59:14.941249+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9666759371757507,
+      "observed_source_id": "13539171",
+      "elapsed_seconds": 47.69,
+      "source_id": "13539171",
+      "queue_rank": 44319
     }
   },
-  "updated_at": "2026-11-20T21:58:57.958139+00:00",
+  "updated_at": "2026-11-20T22:00:20.191331+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381664,7 +1381638,7 @@
     },
     "2170": {
       "misses": [],
-      "updated_at": "2026-11-20T21:58:47.113658+00:00"
+      "updated_at": "2026-11-20T21:59:46.749822+00:00"
     },
     "23": {
       "misses": [
@@ -1381680,7 +1381654,7 @@
     },
     "3439": {
       "misses": [],
-      "updated_at": "2026-11-20T19:00:49.477487+00:00"
+      "updated_at": "2026-11-20T22:00:02.628991+00:00"
     },
     "1691": {
       "misses": [],
@@ -1381783,15 +1381757,21 @@
     "1005": {
       "misses": [],
       "updated_at": "2026-11-20T21:57:11.957174+00:00"
+    },
+    "3580": {
+      "misses": [
+        "3580:1:1"
+      ],
+      "updated_at": "2026-11-20T22:00:08.080853+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 1005,
+    "last_series": 3395,
     "last_series_order": [
       false,
       -6.7,
-      -2167,
-      1005
+      -2105,
+      3395
     ]
   },
   "czech_fallback_revision": 1
