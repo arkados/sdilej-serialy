@@ -1224939,18 +1224939,16 @@
       "retry_after": "2026-11-11T18:18:33.733491+00:00"
     },
     "1185:1:11": {
-      "at": "2026-11-12T18:33:38.539783+00:00",
+      "at": "2026-11-20T10:10:08.051842+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_acceptable_original",
-      "elapsed_seconds": 138.34,
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-13T18:35:56.879098+00:00"
+      "elapsed_seconds": 264.8,
+      "consecutive_failures": 4,
+      "retry_after": "2026-11-21T10:24:08.110878+00:00"
     },
     "671:1:2": {
       "at": "2026-11-10T18:19:40.019313+00:00",
@@ -1372018,9 +1372016,37 @@
       "elapsed_seconds": 223.06,
       "source_id": "32459513",
       "queue_rank": 44152
+    },
+    "2086:2:4": {
+      "at": "2026-11-20T10:06:34.583744+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9153996706008911,
+      "observed_source_id": "32459516",
+      "elapsed_seconds": 243.45,
+      "source_id": "32459516",
+      "queue_rank": 44153
+    },
+    "2086:2:5": {
+      "at": "2026-11-20T10:07:05.013759+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.954510509967804,
+      "observed_source_id": "32459520",
+      "elapsed_seconds": 276.84,
+      "source_id": "32459520",
+      "queue_rank": 44154
     }
   },
-  "updated_at": "2026-11-20T10:10:19.791642+00:00",
+  "updated_at": "2026-11-20T10:25:12.613971+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1373872,18 +1373898,18 @@
       "retry_after": "2026-11-21T05:22:49.155630+00:00"
     },
     "1553:2:13": {
-      "at": "2026-11-19T09:22:40.802802+00:00",
+      "at": "2026-11-20T10:07:02.034310+00:00",
       "status": "deferred",
       "method": "source_repair",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 136.43,
+      "elapsed_seconds": 273.62,
       "source_repair_revision": 3,
       "repair_fingerprint": "3b9d253dd960f1d7cf1d4e3cc881535c8bc2526431d03eb9cd9be78c5eae2a0f",
-      "consecutive_failures": 88,
-      "retry_after": "2026-11-20T09:24:57.235754+00:00"
+      "consecutive_failures": 89,
+      "retry_after": "2026-11-21T10:24:08.110697+00:00"
     },
     "1553:2:15": {
       "at": "2026-11-19T09:36:30.355443+00:00",
@@ -1376715,9 +1376741,11 @@
     "1553": {
       "misses": [
         "1553:1:15",
-        "1553:1:16"
+        "1553:1:16",
+        "1553:2:13"
       ],
-      "updated_at": "2026-11-20T05:22:49.155657+00:00"
+      "updated_at": "2026-11-20T10:24:08.110722+00:00",
+      "retry_after": "2026-11-20T14:24:08.110722+00:00"
     },
     "1629": {
       "misses": [],
@@ -1379539,7 +1379567,7 @@
     },
     "2086": {
       "misses": [],
-      "updated_at": "2026-11-20T10:10:07.220638+00:00"
+      "updated_at": "2026-11-20T10:24:08.110830+00:00"
     },
     "461": {
       "misses": [
@@ -1379735,15 +1379763,21 @@
     "562": {
       "misses": [],
       "updated_at": "2026-11-20T09:40:58.971476+00:00"
+    },
+    "1185": {
+      "misses": [
+        "1185:1:11"
+      ],
+      "updated_at": "2026-11-20T10:24:08.110889+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 1185,
+    "last_series": 671,
     "last_series_order": [
       false,
       -6.7,
-      -89303,
-      1185
+      -76880,
+      671
     ]
   },
   "czech_fallback_revision": 1
