@@ -1,34 +1,30 @@
 {
-  "checked_at": "2026-11-19T23:50:52.487777+00:00",
-  "run_id": "44640964680",
+  "checked_at": "2026-11-20T00:01:52.332702+00:00",
+  "run_id": "44642400242",
   "status": "check_failed",
   "error": {
-    "type": "ChunkedEncodingError",
+    "type": "HTTPError",
+    "http_status": 403,
     "frames": [
       {
-        "file": "sessions.py",
-        "function": "send",
-        "line": 805
+        "file": "source_access.py",
+        "function": "main",
+        "line": 38
       },
       {
-        "file": "sessions.py",
-        "function": "resolve_redirects",
-        "line": 292
+        "file": "auth.py",
+        "function": "login_with_retry",
+        "line": 43
       },
       {
-        "file": "sessions.py",
-        "function": "send",
-        "line": 827
-      },
-      {
-        "file": "models.py",
-        "function": "content",
-        "line": 1042
+        "file": "sdilej.py",
+        "function": "login",
+        "line": 226
       },
       {
         "file": "models.py",
-        "function": "generate",
-        "line": 939
+        "function": "raise_for_status",
+        "line": 1167
       }
     ]
   },
