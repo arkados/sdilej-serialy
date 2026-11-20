@@ -1220340,100 +1220340,28 @@
       "queue_rank": 38381
     },
     "23:1:1": {
-      "at": "2026-11-10T14:08:11.431731+00:00",
+      "at": "2026-11-20T18:37:20.211641+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 20.97,
-      "search_evidence": [
-        {
-          "path": "/vcelka-maja-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202169,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vcelka-maja/s/-6",
-          "status": 200,
-          "response_bytes": 395775,
-          "boxes": 176,
-          "parsed_candidates": 173,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vcelka-maja-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202205,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vcelka-maja/s/-6",
-          "status": 200,
-          "response_bytes": 395805,
-          "boxes": 176,
-          "parsed_candidates": 173,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T14:08:32.403046+00:00"
+      "elapsed_seconds": 18.18,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T18:37:38.388599+00:00"
     },
     "4488:1:1": {
-      "at": "2026-11-10T14:08:15.612510+00:00",
+      "at": "2026-11-20T18:37:39.422145+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 32.7,
-      "search_evidence": [
-        {
-          "path": "/chloe-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201817,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chloe/s/-6",
-          "status": 200,
-          "response_bytes": 398768,
-          "boxes": 151,
-          "parsed_candidates": 119,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chloe-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201873,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chloe/s/-6",
-          "status": 200,
-          "response_bytes": 398747,
-          "boxes": 151,
-          "parsed_candidates": 119,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T14:08:48.316979+00:00"
+      "elapsed_seconds": 18.9,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-21T18:37:58.321977+00:00"
     },
     "198:1:6": {
       "at": "2026-11-10T14:07:49.189041+00:00",
@@ -1373351,9 +1373279,37 @@
       "elapsed_seconds": 83.72,
       "source_id": "28623677",
       "queue_rank": 44258
+    },
+    "1593:1:5": {
+      "at": "2026-11-20T18:34:36.166807+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8710716366767883,
+      "observed_source_id": "30971953",
+      "elapsed_seconds": 141.75,
+      "source_id": "30971953",
+      "queue_rank": 44259
+    },
+    "1593:1:4": {
+      "at": "2026-11-20T18:34:34.842593+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9628409147262573,
+      "observed_source_id": "30971945",
+      "elapsed_seconds": 164.34,
+      "source_id": "30971945",
+      "queue_rank": 44260
     }
   },
-  "updated_at": "2026-11-20T18:37:03.097235+00:00",
+  "updated_at": "2026-11-20T18:38:21.848569+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381161,7 +1381117,7 @@
     },
     "1593": {
       "misses": [],
-      "updated_at": "2026-11-20T18:33:07.910809+00:00"
+      "updated_at": "2026-11-20T18:37:19.181609+00:00"
     },
     "675": {
       "misses": [],
@@ -1381282,15 +1381238,27 @@
     "2170": {
       "misses": [],
       "updated_at": "2026-11-20T18:33:07.910931+00:00"
+    },
+    "23": {
+      "misses": [
+        "23:1:1"
+      ],
+      "updated_at": "2026-11-20T18:37:38.388633+00:00"
+    },
+    "4488": {
+      "misses": [
+        "4488:1:1"
+      ],
+      "updated_at": "2026-11-20T18:37:58.322001+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 2170,
+    "last_series": 4488,
     "last_series_order": [
       false,
       -6.7,
-      -5356,
-      2170
+      -4969,
+      4488
     ]
   },
   "czech_fallback_revision": 1
