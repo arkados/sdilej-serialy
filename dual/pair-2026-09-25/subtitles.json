@@ -1503,7 +1503,47 @@
       "detail_url": "https://prehraj.to/huste-mraky-vzestup-a-pad-firmy-juul-s01e01-jiskra-1080p-cz-titulky-titulky-cekaji-mp4/9a163cc4182aae70",
       "checked_at": "2026-11-20T21:28:37.591063+00:00",
       "retry_after": "2026-11-20T21:43:37.591079+00:00"
+    },
+    "31206453": {
+      "identity": "675:1:5",
+      "account": "b",
+      "target_video_id": "31206453",
+      "status": "deferred",
+      "processing_guard_revision": 1,
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      },
+      "checked_at": "2026-11-20T21:38:15.176282+00:00",
+      "retry_after": "2026-11-20T21:53:15.176297+00:00"
     }
   },
-  "updated_at": "2026-11-20T21:36:34.271376+00:00"
+  "updated_at": "2026-11-20T21:38:15.176305+00:00"
 }
