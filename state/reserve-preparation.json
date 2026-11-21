@@ -1222711,52 +1222711,16 @@
       "queue_rank": 38525
     },
     "9096:2:3": {
-      "at": "2026-11-10T17:58:18.541187+00:00",
+      "at": "2026-11-21T01:41:48.185940+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 25.98,
-      "search_evidence": [
-        {
-          "path": "/leo-mattei-brigade-des-mineurs-s02e03/s/-6",
-          "status": 200,
-          "response_bytes": 202330,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/leo-mattei-brigade-des-mineurs/s/-6",
-          "status": 200,
-          "response_bytes": 202190,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/leo-mattei-brigade-des-mineurs-s02e03/s/-6",
-          "status": 200,
-          "response_bytes": 202389,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/leo-mattei-brigade-des-mineurs/s/-6",
-          "status": 200,
-          "response_bytes": 202161,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T17:59:25.921326+00:00"
+      "elapsed_seconds": 6.55,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T01:41:54.732143+00:00"
     },
     "116:1:1": {
       "at": "2026-11-10T17:57:50.093735+00:00",
@@ -1373805,9 +1373769,65 @@
       "elapsed_seconds": 51.41,
       "source_id": "30975643",
       "queue_rank": 44396
+    },
+    "1116:1:9": {
+      "at": "2026-11-21T01:39:40.632056+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9956179857254028,
+      "observed_source_id": "32923776",
+      "elapsed_seconds": 71.42,
+      "source_id": "32923776",
+      "queue_rank": 44397
+    },
+    "1116:1:10": {
+      "at": "2026-11-21T01:40:04.219103+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9124490022659302,
+      "observed_source_id": "32923778",
+      "elapsed_seconds": 54.28,
+      "source_id": "32923778",
+      "queue_rank": 44398
+    },
+    "1116:1:8": {
+      "at": "2026-11-21T01:39:39.803540+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.829403281211853,
+      "observed_source_id": "32923774",
+      "elapsed_seconds": 103.0,
+      "source_id": "32923774",
+      "queue_rank": 44399
+    },
+    "3079:2:1": {
+      "at": "2026-11-21T01:41:12.683735+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.716304361820221,
+      "observed_source_id": "31098530",
+      "elapsed_seconds": 34.81,
+      "source_id": "31098530",
+      "queue_rank": 44400
     }
   },
-  "updated_at": "2026-11-21T01:40:42.369913+00:00",
+  "updated_at": "2026-11-21T01:41:58.849231+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381671,7 +1381691,7 @@
     },
     "1116": {
       "misses": [],
-      "updated_at": "2026-11-21T01:39:21.431935+00:00"
+      "updated_at": "2026-11-21T01:41:22.804773+00:00"
     },
     "172": {
       "misses": [
@@ -1381919,7 +1381939,7 @@
     },
     "3079": {
       "misses": [],
-      "updated_at": "2026-11-20T23:44:58.115549+00:00"
+      "updated_at": "2026-11-21T01:41:47.494862+00:00"
     },
     "401": {
       "misses": [
@@ -1382042,15 +1382062,21 @@
     "116": {
       "misses": [],
       "updated_at": "2026-11-21T01:39:38.960706+00:00"
+    },
+    "9096": {
+      "misses": [
+        "9096:2:3"
+      ],
+      "updated_at": "2026-11-21T01:41:54.732179+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 116,
+    "last_series": 9096,
     "last_series_order": [
       false,
       -6.7,
       -182,
-      116
+      9096
     ]
   },
   "czech_fallback_revision": 1
