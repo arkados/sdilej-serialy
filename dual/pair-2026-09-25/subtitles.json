@@ -550,12 +550,43 @@
       "identity": "1410:2:54",
       "account": "a",
       "target_video_id": "31109419",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 92,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e54-dovolena-na-hawaii-2-1080p-cz-titulky-titulky-cekaji-mkv/1d053d0e5582ee0a",
-      "checked_at": "2026-11-21T11:32:18.605002+00:00",
-      "retry_after": "2026-11-21T11:47:18.605017+00:00"
+      "checked_at": "2026-11-21T19:47:43.982580+00:00",
+      "retry_after": "2026-11-21T20:02:43.982594+00:00",
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      }
     },
     "31109448": {
       "identity": "1410:2:63",
@@ -1792,5 +1823,5 @@
       "retry_after": "2026-11-21T11:59:39.019993+00:00"
     }
   },
-  "updated_at": "2026-11-21T19:45:51.313638+00:00"
+  "updated_at": "2026-11-21T19:47:43.982603+00:00"
 }
