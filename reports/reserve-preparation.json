@@ -1,81 +1,82 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44949554772",
-  "attempted_this_run": 39,
-  "prepared_this_run": 15,
-  "reserve_total": 36411,
-  "queue_total": 44846,
-  "updated_at": "2026-11-21T22:46:03.032570+00:00",
+  "attempted_this_run": 44,
+  "prepared_this_run": 17,
+  "reserve_total": 36413,
+  "queue_total": 44848,
+  "updated_at": "2026-11-21T22:55:34.027644+00:00",
   "workers": 4,
-  "elapsed_seconds": 3476.07,
-  "prepared_per_hour": 15.53,
-  "available_this_run": 15,
-  "available_per_hour": 15.53,
+  "elapsed_seconds": 4047.06,
+  "prepared_per_hour": 15.12,
+  "available_this_run": 17,
+  "available_per_hour": 15.12,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 44846,
-    "ready": 8,
+    "queue_total": 44848,
+    "ready": 6,
     "ready_by_account": {
-      "a": 5,
-      "b": 3
+      "a": 4,
+      "b": 2
     },
     "categories": {
-      "completed": 43944,
-      "allocated": 879,
+      "completed": 43945,
+      "allocated": 882,
       "failed": 12,
       "language_review": 3,
-      "ready": 8
+      "ready": 6
     },
     "completed_by_account": {
       "a": 21965,
-      "b": 21979
+      "b": 21980
     },
-    "uploads_last_24h": 508,
-    "uploads_per_hour_24h": 21.17,
-    "stock_hours_24h": 0.38
+    "uploads_last_24h": 506,
+    "uploads_per_hour_24h": 21.08,
+    "stock_hours_24h": 0.28
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 230,
-      "b": 102
+      "a": 801,
+      "b": 151
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 8,
       "inconclusive_audio": 6,
-      "no_matches": 9,
+      "transient_original": 5,
+      "no_matches": 10,
       "inconclusive_subtitles": 1,
-      "prepared": 15
+      "no_acceptable_original": 1,
+      "prepared": 16
     }
   },
-  "indexed_candidates_in_scan": 1853,
+  "indexed_candidates_in_scan": 1856,
   "discovery_progress": {
-    "last_series": 9356,
+    "last_series": 5412,
     "last_series_order": [
       false,
       -6.5,
-      -163,
-      9356
+      -103,
+      5412
     ]
   },
   "cache": {
-    "search_miss": 182,
-    "search_seconds": 2824.45,
+    "search_miss": 206,
+    "search_seconds": 2987.89,
     "search_hit": 6,
-    "media_miss": 74,
-    "media_seconds": 396.12,
-    "media_hit": 122,
-    "audio_miss": 29,
-    "audio_seconds": 832.52,
+    "media_miss": 79,
+    "media_seconds": 416.94,
+    "media_hit": 123,
+    "audio_miss": 31,
+    "audio_seconds": 881.76,
     "audio_hit": 2
   },
   "audio_pipeline": {
-    "sample_count": 61,
-    "download_seconds": 685.67,
+    "sample_count": 67,
+    "download_seconds": 721.4,
     "inference_wait_seconds": 4.38,
-    "inference_seconds": 142.33,
+    "inference_seconds": 155.83,
     "failures": 2
   },
   "productive_seasons": 164,
@@ -88,7 +89,7 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 36411,
+    "prepared": 36413,
     "deferred": 38690
   },
   "requested_series": [
@@ -2892,7 +2893,7 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 11,
+    "control_requests": 12,
     "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
@@ -2901,9 +2902,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724120,
+        "response_bytes": 724021,
         "parsed_candidates": 412,
-        "body_sha256": "886542f06e9dea7503b8473e13330ac98028b9e4f9e9e1ccb90f0779f7e686df",
+        "body_sha256": "3c40d34c158593676665d6fd9b682ec7be7feb93a8a68835c26995d6d760582e",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2912,7 +2913,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-21T22:45:24.955211+00:00"
+        "checked_at": "2026-11-21T22:55:01.056417+00:00"
       }
     ]
   }
