@@ -1225656,52 +1225656,16 @@
       "queue_rank": 38722
     },
     "527:1:6": {
-      "at": "2026-11-10T22:16:18.154248+00:00",
+      "at": "2026-11-21T08:47:45.680548+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 159.3,
-      "search_evidence": [
-        {
-          "path": "/in-the-land-of-leadale-s01e06/s/-6",
-          "status": 200,
-          "response_bytes": 202179,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/in-the-land-of-leadale/s/-6",
-          "status": 200,
-          "response_bytes": 201983,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/in-the-land-of-leadale-s01e06/s/-6",
-          "status": 200,
-          "response_bytes": 202266,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/in-the-land-of-leadale/s/-6",
-          "status": 200,
-          "response_bytes": 202055,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T22:21:52.699557+00:00"
+      "elapsed_seconds": 29.7,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T08:48:15.377637+00:00"
     },
     "730:1:1": {
       "at": "2026-11-10T22:17:57.891326+00:00",
@@ -1374867,9 +1374831,63 @@
       "elapsed_seconds": 80.91,
       "source_id": "35473548",
       "queue_rank": 44589
+    },
+    "1404:1:12": {
+      "at": "2026-11-21T08:46:12.428019+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8675218224525452,
+      "observed_source_id": "35473549",
+      "elapsed_seconds": 72.17,
+      "source_id": "35473549",
+      "queue_rank": 44591
+    },
+    "545:1:3": {
+      "at": "2026-11-21T08:46:49.237743+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9073545336723328,
+      "observed_source_id": "28188074",
+      "elapsed_seconds": 55.59,
+      "source_id": "28188074",
+      "queue_rank": 44592
+    },
+    "5124:2:1": {
+      "at": "2026-11-21T08:47:25.483602+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 27.39,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-22T08:47:52.877783+00:00"
+    },
+    "1404:1:13": {
+      "at": "2026-11-21T08:46:48.070404+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9790984392166138,
+      "observed_source_id": "27442083",
+      "elapsed_seconds": 77.13,
+      "source_id": "27442083",
+      "queue_rank": 44593
     }
   },
-  "updated_at": "2026-11-21T08:47:07.301283+00:00",
+  "updated_at": "2026-11-21T08:48:19.396301+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383284,7 +1383302,7 @@
     },
     "1404": {
       "misses": [],
-      "updated_at": "2026-11-21T08:46:11.526404+00:00"
+      "updated_at": "2026-11-21T08:48:05.202154+00:00"
     },
     "9729": {
       "misses": [
@@ -1383300,7 +1383318,7 @@
     },
     "545": {
       "misses": [],
-      "updated_at": "2026-11-21T04:36:19.405389+00:00"
+      "updated_at": "2026-11-21T08:47:44.829478+00:00"
     },
     "169": {
       "misses": [
@@ -1383502,15 +1383520,27 @@
     "5239": {
       "misses": [],
       "updated_at": "2026-11-21T08:46:48.375276+00:00"
+    },
+    "5124": {
+      "misses": [
+        "5124:2:1"
+      ],
+      "updated_at": "2026-11-21T08:47:52.877808+00:00"
+    },
+    "527": {
+      "misses": [
+        "527:1:6"
+      ],
+      "updated_at": "2026-11-21T08:48:15.377663+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 5239,
+    "last_series": 527,
     "last_series_order": [
       false,
       -6.6,
-      -1488,
-      5239
+      -1197,
+      527
     ]
   },
   "czech_fallback_revision": 1
