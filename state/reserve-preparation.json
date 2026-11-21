@@ -1228410,66 +1228410,28 @@
       "queue_rank": 38943
     },
     "39:1:1": {
-      "at": "2026-11-16T09:59:26.819960+00:00",
+      "at": "2026-11-21T18:13:05.873041+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_acceptable_original",
-      "elapsed_seconds": 44.39,
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-17T10:00:11.212712+00:00"
+      "elapsed_seconds": 77.06,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-22T18:14:28.400472+00:00"
     },
     "2975:1:1": {
-      "at": "2026-11-11T04:32:20.437112+00:00",
+      "at": "2026-11-21T18:14:29.484172+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 26.64,
-      "search_evidence": [
-        {
-          "path": "/hotel-costiera-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202100,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-costiera/s/-6",
-          "status": 200,
-          "response_bytes": 207096,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-costiera-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202047,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-costiera/s/-6",
-          "status": 200,
-          "response_bytes": 207057,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-12T04:32:47.075542+00:00"
+      "elapsed_seconds": 20.11,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T18:14:49.589416+00:00"
     },
     "3061:1:6": {
       "at": "2026-11-11T04:33:38.808022+00:00",
@@ -1375998,9 +1375960,23 @@
       "elapsed_seconds": 216.3,
       "source_id": "33423075",
       "queue_rank": 44745
+    },
+    "246:1:4": {
+      "at": "2026-11-21T18:13:04.802226+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9778883457183838,
+      "observed_source_id": "29132788",
+      "elapsed_seconds": 110.91,
+      "source_id": "29132788",
+      "queue_rank": 44746
     }
   },
-  "updated_at": "2026-11-21T18:14:06.080868+00:00",
+  "updated_at": "2026-11-21T18:15:33.954621+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1384823,7 +1384799,7 @@
     },
     "246": {
       "misses": [],
-      "updated_at": "2026-11-21T15:36:05.634040+00:00"
+      "updated_at": "2026-11-21T18:14:55.708257+00:00"
     },
     "1322": {
       "misses": [],
@@ -1384932,15 +1384908,27 @@
     "778": {
       "misses": [],
       "updated_at": "2026-11-21T17:42:07.923360+00:00"
+    },
+    "39": {
+      "misses": [
+        "39:1:1"
+      ],
+      "updated_at": "2026-11-21T18:14:28.400507+00:00"
+    },
+    "2975": {
+      "misses": [
+        "2975:1:1"
+      ],
+      "updated_at": "2026-11-21T18:14:49.589445+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 39,
+    "last_series": 2975,
     "last_series_order": [
       false,
       -6.5,
-      -3816,
-      39
+      -3639,
+      2975
     ]
   },
   "czech_fallback_revision": 1
