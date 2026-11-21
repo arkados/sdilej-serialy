@@ -1224815,84 +1224815,16 @@
       "retry_after": "2026-11-22T05:23:24.281135+00:00"
     },
     "10003:1:7": {
-      "at": "2026-11-10T20:52:00.684815+00:00",
+      "at": "2026-11-21T06:02:53.107153+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 48.84,
-      "search_evidence": [
-        {
-          "path": "/pes-filipes-s01e07/s/-6",
-          "status": 200,
-          "response_bytes": 201980,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pes-filipes/s/-6",
-          "status": 200,
-          "response_bytes": 210351,
-          "boxes": 8,
-          "parsed_candidates": 6,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-huckleberry-hound-show-s01e07/s/-6",
-          "status": 200,
-          "response_bytes": 202360,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-huckleberry-hound-show/s/-6",
-          "status": 200,
-          "response_bytes": 202181,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pes-filipes-s01e07/s/-6",
-          "status": 200,
-          "response_bytes": 201969,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pes-filipes/s/-6",
-          "status": 200,
-          "response_bytes": 210400,
-          "boxes": 8,
-          "parsed_candidates": 6,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-huckleberry-hound-show-s01e07/s/-6",
-          "status": 200,
-          "response_bytes": 202320,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-huckleberry-hound-show/s/-6",
-          "status": 200,
-          "response_bytes": 202149,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T20:52:49.523564+00:00"
+      "elapsed_seconds": 242.31,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T06:06:55.418013+00:00"
     },
     "3933:1:6": {
       "at": "2026-11-10T20:53:18.012766+00:00",
@@ -1374857,9 +1374789,23 @@
       "elapsed_seconds": 502.97,
       "source_id": "33310701",
       "queue_rank": 44545
+    },
+    "1049:2:15": {
+      "at": "2026-11-21T06:00:31.912151+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9755502343177795,
+      "observed_source_id": "33310712",
+      "elapsed_seconds": 383.53,
+      "source_id": "33310712",
+      "queue_rank": 44546
     }
   },
-  "updated_at": "2026-11-21T06:06:22.319478+00:00",
+  "updated_at": "2026-11-21T06:07:32.508797+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383240,7 +1383186,7 @@
     },
     "1049": {
       "misses": [],
-      "updated_at": "2026-11-21T06:03:31.371437+00:00"
+      "updated_at": "2026-11-21T06:06:56.067346+00:00"
     },
     "9731": {
       "misses": [
@@ -1383384,6 +1383330,12 @@
         "5134:1:1"
       ],
       "updated_at": "2026-11-21T05:23:24.281149+00:00"
+    },
+    "10003": {
+      "misses": [
+        "10003:1:7"
+      ],
+      "updated_at": "2026-11-21T06:06:55.418045+00:00"
     }
   },
   "discovery_progress": {
