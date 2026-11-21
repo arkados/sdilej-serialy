@@ -1222392,84 +1222392,16 @@
       "queue_rank": 38505
     },
     "6108:1:1": {
-      "at": "2026-11-10T17:28:58.315397+00:00",
+      "at": "2026-11-21T01:14:09.417056+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 29.82,
-      "search_evidence": [
-        {
-          "path": "/hotel-evropa-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202352,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-evropa/s/-6",
-          "status": 200,
-          "response_bytes": 207216,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-europa-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202321,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-europa/s/-6",
-          "status": 200,
-          "response_bytes": 207135,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-evropa-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202445,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-evropa/s/-6",
-          "status": 200,
-          "response_bytes": 207087,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-europa-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202388,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hotel-europa/s/-6",
-          "status": 200,
-          "response_bytes": 207087,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T17:29:46.213980+00:00"
+      "elapsed_seconds": 112.75,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T01:16:02.167189+00:00"
     },
     "1120:1:5": {
       "at": "2026-11-10T17:23:18.415391+00:00",
@@ -1373966,9 +1373898,23 @@
       "elapsed_seconds": 188.61,
       "consecutive_failures": 1,
       "retry_after": "2026-11-21T02:14:26.432435+00:00"
+    },
+    "1808:1:6": {
+      "at": "2026-11-21T01:14:08.754031+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9454448819160461,
+      "observed_source_id": "28491879",
+      "elapsed_seconds": 92.25,
+      "source_id": "28491879",
+      "queue_rank": 44381
     }
   },
-  "updated_at": "2026-11-21T01:15:12.044006+00:00",
+  "updated_at": "2026-11-21T01:16:28.878502+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381831,7 +1381777,7 @@
     },
     "1808": {
       "misses": [],
-      "updated_at": "2026-11-21T01:14:08.115563+00:00"
+      "updated_at": "2026-11-21T01:15:41.000102+00:00"
     },
     "1116": {
       "misses": [],
@@ -1382160,6 +1382106,12 @@
         "2313:1:2"
       ],
       "updated_at": "2026-11-21T00:39:25.028859+00:00"
+    },
+    "6108": {
+      "misses": [
+        "6108:1:1"
+      ],
+      "updated_at": "2026-11-21T01:16:02.167221+00:00"
     }
   },
   "discovery_progress": {
