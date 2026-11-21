@@ -1223555,84 +1223555,16 @@
       "queue_rank": 38584
     },
     "9680:1:1": {
-      "at": "2026-11-10T19:17:12.280719+00:00",
+      "at": "2026-11-21T02:59:57.916425+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 17.9,
-      "search_evidence": [
-        {
-          "path": "/strazci-vesmiru-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202070,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/strazci-vesmiru/s/-6",
-          "status": 200,
-          "response_bytes": 326537,
-          "boxes": 112,
-          "parsed_candidates": 107,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/power-rangers-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202285,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/power-rangers/s/-6",
-          "status": 200,
-          "response_bytes": 280500,
-          "boxes": 65,
-          "parsed_candidates": 56,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/strazci-vesmiru-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202074,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/strazci-vesmiru/s/-6",
-          "status": 200,
-          "response_bytes": 326572,
-          "boxes": 112,
-          "parsed_candidates": 107,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/power-rangers-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202329,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/power-rangers/s/-6",
-          "status": 200,
-          "response_bytes": 280521,
-          "boxes": 65,
-          "parsed_candidates": 56,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T19:17:30.185751+00:00"
+      "elapsed_seconds": 129.24,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T03:02:07.158145+00:00"
     },
     "2076:1:3": {
       "at": "2026-11-10T19:16:11.961324+00:00",
@@ -1374109,9 +1374041,23 @@
       "elapsed_seconds": 146.91,
       "source_id": "35293032",
       "queue_rank": 44461
+    },
+    "447:1:14": {
+      "at": "2026-11-21T02:59:51.349615+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.966347336769104,
+      "observed_source_id": "35293034",
+      "elapsed_seconds": 168.4,
+      "source_id": "35293034",
+      "queue_rank": 44462
     }
   },
-  "updated_at": "2026-11-21T03:01:24.801027+00:00",
+  "updated_at": "2026-11-21T03:02:46.045427+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1382437,7 +1382383,7 @@
     },
     "447": {
       "misses": [],
-      "updated_at": "2026-11-21T03:00:33.717483+00:00"
+      "updated_at": "2026-11-21T03:02:39.745065+00:00"
     },
     "1026": {
       "misses": [],
@@ -1382454,6 +1382400,12 @@
     "1115": {
       "misses": [],
       "updated_at": "2026-11-21T02:49:31.576443+00:00"
+    },
+    "9680": {
+      "misses": [
+        "9680:1:1"
+      ],
+      "updated_at": "2026-11-21T03:02:07.158175+00:00"
     }
   },
   "discovery_progress": {
