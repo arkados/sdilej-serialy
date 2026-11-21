@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44863943247",
-  "attempted_this_run": 101,
+  "attempted_this_run": 104,
   "prepared_this_run": 53,
   "reserve_total": 36105,
   "queue_total": 44540,
-  "updated_at": "2026-11-21T05:22:44.264412+00:00",
+  "updated_at": "2026-11-21T05:24:30.427443+00:00",
   "workers": 4,
-  "elapsed_seconds": 4790.74,
-  "prepared_per_hour": 39.83,
+  "elapsed_seconds": 4896.91,
+  "prepared_per_hour": 38.96,
   "available_this_run": 53,
-  "available_per_hour": 39.83,
+  "available_per_hour": 38.96,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -21,38 +21,38 @@
       "b": 49
     },
     "categories": {
-      "completed": 43546,
-      "allocated": 880,
+      "completed": 43548,
+      "allocated": 878,
       "failed": 12,
       "language_review": 3,
       "ready": 99
     },
     "completed_by_account": {
       "a": 21767,
-      "b": 21779
+      "b": 21781
     },
-    "uploads_last_24h": 375,
-    "uploads_per_hour_24h": 15.62,
-    "stock_hours_24h": 6.34
+    "uploads_last_24h": 376,
+    "uploads_per_hour_24h": 15.67,
+    "stock_hours_24h": 6.32
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 842,
-      "b": 116
+      "a": 948,
+      "b": 87
     },
     "preparation_outcomes_last_hour": {
       "inconclusive_subtitles": 7,
       "inconclusive_audio": 10,
       "no_acceptable_original": 7,
       "transient_original": 1,
-      "no_matches": 15,
+      "no_matches": 18,
       "no_english_czech_subtitles": 3,
       "prepared": 46
     }
   },
-  "indexed_candidates_in_scan": 2393,
+  "indexed_candidates_in_scan": 2397,
   "discovery_progress": {
     "last_series": 5134,
     "last_series_order": [
@@ -63,8 +63,8 @@
     ]
   },
   "cache": {
-    "search_miss": 494,
-    "search_seconds": 4234.31,
+    "search_miss": 516,
+    "search_seconds": 4343.11,
     "media_miss": 269,
     "media_seconds": 1455.54,
     "audio_miss": 84,
@@ -2882,23 +2882,23 @@
     }
   ],
   "search_health": {
-    "status": "healthy",
-    "consecutive_failures": 0,
-    "retry_seconds": 0,
-    "failed_cycles_this_run": 0,
-    "control_requests": 22,
-    "request_gap_seconds": 2,
+    "status": "paused",
+    "consecutive_failures": 1,
+    "retry_seconds": 256,
+    "failed_cycles_this_run": 1,
+    "control_requests": 26,
+    "request_gap_seconds": 4,
     "restart_required": false,
     "last_request_limit": null,
-    "resume_after": null,
+    "resume_after": "2026-11-21T05:28:45.846513+00:00",
     "controls": [
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724095,
-        "parsed_candidates": 412,
-        "body_sha256": "c0e9a2ac5b784a9307344b525de003767f169ea3f5e38ddefdefc4473cdb76bc",
-        "video_box_count": 465,
+        "response_bytes": 188633,
+        "parsed_candidates": 0,
+        "body_sha256": "0dda83e84f3785dd9dd3f2a94eadd4d92104681954a9c2344dce16fbe9b4df5e",
+        "video_box_count": 0,
         "heading_matches_query": true,
         "password_field_present": false,
         "fallback_notice_present": false,
@@ -2906,7 +2906,23 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-21T05:22:30.292803+00:00"
+        "checked_at": "2026-11-21T05:23:43.690674+00:00"
+      },
+      {
+        "path": "/doktor-martin/s/-6",
+        "status": 200,
+        "response_bytes": 188465,
+        "parsed_candidates": 0,
+        "body_sha256": "4a895a22490a3178dd9d42f17511e544c3f30f93e4264a4d4d9c6201a787443d",
+        "video_box_count": 0,
+        "heading_matches_query": true,
+        "password_field_present": false,
+        "fallback_notice_present": false,
+        "request_limit_notice_present": false,
+        "cache_age_seconds": null,
+        "response_path": "/doktor-martin/s/-6",
+        "unexpected_origin": false,
+        "checked_at": "2026-11-21T05:23:45.846421+00:00"
       }
     ]
   }
