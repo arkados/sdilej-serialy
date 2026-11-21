@@ -1225814,84 +1225814,16 @@
       "queue_rank": 38732
     },
     "4002:1:1": {
-      "at": "2026-11-10T22:38:08.643592+00:00",
+      "at": "2026-11-21T09:33:32.703355+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 43.12,
-      "search_evidence": [
-        {
-          "path": "/zvlastni-efekty-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202061,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zvlastni-efekty/s/-6",
-          "status": 200,
-          "response_bytes": 213454,
-          "boxes": 10,
-          "parsed_candidates": 10,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fx-the-series-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202077,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fx-the-series/s/-6",
-          "status": 200,
-          "response_bytes": 201857,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zvlastni-efekty-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201975,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zvlastni-efekty/s/-6",
-          "status": 200,
-          "response_bytes": 213443,
-          "boxes": 10,
-          "parsed_candidates": 10,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fx-the-series-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202091,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/fx-the-series/s/-6",
-          "status": 200,
-          "response_bytes": 201909,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T22:38:51.762776+00:00"
+      "elapsed_seconds": 117.23,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T09:35:29.937181+00:00"
     },
     "3460:1:1": {
       "at": "2026-11-10T22:38:06.544584+00:00",
@@ -1375038,9 +1374970,51 @@
       "elapsed_seconds": 406.75,
       "source_id": "35537024",
       "queue_rank": 44605
+    },
+    "3460:1:2": {
+      "at": "2026-11-21T09:33:11.787312+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9434343576431274,
+      "observed_source_id": "34008099",
+      "elapsed_seconds": 70.85,
+      "source_id": "34008099",
+      "queue_rank": 44606
+    },
+    "1977:1:12": {
+      "at": "2026-11-21T09:30:00.316595+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9681726694107056,
+      "observed_source_id": "35537026",
+      "elapsed_seconds": 274.09,
+      "source_id": "35537026",
+      "queue_rank": 44607
+    },
+    "1977:1:13": {
+      "at": "2026-11-21T09:31:07.204172+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9684010148048401,
+      "observed_source_id": "35537028",
+      "elapsed_seconds": 236.96,
+      "source_id": "35537028",
+      "queue_rank": 44608
     }
   },
-  "updated_at": "2026-11-21T09:34:16.176006+00:00",
+  "updated_at": "2026-11-21T09:35:38.753681+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383476,7 +1383450,7 @@
     },
     "1977": {
       "misses": [],
-      "updated_at": "2026-11-21T09:33:10.915098+00:00"
+      "updated_at": "2026-11-21T09:35:04.161878+00:00"
     },
     "813": {
       "misses": [],
@@ -1383700,6 +1383674,16 @@
         "748:1:2"
       ],
       "updated_at": "2026-11-21T09:26:15.182057+00:00"
+    },
+    "3460": {
+      "misses": [],
+      "updated_at": "2026-11-21T09:34:33.493182+00:00"
+    },
+    "4002": {
+      "misses": [
+        "4002:1:1"
+      ],
+      "updated_at": "2026-11-21T09:35:29.937211+00:00"
     }
   },
   "discovery_progress": {
