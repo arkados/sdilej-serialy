@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44947969853",
-  "attempted_this_run": 24,
+  "attempted_this_run": 26,
   "prepared_this_run": 13,
   "reserve_total": 36396,
   "queue_total": 44831,
-  "updated_at": "2026-11-21T21:31:20.674639+00:00",
+  "updated_at": "2026-11-21T21:33:08.496817+00:00",
   "workers": 4,
-  "elapsed_seconds": 2142.04,
-  "prepared_per_hour": 21.85,
+  "elapsed_seconds": 2249.87,
+  "prepared_per_hour": 20.8,
   "available_this_run": 13,
-  "available_per_hour": 21.85,
+  "available_per_hour": 20.8,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -21,34 +21,35 @@
       "b": 3
     },
     "categories": {
-      "completed": 43927,
-      "allocated": 880,
+      "completed": 43928,
+      "allocated": 879,
       "failed": 12,
       "language_review": 3,
       "ready": 9
     },
     "completed_by_account": {
       "a": 21957,
-      "b": 21970
+      "b": 21971
     },
-    "uploads_last_24h": 510,
-    "uploads_per_hour_24h": 21.25,
+    "uploads_last_24h": 511,
+    "uploads_per_hour_24h": 21.29,
     "stock_hours_24h": 0.42
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 715,
-      "b": 176
+      "a": 823,
+      "b": 157
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 6,
+      "transient_original": 4,
       "transient_search": 1,
       "no_matches": 9,
+      "source_search_unavailable": 1,
       "inconclusive_audio": 2,
       "no_english_czech_subtitles": 1,
-      "prepared": 17,
+      "prepared": 16,
       "inconclusive_subtitles": 1
     }
   },
@@ -63,14 +64,14 @@
     ]
   },
   "cache": {
-    "search_miss": 129,
-    "search_seconds": 1464.18,
+    "search_miss": 133,
+    "search_seconds": 1501.57,
     "search_hit": 8,
     "media_miss": 28,
     "media_seconds": 331.57,
     "audio_miss": 16,
     "audio_seconds": 329.39,
-    "media_hit": 94,
+    "media_hit": 103,
     "audio_hit": 3
   },
   "audio_pipeline": {
@@ -2889,23 +2890,23 @@
     }
   ],
   "search_health": {
-    "status": "healthy",
-    "consecutive_failures": 0,
-    "retry_seconds": 0,
-    "failed_cycles_this_run": 0,
-    "control_requests": 9,
-    "request_gap_seconds": 2,
+    "status": "paused",
+    "consecutive_failures": 1,
+    "retry_seconds": 229,
+    "failed_cycles_this_run": 1,
+    "control_requests": 13,
+    "request_gap_seconds": 4,
     "restart_required": false,
     "last_request_limit": null,
-    "resume_after": null,
+    "resume_after": "2026-11-21T21:36:57.074494+00:00",
     "controls": [
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724056,
-        "parsed_candidates": 412,
-        "body_sha256": "953b692bdaf9a86ae4b905172227b71d584685002595156f165a5e9ea9dd19c7",
-        "video_box_count": 465,
+        "response_bytes": 188635,
+        "parsed_candidates": 0,
+        "body_sha256": "1ec801c7c6a618759533c5491e2f4fa2161ecb951f66a547a61675ab1e26b684",
+        "video_box_count": 0,
         "heading_matches_query": true,
         "password_field_present": false,
         "fallback_notice_present": false,
@@ -2913,7 +2914,23 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-21T21:30:30.924502+00:00"
+        "checked_at": "2026-11-21T21:31:53.075709+00:00"
+      },
+      {
+        "path": "/doktor-martin/s/-6",
+        "status": 200,
+        "response_bytes": 188467,
+        "parsed_candidates": 0,
+        "body_sha256": "7ef7746e05ebb4d961599bf8465e6904772a26d45badff0d38e99dd90fd43841",
+        "video_box_count": 0,
+        "heading_matches_query": true,
+        "password_field_present": false,
+        "fallback_notice_present": false,
+        "request_limit_notice_present": false,
+        "cache_age_seconds": null,
+        "response_path": "/doktor-martin/s/-6",
+        "unexpected_origin": false,
+        "checked_at": "2026-11-21T21:31:57.074419+00:00"
       }
     ]
   }
