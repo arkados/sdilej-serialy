@@ -754664,16 +754664,19 @@
       "retry_after": "2026-10-29T07:06:20.550468+00:00"
     },
     "1410:5:16": {
-      "at": "2026-11-21T14:32:32.769601+00:00",
+      "at": "2026-11-21T14:58:25.473252+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 307.7,
-      "consecutive_failures": 9,
-      "retry_after": "2026-11-21T14:47:40.466717+00:00"
+      "observed_audio_language": "en",
+      "observed_language_probability": 0.9863669276237488,
+      "observed_source_id": "34450625",
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 851.48,
+      "consecutive_failures": 10,
+      "retry_after": "2026-11-22T15:14:15.951080+00:00"
     },
     "1410:5:19": {
       "at": "2026-11-20T17:46:58.481527+00:00",
@@ -1300367,84 +1300370,16 @@
       "retry_after": "2026-11-15T12:19:07.845424+00:00"
     },
     "34:1:25": {
-      "at": "2026-11-14T12:18:17.199917+00:00",
+      "at": "2026-11-21T15:07:04.751209+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 54.12,
-      "search_evidence": [
-        {
-          "path": "/kriminalka-miami-s01e25/s/-6",
-          "status": 200,
-          "response_bytes": 216087,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kriminalka-miami/s/-6",
-          "status": 200,
-          "response_bytes": 394610,
-          "boxes": 161,
-          "parsed_candidates": 151,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/csi-miami-s01e25/s/-6",
-          "status": 200,
-          "response_bytes": 215945,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/csi-miami/s/-6",
-          "status": 200,
-          "response_bytes": 538867,
-          "boxes": 266,
-          "parsed_candidates": 251,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kriminalka-miami-s01e25/s/-6",
-          "status": 200,
-          "response_bytes": 216024,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kriminalka-miami/s/-6",
-          "status": 200,
-          "response_bytes": 394551,
-          "boxes": 161,
-          "parsed_candidates": 151,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/csi-miami-s01e25/s/-6",
-          "status": 200,
-          "response_bytes": 215958,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/csi-miami/s/-6",
-          "status": 200,
-          "response_bytes": 538748,
-          "boxes": 266,
-          "parsed_candidates": 251,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T12:19:28.881267+00:00"
+      "elapsed_seconds": 296.04,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T15:14:15.951302+00:00"
     },
     "34:1:26": {
       "at": "2026-11-14T12:18:18.194222+00:00",
@@ -1375577,9 +1375512,37 @@
       "elapsed_seconds": 176.6,
       "source_id": "35456715",
       "queue_rank": 44679
+    },
+    "2847:1:5": {
+      "at": "2026-11-21T15:07:02.712893+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9537071585655212,
+      "observed_source_id": "35456725",
+      "elapsed_seconds": 206.0,
+      "source_id": "35456725",
+      "queue_rank": 44680
+    },
+    "168:2:1": {
+      "at": "2026-11-21T15:07:03.738277+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.965021014213562,
+      "observed_source_id": "35415912",
+      "elapsed_seconds": 491.15,
+      "source_id": "35415912",
+      "queue_rank": 44681
     }
   },
-  "updated_at": "2026-11-21T15:08:05.735903+00:00",
+  "updated_at": "2026-11-21T15:15:20.842443+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1380321,12 +1380284,12 @@
     },
     "1410": {
       "misses": [
-        "1410:5:10",
         "1410:1:10",
-        "1410:5:13"
+        "1410:5:13",
+        "1410:5:16"
       ],
-      "updated_at": "2026-11-21T15:03:34.460948+00:00",
-      "retry_after": "2026-11-21T15:33:34.460948+00:00"
+      "updated_at": "2026-11-21T15:14:15.951115+00:00",
+      "retry_after": "2026-11-21T15:44:15.951115+00:00"
     },
     "9670": {
       "misses": [
@@ -1384259,7 +1384222,7 @@
     },
     "2847": {
       "misses": [],
-      "updated_at": "2026-11-21T15:07:01.687141+00:00"
+      "updated_at": "2026-11-21T15:14:15.951235+00:00"
     },
     "5462": {
       "misses": [
@@ -1384388,6 +1384351,16 @@
         "155:1:1"
       ],
       "updated_at": "2026-11-21T14:31:56.718386+00:00"
+    },
+    "34": {
+      "misses": [
+        "34:1:25"
+      ],
+      "updated_at": "2026-11-21T15:14:15.951318+00:00"
+    },
+    "168": {
+      "misses": [],
+      "updated_at": "2026-11-21T15:15:14.889375+00:00"
     }
   },
   "discovery_progress": {
