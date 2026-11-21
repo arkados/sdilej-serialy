@@ -1225120,84 +1225120,16 @@
       "queue_rank": 38691
     },
     "9274:1:1": {
-      "at": "2026-11-10T21:07:11.395281+00:00",
+      "at": "2026-11-21T08:11:45.779445+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 56.34,
-      "search_evidence": [
-        {
-          "path": "/dva-kralove-z-tupela-jizanska-krimi-saga-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202595,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/dva-kralove-z-tupela-jizanska-krimi-saga/s/-6",
-          "status": 200,
-          "response_bytes": 202437,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-kings-of-tupelo-a-southern-crime-saga-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202585,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-kings-of-tupelo-a-southern-crime-saga/s/-6",
-          "status": 200,
-          "response_bytes": 202449,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/dva-kralove-z-tupela-jizanska-krimi-saga-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202582,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/dva-kralove-z-tupela-jizanska-krimi-saga/s/-6",
-          "status": 200,
-          "response_bytes": 202515,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-kings-of-tupelo-a-southern-crime-saga-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202665,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-kings-of-tupelo-a-southern-crime-saga/s/-6",
-          "status": 200,
-          "response_bytes": 202556,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T21:08:07.730773+00:00"
+      "elapsed_seconds": 110.51,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T08:13:36.288949+00:00"
     },
     "4169:1:6": {
       "at": "2026-11-10T21:08:39.017738+00:00",
@@ -1374866,9 +1374798,23 @@
       "elapsed_seconds": 523.05,
       "source_id": "33972714",
       "queue_rank": 44563
+    },
+    "665:1:10": {
+      "at": "2026-11-21T08:06:43.181954+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9554932713508606,
+      "observed_source_id": "33972710",
+      "elapsed_seconds": 387.78,
+      "source_id": "33972710",
+      "queue_rank": 44564
     }
   },
-  "updated_at": "2026-11-21T08:12:31.833709+00:00",
+  "updated_at": "2026-11-21T08:13:51.074183+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383261,7 +1383207,7 @@
     },
     "665": {
       "misses": [],
-      "updated_at": "2026-11-21T08:11:44.940226+00:00"
+      "updated_at": "2026-11-21T08:13:10.967114+00:00"
     },
     "6011": {
       "misses": [
@@ -1383431,15 +1383377,21 @@
     "4710": {
       "misses": [],
       "updated_at": "2026-11-21T08:00:04.430335+00:00"
+    },
+    "9274": {
+      "misses": [
+        "9274:1:1"
+      ],
+      "updated_at": "2026-11-21T08:13:36.288980+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 9274,
+    "last_series": 249,
     "last_series_order": [
       false,
       -6.6,
-      -2631,
-      9274
+      -2577,
+      249
     ]
   },
   "czech_fallback_revision": 1
