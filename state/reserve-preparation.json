@@ -1229618,84 +1229618,16 @@
       "queue_rank": 39039
     },
     "3287:1:1": {
-      "at": "2026-11-11T07:29:36.170236+00:00",
+      "at": "2026-11-21T20:24:57.802821+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 55.07,
-      "search_evidence": [
-        {
-          "path": "/svortu-sandar-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202057,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/svortu-sandar/s/-6",
-          "status": 200,
-          "response_bytes": 202165,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/black-sands-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202292,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/black-sands/s/-6",
-          "status": 200,
-          "response_bytes": 215751,
-          "boxes": 12,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/svortu-sandar-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202132,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/svortu-sandar/s/-6",
-          "status": 200,
-          "response_bytes": 202141,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/black-sands-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202322,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/black-sands/s/-6",
-          "status": 200,
-          "response_bytes": 215733,
-          "boxes": 12,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-12T07:30:31.239625+00:00"
+      "elapsed_seconds": 53.6,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T20:33:01.480351+00:00"
     },
     "718:1:6": {
       "at": "2026-11-11T07:29:34.564234+00:00",
@@ -1356451,16 +1356383,16 @@
       "queue_rank": 43391
     },
     "596:2:8": {
-      "at": "2026-11-21T14:18:27.021696+00:00",
+      "at": "2026-11-21T20:24:58.701752+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "transient_original",
-      "elapsed_seconds": 230.97,
-      "consecutive_failures": 15,
-      "retry_after": "2026-11-21T20:22:17.987932+00:00"
+      "elapsed_seconds": 121.58,
+      "consecutive_failures": 16,
+      "retry_after": "2026-11-22T02:33:01.480437+00:00"
     },
     "596:2:10": {
       "at": "2026-11-18T19:11:22.168335+00:00",
@@ -1376535,9 +1376467,23 @@
       "elapsed_seconds": 26.15,
       "consecutive_failures": 1,
       "retry_after": "2026-11-22T20:25:23.037904+00:00"
+    },
+    "1915:1:7": {
+      "at": "2026-11-21T20:24:55.984268+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9802071452140808,
+      "observed_source_id": "35507933",
+      "elapsed_seconds": 80.14,
+      "source_id": "35507933",
+      "queue_rank": 44814
     }
   },
-  "updated_at": "2026-11-21T20:25:27.557648+00:00",
+  "updated_at": "2026-11-21T20:34:06.792886+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1382566,7 +1382512,7 @@
       "misses": [
         "596:2:8"
       ],
-      "updated_at": "2026-11-21T14:22:17.987960+00:00"
+      "updated_at": "2026-11-21T20:33:01.480449+00:00"
     },
     "8697": {
       "misses": [
@@ -1385514,7 +1385460,7 @@
     },
     "1915": {
       "misses": [],
-      "updated_at": "2026-11-21T20:24:55.095978+00:00"
+      "updated_at": "2026-11-21T20:33:01.479282+00:00"
     },
     "2477": {
       "misses": [
@@ -1385617,6 +1385563,12 @@
         "278:1:2"
       ],
       "updated_at": "2026-11-21T20:25:23.037939+00:00"
+    },
+    "3287": {
+      "misses": [
+        "3287:1:1"
+      ],
+      "updated_at": "2026-11-21T20:33:01.480371+00:00"
     }
   },
   "discovery_progress": {
