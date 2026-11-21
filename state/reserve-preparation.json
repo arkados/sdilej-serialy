@@ -1225278,84 +1225278,16 @@
       "queue_rank": 38700
     },
     "4779:1:1": {
-      "at": "2026-11-10T21:15:05.848267+00:00",
+      "at": "2026-11-21T08:31:23.142690+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 43.16,
-      "search_evidence": [
-        {
-          "path": "/volejte-millie-blackovou-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202640,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/volejte-millie-blackovou/s/-6",
-          "status": 200,
-          "response_bytes": 207907,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/get-millie-black-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202119,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/get-millie-black/s/-6",
-          "status": 200,
-          "response_bytes": 201935,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/volejte-millie-blackovou-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202577,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/volejte-millie-blackovou/s/-6",
-          "status": 200,
-          "response_bytes": 207873,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/get-millie-black-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202149,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/get-millie-black/s/-6",
-          "status": 200,
-          "response_bytes": 201971,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T21:15:49.009248+00:00"
+      "elapsed_seconds": 32.56,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T08:31:55.703790+00:00"
     },
     "4236:1:4": {
       "at": "2026-11-10T21:16:36.396035+00:00",
@@ -1374842,9 +1374774,51 @@
       "elapsed_seconds": 437.1,
       "source_id": "33972890",
       "queue_rank": 44572
+    },
+    "125:2:2": {
+      "at": "2026-11-21T08:28:52.482938+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9295979142189026,
+      "observed_source_id": "15402155",
+      "elapsed_seconds": 149.12,
+      "source_id": "15402155",
+      "queue_rank": 44573
+    },
+    "125:2:3": {
+      "at": "2026-11-21T08:30:03.709103+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9844538569450378,
+      "observed_source_id": "16364734",
+      "elapsed_seconds": 104.46,
+      "source_id": "16364734",
+      "queue_rank": 44574
+    },
+    "621:1:9": {
+      "at": "2026-11-21T08:26:52.208060+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9300519227981567,
+      "observed_source_id": "33972873",
+      "elapsed_seconds": 316.81,
+      "source_id": "33972873",
+      "queue_rank": 44575
     }
   },
-  "updated_at": "2026-11-21T08:31:08.220197+00:00",
+  "updated_at": "2026-11-21T08:32:22.048325+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383250,11 +1383224,11 @@
     },
     "621": {
       "misses": [],
-      "updated_at": "2026-11-21T08:26:51.342644+00:00"
+      "updated_at": "2026-11-21T08:32:09.022990+00:00"
     },
     "125": {
       "misses": [],
-      "updated_at": "2026-11-21T03:34:20.741796+00:00"
+      "updated_at": "2026-11-21T08:31:48.167298+00:00"
     },
     "1404": {
       "misses": [],
@@ -1383430,15 +1383404,21 @@
         "4800:1:12"
       ],
       "updated_at": "2026-11-21T08:26:25.106047+00:00"
+    },
+    "4779": {
+      "misses": [
+        "4779:1:1"
+      ],
+      "updated_at": "2026-11-21T08:31:55.703820+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 4800,
+    "last_series": 4053,
     "last_series_order": [
       false,
       -6.6,
-      -2452,
-      4800
+      -2237,
+      4053
     ]
   },
   "czech_fallback_revision": 1
