@@ -1225056,84 +1225056,16 @@
       "retry_after": "2026-11-11T21:02:34.283224+00:00"
     },
     "2092:1:1": {
-      "at": "2026-11-10T21:01:49.782070+00:00",
+      "at": "2026-11-21T07:10:07.913049+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 48.63,
-      "search_evidence": [
-        {
-          "path": "/jsem-v-kapele-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202118,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jsem-v-kapele/s/-6",
-          "status": 200,
-          "response_bytes": 201807,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/i-m-in-the-band-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202114,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/i-m-in-the-band/s/-6",
-          "status": 200,
-          "response_bytes": 202011,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jsem-v-kapele-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202060,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jsem-v-kapele/s/-6",
-          "status": 200,
-          "response_bytes": 201813,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/i-m-in-the-band-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202140,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/i-m-in-the-band/s/-6",
-          "status": 200,
-          "response_bytes": 201848,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-11T21:02:52.235302+00:00"
+      "elapsed_seconds": 39.37,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-22T07:10:47.283489+00:00"
     },
     "4980:1:4": {
       "at": "2026-11-10T21:01:40.166141+00:00",
@@ -1374819,9 +1374751,51 @@
       "elapsed_seconds": 182.14,
       "source_id": "33310735",
       "queue_rank": 44552
+    },
+    "1049:2:21": {
+      "at": "2026-11-21T07:07:51.661907+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.937433660030365,
+      "observed_source_id": "33310742",
+      "elapsed_seconds": 111.12,
+      "source_id": "33310742",
+      "queue_rank": 44553
+    },
+    "351:1:2": {
+      "at": "2026-11-21T07:09:38.346758+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9915001392364502,
+      "observed_source_id": "24163491",
+      "elapsed_seconds": 41.24,
+      "source_id": "24163491",
+      "queue_rank": 44554
+    },
+    "1049:2:22": {
+      "at": "2026-11-21T07:08:41.009281+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9543535113334656,
+      "observed_source_id": "32329478",
+      "elapsed_seconds": 124.86,
+      "source_id": "32329478",
+      "queue_rank": 44555
     }
   },
-  "updated_at": "2026-11-21T07:09:45.403101+00:00",
+  "updated_at": "2026-11-21T07:11:12.713344+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383207,7 +1383181,7 @@
     },
     "1049": {
       "misses": [],
-      "updated_at": "2026-11-21T07:09:04.431889+00:00"
+      "updated_at": "2026-11-21T07:10:45.869585+00:00"
     },
     "9731": {
       "misses": [
@@ -1383367,15 +1383341,25 @@
     "3947": {
       "misses": [],
       "updated_at": "2026-11-21T07:02:10.836412+00:00"
+    },
+    "351": {
+      "misses": [],
+      "updated_at": "2026-11-21T07:10:19.588129+00:00"
+    },
+    "2092": {
+      "misses": [
+        "2092:1:1"
+      ],
+      "updated_at": "2026-11-21T07:10:47.283522+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 351,
+    "last_series": 2092,
     "last_series_order": [
       false,
       -6.6,
-      -3179,
-      351
+      -2909,
+      2092
     ]
   },
   "czech_fallback_revision": 1
