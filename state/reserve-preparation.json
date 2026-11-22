@@ -754513,7 +754513,7 @@
       "retry_after": "2026-11-22T17:22:22.949635+00:00"
     },
     "1410:5:13": {
-      "at": "2026-11-21T14:48:14.080519+00:00",
+      "at": "2026-11-22T20:28:33.138079+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
@@ -754522,10 +754522,10 @@
       "observed_audio_language": "en",
       "observed_language_probability": 0.9890930652618408,
       "observed_source_id": "34450642",
-      "reason": "inconclusive_subtitles",
-      "elapsed_seconds": 920.38,
-      "consecutive_failures": 10,
-      "retry_after": "2026-11-22T15:03:34.460921+00:00"
+      "reason": "transient_search",
+      "elapsed_seconds": 108.77,
+      "consecutive_failures": 11,
+      "retry_after": "2026-11-23T02:30:21.905252+00:00"
     },
     "1255:1:37": {
       "at": "2026-10-28T07:05:58.672327+00:00",
@@ -1377700,9 +1377700,23 @@
       "elapsed_seconds": 42.54,
       "source_id": "10920261",
       "queue_rank": 45141
+    },
+    "1862:1:16": {
+      "at": "2026-11-22T20:28:50.865102+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9710748791694641,
+      "observed_source_id": "34357325",
+      "elapsed_seconds": 55.98,
+      "source_id": "34357325",
+      "queue_rank": 45142
     }
   },
-  "updated_at": "2026-11-22T20:29:05.897695+00:00",
+  "updated_at": "2026-11-22T20:31:14.023335+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1382444,9 +1382458,11 @@
     "1410": {
       "misses": [
         "1410:5:11",
-        "1410:1:10"
+        "1410:1:10",
+        "1410:5:13"
       ],
-      "updated_at": "2026-11-22T14:26:07.116498+00:00"
+      "updated_at": "2026-11-22T20:30:21.905271+00:00",
+      "retry_after": "2026-11-22T21:00:21.905271+00:00"
     },
     "9670": {
       "misses": [
@@ -1387493,7 +1387509,7 @@
     },
     "1862": {
       "misses": [],
-      "updated_at": "2026-11-22T20:28:30.789532+00:00"
+      "updated_at": "2026-11-22T20:30:09.784021+00:00"
     },
     "9704": {
       "misses": [
