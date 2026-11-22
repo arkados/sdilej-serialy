@@ -592,12 +592,43 @@
       "identity": "1410:2:63",
       "account": "a",
       "target_video_id": "31109448",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 110,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e63-dalkove-ovladani-1080p-cz-titulky-titulky-cekaji-mkv/72f39a02b453dd54",
-      "checked_at": "2026-11-22T08:18:26.043494+00:00",
-      "retry_after": "2026-11-22T08:33:26.043508+00:00"
+      "checked_at": "2026-11-22T16:45:24.840865+00:00",
+      "retry_after": "2026-11-22T17:00:24.840878+00:00",
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      }
     },
     "31109712": {
       "identity": "1410:2:13",
@@ -1895,5 +1926,5 @@
       }
     }
   },
-  "updated_at": "2026-11-22T16:43:37.921500+00:00"
+  "updated_at": "2026-11-22T16:45:24.840891+00:00"
 }
