@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44989612479",
-  "attempted_this_run": 2,
+  "attempted_this_run": 6,
   "prepared_this_run": 0,
   "reserve_total": 36502,
   "queue_total": 44937,
-  "updated_at": "2026-11-22T05:36:30.658897+00:00",
+  "updated_at": "2026-11-22T05:41:14.551211+00:00",
   "workers": 4,
-  "elapsed_seconds": 298.22,
+  "elapsed_seconds": 582.12,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -15,35 +15,36 @@
   "target_stock": 3000,
   "stock": {
     "queue_total": 44937,
-    "ready": 3,
+    "ready": 2,
     "ready_by_account": {
       "a": 2,
-      "b": 1
+      "b": 0
     },
     "categories": {
       "completed": 44040,
       "allocated": 879,
       "failed": 12,
       "language_review": 3,
-      "ready": 3
+      "ready": 2,
+      "in_flight": 1
     },
     "completed_by_account": {
       "a": 22014,
       "b": 22026
     },
-    "uploads_last_24h": 478,
-    "uploads_per_hour_24h": 19.92,
-    "stock_hours_24h": 0.15
+    "uploads_last_24h": 472,
+    "uploads_per_hour_24h": 19.67,
+    "stock_hours_24h": 0.1
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 133,
-      "b": 251
+      "a": 417,
+      "b": 535
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 3,
+      "transient_original": 6,
       "inconclusive_subtitles": 2,
       "no_matches": 3,
       "SubtitleUnavailable": 1,
@@ -62,23 +63,24 @@
     ]
   },
   "cache": {
-    "search_miss": 32,
-    "search_seconds": 222.73,
-    "media_hit": 49,
-    "media_miss": 5,
-    "media_seconds": 124.05,
-    "audio_miss": 1,
-    "audio_seconds": 16.1,
-    "audio_hit": 1
+    "search_miss": 40,
+    "search_seconds": 263.53,
+    "media_hit": 71,
+    "media_miss": 17,
+    "media_seconds": 290.92,
+    "audio_miss": 6,
+    "audio_seconds": 161.43,
+    "audio_hit": 1,
+    "search_hit": 2
   },
   "audio_pipeline": {
-    "sample_count": 1,
-    "download_seconds": 6.16,
+    "sample_count": 10,
+    "download_seconds": 124.17,
     "inference_wait_seconds": 0.0,
-    "inference_seconds": 9.94
+    "inference_seconds": 37.24
   },
   "productive_seasons": 164,
-  "series_paused_this_run": 3,
+  "series_paused_this_run": 2,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
   "repaired_this_run": 0,
