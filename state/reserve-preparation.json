@@ -1231541,84 +1231541,16 @@
       "queue_rank": 39166
     },
     "9615:1:1": {
-      "at": "2026-11-11T11:44:57.126516+00:00",
+      "at": "2026-11-22T04:14:20.079248+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 57.16,
-      "search_evidence": [
-        {
-          "path": "/jerry-springer-rvacky-kamera-akce-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202449,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jerry-springer-rvacky-kamera-akce/s/-6",
-          "status": 200,
-          "response_bytes": 202241,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jerry-springer-fights-camera-action-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202569,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jerry-springer-fights-camera-action/s/-6",
-          "status": 200,
-          "response_bytes": 202324,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jerry-springer-rvacky-kamera-akce-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202434,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jerry-springer-rvacky-kamera-akce/s/-6",
-          "status": 200,
-          "response_bytes": 202329,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jerry-springer-fights-camera-action-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202537,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jerry-springer-fights-camera-action/s/-6",
-          "status": 200,
-          "response_bytes": 202437,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-12T11:45:54.290876+00:00"
+      "elapsed_seconds": 108.59,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-23T04:16:08.666252+00:00"
     },
     "439:1:1": {
       "at": "2026-11-11T11:44:58.069921+00:00",
@@ -1376791,9 +1376723,23 @@
       "elapsed_seconds": 163.19,
       "source_id": "32146389",
       "queue_rank": 44917
+    },
+    "9779:2:1": {
+      "at": "2026-11-22T04:14:19.011033+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9952959418296814,
+      "observed_source_id": "30894126",
+      "elapsed_seconds": 100.45,
+      "source_id": "30894126",
+      "queue_rank": 44918
     }
   },
-  "updated_at": "2026-11-22T04:15:21.245303+00:00",
+  "updated_at": "2026-11-22T04:16:41.984158+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386092,6 +1386038,16 @@
         "4991:1:2"
       ],
       "updated_at": "2026-11-22T03:15:43.229519+00:00"
+    },
+    "9779": {
+      "misses": [],
+      "updated_at": "2026-11-22T04:15:59.459810+00:00"
+    },
+    "9615": {
+      "misses": [
+        "9615:1:1"
+      ],
+      "updated_at": "2026-11-22T04:16:08.666281+00:00"
     }
   },
   "discovery_progress": {
