@@ -1233143,84 +1233143,16 @@
       "queue_rank": 39270
     },
     "3872:1:1": {
-      "at": "2026-11-11T17:33:09.627225+00:00",
+      "at": "2026-11-22T11:16:47.939500+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 51.33,
-      "search_evidence": [
-        {
-          "path": "/digitalni-detox-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202044,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/digitalni-detox/s/-6",
-          "status": 200,
-          "response_bytes": 204269,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/off-the-hook-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 220415,
-          "boxes": 14,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/off-the-hook/s/-6",
-          "status": 200,
-          "response_bytes": 558408,
-          "boxes": 282,
-          "parsed_candidates": 235,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/digitalni-detox-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 202076,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/digitalni-detox/s/-6",
-          "status": 200,
-          "response_bytes": 204357,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/off-the-hook-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 220471,
-          "boxes": 14,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/off-the-hook/s/-6",
-          "status": 200,
-          "response_bytes": 558392,
-          "boxes": 282,
-          "parsed_candidates": 235,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-12T17:34:08.299533+00:00"
+      "elapsed_seconds": 197.89,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-23T11:20:05.827917+00:00"
     },
     "759:1:7": {
       "at": "2026-11-11T17:31:43.193135+00:00",
@@ -1246983,16 +1246915,16 @@
       "retry_after": "2026-11-13T08:31:44.912418+00:00"
     },
     "2181:1:18": {
-      "at": "2026-11-22T10:40:31.352753+00:00",
+      "at": "2026-11-22T11:14:28.875291+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 330.74,
-      "consecutive_failures": 10,
-      "retry_after": "2026-11-22T10:56:02.090132+00:00"
+      "reason": "inconclusive_audio",
+      "elapsed_seconds": 256.28,
+      "consecutive_failures": 11,
+      "retry_after": "2026-11-23T11:19:21.872499+00:00"
     },
     "4274:1:3": {
       "at": "2026-11-12T08:31:47.394516+00:00",
@@ -1377323,9 +1377255,23 @@
       "elapsed_seconds": 136.47,
       "source_id": "14285995",
       "queue_rank": 45008
+    },
+    "9743:1:22": {
+      "at": "2026-11-22T11:16:18.544546+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9503604173660278,
+      "observed_source_id": "14296633",
+      "elapsed_seconds": 115.3,
+      "source_id": "14296633",
+      "queue_rank": 45009
     }
   },
-  "updated_at": "2026-11-22T11:16:52.008394+00:00",
+  "updated_at": "2026-11-22T11:20:25.500809+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386566,7 +1386512,7 @@
         "2181:1:9",
         "2181:1:18"
       ],
-      "updated_at": "2026-11-22T11:14:28.234193+00:00"
+      "updated_at": "2026-11-22T11:19:21.872536+00:00"
     },
     "1430": {
       "misses": [],
@@ -1386811,7 +1386757,7 @@
     },
     "9743": {
       "misses": [],
-      "updated_at": "2026-11-22T11:16:47.274290+00:00"
+      "updated_at": "2026-11-22T11:19:21.872611+00:00"
     },
     "8730": {
       "misses": [
@@ -1386824,6 +1386770,12 @@
         "3004:1:1"
       ],
       "updated_at": "2026-11-22T10:40:30.496925+00:00"
+    },
+    "3872": {
+      "misses": [
+        "3872:1:1"
+      ],
+      "updated_at": "2026-11-22T11:20:05.827950+00:00"
     }
   },
   "discovery_progress": {
