@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
-  "run_id": "44999028331",
-  "attempted_this_run": 29,
-  "prepared_this_run": 5,
+  "run_id": "45002026389",
+  "attempted_this_run": 0,
+  "prepared_this_run": 0,
   "reserve_total": 36531,
   "queue_total": 44966,
-  "updated_at": "2026-11-22T08:13:15.983131+00:00",
+  "updated_at": "2026-11-22T08:24:06.562450+00:00",
   "workers": 4,
-  "elapsed_seconds": 2083.09,
-  "prepared_per_hour": 8.64,
-  "available_this_run": 5,
-  "available_per_hour": 8.64,
+  "elapsed_seconds": 66.16,
+  "prepared_per_hour": 0.0,
+  "available_this_run": 0,
+  "available_per_hour": 0.0,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -23,8 +23,7 @@
     "categories": {
       "completed": 44069,
       "allocated": 879,
-      "failed": 10,
-      "in_flight": 2,
+      "failed": 12,
       "language_review": 3,
       "ready": 3
     },
@@ -40,19 +39,19 @@
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1616,
-      "b": 295
+      "a": 2267,
+      "b": 946
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 5,
-      "no_matches": 8,
-      "source_search_unavailable": 4,
+      "no_matches": 5,
       "no_acceptable_original": 7,
       "inconclusive_audio": 4,
-      "prepared": 14
+      "source_search_unavailable": 3,
+      "prepared": 5
     }
   },
-  "indexed_candidates_in_scan": 1070,
+  "indexed_candidates_in_scan": 966,
   "discovery_progress": {
     "last_series": 8752,
     "last_series_order": [
@@ -63,23 +62,12 @@
     ]
   },
   "cache": {
-    "search_miss": 119,
-    "search_seconds": 2165.75,
-    "search_hit": 6,
-    "media_hit": 100,
-    "media_miss": 46,
-    "media_seconds": 374.06,
-    "audio_miss": 13,
-    "audio_seconds": 273.43
+    "search_miss": 12,
+    "search_seconds": 174.32,
+    "search_hit": 1
   },
-  "audio_pipeline": {
-    "sample_count": 28,
-    "download_seconds": 234.56,
-    "failures": 4,
-    "inference_wait_seconds": 0.0,
-    "inference_seconds": 38.85
-  },
-  "productive_seasons": 163,
+  "audio_pipeline": {},
+  "productive_seasons": 160,
   "series_paused_this_run": 3,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
@@ -2881,48 +2869,15 @@
     }
   ],
   "search_health": {
-    "status": "paused",
+    "status": "probe_due",
     "consecutive_failures": 2,
-    "retry_seconds": 571,
-    "failed_cycles_this_run": 2,
-    "control_requests": 15,
+    "retry_seconds": 0,
+    "failed_cycles_this_run": 0,
+    "control_requests": 0,
     "request_gap_seconds": 8,
-    "restart_required": true,
+    "restart_required": false,
     "last_request_limit": null,
-    "resume_after": "2026-11-22T08:22:46.371783+00:00",
-    "controls": [
-      {
-        "path": "/teorie-velkeho-tresku/s/-6",
-        "status": 200,
-        "response_bytes": 188633,
-        "parsed_candidates": 0,
-        "body_sha256": "679b15262776e4966e68b26e6088566f6b413d663a504ded861d696fb4bbd436",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/teorie-velkeho-tresku/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-22T08:12:38.738928+00:00"
-      },
-      {
-        "path": "/doktor-martin/s/-6",
-        "status": 200,
-        "response_bytes": 188465,
-        "parsed_candidates": 0,
-        "body_sha256": "3c33439251900a123cfc9b7285502231ac107c5035ec39aebb9cef19f6407636",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/doktor-martin/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-22T08:12:46.371706+00:00"
-      }
-    ]
+    "resume_after": null,
+    "controls": []
   }
 }
