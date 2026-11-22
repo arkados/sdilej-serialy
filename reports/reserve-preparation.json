@@ -5,12 +5,12 @@
   "prepared_this_run": 4,
   "reserve_total": 36530,
   "queue_total": 44965,
-  "updated_at": "2026-11-22T08:10:52.743806+00:00",
+  "updated_at": "2026-11-22T08:12:15.862285+00:00",
   "workers": 4,
-  "elapsed_seconds": 1939.85,
-  "prepared_per_hour": 7.42,
+  "elapsed_seconds": 2022.97,
+  "prepared_per_hour": 7.12,
   "available_this_run": 4,
-  "available_per_hour": 7.42,
+  "available_per_hour": 7.12,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -23,7 +23,8 @@
     "categories": {
       "completed": 44069,
       "allocated": 879,
-      "failed": 12,
+      "failed": 10,
+      "in_flight": 2,
       "language_review": 3,
       "ready": 2
     },
@@ -39,8 +40,8 @@
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1473,
-      "b": 152
+      "a": 1556,
+      "b": 235
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 5,
@@ -2880,22 +2881,22 @@
     }
   ],
   "search_health": {
-    "status": "paused",
+    "status": "probe_due",
     "consecutive_failures": 1,
-    "retry_seconds": 77,
+    "retry_seconds": 0,
     "failed_cycles_this_run": 1,
-    "control_requests": 11,
+    "control_requests": 12,
     "request_gap_seconds": 4,
     "restart_required": false,
     "last_request_limit": null,
-    "resume_after": "2026-11-22T08:12:09.581391+00:00",
+    "resume_after": null,
     "controls": [
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
         "response_bytes": 188633,
         "parsed_candidates": 0,
-        "body_sha256": "03a4145d93da9bff1400b3c343b9ef0651568871673c9ea4034e6973fd637696",
+        "body_sha256": "2266e13cea5123e1648b14a47c0bb0a0fb2fd2e3d0e33729e014e5cf4432f1c6",
         "video_box_count": 0,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2904,7 +2905,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-22T08:07:05.566665+00:00"
+        "checked_at": "2026-11-22T08:12:09.992466+00:00"
       },
       {
         "path": "/doktor-martin/s/-6",
