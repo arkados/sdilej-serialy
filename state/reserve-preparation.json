@@ -1330336,52 +1330336,16 @@
       "retry_after": "2026-11-16T20:31:53.386644+00:00"
     },
     "5803:1:2": {
-      "at": "2026-11-15T20:31:53.385671+00:00",
+      "at": "2026-11-22T17:57:59.422532+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 16.44,
-      "search_evidence": [
-        {
-          "path": "/the-vince-staples-show-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216688,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-vince-staples-show/s/-6",
-          "status": 200,
-          "response_bytes": 228767,
-          "boxes": 10,
-          "parsed_candidates": 10,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-vince-staples-show-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216682,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-vince-staples-show/s/-6",
-          "status": 200,
-          "response_bytes": 228789,
-          "boxes": 10,
-          "parsed_candidates": 10,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-16T20:32:09.826580+00:00"
+      "elapsed_seconds": 119.27,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-23T17:59:58.691114+00:00"
     },
     "3712:1:4": {
       "at": "2026-11-15T20:32:36.561029+00:00",
@@ -1377535,9 +1377499,21 @@
       "elapsed_seconds": 185.21,
       "consecutive_failures": 1,
       "retry_after": "2026-11-23T17:58:22.843984+00:00"
+    },
+    "5803:1:4": {
+      "at": "2026-11-22T17:58:23.916870+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 94.88,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-23T17:59:59.820672+00:00"
     }
   },
-  "updated_at": "2026-11-22T17:59:23.006144+00:00",
+  "updated_at": "2026-11-22T18:00:36.565090+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1385842,9 +1385818,12 @@
     },
     "5803": {
       "misses": [
-        "5803:1:1"
+        "5803:1:1",
+        "5803:1:2",
+        "5803:1:4"
       ],
-      "updated_at": "2026-11-22T17:57:58.345709+00:00"
+      "updated_at": "2026-11-22T17:59:59.820702+00:00",
+      "retry_after": "2026-11-22T21:59:59.820702+00:00"
     },
     "6597": {
       "misses": [
@@ -1387271,12 +1387250,12 @@
     }
   },
   "discovery_progress": {
-    "last_series": 3445,
+    "last_series": 2809,
     "last_series_order": [
       false,
       -6.3,
-      -10930,
-      3445
+      -9062,
+      2809
     ]
   },
   "czech_fallback_revision": 1
