@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44977405204",
-  "attempted_this_run": 1,
+  "attempted_this_run": 2,
   "prepared_this_run": 0,
   "reserve_total": 36472,
   "queue_total": 44907,
-  "updated_at": "2026-11-22T02:57:51.082452+00:00",
+  "updated_at": "2026-11-22T02:59:04.546398+00:00",
   "workers": 4,
-  "elapsed_seconds": 291.74,
+  "elapsed_seconds": 365.21,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -38,11 +38,12 @@
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 425,
-      "b": 1058
+      "a": 498,
+      "b": 1132
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 5,
+      "inconclusive_audio": 1,
       "source_search_unavailable": 4,
       "inconclusive_subtitles": 1,
       "source_already_assigned": 1,
@@ -62,12 +63,19 @@
     ]
   },
   "cache": {
-    "search_miss": 17,
-    "search_seconds": 499.91,
+    "search_miss": 20,
+    "search_seconds": 579.45,
     "search_hit": 2,
-    "media_hit": 7
+    "media_hit": 12,
+    "audio_miss": 2,
+    "audio_seconds": 67.33
   },
-  "audio_pipeline": {},
+  "audio_pipeline": {
+    "sample_count": 8,
+    "download_seconds": 51.98,
+    "inference_wait_seconds": 0.0,
+    "inference_seconds": 15.35
+  },
   "productive_seasons": 164,
   "series_paused_this_run": 0,
   "saved_reviewed_this_run": 0,
