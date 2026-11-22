@@ -754632,7 +754632,7 @@
       "retry_after": "2026-10-29T07:06:20.550468+00:00"
     },
     "1410:5:16": {
-      "at": "2026-11-21T14:58:25.473252+00:00",
+      "at": "2026-11-22T20:28:34.199234+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
@@ -754641,10 +754641,10 @@
       "observed_audio_language": "en",
       "observed_language_probability": 0.9863669276237488,
       "observed_source_id": "34450625",
-      "reason": "inconclusive_subtitles",
-      "elapsed_seconds": 851.48,
-      "consecutive_failures": 10,
-      "retry_after": "2026-11-22T15:14:15.951080+00:00"
+      "reason": "transient_search",
+      "elapsed_seconds": 420.1,
+      "consecutive_failures": 11,
+      "retry_after": "2026-11-23T02:35:34.302927+00:00"
     },
     "1410:5:19": {
       "at": "2026-11-21T18:26:30.693182+00:00",
@@ -1377714,9 +1377714,33 @@
       "elapsed_seconds": 55.98,
       "source_id": "34357325",
       "queue_rank": 45142
+    },
+    "1862:1:17": {
+      "at": "2026-11-22T20:30:09.784120+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 324.52,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-22T20:45:34.301322+00:00"
+    },
+    "1862:1:18": {
+      "at": "2026-11-22T20:30:10.868951+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 323.43,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-22T20:45:34.301320+00:00"
     }
   },
-  "updated_at": "2026-11-22T20:34:04.954927+00:00",
+  "updated_at": "2026-11-22T20:35:38.452463+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1382457,12 +1382481,12 @@
     },
     "1410": {
       "misses": [
-        "1410:5:11",
         "1410:1:10",
-        "1410:5:13"
+        "1410:5:13",
+        "1410:5:16"
       ],
-      "updated_at": "2026-11-22T20:30:21.905271+00:00",
-      "retry_after": "2026-11-22T21:00:21.905271+00:00"
+      "updated_at": "2026-11-22T20:35:34.302946+00:00",
+      "retry_after": "2026-11-22T21:05:34.302946+00:00"
     },
     "9670": {
       "misses": [
