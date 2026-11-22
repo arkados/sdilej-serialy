@@ -1,28 +1,28 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "44981316045",
-  "attempted_this_run": 42,
-  "prepared_this_run": 21,
-  "reserve_total": 36497,
-  "queue_total": 44932,
-  "updated_at": "2026-11-22T05:12:41.656915+00:00",
+  "attempted_this_run": 46,
+  "prepared_this_run": 22,
+  "reserve_total": 36498,
+  "queue_total": 44933,
+  "updated_at": "2026-11-22T05:14:07.412862+00:00",
   "workers": 4,
-  "elapsed_seconds": 5714.2,
-  "prepared_per_hour": 13.23,
-  "available_this_run": 21,
-  "available_per_hour": 13.23,
+  "elapsed_seconds": 5799.96,
+  "prepared_per_hour": 13.66,
+  "available_this_run": 22,
+  "available_per_hour": 13.66,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 44932,
+    "queue_total": 44933,
     "ready": 5,
     "ready_by_account": {
-      "a": 3,
-      "b": 2
+      "a": 4,
+      "b": 1
     },
     "categories": {
       "completed": 44033,
-      "allocated": 879,
+      "allocated": 880,
       "failed": 12,
       "language_review": 3,
       "ready": 5
@@ -31,27 +31,28 @@
       "a": 22010,
       "b": 22023
     },
-    "uploads_last_24h": 495,
-    "uploads_per_hour_24h": 20.62,
+    "uploads_last_24h": 493,
+    "uploads_per_hour_24h": 20.54,
     "stock_hours_24h": 0.24
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 747,
-      "b": 100
+      "a": 833,
+      "b": 186
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 4,
-      "inconclusive_subtitles": 2,
+      "inconclusive_subtitles": 3,
       "no_matches": 4,
-      "inconclusive_audio": 4,
+      "SubtitleUnavailable": 1,
+      "inconclusive_audio": 5,
       "no_acceptable_original": 2,
-      "prepared": 15
+      "prepared": 16
     }
   },
-  "indexed_candidates_in_scan": 1007,
+  "indexed_candidates_in_scan": 1022,
   "discovery_progress": {
     "last_series": 6836,
     "last_series_order": [
@@ -62,24 +63,24 @@
     ]
   },
   "cache": {
-    "search_miss": 190,
-    "search_seconds": 2091.53,
+    "search_miss": 206,
+    "search_seconds": 2183.02,
     "search_hit": 12,
-    "media_miss": 147,
-    "media_seconds": 656.78,
+    "media_miss": 153,
+    "media_seconds": 673.29,
     "media_hit": 144,
-    "audio_miss": 44,
-    "audio_seconds": 730.27,
+    "audio_miss": 45,
+    "audio_seconds": 848.97,
     "audio_hit": 10
   },
   "audio_pipeline": {
-    "sample_count": 69,
-    "download_seconds": 564.44,
-    "inference_wait_seconds": 9.57,
-    "inference_seconds": 199.82,
+    "sample_count": 75,
+    "download_seconds": 612.23,
+    "inference_wait_seconds": 11.03,
+    "inference_seconds": 225.57,
     "failures": 4
   },
-  "productive_seasons": 167,
+  "productive_seasons": 168,
   "series_paused_this_run": 1,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
@@ -89,8 +90,8 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 36497,
-    "deferred": 38694
+    "prepared": 36498,
+    "deferred": 38693
   },
   "requested_series": [
     {
@@ -2885,7 +2886,7 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 8,
+    "control_requests": 9,
     "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
@@ -2894,9 +2895,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724023,
+        "response_bytes": 724078,
         "parsed_candidates": 412,
-        "body_sha256": "b7d51767b23c332c2d710623dd6c77ebc4b3892b0d1ccc8afb1aa2c49085255b",
+        "body_sha256": "f620c758ee757181562a53a8b72f2ad1fc20a1b921dff939d105b8d17ce66097",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2905,7 +2906,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-22T05:11:26.296336+00:00"
+        "checked_at": "2026-11-22T05:13:33.011539+00:00"
       }
     ]
   }
