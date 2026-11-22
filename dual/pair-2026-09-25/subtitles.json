@@ -508,12 +508,43 @@
       "identity": "1410:2:53",
       "account": "a",
       "target_video_id": "31109273",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 111,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e53-dovolena-na-hawaii-1-1080p-cz-titulky-titulky-cekaji-mkv/85f2bbbecbed8f5c",
-      "checked_at": "2026-11-22T08:17:37.211108+00:00",
-      "retry_after": "2026-11-22T08:32:37.211121+00:00"
+      "checked_at": "2026-11-22T16:41:49.736329+00:00",
+      "retry_after": "2026-11-22T16:56:49.736341+00:00",
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      }
     },
     "31109419": {
       "identity": "1410:2:54",
@@ -1833,5 +1864,5 @@
       }
     }
   },
-  "updated_at": "2026-11-22T16:39:55.337714+00:00"
+  "updated_at": "2026-11-22T16:41:49.736349+00:00"
 }
