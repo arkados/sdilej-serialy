@@ -1332060,16 +1332060,16 @@
       "retry_after": "2026-11-23T12:11:42.375054+00:00"
     },
     "979:1:8": {
-      "at": "2026-11-23T04:36:57.160382+00:00",
+      "at": "2026-11-23T10:44:22.997705+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "transient_original",
-      "elapsed_seconds": 62.67,
-      "consecutive_failures": 30,
-      "retry_after": "2026-11-23T10:38:39.909664+00:00"
+      "elapsed_seconds": 329.99,
+      "consecutive_failures": 31,
+      "retry_after": "2026-11-23T16:49:52.987982+00:00"
     },
     "5990:1:7": {
       "at": "2026-11-16T04:37:03.135518+00:00",
@@ -1378529,9 +1378529,35 @@
       "elapsed_seconds": 113.62,
       "source_id": "22304057",
       "queue_rank": 45390
+    },
+    "7478:1:2": {
+      "at": "2026-11-23T10:47:45.279697+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9773504734039307,
+      "observed_source_id": "27679691",
+      "elapsed_seconds": 104.85,
+      "source_id": "27679691",
+      "queue_rank": 45391
+    },
+    "3098:1:2": {
+      "at": "2026-11-23T10:49:31.252605+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 47.42,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-24T10:50:18.674763+00:00"
     }
   },
-  "updated_at": "2026-11-23T10:48:36.530637+00:00",
+  "updated_at": "2026-11-23T10:50:28.145976+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383167,9 +1383193,10 @@
     },
     "979": {
       "misses": [
-        "979:1:7"
+        "979:1:7",
+        "979:1:8"
       ],
-      "updated_at": "2026-11-23T06:11:42.375085+00:00"
+      "updated_at": "2026-11-23T10:49:52.988008+00:00"
     },
     "2976": {
       "misses": [],
@@ -1388929,15 +1388956,25 @@
     "372": {
       "misses": [],
       "updated_at": "2026-11-23T10:44:59.636291+00:00"
+    },
+    "7478": {
+      "misses": [],
+      "updated_at": "2026-11-23T10:49:30.129945+00:00"
+    },
+    "3098": {
+      "misses": [
+        "3098:1:2"
+      ],
+      "updated_at": "2026-11-23T10:50:18.674795+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 7478,
+    "last_series": 3098,
     "last_series_order": [
       false,
       -6.1,
-      -5635,
-      7478
+      -5099,
+      3098
     ]
   },
   "czech_fallback_revision": 1
