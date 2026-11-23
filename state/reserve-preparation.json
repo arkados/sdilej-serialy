@@ -1241106,84 +1241106,16 @@
       "queue_rank": 39850
     },
     "6997:1:1": {
-      "at": "2026-11-12T08:15:23.492664+00:00",
+      "at": "2026-11-23T13:12:43.984351+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 34.79,
-      "search_evidence": [
-        {
-          "path": "/cisar-z-ocean-parku-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216196,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cisar-z-ocean-parku/s/-6",
-          "status": 200,
-          "response_bytes": 216030,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-emperor-of-ocean-park-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216297,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-emperor-of-ocean-park/s/-6",
-          "status": 200,
-          "response_bytes": 216139,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cisar-z-ocean-parku-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216223,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cisar-z-ocean-parku/s/-6",
-          "status": 200,
-          "response_bytes": 215991,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-emperor-of-ocean-park-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216244,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-emperor-of-ocean-park/s/-6",
-          "status": 200,
-          "response_bytes": 216286,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T08:18:08.517952+00:00"
+      "elapsed_seconds": 59.92,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T13:14:01.120424+00:00"
     },
     "3322:1:4": {
       "at": "2026-11-12T08:18:10.776481+00:00",
@@ -1378689,9 +1378621,37 @@
       "elapsed_seconds": 80.87,
       "source_id": "34418183",
       "queue_rank": 45435
+    },
+    "2764:2:5": {
+      "at": "2026-11-23T13:12:41.803113+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9735673666000366,
+      "observed_source_id": "34418328",
+      "elapsed_seconds": 88.26,
+      "source_id": "34418328",
+      "queue_rank": 45436
+    },
+    "2764:2:4": {
+      "at": "2026-11-23T13:12:40.705485+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9733773469924927,
+      "observed_source_id": "34418257",
+      "elapsed_seconds": 123.88,
+      "source_id": "34418257",
+      "queue_rank": 45437
     }
   },
-  "updated_at": "2026-11-23T13:13:43.635608+00:00",
+  "updated_at": "2026-11-23T13:15:05.847691+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389184,13 +1389144,19 @@
     },
     "2764": {
       "misses": [],
-      "updated_at": "2026-11-23T13:12:39.649908+00:00"
+      "updated_at": "2026-11-23T13:14:44.589528+00:00"
     },
     "8431": {
       "misses": [
         "8431:1:2"
       ],
       "updated_at": "2026-11-23T13:13:39.529496+00:00"
+    },
+    "6997": {
+      "misses": [
+        "6997:1:1"
+      ],
+      "updated_at": "2026-11-23T13:14:01.120454+00:00"
     }
   },
   "discovery_progress": {
