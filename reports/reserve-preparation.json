@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45172735861",
-  "attempted_this_run": 0,
+  "attempted_this_run": 3,
   "prepared_this_run": 0,
   "reserve_total": 37030,
   "queue_total": 45465,
-  "updated_at": "2026-11-23T14:24:40.611181+00:00",
+  "updated_at": "2026-11-23T14:25:58.658920+00:00",
   "workers": 4,
-  "elapsed_seconds": 203.01,
+  "elapsed_seconds": 281.06,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -15,40 +15,42 @@
   "target_stock": 3000,
   "stock": {
     "queue_total": 45465,
-    "ready": 33,
+    "ready": 32,
     "ready_by_account": {
       "a": 16,
-      "b": 17
+      "b": 16
     },
     "categories": {
-      "completed": 44534,
+      "completed": 44535,
       "allocated": 882,
       "failed": 12,
       "language_review": 3,
-      "ready": 33,
-      "in_flight": 1
+      "in_flight": 1,
+      "ready": 32
     },
     "completed_by_account": {
       "a": 22262,
-      "b": 22272
+      "b": 22273
     },
-    "uploads_last_24h": 377,
-    "uploads_per_hour_24h": 15.71,
-    "stock_hours_24h": 2.1
+    "uploads_last_24h": 378,
+    "uploads_per_hour_24h": 15.75,
+    "stock_hours_24h": 2.03
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 143,
-      "b": 193
+      "a": 221,
+      "b": 87
     },
     "preparation_outcomes_last_hour": {
+      "transient_original": 2,
       "inconclusive_audio": 5,
       "no_acceptable_original": 3,
       "prepared": 20,
       "no_matches": 19,
-      "inconclusive_subtitles": 1
+      "inconclusive_subtitles": 1,
+      "no_english_czech_subtitles": 1
     }
   },
   "indexed_candidates_in_scan": 1659,
@@ -62,13 +64,14 @@
     ]
   },
   "cache": {
-    "search_miss": 22,
-    "search_seconds": 136.82,
-    "media_miss": 5,
-    "media_hit": 33,
-    "media_seconds": 76.22,
+    "search_miss": 30,
+    "search_seconds": 180.0,
+    "media_miss": 9,
+    "media_hit": 44,
+    "media_seconds": 144.66,
     "audio_miss": 3,
-    "audio_seconds": 95.75
+    "audio_seconds": 95.75,
+    "audio_hit": 3
   },
   "audio_pipeline": {
     "sample_count": 9,
