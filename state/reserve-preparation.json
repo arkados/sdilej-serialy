@@ -528345,85 +528345,17 @@
       "queue_rank": 29767
     },
     "4:0:1": {
-      "at": "2026-10-29T14:16:53.100653+00:00",
+      "at": "2026-11-23T10:29:07.339323+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
+      "czech_fallback_revision": 1,
       "request_probe_revision": 1,
-      "method": "discovery",
       "reason": "no_matches",
-      "elapsed_seconds": 289.48,
-      "search_evidence": [
-        {
-          "path": "/tlapkova-patrola-s00e01/s/-6",
-          "status": 200,
-          "response_bytes": 217075,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tlapkova-patrola/s/-6",
-          "status": 200,
-          "response_bytes": 726293,
-          "boxes": 459,
-          "parsed_candidates": 454,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/paw-patrol-s00e01/s/-6",
-          "status": 200,
-          "response_bytes": 216918,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/paw-patrol/s/-6",
-          "status": 200,
-          "response_bytes": 474385,
-          "boxes": 173,
-          "parsed_candidates": 167,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tlapkova-patrola-s00e01/s/-6",
-          "status": 200,
-          "response_bytes": 217052,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tlapkova-patrola/s/-6",
-          "status": 200,
-          "response_bytes": 726371,
-          "boxes": 459,
-          "parsed_candidates": 454,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/paw-patrol-s00e01/s/-6",
-          "status": 200,
-          "response_bytes": 216967,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/paw-patrol/s/-6",
-          "status": 200,
-          "response_bytes": 474405,
-          "boxes": 173,
-          "parsed_candidates": 167,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 3,
-      "retry_after": "2026-10-30T14:21:42.580262+00:00"
+      "elapsed_seconds": 270.45,
+      "consecutive_failures": 4,
+      "retry_after": "2026-11-24T10:33:37.789853+00:00"
     },
     "10497:3:3": {
       "at": "2026-10-31T06:05:33.470493+00:00",
@@ -1378541,9 +1378473,35 @@
       "elapsed_seconds": 251.02,
       "source_id": "22304045",
       "queue_rank": 45382
+    },
+    "1238:1:17": {
+      "at": "2026-11-23T10:28:32.238413+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9484307169914246,
+      "observed_source_id": "28445416",
+      "elapsed_seconds": 246.35,
+      "source_id": "28445416",
+      "queue_rank": 45383
+    },
+    "4579:1:2": {
+      "at": "2026-11-23T10:29:23.439998+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 246.23,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-24T10:33:29.671042+00:00"
     }
   },
-  "updated_at": "2026-11-23T10:32:09.410936+00:00",
+  "updated_at": "2026-11-23T10:33:49.200835+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388883,7 +1388841,7 @@
     },
     "1238": {
       "misses": [],
-      "updated_at": "2026-11-23T10:31:54.050559+00:00"
+      "updated_at": "2026-11-23T10:32:42.850942+00:00"
     },
     "9716": {
       "misses": [],
@@ -1388918,6 +1388876,18 @@
     "971": {
       "misses": [],
       "updated_at": "2026-11-23T09:42:39.409690+00:00"
+    },
+    "4579": {
+      "misses": [
+        "4579:1:2"
+      ],
+      "updated_at": "2026-11-23T10:33:29.671070+00:00"
+    },
+    "4": {
+      "misses": [
+        "4:0:1"
+      ],
+      "updated_at": "2026-11-23T10:33:37.789886+00:00"
     }
   },
   "discovery_progress": {
