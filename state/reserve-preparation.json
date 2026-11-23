@@ -41546,16 +41546,16 @@
       "queue_rank": 26220
     },
     "1003:1:1": {
-      "at": "2026-11-23T14:25:16.929558+00:00",
+      "at": "2026-11-23T15:41:49.555247+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "transient_original",
-      "elapsed_seconds": 360.59,
-      "consecutive_failures": 62,
-      "retry_after": "2026-11-23T20:31:17.517265+00:00"
+      "elapsed_seconds": 369.43,
+      "consecutive_failures": 63,
+      "retry_after": "2026-11-23T21:47:58.988554+00:00"
     },
     "1003:1:2": {
       "at": "2026-11-10T17:57:35.016673+00:00",
@@ -1242133,84 +1242133,16 @@
       "queue_rank": 39906
     },
     "8465:3:2": {
-      "at": "2026-11-12T09:48:57.605883+00:00",
+      "at": "2026-11-23T15:46:36.839915+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 43.3,
-      "search_evidence": [
-        {
-          "path": "/tajne-nacisticke-zakladny-s03e02/s/-6",
-          "status": 200,
-          "response_bytes": 216287,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tajne-nacisticke-zakladny/s/-6",
-          "status": 200,
-          "response_bytes": 272244,
-          "boxes": 41,
-          "parsed_candidates": 41,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/secret-nazi-bases-s03e02/s/-6",
-          "status": 200,
-          "response_bytes": 216073,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/secret-nazi-bases/s/-6",
-          "status": 200,
-          "response_bytes": 215961,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tajne-nacisticke-zakladny-s03e02/s/-6",
-          "status": 200,
-          "response_bytes": 216346,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tajne-nacisticke-zakladny/s/-6",
-          "status": 200,
-          "response_bytes": 272267,
-          "boxes": 41,
-          "parsed_candidates": 41,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/secret-nazi-bases-s03e02/s/-6",
-          "status": 200,
-          "response_bytes": 216172,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/secret-nazi-bases/s/-6",
-          "status": 200,
-          "response_bytes": 215947,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T09:49:40.901932+00:00"
+      "elapsed_seconds": 19.85,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T15:47:08.431445+00:00"
     },
     "957:1:3": {
       "at": "2026-11-12T09:48:55.752562+00:00",
@@ -1378236,9 +1378168,23 @@
       "elapsed_seconds": 42.72,
       "source_id": "34400923",
       "queue_rank": 45487
+    },
+    "4576:1:4": {
+      "at": "2026-11-23T15:45:59.248181+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9258328080177307,
+      "observed_source_id": "34400928",
+      "elapsed_seconds": 49.75,
+      "source_id": "34400928",
+      "queue_rank": 45488
     }
   },
-  "updated_at": "2026-11-23T15:46:44.910720+00:00",
+  "updated_at": "2026-11-23T15:48:13.775143+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386229,7 +1386175,7 @@
       "misses": [
         "1003:1:1"
       ],
-      "updated_at": "2026-11-23T14:31:17.517291+00:00"
+      "updated_at": "2026-11-23T15:47:58.988587+00:00"
     },
     "5806": {
       "misses": [],
@@ -1388867,16 +1388813,22 @@
     },
     "4576": {
       "misses": [],
-      "updated_at": "2026-11-23T15:46:41.111666+00:00"
+      "updated_at": "2026-11-23T15:47:08.430925+00:00"
+    },
+    "8465": {
+      "misses": [
+        "8465:3:2"
+      ],
+      "updated_at": "2026-11-23T15:47:08.431461+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 8465,
+    "last_series": 2940,
     "last_series_order": [
       false,
       -6.1,
-      -145,
-      8465
+      -131,
+      2940
     ]
   },
   "czech_fallback_revision": 1
