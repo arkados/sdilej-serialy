@@ -1068,12 +1068,34 @@
       "identity": "1388:3:3",
       "account": "a",
       "target_video_id": "31165782",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 74,
       "detail_url": "https://prehraj.to/dark-winds-s03e03-3-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/175e25649aeb7f24",
-      "checked_at": "2026-11-22T08:22:41.921394+00:00",
-      "retry_after": "2026-11-22T08:37:41.921410+00:00"
+      "checked_at": "2026-11-23T15:09:17.909993+00:00",
+      "retry_after": "2026-11-23T15:24:17.910008+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31166208": {
       "identity": "1388:3:7",
@@ -1667,5 +1689,5 @@
       }
     }
   },
-  "updated_at": "2026-11-23T15:08:54.338065+00:00"
+  "updated_at": "2026-11-23T15:09:17.910016+00:00"
 }
