@@ -1,53 +1,54 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45275337425",
-  "attempted_this_run": 2,
+  "attempted_this_run": 3,
   "prepared_this_run": 2,
   "reserve_total": 37144,
   "queue_total": 45579,
-  "updated_at": "2026-11-23T22:17:00.018005+00:00",
+  "updated_at": "2026-11-23T22:21:52.565735+00:00",
   "workers": 4,
-  "elapsed_seconds": 417.12,
-  "prepared_per_hour": 17.26,
+  "elapsed_seconds": 709.67,
+  "prepared_per_hour": 10.15,
   "available_this_run": 2,
-  "available_per_hour": 17.26,
+  "available_per_hour": 10.15,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 45579,
-    "ready": 10,
+    "ready": 5,
     "ready_by_account": {
-      "a": 5,
-      "b": 5
+      "a": 3,
+      "b": 2
     },
     "categories": {
-      "completed": 44675,
-      "allocated": 879,
+      "completed": 44676,
+      "allocated": 882,
       "failed": 12,
       "language_review": 3,
-      "ready": 10
+      "in_flight": 1,
+      "ready": 5
     },
     "completed_by_account": {
       "a": 22332,
-      "b": 22343
+      "b": 22344
     },
     "uploads_last_24h": 416,
     "uploads_per_hour_24h": 17.33,
-    "stock_hours_24h": 0.58
+    "stock_hours_24h": 0.29
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 745,
-      "b": 1122
+      "a": 1037,
+      "b": 100
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 4,
       "no_matches": 8,
       "source_search_unavailable": 3,
       "inconclusive_audio": 4,
-      "inconclusive_subtitles": 1,
+      "inconclusive_subtitles": 2,
       "prepared": 20
     }
   },
@@ -62,14 +63,15 @@
     ]
   },
   "cache": {
-    "search_miss": 36,
-    "search_seconds": 1006.87,
+    "search_miss": 47,
+    "search_seconds": 1374.99,
     "search_hit": 2,
-    "media_hit": 5,
+    "media_hit": 15,
     "media_miss": 3,
     "media_seconds": 9.21,
     "audio_miss": 3,
-    "audio_seconds": 25.44
+    "audio_seconds": 25.44,
+    "audio_hit": 1
   },
   "audio_pipeline": {
     "sample_count": 3,
@@ -2887,7 +2889,7 @@
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
     "control_requests": 2,
-    "request_gap_seconds": 8,
+    "request_gap_seconds": 4.0,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
