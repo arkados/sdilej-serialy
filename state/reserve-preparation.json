@@ -29090,16 +29090,16 @@
       "retry_after": "2026-11-22T18:37:17.409948+00:00"
     },
     "1264:1:10": {
-      "at": "2026-11-22T22:47:50.854496+00:00",
+      "at": "2026-11-23T00:19:04.081194+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "inconclusive_audio",
-      "elapsed_seconds": 178.67,
-      "consecutive_failures": 31,
-      "retry_after": "2026-11-23T22:50:49.525156+00:00"
+      "reason": "transient_original",
+      "elapsed_seconds": 69.53,
+      "consecutive_failures": 32,
+      "retry_after": "2026-11-23T06:20:13.613764+00:00"
     },
     "1264:1:11": {
       "at": "2026-11-22T09:46:20.411820+00:00",
@@ -1378029,9 +1378029,23 @@
       "elapsed_seconds": 332.67,
       "source_id": "34685041",
       "queue_rank": 45194
+    },
+    "2091:1:8": {
+      "at": "2026-11-23T00:19:29.020456+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.989496648311615,
+      "observed_source_id": "7683901",
+      "elapsed_seconds": 57.82,
+      "source_id": "7683901",
+      "queue_rank": 45195
     }
   },
-  "updated_at": "2026-11-23T00:19:35.194933+00:00",
+  "updated_at": "2026-11-23T00:20:55.684867+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1385691,9 +1385705,11 @@
     "1264": {
       "misses": [
         "1264:2:4",
-        "1264:2:3"
+        "1264:2:3",
+        "1264:1:10"
       ],
-      "updated_at": "2026-11-23T00:17:32.103715+00:00"
+      "updated_at": "2026-11-23T00:20:13.613795+00:00",
+      "retry_after": "2026-11-23T00:50:13.613795+00:00"
     },
     "208": {
       "misses": [],
@@ -1387930,7 +1387946,7 @@
     },
     "2091": {
       "misses": [],
-      "updated_at": "2026-11-23T00:18:03.764809+00:00"
+      "updated_at": "2026-11-23T00:20:26.844922+00:00"
     },
     "6501": {
       "misses": [
