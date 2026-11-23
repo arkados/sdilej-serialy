@@ -1243588,84 +1243588,16 @@
       "queue_rank": 39998
     },
     "7879:1:1": {
-      "at": "2026-11-12T11:39:30.114756+00:00",
+      "at": "2026-11-23T20:40:34.719979+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 43.99,
-      "search_evidence": [
-        {
-          "path": "/nestvura-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216376,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nestvura/s/-6",
-          "status": 200,
-          "response_bytes": 446997,
-          "boxes": 192,
-          "parsed_candidates": 169,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monster-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 311590,
-          "boxes": 72,
-          "parsed_candidates": 70,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monster/s/-6",
-          "status": 200,
-          "response_bytes": 360408,
-          "boxes": 135,
-          "parsed_candidates": 103,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nestvura-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216326,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nestvura/s/-6",
-          "status": 200,
-          "response_bytes": 446936,
-          "boxes": 192,
-          "parsed_candidates": 169,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monster-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 311676,
-          "boxes": 72,
-          "parsed_candidates": 70,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monster/s/-6",
-          "status": 200,
-          "response_bytes": 360285,
-          "boxes": 135,
-          "parsed_candidates": 103,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T11:40:14.108501+00:00"
+      "elapsed_seconds": 89.83,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T20:42:04.545462+00:00"
     },
     "4431:1:2": {
       "at": "2026-11-12T11:39:16.581561+00:00",
@@ -1324342,16 +1324274,16 @@
       "retry_after": "2026-11-16T20:31:53.386644+00:00"
     },
     "5803:1:2": {
-      "at": "2026-11-22T17:57:59.422532+00:00",
+      "at": "2026-11-23T20:41:17.017214+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 119.27,
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-23T17:59:58.691114+00:00"
+      "elapsed_seconds": 43.25,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-24T20:42:00.270855+00:00"
     },
     "3712:1:4": {
       "at": "2026-11-15T20:32:36.561029+00:00",
@@ -1378201,9 +1378133,23 @@
       "elapsed_seconds": 39.34,
       "consecutive_failures": 1,
       "retry_after": "2026-11-23T20:55:33.863923+00:00"
+    },
+    "1312:1:8": {
+      "at": "2026-11-23T20:37:19.357290+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9549180865287781,
+      "observed_source_id": "34882807",
+      "elapsed_seconds": 235.16,
+      "source_id": "34882807",
+      "queue_rank": 45551
     }
   },
-  "updated_at": "2026-11-23T20:40:59.885829+00:00",
+  "updated_at": "2026-11-23T20:42:21.040109+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386519,9 +1386465,11 @@
     "5803": {
       "misses": [
         "5803:1:4",
-        "5803:1:1"
+        "5803:1:1",
+        "5803:1:2"
       ],
-      "updated_at": "2026-11-23T20:35:48.478358+00:00"
+      "updated_at": "2026-11-23T20:42:00.270897+00:00",
+      "retry_after": "2026-11-24T00:42:00.270897+00:00"
     },
     "6597": {
       "misses": [
@@ -1388925,10 +1388873,8 @@
       "updated_at": "2026-11-23T18:56:55.210786+00:00"
     },
     "1312": {
-      "misses": [
-        "1312:1:14"
-      ],
-      "updated_at": "2026-11-23T20:40:33.863946+00:00"
+      "misses": [],
+      "updated_at": "2026-11-23T20:41:16.134881+00:00"
     },
     "2777": {
       "misses": [
@@ -1388983,6 +1388929,12 @@
         "1768:1:1"
       ],
       "updated_at": "2026-11-23T20:35:48.478269+00:00"
+    },
+    "7879": {
+      "misses": [
+        "7879:1:1"
+      ],
+      "updated_at": "2026-11-23T20:42:04.545490+00:00"
     }
   },
   "discovery_progress": {
