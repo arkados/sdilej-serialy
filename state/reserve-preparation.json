@@ -128283,16 +128283,46 @@
       "queue_rank": 21904
     },
     "121:2:6": {
-      "at": "2026-11-23T03:39:10.212232+00:00",
+      "at": "2026-11-23T09:40:44.402010+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "transient_original",
-      "elapsed_seconds": 69.6,
+      "reason": "source_search_unavailable",
+      "error": {
+        "type": "SearchUnavailable",
+        "frames": [
+          {
+            "file": "episodes.py",
+            "function": "_inspect",
+            "line": 356
+          },
+          {
+            "file": "source_audit.py",
+            "function": "_get",
+            "line": 118
+          },
+          {
+            "file": "episodes.py",
+            "function": "_get",
+            "line": 244
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 202
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 84
+          }
+        ]
+      },
+      "elapsed_seconds": 470.29,
       "consecutive_failures": 26,
-      "retry_after": "2026-11-23T09:40:31.327454+00:00"
+      "retry_after": "2026-11-23T09:58:05.055718+00:00"
     },
     "121:2:7": {
       "at": "2026-10-18T08:55:47.849984+00:00",
@@ -1378481,9 +1378511,23 @@
       "elapsed_seconds": 324.59,
       "consecutive_failures": 0,
       "retry_after": "2026-11-23T09:58:05.055714+00:00"
+    },
+    "1238:1:11": {
+      "at": "2026-11-23T09:42:03.358416+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8149527907371521,
+      "observed_source_id": "22304037",
+      "elapsed_seconds": 408.4,
+      "source_id": "22304037",
+      "queue_rank": 45377
     }
   },
-  "updated_at": "2026-11-23T09:48:17.136376+00:00",
+  "updated_at": "2026-11-23T09:48:55.858184+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388823,7 +1388867,7 @@
     },
     "1238": {
       "misses": [],
-      "updated_at": "2026-11-23T09:40:41.987494+00:00"
+      "updated_at": "2026-11-23T09:48:51.755961+00:00"
     },
     "9716": {
       "misses": [],
