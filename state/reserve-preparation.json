@@ -1243503,84 +1243503,16 @@
       "queue_rank": 39990
     },
     "8300:1:1": {
-      "at": "2026-11-12T11:31:06.947016+00:00",
+      "at": "2026-11-23T20:13:43.677799+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 19.47,
-      "search_evidence": [
-        {
-          "path": "/mlady-van-helsing-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216495,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mlady-van-helsing/s/-6",
-          "status": 200,
-          "response_bytes": 222166,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/demons-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 291587,
-          "boxes": 59,
-          "parsed_candidates": 59,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/demons/s/-6",
-          "status": 200,
-          "response_bytes": 518135,
-          "boxes": 272,
-          "parsed_candidates": 235,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mlady-van-helsing-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216531,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mlady-van-helsing/s/-6",
-          "status": 200,
-          "response_bytes": 222128,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/demons-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 291530,
-          "boxes": 59,
-          "parsed_candidates": 59,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/demons/s/-6",
-          "status": 200,
-          "response_bytes": 518225,
-          "boxes": 272,
-          "parsed_candidates": 235,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T11:31:32.748386+00:00"
+      "elapsed_seconds": 145.13,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T20:16:08.803309+00:00"
     },
     "9679:1:1": {
       "at": "2026-11-12T11:31:32.753578+00:00",
@@ -1378311,16 +1378243,16 @@
       "queue_rank": 45539
     },
     "392:1:2": {
-      "at": "2026-11-23T19:31:25.907695+00:00",
+      "at": "2026-11-23T20:13:44.558860+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 298.46,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-23T19:46:24.364015+00:00"
+      "reason": "transient_search",
+      "elapsed_seconds": 125.46,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-23T20:30:50.020541+00:00"
     },
     "2163:1:9": {
       "at": "2026-11-23T20:05:03.070212+00:00",
@@ -1378365,7 +1378297,7 @@
       "queue_rank": 45543
     }
   },
-  "updated_at": "2026-11-23T20:14:45.483511+00:00",
+  "updated_at": "2026-11-23T20:16:26.079331+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389110,6 +1389042,18 @@
         "9724:6:1"
       ],
       "updated_at": "2026-11-23T19:29:33.787072+00:00"
+    },
+    "392": {
+      "misses": [
+        "392:1:2"
+      ],
+      "updated_at": "2026-11-23T20:15:50.020566+00:00"
+    },
+    "8300": {
+      "misses": [
+        "8300:1:1"
+      ],
+      "updated_at": "2026-11-23T20:16:08.803338+00:00"
     }
   },
   "discovery_progress": {
