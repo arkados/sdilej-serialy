@@ -1236917,84 +1236917,16 @@
       "queue_rank": 39536
     },
     "2541:1:1": {
-      "at": "2026-11-12T00:19:43.049536+00:00",
+      "at": "2026-11-23T01:32:55.227868+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 263.84,
-      "search_evidence": [
-        {
-          "path": "/pound-puppies-stenatka-do-kazde-rodiny-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216622,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pound-puppies-stenatka-do-kazde-rodiny/s/-6",
-          "status": 200,
-          "response_bytes": 216349,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pound-puppies-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216009,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pound-puppies/s/-6",
-          "status": 200,
-          "response_bytes": 215938,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pound-puppies-stenatka-do-kazde-rodiny-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216493,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pound-puppies-stenatka-do-kazde-rodiny/s/-6",
-          "status": 200,
-          "response_bytes": 216396,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pound-puppies-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216019,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pound-puppies/s/-6",
-          "status": 200,
-          "response_bytes": 215935,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T00:24:06.893309+00:00"
+      "czech_fallback_revision": 1,
+      "reason": "transient_search",
+      "elapsed_seconds": 101.8,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-23T02:04:37.028378+00:00"
     },
     "4764:1:1": {
       "at": "2026-11-23T00:58:36.430281+00:00",
@@ -1237060,21 +1236992,16 @@
       "retry_after": "2026-11-23T15:37:51.296893+00:00"
     },
     "3727:1:1": {
-      "at": "2026-11-12T00:30:46.767118+00:00",
+      "at": "2026-11-23T01:32:55.988845+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
-      "observed_audio_language": "en",
-      "observed_language_probability": 0.9740045070648193,
-      "observed_source_id": "34399456",
-      "elapsed_seconds": 75.76,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T00:32:02.532052+00:00"
+      "czech_fallback_revision": 1,
+      "reason": "transient_original",
+      "elapsed_seconds": 94.41,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-23T02:04:30.399578+00:00"
     },
     "1755:1:1": {
       "at": "2026-11-12T00:31:30.406496+00:00",
@@ -1377807,16 +1377734,18 @@
       "queue_rank": 45195
     },
     "2091:1:12": {
-      "at": "2026-11-23T00:59:25.584713+00:00",
-      "status": "deferred",
+      "at": "2026-11-23T01:32:56.747644+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 336.72,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-23T01:15:02.303853+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9679994583129883,
+      "observed_source_id": "7683886",
+      "elapsed_seconds": 105.24,
+      "source_id": "7683886",
+      "queue_rank": 45209
     },
     "2091:1:16": {
       "at": "2026-11-23T00:59:26.416226+00:00",
@@ -1378009,9 +1377938,23 @@
       "elapsed_seconds": 79.08,
       "source_id": "33090317",
       "queue_rank": 45207
+    },
+    "4222:1:6": {
+      "at": "2026-11-23T01:32:29.716261+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9596331119537354,
+      "observed_source_id": "33090636",
+      "elapsed_seconds": 88.13,
+      "source_id": "33090636",
+      "queue_rank": 45208
     }
   },
-  "updated_at": "2026-11-23T01:33:59.455032+00:00",
+  "updated_at": "2026-11-23T01:35:26.504866+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1387909,7 +1387852,7 @@
     },
     "2091": {
       "misses": [],
-      "updated_at": "2026-11-23T00:58:14.765282+00:00"
+      "updated_at": "2026-11-23T01:34:41.985701+00:00"
     },
     "6501": {
       "misses": [
@@ -1387923,7 +1387866,7 @@
     },
     "4222": {
       "misses": [],
-      "updated_at": "2026-11-23T01:32:54.474032+00:00"
+      "updated_at": "2026-11-23T01:34:21.824758+00:00"
     },
     "7517": {
       "misses": [
@@ -1387972,6 +1387915,18 @@
         "383:1:1"
       ],
       "updated_at": "2026-11-23T00:59:05.522701+00:00"
+    },
+    "3727": {
+      "misses": [
+        "3727:1:1"
+      ],
+      "updated_at": "2026-11-23T01:34:30.399605+00:00"
+    },
+    "2541": {
+      "misses": [
+        "2541:1:1"
+      ],
+      "updated_at": "2026-11-23T01:34:37.028411+00:00"
     }
   },
   "discovery_progress": {
