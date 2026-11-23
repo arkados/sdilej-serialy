@@ -1240014,84 +1240014,16 @@
       "queue_rank": 39762
     },
     "2960:1:1": {
-      "at": "2026-11-12T06:08:40.362372+00:00",
+      "at": "2026-11-23T09:17:00.253144+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 39.33,
-      "search_evidence": [
-        {
-          "path": "/sonny-ve-velkem-svete-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216336,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sonny-ve-velkem-svete/s/-6",
-          "status": 200,
-          "response_bytes": 218806,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sonny-with-a-chance-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216118,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sonny-with-a-chance/s/-6",
-          "status": 200,
-          "response_bytes": 216061,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sonny-ve-velkem-svete-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216171,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sonny-ve-velkem-svete/s/-6",
-          "status": 200,
-          "response_bytes": 218815,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sonny-with-a-chance-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216186,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sonny-with-a-chance/s/-6",
-          "status": 200,
-          "response_bytes": 215960,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T06:09:19.692946+00:00"
+      "elapsed_seconds": 31.22,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T09:17:43.426030+00:00"
     },
     "705:1:1": {
       "at": "2026-11-12T06:05:07.603212+00:00",
@@ -1341963,19 +1341895,19 @@
       "retry_after": "2026-11-23T08:33:39.767499+00:00"
     },
     "411:1:4": {
-      "at": "2026-11-21T08:44:49.781085+00:00",
+      "at": "2026-11-23T09:13:58.792743+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "observed_audio_language": "sk",
-      "observed_language_probability": 0.666938841342926,
+      "observed_language_probability": 0.7259824872016907,
       "observed_source_id": "25923475",
       "reason": "no_english_czech_subtitles",
-      "elapsed_seconds": 239.33,
-      "consecutive_failures": 9,
-      "retry_after": "2026-11-22T08:48:52.269058+00:00"
+      "elapsed_seconds": 270.17,
+      "consecutive_failures": 10,
+      "retry_after": "2026-11-24T09:18:28.958079+00:00"
     },
     "153:2:3": {
       "at": "2026-11-23T02:19:17.801962+00:00",
@@ -1378417,7 +1378349,7 @@
       "queue_rank": 45363
     }
   },
-  "updated_at": "2026-11-23T09:17:27.673927+00:00",
+  "updated_at": "2026-11-23T09:18:48.599554+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383035,12 +1382967,12 @@
   "series_discovery": {
     "411": {
       "misses": [
-        "411:1:2",
         "411:1:1",
-        "411:1:3"
+        "411:1:3",
+        "411:1:4"
       ],
-      "updated_at": "2026-11-23T09:09:59.205875+00:00",
-      "retry_after": "2026-11-23T09:39:59.205875+00:00"
+      "updated_at": "2026-11-23T09:18:28.958102+00:00",
+      "retry_after": "2026-11-23T09:48:28.958102+00:00"
     },
     "320": {
       "misses": [
@@ -1388768,6 +1388700,12 @@
     "9716": {
       "misses": [],
       "updated_at": "2026-11-23T09:17:12.322415+00:00"
+    },
+    "2960": {
+      "misses": [
+        "2960:1:1"
+      ],
+      "updated_at": "2026-11-23T09:17:43.426067+00:00"
     }
   },
   "discovery_progress": {
