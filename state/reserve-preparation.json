@@ -169849,21 +169849,19 @@
       "queue_rank": 23785
     },
     "1299:1:3": {
-      "at": "2026-10-28T14:13:53.310889+00:00",
+      "at": "2026-11-23T09:15:45.745957+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
       "observed_language_probability": 0.9323441386222839,
       "observed_source_id": "35101609",
-      "elapsed_seconds": 348.8,
-      "consecutive_failures": 5,
-      "retry_after": "2026-10-29T14:19:42.108016+00:00"
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 538.37,
+      "consecutive_failures": 6,
+      "retry_after": "2026-11-24T09:24:44.118404+00:00"
     },
     "1162:1:4": {
       "at": "2026-10-14T03:11:42.886640+00:00",
@@ -1378355,9 +1378353,23 @@
       "elapsed_seconds": 102.52,
       "source_id": "16992156",
       "queue_rank": 45367
+    },
+    "1238:1:6": {
+      "at": "2026-11-23T09:21:58.484677+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9454408288002014,
+      "observed_source_id": "16992195",
+      "elapsed_seconds": 145.89,
+      "source_id": "16992195",
+      "queue_rank": 45368
     }
   },
-  "updated_at": "2026-11-23T09:24:27.486441+00:00",
+  "updated_at": "2026-11-23T09:25:42.590860+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388700,7 +1388712,7 @@
     },
     "1238": {
       "misses": [],
-      "updated_at": "2026-11-23T09:22:33.953237+00:00"
+      "updated_at": "2026-11-23T09:24:37.556524+00:00"
     },
     "9716": {
       "misses": [],
@@ -1388717,6 +1388729,12 @@
         "1457:1:9"
       ],
       "updated_at": "2026-11-23T09:23:20.896387+00:00"
+    },
+    "1299": {
+      "misses": [
+        "1299:1:3"
+      ],
+      "updated_at": "2026-11-23T09:24:44.118432+00:00"
     }
   },
   "discovery_progress": {
