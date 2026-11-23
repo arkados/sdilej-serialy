@@ -1238220,16 +1238220,18 @@
       "queue_rank": 39626
     },
     "556:1:1": {
-      "at": "2026-11-23T06:32:37.052872+00:00",
-      "status": "deferred",
+      "at": "2026-11-23T08:42:40.465745+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "transient_original",
-      "elapsed_seconds": 221.52,
-      "consecutive_failures": 4,
-      "retry_after": "2026-11-23T08:36:36.969215+00:00"
+      "observed_audio_language": "en",
+      "observed_language_probability": 0.9964156150817871,
+      "observed_source_id": "34086083",
+      "elapsed_seconds": 200.8,
+      "source_id": "34086083",
+      "queue_rank": 45330
     },
     "2809:1:2": {
       "at": "2026-11-12T03:09:46.078535+00:00",
@@ -1239450,84 +1239452,16 @@
       "queue_rank": 39720
     },
     "7679:1:4": {
-      "at": "2026-11-12T05:21:42.079849+00:00",
+      "at": "2026-11-23T08:45:59.373113+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 25.08,
-      "search_evidence": [
-        {
-          "path": "/tak-ci-onak-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 215981,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tak-ci-onak/s/-6",
-          "status": 200,
-          "response_bytes": 216315,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/one-way-or-another-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 216105,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/one-way-or-another/s/-6",
-          "status": 200,
-          "response_bytes": 219850,
-          "boxes": 4,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tak-ci-onak-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 215997,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tak-ci-onak/s/-6",
-          "status": 200,
-          "response_bytes": 216282,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/one-way-or-another-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 216128,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/one-way-or-another/s/-6",
-          "status": 200,
-          "response_bytes": 219974,
-          "boxes": 4,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T05:22:07.157718+00:00"
+      "elapsed_seconds": 24.99,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T08:46:24.361767+00:00"
     },
     "3389:1:1": {
       "at": "2026-11-12T05:22:08.274352+00:00",
@@ -1378449,9 +1378383,23 @@
       "elapsed_seconds": 47.3,
       "source_id": "32345388",
       "queue_rank": 45328
+    },
+    "4431:1:6": {
+      "at": "2026-11-23T08:45:02.422978+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.948217511177063,
+      "observed_source_id": "26175440",
+      "elapsed_seconds": 55.22,
+      "source_id": "26175440",
+      "queue_rank": 45329
     }
   },
-  "updated_at": "2026-11-23T08:45:17.638948+00:00",
+  "updated_at": "2026-11-23T08:46:41.198489+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388567,10 +1388515,8 @@
       "updated_at": "2026-11-23T04:41:44.274352+00:00"
     },
     "556": {
-      "misses": [
-        "556:1:1"
-      ],
-      "updated_at": "2026-11-23T06:36:36.969265+00:00"
+      "misses": [],
+      "updated_at": "2026-11-23T08:46:01.688211+00:00"
     },
     "328": {
       "misses": [
@@ -1388710,15 +1388656,25 @@
     "407": {
       "misses": [],
       "updated_at": "2026-11-23T08:42:39.149002+00:00"
+    },
+    "4431": {
+      "misses": [],
+      "updated_at": "2026-11-23T08:45:57.646705+00:00"
+    },
+    "7679": {
+      "misses": [
+        "7679:1:4"
+      ],
+      "updated_at": "2026-11-23T08:46:24.361802+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 4431,
+    "last_series": 7679,
     "last_series_order": [
       false,
       -6.2,
-      -608,
-      4431
+      -519,
+      7679
     ]
   },
   "czech_fallback_revision": 1
