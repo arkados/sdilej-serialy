@@ -1101,12 +1101,34 @@
       "identity": "1388:3:7",
       "account": "a",
       "target_video_id": "31166208",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 74,
       "detail_url": "https://prehraj.to/dark-winds-s03e07-7-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/20f31e404e09b7d7",
-      "checked_at": "2026-11-22T08:22:57.441389+00:00",
-      "retry_after": "2026-11-22T08:37:57.441407+00:00"
+      "checked_at": "2026-11-23T15:09:43.423642+00:00",
+      "retry_after": "2026-11-23T15:24:43.423655+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31166897": {
       "identity": "1388:4:1",
@@ -1689,5 +1711,5 @@
       }
     }
   },
-  "updated_at": "2026-11-23T15:09:17.910016+00:00"
+  "updated_at": "2026-11-23T15:09:43.423664+00:00"
 }
