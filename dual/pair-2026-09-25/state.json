@@ -1509626,7 +1509626,7 @@
     }
   },
   "initialized_at": "2026-09-25T14:05:15.686917+00:00",
-  "updated_at": "2026-11-23T08:43:38.470470+00:00",
+  "updated_at": "2026-11-23T08:46:19.739695+00:00",
   "pilot_verified_at": "2026-09-25T14:23:33.839342+00:00",
   "pilot_counts": {
     "a": 2,
@@ -1509782,10 +1509782,14 @@
     }
   ],
   "last_transient_error": {
-    "at": "2026-11-23T05:41:02.330601+00:00",
-    "type": "HTTPError",
-    "http_status": 504,
+    "at": "2026-11-23T08:46:19.738931+00:00",
+    "type": "TargetLoginUnavailable",
     "frames": [
+      {
+        "file": "sessions.py",
+        "function": "get",
+        "line": 671
+      },
       {
         "file": "sessions.py",
         "function": "request",
@@ -1509804,12 +1509808,7 @@
       {
         "file": "auth.py",
         "function": "check_status",
-        "line": 24
-      },
-      {
-        "file": "models.py",
-        "function": "raise_for_status",
-        "line": 1167
+        "line": 21
       }
     ]
   }
