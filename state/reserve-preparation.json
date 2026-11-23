@@ -27138,16 +27138,16 @@
       "retry_after": "2026-11-24T13:56:07.343690+00:00"
     },
     "1264:1:7": {
-      "at": "2026-11-23T13:48:19.699005+00:00",
+      "at": "2026-11-23T18:59:41.684629+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 180.47,
-      "consecutive_failures": 38,
-      "retry_after": "2026-11-24T13:51:56.874564+00:00"
+      "elapsed_seconds": 166.78,
+      "consecutive_failures": 39,
+      "retry_after": "2026-11-24T19:15:32.793643+00:00"
     },
     "3687:1:1": {
       "at": "2026-10-19T00:20:32.349475+00:00",
@@ -30733,16 +30733,16 @@
       "retry_after": "2026-11-24T18:56:17.989416+00:00"
     },
     "1264:2:4": {
-      "at": "2026-11-23T16:36:13.083936+00:00",
+      "at": "2026-11-23T18:59:40.785847+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 169.72,
-      "consecutive_failures": 35,
-      "retry_after": "2026-11-24T16:39:24.669777+00:00"
+      "elapsed_seconds": 132.13,
+      "consecutive_failures": 36,
+      "retry_after": "2026-11-24T19:15:32.793551+00:00"
     },
     "1264:2:5": {
       "at": "2026-11-23T16:16:34.380152+00:00",
@@ -1243206,84 +1243206,16 @@
       "queue_rank": 39975
     },
     "2777:1:1": {
-      "at": "2026-11-12T11:17:04.390917+00:00",
+      "at": "2026-11-23T19:15:35.478944+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 32.56,
-      "search_evidence": [
-        {
-          "path": "/millerovi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216232,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/millerovi/s/-6",
-          "status": 200,
-          "response_bytes": 398258,
-          "boxes": 154,
-          "parsed_candidates": 138,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-millers-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 249965,
-          "boxes": 24,
-          "parsed_candidates": 24,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-millers/s/-6",
-          "status": 200,
-          "response_bytes": 621572,
-          "boxes": 329,
-          "parsed_candidates": 306,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/millerovi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216211,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/millerovi/s/-6",
-          "status": 200,
-          "response_bytes": 398354,
-          "boxes": 154,
-          "parsed_candidates": 138,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-millers-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 250047,
-          "boxes": 24,
-          "parsed_candidates": 24,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-millers/s/-6",
-          "status": 200,
-          "response_bytes": 621624,
-          "boxes": 329,
-          "parsed_candidates": 306,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T11:19:29.726322+00:00"
+      "elapsed_seconds": 48.84,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T19:16:24.321835+00:00"
     },
     "10097:1:1": {
       "at": "2026-11-12T11:19:30.647661+00:00",
@@ -1378413,9 +1378345,23 @@
       "elapsed_seconds": 126.07,
       "source_id": "34882777",
       "queue_rank": 45528
+    },
+    "245:1:9": {
+      "at": "2026-11-23T18:59:42.561726+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9407615661621094,
+      "observed_source_id": "12773742",
+      "elapsed_seconds": 138.18,
+      "source_id": "12773742",
+      "queue_rank": 45529
     }
   },
-  "updated_at": "2026-11-23T19:00:36.125229+00:00",
+  "updated_at": "2026-11-23T19:16:37.843392+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386076,10 +1386022,12 @@
     },
     "1264": {
       "misses": [
-        "1264:2:3",
-        "1264:1:10"
+        "1264:1:10",
+        "1264:2:4",
+        "1264:1:7"
       ],
-      "updated_at": "2026-11-23T18:59:38.806447+00:00"
+      "updated_at": "2026-11-23T19:15:32.793651+00:00",
+      "retry_after": "2026-11-23T19:45:32.793651+00:00"
     },
     "208": {
       "misses": [],
@@ -1389099,7 +1389047,7 @@
     },
     "245": {
       "misses": [],
-      "updated_at": "2026-11-23T18:59:38.806552+00:00"
+      "updated_at": "2026-11-23T19:15:32.793719+00:00"
     },
     "835": {
       "misses": [],
@@ -1389134,15 +1389082,21 @@
     "1312": {
       "misses": [],
       "updated_at": "2026-11-23T18:59:38.806620+00:00"
+    },
+    "2777": {
+      "misses": [
+        "2777:1:1"
+      ],
+      "updated_at": "2026-11-23T19:16:24.321869+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 1312,
+    "last_series": 10097,
     "last_series_order": [
       false,
       -6,
-      -6499,
-      1312
+      -4788,
+      10097
     ]
   },
   "czech_fallback_revision": 1
