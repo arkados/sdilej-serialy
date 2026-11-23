@@ -41546,16 +41546,16 @@
       "queue_rank": 26220
     },
     "1003:1:1": {
-      "at": "2026-11-22T23:51:29.124079+00:00",
+      "at": "2026-11-23T00:41:40.253021+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "transient_original",
-      "elapsed_seconds": 715.09,
-      "consecutive_failures": 50,
-      "retry_after": "2026-11-23T06:05:10.723711+00:00"
+      "elapsed_seconds": 629.39,
+      "consecutive_failures": 51,
+      "retry_after": "2026-11-23T06:52:26.749094+00:00"
     },
     "1003:1:2": {
       "at": "2026-11-10T17:57:35.016673+00:00",
@@ -1236751,84 +1236751,16 @@
       "queue_rank": 39525
     },
     "7580:1:1": {
-      "at": "2026-11-11T23:39:27.443853+00:00",
+      "at": "2026-11-23T00:51:08.429862+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 47.37,
-      "search_evidence": [
-        {
-          "path": "/marinaci-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 223303,
-          "boxes": 6,
-          "parsed_candidates": 6,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/marinaci/s/-6",
-          "status": 200,
-          "response_bytes": 439210,
-          "boxes": 194,
-          "parsed_candidates": 136,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/marines-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 227341,
-          "boxes": 9,
-          "parsed_candidates": 9,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/marines/s/-6",
-          "status": 200,
-          "response_bytes": 267876,
-          "boxes": 65,
-          "parsed_candidates": 18,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/marinaci-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 223339,
-          "boxes": 6,
-          "parsed_candidates": 6,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/marinaci/s/-6",
-          "status": 200,
-          "response_bytes": 439028,
-          "boxes": 194,
-          "parsed_candidates": 136,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/marines-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 227493,
-          "boxes": 9,
-          "parsed_candidates": 9,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/marines/s/-6",
-          "status": 200,
-          "response_bytes": 268015,
-          "boxes": 65,
-          "parsed_candidates": 18,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-12T23:40:14.814316+00:00"
+      "elapsed_seconds": 112.09,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T00:53:00.520961+00:00"
     },
     "2405:1:1": {
       "at": "2026-11-11T23:38:52.457158+00:00",
@@ -1378133,9 +1378065,23 @@
       "elapsed_seconds": 85.99,
       "source_id": "7683891",
       "queue_rank": 45198
+    },
+    "2091:1:22": {
+      "at": "2026-11-23T00:51:07.588939+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9794532656669617,
+      "observed_source_id": "12914624",
+      "elapsed_seconds": 108.36,
+      "source_id": "12914624",
+      "queue_rank": 45199
     }
   },
-  "updated_at": "2026-11-23T00:52:11.914980+00:00",
+  "updated_at": "2026-11-23T00:53:32.354477+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386129,7 +1386075,7 @@
       "misses": [
         "1003:1:1"
       ],
-      "updated_at": "2026-11-23T00:05:10.723743+00:00"
+      "updated_at": "2026-11-23T00:52:26.749129+00:00"
     },
     "5806": {
       "misses": [],
@@ -1388038,7 +1387984,7 @@
     },
     "2091": {
       "misses": [],
-      "updated_at": "2026-11-23T00:51:06.752569+00:00"
+      "updated_at": "2026-11-23T00:52:55.944872+00:00"
     },
     "6501": {
       "misses": [
@@ -1388083,6 +1388029,12 @@
         "10015:1:1"
       ],
       "updated_at": "2026-11-23T00:18:39.400133+00:00"
+    },
+    "7580": {
+      "misses": [
+        "7580:1:1"
+      ],
+      "updated_at": "2026-11-23T00:53:00.520988+00:00"
     }
   },
   "discovery_progress": {
