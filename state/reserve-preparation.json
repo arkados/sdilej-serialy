@@ -342581,52 +342581,16 @@
       "queue_rank": 29596
     },
     "1457:1:9": {
-      "at": "2026-11-12T07:10:23.295462+00:00",
+      "at": "2026-11-23T09:22:35.078353+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "transient_search",
-      "elapsed_seconds": 94.7,
-      "search_evidence": [
-        {
-          "path": "/pomsta-s01e09/s/-6",
-          "status": 200,
-          "response_bytes": 221313,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pomsta/s/-6",
-          "status": 200,
-          "response_bytes": 525354,
-          "boxes": 297,
-          "parsed_candidates": 263,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/revenge-s01e09/s/-6",
-          "status": 200,
-          "response_bytes": 217403,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/revenge/s/-6",
-          "status": 200,
-          "response_bytes": 349839,
-          "boxes": 130,
-          "parsed_candidates": 97,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 5,
-      "retry_after": "2026-11-12T11:11:57.991126+00:00"
+      "elapsed_seconds": 38.49,
+      "consecutive_failures": 6,
+      "retry_after": "2026-11-23T15:23:20.896349+00:00"
     },
     "2237:1:6": {
       "at": "2026-11-03T16:39:21.228394+00:00",
@@ -1378393,7 +1378357,7 @@
       "queue_rank": 45367
     }
   },
-  "updated_at": "2026-11-23T09:23:02.354770+00:00",
+  "updated_at": "2026-11-23T09:24:27.486441+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388747,6 +1388711,12 @@
         "2960:1:1"
       ],
       "updated_at": "2026-11-23T09:17:43.426067+00:00"
+    },
+    "1457": {
+      "misses": [
+        "1457:1:9"
+      ],
+      "updated_at": "2026-11-23T09:23:20.896387+00:00"
     }
   },
   "discovery_progress": {
