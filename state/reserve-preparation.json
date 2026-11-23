@@ -30745,16 +30745,16 @@
       "retry_after": "2026-11-23T12:25:24.474328+00:00"
     },
     "1264:2:5": {
-      "at": "2026-11-23T00:52:27.586377+00:00",
+      "at": "2026-11-23T08:14:51.572384+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "transient_original",
-      "elapsed_seconds": 82.29,
-      "consecutive_failures": 24,
-      "retry_after": "2026-11-23T06:53:49.877307+00:00"
+      "reason": "inconclusive_audio",
+      "elapsed_seconds": 165.39,
+      "consecutive_failures": 25,
+      "retry_after": "2026-11-24T08:17:59.329416+00:00"
     },
     "3583:10:1": {
       "at": "2026-10-18T13:13:06.272636+00:00",
@@ -1239328,84 +1239328,16 @@
       "queue_rank": 39708
     },
     "4655:1:1": {
-      "at": "2026-11-12T05:08:57.672375+00:00",
+      "at": "2026-11-23T08:18:00.414163+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 31.56,
-      "search_evidence": [
-        {
-          "path": "/garouden-cesta-vlka-samotare-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216370,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garouden-cesta-vlka-samotare/s/-6",
-          "status": 200,
-          "response_bytes": 216244,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garouden-the-way-of-the-lone-wolf-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216492,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garouden-the-way-of-the-lone-wolf/s/-6",
-          "status": 200,
-          "response_bytes": 216277,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garouden-cesta-vlka-samotare-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216333,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garouden-cesta-vlka-samotare/s/-6",
-          "status": 200,
-          "response_bytes": 216214,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garouden-the-way-of-the-lone-wolf-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216580,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garouden-the-way-of-the-lone-wolf/s/-6",
-          "status": 200,
-          "response_bytes": 216384,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T05:09:29.233935+00:00"
+      "elapsed_seconds": 54.08,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T08:18:54.490862+00:00"
     },
     "5031:1:1": {
       "at": "2026-11-12T05:09:30.688573+00:00",
@@ -1378438,9 +1378370,51 @@
       "elapsed_seconds": 49.7,
       "source_id": "26878970",
       "queue_rank": 45315
+    },
+    "2273:1:16": {
+      "at": "2026-11-23T08:17:01.740227+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8693817257881165,
+      "observed_source_id": "26878991",
+      "elapsed_seconds": 38.43,
+      "source_id": "26878991",
+      "queue_rank": 45316
+    },
+    "2273:1:17": {
+      "at": "2026-11-23T08:17:22.518527+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9606981873512268,
+      "observed_source_id": "26881303",
+      "elapsed_seconds": 35.22,
+      "source_id": "26881303",
+      "queue_rank": 45317
+    },
+    "3197:2:1": {
+      "at": "2026-11-23T08:17:59.334883+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9844426512718201,
+      "observed_source_id": "32345328",
+      "elapsed_seconds": 57.0,
+      "source_id": "32345328",
+      "queue_rank": 45318
     }
   },
-  "updated_at": "2026-11-23T08:17:32.433200+00:00",
+  "updated_at": "2026-11-23T08:19:00.372762+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386099,12 +1386073,9 @@
     },
     "1264": {
       "misses": [
-        "1264:1:10",
-        "1264:2:3",
-        "1264:1:7"
+        "1264:2:5"
       ],
-      "updated_at": "2026-11-23T06:47:45.187597+00:00",
-      "retry_after": "2026-11-23T07:17:45.187597+00:00"
+      "updated_at": "2026-11-23T08:17:59.329442+00:00"
     },
     "208": {
       "misses": [],
@@ -1388611,7 +1388582,7 @@
     },
     "2273": {
       "misses": [],
-      "updated_at": "2026-11-23T08:17:28.287919+00:00"
+      "updated_at": "2026-11-23T08:17:59.329648+00:00"
     },
     "8105": {
       "misses": [
@@ -1388689,15 +1388660,25 @@
     "3196": {
       "misses": [],
       "updated_at": "2026-11-23T08:14:49.175538+00:00"
+    },
+    "4655": {
+      "misses": [
+        "4655:1:1"
+      ],
+      "updated_at": "2026-11-23T08:18:54.490913+00:00"
+    },
+    "3197": {
+      "misses": [],
+      "updated_at": "2026-11-23T08:18:56.335147+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 3196,
+    "last_series": 4655,
     "last_series_order": [
       false,
       -6.2,
-      -1142,
-      3196
+      -857,
+      4655
     ]
   },
   "czech_fallback_revision": 1
