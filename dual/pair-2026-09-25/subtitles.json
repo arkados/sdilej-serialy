@@ -1225,12 +1225,34 @@
       "identity": "1388:3:6",
       "account": "b",
       "target_video_id": "31168248",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 72,
       "detail_url": "https://prehraj.to/dark-winds-s03e06-6-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/f1dfcf416482066b",
-      "checked_at": "2026-11-22T08:29:33.318909+00:00",
-      "retry_after": "2026-11-22T08:44:33.318923+00:00"
+      "checked_at": "2026-11-23T15:19:55.287542+00:00",
+      "retry_after": "2026-11-23T15:34:55.287554+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31180332": {
       "identity": "7095:1:2",
@@ -1833,5 +1855,5 @@
       "retry_after": "2026-11-23T15:29:05.792105+00:00"
     }
   },
-  "updated_at": "2026-11-23T15:19:30.762068+00:00"
+  "updated_at": "2026-11-23T15:19:55.287562+00:00"
 }
