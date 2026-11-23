@@ -1240564,7 +1240564,7 @@
       "queue_rank": 39809
     },
     "3346:1:4": {
-      "at": "2026-11-23T11:02:07.815463+00:00",
+      "at": "2026-11-23T12:04:57.063072+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
@@ -1240574,9 +1240574,9 @@
       "observed_language_probability": 0.8637629747390747,
       "observed_source_id": "35490840",
       "reason": "no_english_czech_subtitles",
-      "elapsed_seconds": 85.27,
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-23T12:03:33.087294+00:00"
+      "elapsed_seconds": 112.56,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-23T14:06:49.622138+00:00"
     },
     "226:1:3": {
       "at": "2026-11-12T07:29:41.107337+00:00",
@@ -1240760,84 +1240760,16 @@
       "queue_rank": 39825
     },
     "212:1:1": {
-      "at": "2026-11-12T07:42:54.329788+00:00",
+      "at": "2026-11-23T12:04:08.872169+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 53.32,
-      "search_evidence": [
-        {
-          "path": "/ostrov-pokuseni-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216088,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ostrov-pokuseni/s/-6",
-          "status": 200,
-          "response_bytes": 216101,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/temptation-island-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216176,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/temptation-island/s/-6",
-          "status": 200,
-          "response_bytes": 215933,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ostrov-pokuseni-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216018,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ostrov-pokuseni/s/-6",
-          "status": 200,
-          "response_bytes": 216254,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/temptation-island-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216109,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/temptation-island/s/-6",
-          "status": 200,
-          "response_bytes": 215946,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T07:43:47.652308+00:00"
+      "elapsed_seconds": 133.3,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T12:06:22.173502+00:00"
     },
     "90:1:2": {
       "at": "2026-11-12T07:42:53.544965+00:00",
@@ -1378683,9 +1378615,23 @@
       "elapsed_seconds": 96.34,
       "source_id": "26614698",
       "queue_rank": 45416
+    },
+    "3385:2:4": {
+      "at": "2026-11-23T12:03:36.361835+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9711812138557434,
+      "observed_source_id": "22262345",
+      "elapsed_seconds": 138.36,
+      "source_id": "22262345",
+      "queue_rank": 45417
     }
   },
-  "updated_at": "2026-11-23T12:05:35.908044+00:00",
+  "updated_at": "2026-11-23T12:06:57.365569+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389122,11 +1389068,11 @@
       "misses": [
         "3346:1:4"
       ],
-      "updated_at": "2026-11-23T11:03:33.087320+00:00"
+      "updated_at": "2026-11-23T12:06:49.622163+00:00"
     },
     "3385": {
       "misses": [],
-      "updated_at": "2026-11-23T12:04:56.223978+00:00"
+      "updated_at": "2026-11-23T12:05:54.720725+00:00"
     },
     "9760": {
       "misses": [
@@ -1389139,6 +1389085,12 @@
         "8388:1:1"
       ],
       "updated_at": "2026-11-23T11:57:56.543591+00:00"
+    },
+    "212": {
+      "misses": [
+        "212:1:1"
+      ],
+      "updated_at": "2026-11-23T12:06:22.173530+00:00"
     }
   },
   "discovery_progress": {
