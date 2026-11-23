@@ -252,12 +252,14 @@ def test_unconfirmed_login_defers_both_accounts_without_losing_allocations(tmp_p
         monkeypatch.setattr(dual, 'target_session', unavailable)
     report = dual.run(tmp_path, 'test', 'full')
     assert report['transient_pause'] and not report['halted'] and report['retry_delay_seconds'] == 300
+    assert report['target_login_unavailable']
     saved = json.loads(state.path.read_text())
     assert saved['episodes'] == before and 'halted_at' not in saved
     assert saved['last_transient_error']['type'] == 'TargetLoginUnavailable'
     monkeypatch.setattr(dual, 'target_session', lambda email, *a, **k: sessions[email[0]])
     monkeypatch.setattr(dual, 'upload_continuously', lambda *a, **k: {})
-    assert not dual.run(tmp_path, 'test', 'full')['halted']
+    recovered = dual.run(tmp_path, 'test', 'full')
+    assert not recovered['halted'] and not recovered['target_login_unavailable']
 
 
 @pytest.mark.parametrize('complete_receipt', [False, True])

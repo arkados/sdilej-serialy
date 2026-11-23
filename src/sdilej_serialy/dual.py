@@ -15,6 +15,7 @@ from pathlib import Path
 from sdilej_serialy.media import prehrajto
 from sdilej_serialy.media.models import Candidate
 
+from .auth import TargetLoginUnavailable
 from .catalog import load_jsonl
 from .continuous import SourceUnavailable, upload_continuously, uploaded_identities
 from .git_state import GitCheckpointPersister, CheckpointError
@@ -368,6 +369,7 @@ def _run(root, generation, mode, limit_per_account=25, persist=False, idle_refil
     sessions = {}
     stop = threading.Event()
     transient_pause = threading.Event()
+    target_login_unavailable = False
     retry_delay_seconds = 60
     results = {}
     try:
@@ -456,8 +458,8 @@ def _run(root, generation, mode, limit_per_account=25, persist=False, idle_refil
             print('checkpoint_batch_deferred', flush=True)
         elif transient_http(error) and not stop.is_set():
             transient_pause.set()
-            from .auth import TargetLoginUnavailable
-            if isinstance(error, TargetLoginUnavailable):
+            target_login_unavailable = isinstance(error, TargetLoginUnavailable)
+            if target_login_unavailable:
                 retry_delay_seconds = 300
             state.data['last_transient_error'] = dict(at=now_iso(), **error_evidence(error))
             state.save()
@@ -478,6 +480,7 @@ def _run(root, generation, mode, limit_per_account=25, persist=False, idle_refil
                       halted=bool(state.data.get('halted_at')), updated_at=now_iso())
         report['retry_deferred'] = len(state.retry_deferred_identities())
         report['transient_pause'] = transient_pause.is_set()
+        report['target_login_unavailable'] = target_login_unavailable
         report['retry_delay_seconds'] = retry_delay_seconds
         report['stop_claiming_at'] = stop_claiming_at
         report['claim_deadline_reached'] = claim_deadline is not None and time.monotonic() >= claim_deadline

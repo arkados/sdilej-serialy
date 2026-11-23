@@ -63,19 +63,39 @@ jobs:
           # Stop admission well before the 350-minute runner limit. This leaves
           # over two hours to finish active relays and persist their receipts.
           dual_deadline=$(( $(date +%s) + 210 * 60 ))
+          target_login_failures=0
           while [ "$(date +%s)" -lt "$dual_deadline" ]; do
             git pull --rebase origin main
             # Pulling the repository does not update an installed wheel.
             # Reload fixes and source-upgrade support between safe batches.
             pip install --no-deps .
             python -m sdilej_serialy.dual run --generation "$DUAL_GENERATION" --mode full --persist-git-state --stop-claiming-at "$dual_deadline"
-            if python -c 'import json,os,sys; r=json.load(open("dual/"+os.environ["DUAL_GENERATION"]+"/report.json")); sys.exit(r["remaining"] != 0)'; then
+            batch_status=$(python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          report = json.loads((Path("dual") / os.environ["DUAL_GENERATION"] / "report.json").read_text())
+          delay = max(60, min(300, int(report.get("retry_delay_seconds", 60))))
+          print(report["remaining"], delay, int(report.get("target_login_unavailable", False)))
+          PY
+            )
+            read -r remaining retry_delay target_login_unavailable <<< "$batch_status"
+            if (( remaining == 0 )); then
               exit 0
             fi
-            # Inconclusive authentication gets a quiet window, without changing
-            # any episode allocation or permanently halting the shared queue.
-            retry_delay=$(python -c 'import json,os; r=json.load(open("dual/"+os.environ["DUAL_GENERATION"]+"/report.json")); print(max(60,min(300,int(r.get("retry_delay_seconds",60)))))')
+            if (( target_login_unavailable )); then
+              target_login_failures=$((target_login_failures + 1))
+            else
+              target_login_failures=0
+            fi
             sleep "$retry_delay"
+            # Each batch has finished its workers and persisted their state.
+            # Persistent login failures get a fresh runner through the normal handoff.
+            if (( target_login_failures >= 3 )); then
+              echo 'Handing off after three consecutive target login failures'
+              break
+            fi
           done
       - name: Preserve progress after interruption
         if: always()

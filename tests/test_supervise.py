@@ -130,6 +130,48 @@ def test_handoff_retains_empty_run_backoff_and_rejects_unknown_caller():
             finishing_run([run('in_progress')], caller, NOW)
 
 
+def test_upload_hands_off_after_three_consecutive_login_failures(tmp_path):
+    import os
+    import subprocess
+    import sys
+    import textwrap
+    from pathlib import Path
+
+    workflow = Path('.github/workflows/dual.yml').read_text()
+    step = workflow.split('      - name: Upload a shared queue', 1)[1].split('\n      - ', 1)[0]
+    script = textwrap.dedent(step.split('        run: |\n', 1)[1])
+    (tmp_path / 'dual/test').mkdir(parents=True)
+    commands = """
+date() { echo 1000; }
+git() { :; }
+pip() { :; }
+sleep() { echo "delay=$1"; }
+batch=0
+python() {
+  if [[ "$1" != -m ]]; then
+    "$PYTHON_BINARY" "$@"
+    return
+  fi
+  batch=$((batch + 1))
+  echo "batch=$batch"
+  case "$batch" in
+    1|2|4|5|6)
+      echo '{"remaining": 10, "retry_delay_seconds": 300, "target_login_unavailable": true}' ;;
+    3)
+      echo '{"remaining": 10, "retry_delay_seconds": 60, "target_login_unavailable": false}' ;;
+    *) return 1 ;;
+  esac > dual/test/report.json
+}
+"""
+    result = subprocess.run(['bash', '-c', commands + script], cwd=tmp_path, capture_output=True,
+                            text=True, env=dict(os.environ, DUAL_GENERATION='test',
+                                                DUAL_MODE='full', PYTHON_BINARY=sys.executable))
+    assert result.returncode == 0, result.stderr
+    expected = [line for batch, delay in enumerate([300, 300, 60, 300, 300, 300], 1)
+                for line in (f'batch={batch}', f'delay={delay}')]
+    assert result.stdout.splitlines() == [*expected, 'Handing off after three consecutive target login failures']
+
+
 @pytest.mark.parametrize('push_status,attempts', [(0, 1), (1, 5)])
 def test_upload_cleanup_requires_confirmed_push_before_successful_handoff(push_status, attempts):
     import os
