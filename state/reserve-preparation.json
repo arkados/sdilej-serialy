@@ -754629,7 +754629,7 @@
       "retry_after": "2026-10-29T07:06:20.550468+00:00"
     },
     "1410:5:16": {
-      "at": "2026-11-22T20:28:34.199234+00:00",
+      "at": "2026-11-23T03:14:04.319372+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
@@ -754638,10 +754638,10 @@
       "observed_audio_language": "en",
       "observed_language_probability": 0.9863669276237488,
       "observed_source_id": "34450625",
-      "reason": "transient_search",
-      "elapsed_seconds": 420.1,
-      "consecutive_failures": 11,
-      "retry_after": "2026-11-23T02:35:34.302927+00:00"
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 431.68,
+      "consecutive_failures": 12,
+      "retry_after": "2026-11-24T03:21:15.998654+00:00"
     },
     "1410:5:19": {
       "at": "2026-11-23T02:12:36.348937+00:00",
@@ -1237652,84 +1237652,16 @@
       "queue_rank": 39587
     },
     "10318:1:1": {
-      "at": "2026-11-12T02:33:04.546800+00:00",
+      "at": "2026-11-23T03:18:44.353523+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 21.17,
-      "search_evidence": [
-        {
-          "path": "/ruda-ryba-modra-ryba-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216247,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ruda-ryba-modra-ryba/s/-6",
-          "status": 200,
-          "response_bytes": 216010,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/dr-seuss-s-red-fish-blue-fish-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216359,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/dr-seuss-s-red-fish-blue-fish/s/-6",
-          "status": 200,
-          "response_bytes": 216169,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ruda-ryba-modra-ryba-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216194,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ruda-ryba-modra-ryba/s/-6",
-          "status": 200,
-          "response_bytes": 216063,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/dr-seuss-s-red-fish-blue-fish-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216303,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/dr-seuss-s-red-fish-blue-fish/s/-6",
-          "status": 200,
-          "response_bytes": 216165,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T02:33:25.717232+00:00"
+      "elapsed_seconds": 134.14,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T03:20:59.707527+00:00"
     },
     "323:1:3": {
       "at": "2026-11-12T02:32:37.676575+00:00",
@@ -1377862,16 +1377794,18 @@
       "queue_rank": 45232
     },
     "138:1:13": {
-      "at": "2026-11-23T02:35:12.603781+00:00",
-      "status": "deferred",
+      "at": "2026-11-23T03:20:12.190897+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 315.68,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-23T02:50:28.276960+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9946494698524475,
+      "observed_source_id": "28445746",
+      "elapsed_seconds": 86.3,
+      "source_id": "28445746",
+      "queue_rank": 45238
     },
     "138:1:18": {
       "at": "2026-11-23T03:16:02.954821+00:00",
@@ -1377928,9 +1377862,23 @@
       "elapsed_seconds": 94.43,
       "source_id": "28445780",
       "queue_rank": 45236
+    },
+    "182:1:2": {
+      "at": "2026-11-23T03:20:07.578039+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.7628495693206787,
+      "observed_source_id": "34940132",
+      "elapsed_seconds": 69.67,
+      "source_id": "34940132",
+      "queue_rank": 45237
     }
   },
-  "updated_at": "2026-11-23T03:20:43.198853+00:00",
+  "updated_at": "2026-11-23T03:22:04.935044+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1382671,9 +1382619,10 @@
     },
     "1410": {
       "misses": [
-        "1410:5:13"
+        "1410:5:13",
+        "1410:5:16"
       ],
-      "updated_at": "2026-11-23T03:16:01.907396+00:00"
+      "updated_at": "2026-11-23T03:21:15.998682+00:00"
     },
     "9670": {
       "misses": [
@@ -1387970,7 +1387919,7 @@
     },
     "138": {
       "misses": [],
-      "updated_at": "2026-11-23T03:20:11.126705+00:00"
+      "updated_at": "2026-11-23T03:21:38.493924+00:00"
     },
     "8765": {
       "misses": [],
@@ -1388003,6 +1387952,16 @@
     "96": {
       "misses": [],
       "updated_at": "2026-11-23T02:34:37.192670+00:00"
+    },
+    "10318": {
+      "misses": [
+        "10318:1:1"
+      ],
+      "updated_at": "2026-11-23T03:20:59.707559+00:00"
+    },
+    "182": {
+      "misses": [],
+      "updated_at": "2026-11-23T03:21:17.246587+00:00"
     }
   },
   "discovery_progress": {
