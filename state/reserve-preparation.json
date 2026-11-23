@@ -1239642,84 +1239642,16 @@
       "queue_rank": 39734
     },
     "2178:1:1": {
-      "at": "2026-11-12T05:44:24.694914+00:00",
+      "at": "2026-11-23T09:01:10.794338+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 31.5,
-      "search_evidence": [
-        {
-          "path": "/zlocin-v-alpach-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 218939,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zlocin-v-alpach/s/-6",
-          "status": 200,
-          "response_bytes": 409749,
-          "boxes": 156,
-          "parsed_candidates": 156,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/watzmann-ermittelt-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216199,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/watzmann-ermittelt/s/-6",
-          "status": 200,
-          "response_bytes": 216034,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zlocin-v-alpach-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 218931,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zlocin-v-alpach/s/-6",
-          "status": 200,
-          "response_bytes": 409797,
-          "boxes": 156,
-          "parsed_candidates": 156,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/watzmann-ermittelt-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216153,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/watzmann-ermittelt/s/-6",
-          "status": 200,
-          "response_bytes": 215948,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T05:44:56.192145+00:00"
+      "elapsed_seconds": 25.33,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T09:01:36.126473+00:00"
     },
     "2573:1:1": {
       "at": "2026-11-12T05:44:33.881243+00:00",
@@ -1365538,16 +1365470,16 @@
       "queue_rank": 44472
     },
     "158:1:4": {
-      "at": "2026-11-23T06:57:47.629316+00:00",
+      "at": "2026-11-23T08:56:47.798645+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 294.32,
-      "consecutive_failures": 28,
-      "retry_after": "2026-11-24T07:12:32.451404+00:00"
+      "elapsed_seconds": 292.36,
+      "consecutive_failures": 29,
+      "retry_after": "2026-11-24T09:01:40.154974+00:00"
     },
     "158:1:5": {
       "at": "2026-11-21T03:13:50.159474+00:00",
@@ -1378383,9 +1378315,35 @@
       "elapsed_seconds": 131.6,
       "source_id": "33686526",
       "queue_rank": 45341
+    },
+    "806:1:2": {
+      "at": "2026-11-23T09:00:37.014519+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 31.0,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-24T09:01:09.705211+00:00"
+    },
+    "837:1:12": {
+      "at": "2026-11-23T08:59:02.438210+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9880563020706177,
+      "observed_source_id": "33686530",
+      "elapsed_seconds": 146.86,
+      "source_id": "33686530",
+      "queue_rank": 45342
     }
   },
-  "updated_at": "2026-11-23T09:00:51.717302+00:00",
+  "updated_at": "2026-11-23T09:02:14.578320+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386743,9 +1386701,10 @@
     },
     "158": {
       "misses": [
-        "158:1:6"
+        "158:1:6",
+        "158:1:4"
       ],
-      "updated_at": "2026-11-23T08:59:45.438753+00:00"
+      "updated_at": "2026-11-23T09:01:40.155001+00:00"
     },
     "1125": {
       "misses": [],
@@ -1386769,7 +1386728,7 @@
     },
     "837": {
       "misses": [],
-      "updated_at": "2026-11-23T09:00:35.224200+00:00"
+      "updated_at": "2026-11-23T09:01:29.296798+00:00"
     },
     "223": {
       "misses": [],
@@ -1388680,15 +1388639,27 @@
         "8130:1:1"
       ],
       "updated_at": "2026-11-23T08:55:42.165081+00:00"
+    },
+    "806": {
+      "misses": [
+        "806:1:2"
+      ],
+      "updated_at": "2026-11-23T09:01:09.705250+00:00"
+    },
+    "2178": {
+      "misses": [
+        "2178:1:1"
+      ],
+      "updated_at": "2026-11-23T09:01:36.126503+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 806,
+    "last_series": 2178,
     "last_series_order": [
       false,
       -6.2,
-      -207,
-      806
+      -176,
+      2178
     ]
   },
   "czech_fallback_revision": 1
