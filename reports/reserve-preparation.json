@@ -1,79 +1,80 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45232688118",
-  "attempted_this_run": 17,
-  "prepared_this_run": 11,
-  "reserve_total": 37084,
-  "queue_total": 45519,
-  "updated_at": "2026-11-23T18:36:58.779220+00:00",
+  "attempted_this_run": 21,
+  "prepared_this_run": 13,
+  "reserve_total": 37086,
+  "queue_total": 45521,
+  "updated_at": "2026-11-23T18:50:31.238333+00:00",
   "workers": 4,
-  "elapsed_seconds": 2006.57,
-  "prepared_per_hour": 19.74,
-  "available_this_run": 11,
-  "available_per_hour": 19.74,
+  "elapsed_seconds": 2819.03,
+  "prepared_per_hour": 16.6,
+  "available_this_run": 13,
+  "available_per_hour": 16.6,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 45519,
-    "ready": 8,
+    "queue_total": 45521,
+    "ready": 3,
     "ready_by_account": {
-      "a": 5,
-      "b": 3
+      "a": 2,
+      "b": 1
     },
     "categories": {
-      "completed": 44617,
-      "allocated": 879,
-      "failed": 9,
-      "in_flight": 3,
+      "completed": 44622,
+      "allocated": 881,
+      "failed": 12,
       "language_review": 3,
-      "ready": 8
+      "ready": 3
     },
     "completed_by_account": {
-      "a": 22302,
-      "b": 22315
+      "a": 22304,
+      "b": 22318
     },
-    "uploads_last_24h": 401,
-    "uploads_per_hour_24h": 16.71,
-    "stock_hours_24h": 0.48
+    "uploads_last_24h": 406,
+    "uploads_per_hour_24h": 16.92,
+    "stock_hours_24h": 0.18
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 605,
-      "b": 221
+      "a": 181,
+      "b": 262
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 7,
+      "transient_original": 4,
       "inconclusive_audio": 3,
-      "prepared": 15
+      "inconclusive_subtitles": 1,
+      "prepared": 13
     }
   },
   "indexed_candidates_in_scan": 992,
   "discovery_progress": {
-    "last_series": 2035,
+    "last_series": 2163,
     "last_series_order": [
       false,
       -6,
-      -10524,
-      2035
+      -6783,
+      2163
     ]
   },
   "cache": {
-    "search_miss": 75,
-    "search_seconds": 2076.39,
+    "search_miss": 87,
+    "search_seconds": 2256.69,
     "search_hit": 3,
-    "media_hit": 61,
-    "media_miss": 26,
-    "media_seconds": 216.47,
-    "audio_miss": 18,
-    "audio_seconds": 201.01
+    "media_hit": 69,
+    "media_miss": 34,
+    "media_seconds": 249.04,
+    "audio_miss": 22,
+    "audio_seconds": 379.14,
+    "audio_hit": 1
   },
   "audio_pipeline": {
-    "sample_count": 18,
-    "download_seconds": 166.24,
+    "sample_count": 31,
+    "download_seconds": 314.7,
     "inference_wait_seconds": 0.0,
-    "inference_seconds": 34.75,
+    "inference_seconds": 64.43,
     "failures": 4
   },
   "productive_seasons": 133,
@@ -86,7 +87,7 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 37084,
+    "prepared": 37086,
     "deferred": 38739
   },
   "requested_series": [
@@ -2893,8 +2894,8 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 1,
-    "request_gap_seconds": 8,
+    "control_requests": 2,
+    "request_gap_seconds": 4.0,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
@@ -2902,9 +2903,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724019,
+        "response_bytes": 723998,
         "parsed_candidates": 412,
-        "body_sha256": "a765088f130982f482ec31c3da984469b70c6f77f5c1e3180ccfe7165b0f26a2",
+        "body_sha256": "3897eba81bea27a22267d73e815934f7f919dc07f8e6e819b6b41d8f6af7e0ac",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2913,7 +2914,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-23T18:30:43.604775+00:00"
+        "checked_at": "2026-11-23T18:50:00.916347+00:00"
       }
     ]
   }
