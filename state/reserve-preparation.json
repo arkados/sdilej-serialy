@@ -1241975,84 +1241975,16 @@
       "retry_after": "2026-11-13T09:32:43.035629+00:00"
     },
     "9721:1:1": {
-      "at": "2026-11-12T09:31:50.332728+00:00",
+      "at": "2026-11-23T14:33:46.767746+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 76.7,
-      "search_evidence": [
-        {
-          "path": "/robotkove-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215973,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/robotkove/s/-6",
-          "status": 200,
-          "response_bytes": 243930,
-          "boxes": 24,
-          "parsed_candidates": 20,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/little-robots-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216005,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/little-robots/s/-6",
-          "status": 200,
-          "response_bytes": 217091,
-          "boxes": 2,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/robotkove-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215991,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/robotkove/s/-6",
-          "status": 200,
-          "response_bytes": 243832,
-          "boxes": 24,
-          "parsed_candidates": 20,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/little-robots-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215999,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/little-robots/s/-6",
-          "status": 200,
-          "response_bytes": 217050,
-          "boxes": 2,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T09:33:07.036241+00:00"
+      "elapsed_seconds": 48.84,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-24T14:35:33.153668+00:00"
     },
     "1101:2:23": {
       "at": "2026-11-12T09:35:48.206798+00:00",
@@ -1378254,9 +1378186,37 @@
       "elapsed_seconds": 62.54,
       "source_id": "35314283",
       "queue_rank": 45472
+    },
+    "4393:1:4": {
+      "at": "2026-11-23T14:33:44.785571+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9425902366638184,
+      "observed_source_id": "35314288",
+      "elapsed_seconds": 67.72,
+      "source_id": "35314288",
+      "queue_rank": 45473
+    },
+    "4393:1:5": {
+      "at": "2026-11-23T14:33:45.451114+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9590655565261841,
+      "observed_source_id": "35314293",
+      "elapsed_seconds": 69.25,
+      "source_id": "35314293",
+      "queue_rank": 45474
     }
   },
-  "updated_at": "2026-11-23T14:34:12.848848+00:00",
+  "updated_at": "2026-11-23T14:36:36.369582+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388844,7 +1388804,7 @@
     },
     "4393": {
       "misses": [],
-      "updated_at": "2026-11-23T14:33:44.786112+00:00"
+      "updated_at": "2026-11-23T14:35:33.153622+00:00"
     },
     "159": {
       "misses": [
@@ -1388857,6 +1388817,12 @@
         "128:1:1"
       ],
       "updated_at": "2026-11-23T14:34:09.680461+00:00"
+    },
+    "9721": {
+      "misses": [
+        "9721:1:1"
+      ],
+      "updated_at": "2026-11-23T14:35:33.153679+00:00"
     }
   },
   "discovery_progress": {
