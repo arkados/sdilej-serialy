@@ -862,12 +862,34 @@
       "identity": "702:1:5",
       "account": "b",
       "target_video_id": "31118768",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 136,
       "detail_url": "https://prehraj.to/vladcove-nebes-s01e05-cast-pata-4k-cz-titulky-titulky-cekaji-mkv/b004b1e7744155a9",
-      "checked_at": "2026-11-24T02:43:15.075016+00:00",
-      "retry_after": "2026-11-24T02:58:15.075039+00:00"
+      "checked_at": "2026-11-24T13:03:33.661853+00:00",
+      "retry_after": "2026-11-24T13:18:33.661868+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31119086": {
       "identity": "702:1:4",
@@ -2316,5 +2338,5 @@
       "retry_after": "2026-11-24T13:13:15.025077+00:00"
     }
   },
-  "updated_at": "2026-11-24T13:03:03.127441+00:00"
+  "updated_at": "2026-11-24T13:03:33.661877+00:00"
 }
