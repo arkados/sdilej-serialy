@@ -41546,16 +41546,16 @@
       "queue_rank": 26220
     },
     "1003:1:1": {
-      "at": "2026-11-24T19:56:01.103686+00:00",
+      "at": "2026-11-24T21:01:08.175074+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "transient_original",
-      "elapsed_seconds": 919.78,
-      "consecutive_failures": 88,
-      "retry_after": "2026-11-25T02:11:20.888452+00:00"
+      "elapsed_seconds": 962.93,
+      "consecutive_failures": 89,
+      "retry_after": "2026-11-25T03:17:11.107305+00:00"
     },
     "1003:1:2": {
       "at": "2026-11-10T17:57:35.016673+00:00",
@@ -1250613,84 +1250613,16 @@
       "retry_after": "2026-11-25T20:40:35.768226+00:00"
     },
     "229:1:1": {
-      "at": "2026-11-13T02:46:49.728389+00:00",
+      "at": "2026-11-24T21:16:30.547585+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 58.76,
-      "search_evidence": [
-        {
-          "path": "/modry-pacifik-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215989,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/modry-pacifik/s/-6",
-          "status": 200,
-          "response_bytes": 233431,
-          "boxes": 17,
-          "parsed_candidates": 16,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pacific-blue-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216009,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pacific-blue/s/-6",
-          "status": 200,
-          "response_bytes": 215826,
-          "boxes": 1,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/modry-pacifik-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216006,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/modry-pacifik/s/-6",
-          "status": 200,
-          "response_bytes": 233475,
-          "boxes": 17,
-          "parsed_candidates": 16,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pacific-blue-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215986,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pacific-blue/s/-6",
-          "status": 200,
-          "response_bytes": 215847,
-          "boxes": 1,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T02:47:53.176226+00:00"
+      "elapsed_seconds": 52.72,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T21:17:23.265785+00:00"
     },
     "3427:1:8": {
       "at": "2026-11-13T02:47:54.790585+00:00",
@@ -1357114,16 +1357046,16 @@
       "queue_rank": 44472
     },
     "158:1:4": {
-      "at": "2026-11-24T20:40:49.166673+00:00",
+      "at": "2026-11-24T21:09:26.894797+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 342.65,
-      "consecutive_failures": 40,
-      "retry_after": "2026-11-24T20:56:31.820082+00:00"
+      "reason": "inconclusive_audio",
+      "elapsed_seconds": 485.77,
+      "consecutive_failures": 41,
+      "retry_after": "2026-11-25T21:17:32.667191+00:00"
     },
     "158:1:5": {
       "at": "2026-11-21T03:13:50.159474+00:00",
@@ -1377786,7 +1377718,7 @@
       "queue_rank": 45833
     }
   },
-  "updated_at": "2026-11-24T21:16:47.906221+00:00",
+  "updated_at": "2026-11-24T21:18:10.074052+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1385780,7 +1385712,7 @@
       "misses": [
         "1003:1:1"
       ],
-      "updated_at": "2026-11-24T20:11:20.888478+00:00"
+      "updated_at": "2026-11-24T21:17:11.107332+00:00"
     },
     "5806": {
       "misses": [],
@@ -1386145,9 +1386077,11 @@
     "158": {
       "misses": [
         "158:1:8",
-        "158:1:6"
+        "158:1:6",
+        "158:1:4"
       ],
-      "updated_at": "2026-11-24T18:44:54.458409+00:00"
+      "updated_at": "2026-11-24T21:17:32.667218+00:00",
+      "retry_after": "2026-11-24T21:47:32.667218+00:00"
     },
     "1125": {
       "misses": [],
@@ -1389452,6 +1389386,12 @@
         "5862:1:10"
       ],
       "updated_at": "2026-11-24T20:40:35.768253+00:00"
+    },
+    "229": {
+      "misses": [
+        "229:1:1"
+      ],
+      "updated_at": "2026-11-24T21:17:23.265816+00:00"
     }
   },
   "discovery_progress": {
