@@ -562,12 +562,34 @@
       "identity": "1410:2:18",
       "account": "a",
       "target_video_id": "31109745",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 147,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e18-robinsoni-z-danvillu-1080p-cz-titulky-titulky-cekaji-mkv/5b0dfde6dc28b392",
-      "checked_at": "2026-11-24T12:49:45.938272+00:00",
-      "retry_after": "2026-11-24T13:04:45.938285+00:00"
+      "checked_at": "2026-11-24T23:13:11.427361+00:00",
+      "retry_after": "2026-11-24T23:28:11.427379+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31109768": {
       "identity": "1410:2:43",
@@ -2452,5 +2474,5 @@
       "retry_after": "2026-11-24T13:24:40.612780+00:00"
     }
   },
-  "updated_at": "2026-11-24T23:12:45.890006+00:00"
+  "updated_at": "2026-11-24T23:13:11.427387+00:00"
 }
