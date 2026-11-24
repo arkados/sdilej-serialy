@@ -1207654,58 +1207654,28 @@
       "retry_after": "2026-11-24T22:29:09.353587+00:00"
     },
     "130:1:3": {
-      "at": "2026-11-24T15:19:30.820129+00:00",
+      "at": "2026-11-24T22:03:05.832355+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "transient_original",
-      "elapsed_seconds": 522.22,
-      "consecutive_failures": 41,
-      "retry_after": "2026-11-24T21:35:43.223225+00:00"
+      "elapsed_seconds": 660.85,
+      "consecutive_failures": 42,
+      "retry_after": "2026-11-25T04:14:06.683234+00:00"
     },
     "130:1:4": {
-      "at": "2026-11-24T21:22:31.131666+00:00",
+      "at": "2026-11-24T22:00:53.656367+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "error": {
-        "type": "SearchUnavailable",
-        "frames": [
-          {
-            "file": "episodes.py",
-            "function": "_inspect",
-            "line": 356
-          },
-          {
-            "file": "source_audit.py",
-            "function": "_get",
-            "line": 118
-          },
-          {
-            "file": "episodes.py",
-            "function": "_get",
-            "line": 244
-          },
-          {
-            "file": "search_health.py",
-            "function": "wait",
-            "line": 202
-          },
-          {
-            "file": "search_health.py",
-            "function": "wait",
-            "line": 84
-          }
-        ]
-      },
-      "elapsed_seconds": 449.87,
-      "consecutive_failures": 37,
-      "retry_after": "2026-11-24T21:39:47.674954+00:00"
+      "reason": "transient_original",
+      "elapsed_seconds": 776.34,
+      "consecutive_failures": 38,
+      "retry_after": "2026-11-25T04:13:49.992808+00:00"
     },
     "9330:1:2": {
       "at": "2026-11-09T13:24:08.780118+00:00",
@@ -1250954,84 +1250924,16 @@
       "queue_rank": 40463
     },
     "6700:1:1": {
-      "at": "2026-11-13T03:06:22.266453+00:00",
+      "at": "2026-11-24T22:11:41.329786+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 43.1,
-      "search_evidence": [
-        {
-          "path": "/guntherovy-miliony-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216097,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/guntherovy-miliony/s/-6",
-          "status": 200,
-          "response_bytes": 215987,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/gunther-s-millions-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216163,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/gunther-s-millions/s/-6",
-          "status": 200,
-          "response_bytes": 216019,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/guntherovy-miliony-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216100,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/guntherovy-miliony/s/-6",
-          "status": 200,
-          "response_bytes": 216049,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/gunther-s-millions-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216162,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/gunther-s-millions/s/-6",
-          "status": 200,
-          "response_bytes": 216010,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T03:07:12.936197+00:00"
+      "elapsed_seconds": 151.5,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T22:14:12.826560+00:00"
     },
     "2764:1:5": {
       "at": "2026-11-13T03:07:13.727718+00:00",
@@ -1377916,7 +1377818,7 @@
       "retry_after": "2026-11-24T22:42:19.472041+00:00"
     }
   },
-  "updated_at": "2026-11-24T22:13:24.098010+00:00",
+  "updated_at": "2026-11-24T22:14:37.279608+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383873,9 +1383775,12 @@
     },
     "130": {
       "misses": [
-        "130:1:2"
+        "130:1:2",
+        "130:1:4",
+        "130:1:3"
       ],
-      "updated_at": "2026-11-24T16:29:09.353595+00:00"
+      "updated_at": "2026-11-24T22:14:06.683257+00:00",
+      "retry_after": "2026-11-24T22:44:06.683257+00:00"
     },
     "4169": {
       "misses": [
@@ -1389622,6 +1389527,12 @@
         "821:1:2"
       ],
       "updated_at": "2026-11-24T22:12:19.472095+00:00"
+    },
+    "6700": {
+      "misses": [
+        "6700:1:1"
+      ],
+      "updated_at": "2026-11-24T22:14:12.826586+00:00"
     }
   },
   "discovery_progress": {
