@@ -5,9 +5,9 @@
   "prepared_this_run": 0,
   "reserve_total": 37291,
   "queue_total": 45726,
-  "updated_at": "2026-11-24T10:31:52.164243+00:00",
+  "updated_at": "2026-11-24T10:33:10.361531+00:00",
   "workers": 4,
-  "elapsed_seconds": 145.94,
+  "elapsed_seconds": 224.14,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -21,35 +21,35 @@
       "b": 0
     },
     "categories": {
-      "completed": 44829,
-      "allocated": 882,
+      "completed": 44831,
+      "allocated": 880,
       "failed": 12,
       "language_review": 3
     },
     "completed_by_account": {
-      "a": 22408,
-      "b": 22421
+      "a": 22409,
+      "b": 22422
     },
-    "uploads_last_24h": 405,
-    "uploads_per_hour_24h": 16.88,
+    "uploads_last_24h": 407,
+    "uploads_per_hour_24h": 16.96,
     "stock_hours_24h": 0.0
   },
   "health": {
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 183,
-      "b": 240
+      "a": 90,
+      "b": 83
     },
     "preparation_outcomes_last_hour": {
       "inconclusive_audio": 3,
       "inconclusive_subtitles": 3,
       "transient_original": 3,
-      "no_matches": 14,
+      "no_matches": 11,
       "no_acceptable_original": 1,
-      "prepared": 10,
       "transient_search": 1,
       "source_search_unavailable": 4,
+      "prepared": 9,
       "no_english_czech_subtitles": 2
     }
   },
@@ -64,13 +64,21 @@
     ]
   },
   "cache": {
-    "search_miss": 15,
-    "search_seconds": 339.13,
+    "search_miss": 17,
+    "search_seconds": 402.7,
     "search_hit": 2,
-    "media_miss": 1,
-    "media_seconds": 2.43
+    "media_miss": 2,
+    "media_seconds": 7.69,
+    "media_hit": 2,
+    "audio_miss": 2,
+    "audio_seconds": 26.04
   },
-  "audio_pipeline": {},
+  "audio_pipeline": {
+    "sample_count": 2,
+    "download_seconds": 16.88,
+    "inference_wait_seconds": 0.0,
+    "inference_seconds": 9.15
+  },
   "productive_seasons": 117,
   "series_paused_this_run": 5,
   "saved_reviewed_this_run": 0,
