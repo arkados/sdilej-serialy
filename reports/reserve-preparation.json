@@ -5,9 +5,9 @@
   "prepared_this_run": 0,
   "reserve_total": 37393,
   "queue_total": 45828,
-  "updated_at": "2026-11-24T20:57:58.876089+00:00",
+  "updated_at": "2026-11-24T20:59:15.973221+00:00",
   "workers": 4,
-  "elapsed_seconds": 68.87,
+  "elapsed_seconds": 145.97,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -31,16 +31,16 @@
       "a": 22454,
       "b": 22466
     },
-    "uploads_last_24h": 267,
-    "uploads_per_hour_24h": 11.12,
+    "uploads_last_24h": 266,
+    "uploads_per_hour_24h": 11.08,
     "stock_hours_24h": 1.17
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 4101,
-      "b": 4084
+      "a": 4178,
+      "b": 4162
     },
     "preparation_outcomes_last_hour": {
       "inconclusive_audio": 8,
@@ -63,9 +63,9 @@
     ]
   },
   "cache": {
-    "search_miss": 11,
-    "search_seconds": 133.73,
-    "search_hit": 1
+    "search_miss": 15,
+    "search_seconds": 363.48,
+    "search_hit": 2
   },
   "audio_pipeline": {},
   "productive_seasons": 112,
@@ -2873,15 +2873,32 @@
     }
   ],
   "search_health": {
-    "status": "probe_due",
-    "consecutive_failures": 2,
+    "status": "healthy",
+    "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 0,
+    "control_requests": 1,
     "request_gap_seconds": 8,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
-    "controls": []
+    "controls": [
+      {
+        "path": "/teorie-velkeho-tresku/s/-6",
+        "status": 200,
+        "response_bytes": 724001,
+        "parsed_candidates": 412,
+        "body_sha256": "c7ca62e797eab680b433f11ed59163aa3a19723565639fca9c7e2baa75f813da",
+        "video_box_count": 465,
+        "heading_matches_query": true,
+        "password_field_present": false,
+        "fallback_notice_present": false,
+        "request_limit_notice_present": false,
+        "cache_age_seconds": null,
+        "response_path": "/teorie-velkeho-tresku/s/-6",
+        "unexpected_origin": false,
+        "checked_at": "2026-11-24T20:58:17.089905+00:00"
+      }
+    ]
   }
 }
