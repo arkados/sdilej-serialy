@@ -715,12 +715,34 @@
       "identity": "1629:1:5",
       "account": "b",
       "target_video_id": "31109344",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 141,
       "detail_url": "https://prehraj.to/damsky-gambit-s01e05-vidlicka-1080p-cz-titulky-titulky-cekaji-mkv/373f1b3d112833da",
-      "checked_at": "2026-11-24T02:41:19.804391+00:00",
-      "retry_after": "2026-11-24T02:56:19.804407+00:00"
+      "checked_at": "2026-11-24T13:01:36.626646+00:00",
+      "retry_after": "2026-11-24T13:16:36.626660+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31109533": {
       "identity": "362:1:3",
@@ -2250,5 +2272,5 @@
       "retry_after": "2026-11-24T13:13:15.025077+00:00"
     }
   },
-  "updated_at": "2026-11-24T13:01:15.284099+00:00"
+  "updated_at": "2026-11-24T13:01:36.626670+00:00"
 }
