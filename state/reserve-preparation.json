@@ -1301635,52 +1301635,16 @@
       "queue_rank": 41593
     },
     "6681:1:4": {
-      "at": "2026-11-14T23:19:42.071801+00:00",
+      "at": "2026-11-24T10:57:20.682460+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 58.86,
-      "search_evidence": [
-        {
-          "path": "/kitz-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 217098,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kitz/s/-6",
-          "status": 200,
-          "response_bytes": 421052,
-          "boxes": 190,
-          "parsed_candidates": 175,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kitz-s01e04/s/-6",
-          "status": 200,
-          "response_bytes": 217244,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kitz/s/-6",
-          "status": 200,
-          "response_bytes": 420974,
-          "boxes": 190,
-          "parsed_candidates": 175,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T23:21:30.052601+00:00"
+      "elapsed_seconds": 65.27,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T10:58:55.913774+00:00"
     },
     "7303:1:2": {
       "at": "2026-11-14T23:21:31.628665+00:00",
@@ -1378128,7 +1378092,7 @@
       "queue_rank": 45730
     }
   },
-  "updated_at": "2026-11-24T10:58:09.649308+00:00",
+  "updated_at": "2026-11-24T10:59:59.730723+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389389,6 +1389353,12 @@
         "425:1:2"
       ],
       "updated_at": "2026-11-24T10:57:25.683839+00:00"
+    },
+    "6681": {
+      "misses": [
+        "6681:1:4"
+      ],
+      "updated_at": "2026-11-24T10:58:55.913811+00:00"
     }
   },
   "discovery_progress": {
