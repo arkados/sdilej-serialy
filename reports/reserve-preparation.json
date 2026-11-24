@@ -1,31 +1,31 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45312220587",
-  "attempted_this_run": 11,
-  "prepared_this_run": 5,
-  "reserve_total": 37206,
-  "queue_total": 45641,
-  "updated_at": "2026-11-24T03:09:55.714650+00:00",
+  "attempted_this_run": 16,
+  "prepared_this_run": 8,
+  "reserve_total": 37209,
+  "queue_total": 45644,
+  "updated_at": "2026-11-24T03:16:16.349714+00:00",
   "workers": 4,
-  "elapsed_seconds": 2296.07,
-  "prepared_per_hour": 7.84,
-  "available_this_run": 5,
-  "available_per_hour": 7.84,
+  "elapsed_seconds": 2676.7,
+  "prepared_per_hour": 10.76,
+  "available_this_run": 8,
+  "available_per_hour": 10.76,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 45641,
-    "ready": 4,
+    "queue_total": 45644,
+    "ready": 5,
     "ready_by_account": {
-      "a": 3,
-      "b": 1
+      "a": 2,
+      "b": 3
     },
     "categories": {
       "completed": 44743,
-      "allocated": 879,
+      "allocated": 881,
       "failed": 12,
       "language_review": 3,
-      "ready": 4
+      "ready": 5
     },
     "completed_by_account": {
       "a": 22365,
@@ -33,25 +33,24 @@
     },
     "uploads_last_24h": 405,
     "uploads_per_hour_24h": 16.88,
-    "stock_hours_24h": 0.24
+    "stock_hours_24h": 0.3
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 2158,
-      "b": 894
+      "a": 2540,
+      "b": 1275
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 4,
-      "no_acceptable_original": 1,
-      "inconclusive_audio": 3,
-      "source_search_unavailable": 2,
+      "inconclusive_audio": 2,
+      "source_search_unavailable": 1,
       "no_matches": 2,
-      "prepared": 9
+      "prepared": 8
     }
   },
-  "indexed_candidates_in_scan": 1233,
+  "indexed_candidates_in_scan": 1278,
   "discovery_progress": {
     "last_series": 949,
     "last_series_order": [
@@ -62,23 +61,23 @@
     ]
   },
   "cache": {
-    "search_miss": 62,
-    "search_seconds": 1456.94,
+    "search_miss": 80,
+    "search_seconds": 1627.08,
     "search_hit": 5,
     "media_hit": 69,
-    "media_miss": 23,
-    "media_seconds": 248.09,
-    "audio_miss": 9,
-    "audio_seconds": 163.98
+    "media_miss": 31,
+    "media_seconds": 285.2,
+    "audio_miss": 12,
+    "audio_seconds": 192.92
   },
   "audio_pipeline": {
-    "sample_count": 15,
-    "download_seconds": 138.39,
+    "sample_count": 18,
+    "download_seconds": 161.49,
     "inference_wait_seconds": 0.86,
-    "inference_seconds": 24.05,
+    "inference_seconds": 29.89,
     "failures": 2
   },
-  "productive_seasons": 121,
+  "productive_seasons": 122,
   "series_paused_this_run": 0,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
@@ -88,8 +87,8 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 37206,
-    "deferred": 38741
+    "prepared": 37209,
+    "deferred": 38740
   },
   "requested_series": [
     {
@@ -2886,8 +2885,8 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 4,
-    "request_gap_seconds": 4.0,
+    "control_requests": 5,
+    "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
@@ -2895,9 +2894,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724055,
+        "response_bytes": 724064,
         "parsed_candidates": 412,
-        "body_sha256": "44501ab1d12eb04ad2e00274c0a3c128b10a6327858a91431a0592d948c31dad",
+        "body_sha256": "1fe8962ebbb906ff464ba3903a64f87467945a3aca32b51423a13d030d48fc8e",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2906,7 +2905,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-24T03:09:10.818191+00:00"
+        "checked_at": "2026-11-24T03:10:30.809745+00:00"
       }
     ]
   }
