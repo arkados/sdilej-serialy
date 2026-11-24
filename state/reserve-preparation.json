@@ -1304336,76 +1304336,16 @@
       "queue_rank": 41651
     },
     "691:1:5": {
-      "at": "2026-11-15T00:54:46.806123+00:00",
+      "at": "2026-11-24T13:13:28.935348+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 76.3,
-      "search_evidence": [
-        {
-          "path": "/hot-wheels-zavod-s01e05/s/-6",
-          "status": 200,
-          "response_bytes": 216061,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hot-wheels-let-s-race-s01e05/s/-6",
-          "status": 200,
-          "response_bytes": 216154,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hot-wheels-let-s-race/s/-6",
-          "status": 200,
-          "response_bytes": 215996,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hot-wheels-zavod-s01e05/s/-6",
-          "status": 200,
-          "response_bytes": 216070,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hot-wheels-zavod/s/-6",
-          "status": 200,
-          "response_bytes": 251304,
-          "boxes": 30,
-          "parsed_candidates": 29,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hot-wheels-let-s-race-s01e05/s/-6",
-          "status": 200,
-          "response_bytes": 216277,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hot-wheels-let-s-race/s/-6",
-          "status": 200,
-          "response_bytes": 216043,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-16T00:58:24.289375+00:00"
+      "elapsed_seconds": 82.04,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T13:15:46.080698+00:00"
     },
     "691:1:9": {
       "at": "2026-11-15T00:55:16.535808+00:00",
@@ -1377852,16 +1377792,18 @@
       "queue_rank": 45741
     },
     "33:1:9": {
-      "at": "2026-11-24T12:38:08.538019+00:00",
-      "status": "deferred",
+      "at": "2026-11-24T13:13:29.877284+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 345.81,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-24T12:53:54.344733+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9698296189308167,
+      "observed_source_id": "25692774",
+      "elapsed_seconds": 76.94,
+      "source_id": "25692774",
+      "queue_rank": 45745
     },
     "10442:1:7": {
       "at": "2026-11-24T12:38:54.085831+00:00",
@@ -1377928,9 +1377870,38 @@
       "elapsed_seconds": 43.74,
       "source_id": "25692793",
       "queue_rank": 45744
+    },
+    "1494:1:2": {
+      "at": "2026-11-24T13:12:45.190097+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "sk",
+      "observed_language_probability": 0.7214272022247314,
+      "observed_source_id": "14319905",
+      "reason": "no_english_czech_subtitles",
+      "elapsed_seconds": 120.29,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-24T13:45:46.080607+00:00"
+    },
+    "33:1:13": {
+      "at": "2026-11-24T13:15:49.250644+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9641067385673523,
+      "observed_source_id": "25692797",
+      "elapsed_seconds": 54.51,
+      "source_id": "25692797",
+      "queue_rank": 45746
     }
   },
-  "updated_at": "2026-11-24T13:14:32.245270+00:00",
+  "updated_at": "2026-11-24T13:16:51.206929+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388012,7 +1387983,7 @@
     },
     "33": {
       "misses": [],
-      "updated_at": "2026-11-24T13:13:27.962357+00:00"
+      "updated_at": "2026-11-24T13:16:43.764676+00:00"
     },
     "138": {
       "misses": [],
@@ -1389308,6 +1389279,18 @@
         "10132:1:2"
       ],
       "updated_at": "2026-11-24T12:37:20.909597+00:00"
+    },
+    "1494": {
+      "misses": [
+        "1494:1:2"
+      ],
+      "updated_at": "2026-11-24T13:15:46.080636+00:00"
+    },
+    "691": {
+      "misses": [
+        "691:1:5"
+      ],
+      "updated_at": "2026-11-24T13:15:46.080708+00:00"
     }
   },
   "discovery_progress": {
