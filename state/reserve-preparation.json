@@ -1298444,84 +1298444,16 @@
       "queue_rank": 41556
     },
     "9981:1:2": {
-      "at": "2026-11-14T19:41:21.120848+00:00",
+      "at": "2026-11-24T06:03:19.858341+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 67.62,
-      "search_evidence": [
-        {
-          "path": "/mimi-sef-zpatky-v-kolebce-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216549,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mimi-sef-zpatky-v-kolebce/s/-6",
-          "status": 200,
-          "response_bytes": 225907,
-          "boxes": 7,
-          "parsed_candidates": 7,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-boss-baby-back-in-the-crib-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216354,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-boss-baby-back-in-the-crib/s/-6",
-          "status": 200,
-          "response_bytes": 224625,
-          "boxes": 6,
-          "parsed_candidates": 6,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mimi-sef-zpatky-v-kolebce-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216660,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/mimi-sef-zpatky-v-kolebce/s/-6",
-          "status": 200,
-          "response_bytes": 225813,
-          "boxes": 7,
-          "parsed_candidates": 7,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-boss-baby-back-in-the-crib-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216341,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-boss-baby-back-in-the-crib/s/-6",
-          "status": 200,
-          "response_bytes": 224666,
-          "boxes": 6,
-          "parsed_candidates": 6,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T19:42:43.241445+00:00"
+      "elapsed_seconds": 30.47,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T06:03:52.316654+00:00"
     },
     "9981:1:4": {
       "at": "2026-11-14T19:42:44.217687+00:00",
@@ -1378219,9 +1378151,23 @@
       "elapsed_seconds": 34.48,
       "source_id": "26785269",
       "queue_rank": 45683
+    },
+    "81:1:29": {
+      "at": "2026-11-24T06:02:42.945926+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9799473285675049,
+      "observed_source_id": "26785221",
+      "elapsed_seconds": 68.19,
+      "source_id": "26785221",
+      "queue_rank": 45684
     }
   },
-  "updated_at": "2026-11-24T06:03:27.125606+00:00",
+  "updated_at": "2026-11-24T06:04:57.425401+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389086,7 +1389032,7 @@
     },
     "81": {
       "misses": [],
-      "updated_at": "2026-11-24T06:03:18.316140+00:00"
+      "updated_at": "2026-11-24T06:03:52.316256+00:00"
     },
     "4460": {
       "misses": [
@@ -1389285,6 +1389231,12 @@
         "3379:1:2"
       ],
       "updated_at": "2026-11-24T06:03:20.293560+00:00"
+    },
+    "9981": {
+      "misses": [
+        "9981:1:2"
+      ],
+      "updated_at": "2026-11-24T06:03:52.316672+00:00"
     }
   },
   "discovery_progress": {
