@@ -485,12 +485,34 @@
       "identity": "5535:1:6",
       "account": "a",
       "target_video_id": "31109957",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 142,
       "detail_url": "https://prehraj.to/zlomove-okamziky-atomova-bomba-a-studena-valka-s01e06-rise-na-pokraji-rozpadu-1080p-cz-titulky-titulky-cekaji-mkv/eb248b3cb97439c5",
-      "checked_at": "2026-11-24T02:30:30.325650+00:00",
-      "retry_after": "2026-11-24T02:45:30.325666+00:00"
+      "checked_at": "2026-11-24T12:50:43.189768+00:00",
+      "retry_after": "2026-11-24T13:05:43.189782+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31110119": {
       "identity": "5535:1:9",
@@ -2125,5 +2147,5 @@
       "retry_after": "2026-11-24T03:03:40.732150+00:00"
     }
   },
-  "updated_at": "2026-11-24T12:50:24.038610+00:00"
+  "updated_at": "2026-11-24T12:50:43.189792+00:00"
 }
