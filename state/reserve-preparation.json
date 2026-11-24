@@ -29078,16 +29078,16 @@
       "retry_after": "2026-10-19T03:40:40.893196+00:00"
     },
     "1264:1:8": {
-      "at": "2026-11-24T19:40:05.183374+00:00",
+      "at": "2026-11-24T20:11:13.799481+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 329.21,
-      "consecutive_failures": 40,
-      "retry_after": "2026-11-24T19:55:34.390951+00:00"
+      "reason": "inconclusive_audio",
+      "elapsed_seconds": 359.75,
+      "consecutive_failures": 41,
+      "retry_after": "2026-11-25T20:18:19.228098+00:00"
     },
     "1264:1:10": {
       "at": "2026-11-24T15:18:09.058246+00:00",
@@ -1250175,84 +1250175,16 @@
       "queue_rank": 40413
     },
     "793:1:1": {
-      "at": "2026-11-13T01:42:41.223893+00:00",
+      "at": "2026-11-24T20:14:23.755686+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 281.05,
-      "search_evidence": [
-        {
-          "path": "/sex-zivot-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 218793,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sex-zivot/s/-6",
-          "status": 200,
-          "response_bytes": 235342,
-          "boxes": 17,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sex-life-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215911,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sex-life/s/-6",
-          "status": 200,
-          "response_bytes": 261592,
-          "boxes": 35,
-          "parsed_candidates": 27,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sex-zivot-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 218875,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sex-zivot/s/-6",
-          "status": 200,
-          "response_bytes": 235318,
-          "boxes": 17,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sex-life-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215970,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sex-life/s/-6",
-          "status": 200,
-          "response_bytes": 261491,
-          "boxes": 35,
-          "parsed_candidates": 27,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T01:47:22.276539+00:00"
+      "elapsed_seconds": 215.78,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T20:18:19.228250+00:00"
     },
     "4961:2:1": {
       "at": "2026-11-13T01:43:40.289262+00:00",
@@ -1377727,9 +1377659,23 @@
       "elapsed_seconds": 181.98,
       "source_id": "34928137",
       "queue_rank": 45818
+    },
+    "289:1:8": {
+      "at": "2026-11-24T20:14:16.135353+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9746643900871277,
+      "observed_source_id": "34928159",
+      "elapsed_seconds": 168.03,
+      "source_id": "34928159",
+      "queue_rank": 45819
     }
   },
-  "updated_at": "2026-11-24T20:16:45.110591+00:00",
+  "updated_at": "2026-11-24T20:19:23.721065+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1385389,9 +1385335,10 @@
     },
     "1264": {
       "misses": [
-        "1264:1:7"
+        "1264:1:7",
+        "1264:1:8"
       ],
-      "updated_at": "2026-11-24T20:13:14.524923+00:00"
+      "updated_at": "2026-11-24T20:18:19.228129+00:00"
     },
     "208": {
       "misses": [],
@@ -1389339,11 +1389286,17 @@
     },
     "289": {
       "misses": [],
-      "updated_at": "2026-11-24T20:16:17.350883+00:00"
+      "updated_at": "2026-11-24T20:18:19.228207+00:00"
     },
     "2838": {
       "misses": [],
       "updated_at": "2026-11-24T19:40:11.791444+00:00"
+    },
+    "793": {
+      "misses": [
+        "793:1:1"
+      ],
+      "updated_at": "2026-11-24T20:18:19.228259+00:00"
     }
   },
   "discovery_progress": {
