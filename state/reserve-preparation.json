@@ -1249332,84 +1249332,16 @@
       "queue_rank": 40363
     },
     "551:1:1": {
-      "at": "2026-11-13T00:28:37.909418+00:00",
+      "at": "2026-11-24T16:29:12.081304+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 47.92,
-      "search_evidence": [
-        {
-          "path": "/vesela-tetka-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216007,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vesela-tetka/s/-6",
-          "status": 200,
-          "response_bytes": 217659,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chicago-party-aunt-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216124,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chicago-party-aunt/s/-6",
-          "status": 200,
-          "response_bytes": 216029,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vesela-tetka-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216018,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vesela-tetka/s/-6",
-          "status": 200,
-          "response_bytes": 217560,
-          "boxes": 2,
-          "parsed_candidates": 2,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chicago-party-aunt-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216161,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chicago-party-aunt/s/-6",
-          "status": 200,
-          "response_bytes": 215999,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T00:29:32.938627+00:00"
+      "elapsed_seconds": 43.09,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T16:30:06.565021+00:00"
     },
     "5526:1:1": {
       "at": "2026-11-13T00:28:56.216976+00:00",
@@ -1377767,16 +1377699,18 @@
       "retry_after": "2026-11-25T14:30:22.301332+00:00"
     },
     "9126:1:15": {
-      "at": "2026-11-24T14:31:15.605143+00:00",
-      "status": "deferred",
+      "at": "2026-11-24T16:29:12.998684+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 304.14,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-24T14:46:19.748816+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9341615438461304,
+      "observed_source_id": "29267213",
+      "elapsed_seconds": 63.87,
+      "source_id": "29267213",
+      "queue_rank": 45792
     },
     "9126:1:16": {
       "at": "2026-11-24T15:03:31.082909+00:00",
@@ -1378015,9 +1377949,23 @@
       "elapsed_seconds": 30.96,
       "source_id": "29806912",
       "queue_rank": 45790
+    },
+    "196:1:5": {
+      "at": "2026-11-24T16:29:10.260874+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8707221150398254,
+      "observed_source_id": "29806954",
+      "elapsed_seconds": 36.19,
+      "source_id": "29806954",
+      "queue_rank": 45791
     }
   },
-  "updated_at": "2026-11-24T16:29:46.326055+00:00",
+  "updated_at": "2026-11-24T16:31:15.504435+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389432,7 +1389380,7 @@
     },
     "9126": {
       "misses": [],
-      "updated_at": "2026-11-24T16:16:29.503039+00:00"
+      "updated_at": "2026-11-24T16:30:16.869231+00:00"
     },
     "10210": {
       "misses": [
@@ -1389448,7 +1389396,7 @@
     },
     "196": {
       "misses": [],
-      "updated_at": "2026-11-24T16:29:09.353747+00:00"
+      "updated_at": "2026-11-24T16:30:06.564949+00:00"
     },
     "10017": {
       "misses": [
@@ -1389505,6 +1389453,12 @@
         "2951:2:1"
       ],
       "updated_at": "2026-11-24T16:29:41.153639+00:00"
+    },
+    "551": {
+      "misses": [
+        "551:1:1"
+      ],
+      "updated_at": "2026-11-24T16:30:06.565035+00:00"
     }
   },
   "discovery_progress": {
