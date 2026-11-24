@@ -1300927,84 +1300927,16 @@
       "retry_after": "2026-11-15T23:08:08.815552+00:00"
     },
     "9664:1:2": {
-      "at": "2026-11-14T23:05:46.510874+00:00",
+      "at": "2026-11-24T10:06:07.207229+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 225.85,
-      "search_evidence": [
-        {
-          "path": "/garfieldova-show-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216126,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garfieldova-show/s/-6",
-          "status": 200,
-          "response_bytes": 233530,
-          "boxes": 14,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-garfield-show-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216196,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-garfield-show/s/-6",
-          "status": 200,
-          "response_bytes": 215997,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garfieldova-show-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216108,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/garfieldova-show/s/-6",
-          "status": 200,
-          "response_bytes": 233544,
-          "boxes": 14,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-garfield-show-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216070,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-garfield-show/s/-6",
-          "status": 200,
-          "response_bytes": 215919,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T23:09:32.365341+00:00"
+      "elapsed_seconds": 19.21,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T10:06:26.412496+00:00"
     },
     "9664:1:3": {
       "at": "2026-11-14T23:05:59.624551+00:00",
@@ -1377943,9 +1377875,35 @@
       "elapsed_seconds": 170.27,
       "consecutive_failures": 1,
       "retry_after": "2026-11-24T10:30:35.312538+00:00"
+    },
+    "211:1:6": {
+      "at": "2026-11-24T10:02:57.818565+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8939996361732483,
+      "observed_source_id": "25224489",
+      "elapsed_seconds": 151.49,
+      "source_id": "25224489",
+      "queue_rank": 45721
+    },
+    "458:1:2": {
+      "at": "2026-11-24T10:05:41.181443+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 24.94,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-25T10:06:06.120450+00:00"
     }
   },
-  "updated_at": "2026-11-24T10:05:24.305410+00:00",
+  "updated_at": "2026-11-24T10:06:46.965407+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389161,10 +1389119,8 @@
       "updated_at": "2026-11-24T09:36:28.495986+00:00"
     },
     "211": {
-      "misses": [
-        "211:1:5"
-      ],
-      "updated_at": "2026-11-24T10:00:35.312548+00:00"
+      "misses": [],
+      "updated_at": "2026-11-24T10:05:40.129533+00:00"
     },
     "2543": {
       "misses": [
@@ -1389177,15 +1389133,27 @@
         "1989:1:2"
       ],
       "updated_at": "2026-11-24T10:02:39.629130+00:00"
+    },
+    "458": {
+      "misses": [
+        "458:1:2"
+      ],
+      "updated_at": "2026-11-24T10:06:06.120474+00:00"
+    },
+    "9664": {
+      "misses": [
+        "9664:1:2"
+      ],
+      "updated_at": "2026-11-24T10:06:26.412533+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 1989,
+    "last_series": 9664,
     "last_series_order": [
       false,
       -5.8,
-      -5660,
-      1989
+      -4524,
+      9664
     ]
   },
   "czech_fallback_revision": 1
