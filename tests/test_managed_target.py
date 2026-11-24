@@ -35,7 +35,7 @@ def listing(video_id,name=NAME):
 def test_new_managed_episode_checks_recent_real_listing_without_remote_search():
     session,state,calls,response=setup()
     assert existing_episode(session,NAME) is None
-    assert calls[0][1]['params']=={}
+    assert calls[0][1]['params'] == {'selectedFolderId': '-1'}
     assert session.post is session.session.post
 
 
@@ -84,3 +84,24 @@ def test_recent_allocation_with_lost_id_remains_quarantined_without_blocking_oth
     assert existing_episode(session,NAME) is None
     assert state.data['episodes']['uncertain']==pending
     assert 'transfer_receipt' not in pending and pending['prepared_target']=={'creation_intent':True}
+
+
+def test_portal_removing_ellipsis_from_a_known_title_does_not_block_other_episodes():
+    original = 'A jak to bylo dál... S01E05 - Episode 1080p CZ Dabing'
+    listed = original.replace('...', '')
+    record = dict(target_account='a', episode_key=episode_key(original),
+                  prepared_target={'target_video_id': '123'})
+    session, state, _, _ = setup(listing('123', listed), extra={'older': record})
+
+    assert existing_episode(session, NAME) is None
+    assert state.data['episodes']['older']['episode_key'] == episode_key(original)
+
+
+def test_ellipsis_normalization_preserves_cross_account_reservations():
+    original = 'Series... S01E01 - Episode 1080p CZ Dabing'
+    state_row = dict(target_account='b', episode_key=episode_key(original),
+                     prepared_target={'target_video_id': '123'})
+    session, _, _, _ = setup(extra={'other_account': state_row})
+
+    with pytest.raises(TargetInventoryUnavailable, match='reserves'):
+        existing_episode(session, NAME)

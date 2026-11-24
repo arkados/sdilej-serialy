@@ -15,6 +15,25 @@ def episode_key(name):
     return f'{title}:s{int(match[2])}:e{int(match[3])}'
 
 
+def target_episode_key(key):
+    """Compare portal spellings without changing frozen episode identities."""
+    if not key:
+        return None
+    title, season, episode = key.rsplit(':', 2)
+    # The portal removes ellipses from series names in uploaded titles.
+    title = ' '.join(re.sub(r'\.{3,}', ' ', title).split())
+    return f'{title}:{season}:{episode}'
+
+
+def episode_search_params(name):
+    match = re.match(r'^(.*?\s+S\d+E\d+)', name, re.I)
+    if not match:
+        raise RuntimeError('Missing episode code in target name')
+    query = unicodedata.normalize('NFKC', match[1])
+    query = ' '.join(re.sub(r'\*+|\.{3,}', ' ', query).split())
+    return {'selectedFolderId': '-1', 'searchPhrase': query}
+
+
 def listing_rows(html):
     soup = BeautifulSoup(html, 'html.parser')
     rows = {}
@@ -40,9 +59,8 @@ def listing_rows(html):
 
 
 def existing_episode(session, name, known_id=None):
-    match = re.match(r'^(.*?\s+S\d+E\d+)', name, re.I)
-    if not match:
-        raise RuntimeError('Missing episode code in target name')
+    params = episode_search_params(name)
+    wanted = target_episode_key(episode_key(name))
     if known_id is not None:
         if not str(known_id).isdigit():
             raise RuntimeError('Invalid persisted target ID')
@@ -56,14 +74,14 @@ def existing_episode(session, name, known_id=None):
             soup = BeautifulSoup(detail.text, 'html.parser')
             if any('Změna složky videa' in heading.get_text(' ', strip=True)
                    for heading in soup.select('h1')):
-                if any(episode_key(h.get_text(' ', strip=True)) == episode_key(name)
+                if any(target_episode_key(episode_key(h.get_text(' ', strip=True))) == wanted
                        for h in soup.select('h2')):
                     return str(known_id)
     response = session.get(prehrajto.BASE_URL + '/profil/nahrana-videa',
-                           params={'searchPhrase': re.sub(r'\*+', ' ', match[1])}, timeout=30)
+                           params=params, timeout=30)
     response.raise_for_status()
     if 'uploadedVideoListing' not in response.text:
         raise RuntimeError('Target listing unavailable; refusing new upload')
-    matches = [r for r in listing_rows(response.text) if r['key'] == episode_key(name)]
+    matches = [r for r in listing_rows(response.text) if target_episode_key(r['key']) == wanted]
     matches.sort(key=lambda r: (r['processing'], int(r['id'])))
     return matches[0]['id'] if matches else None

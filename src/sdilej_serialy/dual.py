@@ -24,7 +24,7 @@ from .models import Episode
 from .pipeline import EpisodeState, atomic_json, now_iso, target_session
 from .quality import SUBTITLE_POLICIES, QUALITY_POLICY, rank_candidates, upload_eligible, SUBTITLE_POLICY, SLOVAK_POLICY
 from .recovery import digest
-from .target import episode_key, listing_rows
+from .target import episode_key, episode_search_params, listing_rows, target_episode_key
 from .resilience import error_evidence, receipt_matches, transient_http
 
 ACCOUNTS = ('a', 'b')
@@ -298,14 +298,15 @@ def verify_pilot(rows, state, sessions):
         upload = saved.get('upload')
         if not upload or saved.get('prepared_target') or saved.get('claim'):
             raise RuntimeError('Pilot transfer not confirmed')
-        query = re.sub(r'\*+', ' ', re.match(r'^(.*?\s+S\d+E\d+)', row['display_name'])[1])
+        params = episode_search_params(row['display_name'])
+        wanted = target_episode_key(episode_key(row['display_name']))
         for alias, session in sessions.items():
             response = session.get(prehrajto.BASE_URL + '/profil/nahrana-videa',
-                                   params={'searchPhrase': query}, timeout=30)
+                                   params=params, timeout=30)
             response.raise_for_status()
             if 'uploadedVideoListing' not in response.text:
                 raise RuntimeError('Pilot listing unavailable')
-            matches = [r for r in listing_rows(response.text) if r['key'] == episode_key(row['display_name'])]
+            matches = [r for r in listing_rows(response.text) if target_episode_key(r['key']) == wanted]
             expected = [upload['target_video_id']] if alias == row['target_account'] else []
             if [r['id'] for r in matches] != expected:
                 raise RuntimeError('Pilot target missing, duplicated or on wrong account')

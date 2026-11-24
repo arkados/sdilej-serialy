@@ -17,6 +17,19 @@ def test_target_sanitized_subtitle_does_not_change_identity():
     assert episode_key(wanted) != episode_key(wanted.replace('S03E06', 'S03E060'))
 
 
+def test_owned_id_confirmation_tolerates_only_the_portals_removed_ellipsis():
+    name = 'Byl jednou jeden… vynálezce S01E11 - Buffon'
+    response = SimpleNamespace(status_code=200, raise_for_status=lambda: None,
+                               text='<h1>Změna složky videa</h1><h2>Byl jednou jeden vynálezce S01E11 - Buffon</h2>')
+
+    def get(url, *, params, timeout):
+        assert url.endswith('/profil/uprava-slozky-videa')
+        assert params == {'videoId': '31057532'}
+        return response
+
+    assert existing_episode(SimpleNamespace(get=get), name, '31057532') == '31057532'
+
+
 def test_uncertain_target_survives_failure_restart_and_orphan_release(tmp_path, monkeypatch):
     item = Episode(1, 2, 'Series', None, 3, 6)
     path = tmp_path / 'state.json'

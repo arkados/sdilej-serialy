@@ -1,6 +1,6 @@
 """Unfiltered target reads for a durably managed, initially empty generation."""
 from .resilience import TargetInventoryUnavailable, TargetPending
-from .target import episode_key, listing_rows
+from .target import episode_key, listing_rows, target_episode_key
 from sdilej_serialy.media import prehrajto
 
 
@@ -26,10 +26,11 @@ class ManagedTargetSession:
         params = kwargs.get('params') or {}
         if url != prehrajto.BASE_URL + '/profil/nahrana-videa' or not params.get('searchPhrase'):
             return self.session.get(url, **kwargs)
-        key = episode_key(params['searchPhrase'])
+        key = target_episode_key(episode_key(params['searchPhrase']))
         if not key:
             raise TargetInventoryUnavailable('Managed target read requires an exact episode identity')
         options = dict(kwargs, params={k:v for k,v in params.items() if k != 'searchPhrase'})
+        options['params'].setdefault('selectedFolderId', '-1')
         response = self.session.get(url, **options)
         response.raise_for_status()
         if 'uploadedVideoListing' not in response.text:
@@ -38,8 +39,10 @@ class ManagedTargetSession:
         with self.state._lock:
             records = self.state.data['episodes']
             def record_key(r):
-                return (r.get('episode_key') or episode_key((r.get('upload') or {}).get('display_name',''))
-                        or episode_key((r.get('source') or {}).get('display_name','')))
+                return target_episode_key(
+                    r.get('episode_key') or episode_key((r.get('upload') or {}).get('display_name', ''))
+                    or episode_key((r.get('source') or {}).get('display_name', ''))
+                )
             matching = [(i,r) for i,r in records.items() if record_key(r) == key]
             claims = [(i,r) for i,r in matching if r.get('claim') and r.get('target_account') == self.account]
             if len(claims) != 1:
@@ -60,12 +63,13 @@ class ManagedTargetSession:
                     if target.get('target_video_id'):
                         owned[str(target['target_video_id'])] = record_key(r)
             for row in recent:
-                if row['id'] not in owned and row['key'] in reserved_intents:
+                listed_key = target_episode_key(row['key'])
+                if row['id'] not in owned and listed_key in reserved_intents:
                     # The allocation response may be lost or its checkpoint
                     # still in flight. Keep its episode quarantined; do not
                     # invent an ID/receipt or block unrelated managed episodes.
                     continue
-                if row['id'] not in owned or row['key'] != owned[row['id']]:
+                if row['id'] not in owned or listed_key != owned[row['id']]:
                     raise TargetInventoryUnavailable('Recent target listing contains an untracked or renamed video')
             known = current.get('upload') or current.get('prepared_target') or {}
             if known.get('target_video_id') and str(known['target_video_id']) not in {r['id'] for r in recent}:
