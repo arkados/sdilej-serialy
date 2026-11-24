@@ -1249382,84 +1249382,16 @@
       "retry_after": "2026-11-25T16:33:03.761901+00:00"
     },
     "4438:1:1": {
-      "at": "2026-11-13T00:34:36.676704+00:00",
+      "at": "2026-11-24T16:33:25.687657+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 47.4,
-      "search_evidence": [
-        {
-          "path": "/monstra-vs-vetrelci-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216193,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monstra-vs-vetrelci/s/-6",
-          "status": 200,
-          "response_bytes": 259137,
-          "boxes": 33,
-          "parsed_candidates": 33,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monsters-vs-aliens-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216106,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monsters-vs-aliens/s/-6",
-          "status": 200,
-          "response_bytes": 224868,
-          "boxes": 8,
-          "parsed_candidates": 7,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monstra-vs-vetrelci-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216103,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monstra-vs-vetrelci/s/-6",
-          "status": 200,
-          "response_bytes": 259291,
-          "boxes": 33,
-          "parsed_candidates": 33,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monsters-vs-aliens-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216148,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monsters-vs-aliens/s/-6",
-          "status": 200,
-          "response_bytes": 224869,
-          "boxes": 8,
-          "parsed_candidates": 7,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T00:35:24.077363+00:00"
+      "elapsed_seconds": 52.56,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T16:34:18.249792+00:00"
     },
     "666:1:2": {
       "at": "2026-11-24T14:57:38.429999+00:00",
@@ -1377943,9 +1377875,51 @@
       "elapsed_seconds": 90.45,
       "source_id": "32111816",
       "queue_rank": 45794
+    },
+    "196:1:6": {
+      "at": "2026-11-24T16:32:33.042889+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9551780819892883,
+      "observed_source_id": "29806933",
+      "elapsed_seconds": 31.3,
+      "source_id": "29806933",
+      "queue_rank": 45795
+    },
+    "196:1:7": {
+      "at": "2026-11-24T16:32:33.954529+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9395437240600586,
+      "observed_source_id": "29806924",
+      "elapsed_seconds": 34.63,
+      "source_id": "29806924",
+      "queue_rank": 45796
+    },
+    "196:1:8": {
+      "at": "2026-11-24T16:32:34.895036+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9938815832138062,
+      "observed_source_id": "29807009",
+      "elapsed_seconds": 39.26,
+      "source_id": "29807009",
+      "queue_rank": 45797
     }
   },
-  "updated_at": "2026-11-24T16:33:08.593511+00:00",
+  "updated_at": "2026-11-24T16:34:37.559384+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389374,7 +1389348,7 @@
     },
     "196": {
       "misses": [],
-      "updated_at": "2026-11-24T16:30:06.564949+00:00"
+      "updated_at": "2026-11-24T16:33:25.682458+00:00"
     },
     "10017": {
       "misses": [
@@ -1389443,15 +1389417,21 @@
         "10276:1:2"
       ],
       "updated_at": "2026-11-24T16:33:03.761948+00:00"
+    },
+    "4438": {
+      "misses": [
+        "4438:1:1"
+      ],
+      "updated_at": "2026-11-24T16:34:18.249823+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 10276,
+    "last_series": 4438,
     "last_series_order": [
       false,
       -5.7,
-      -2013,
-      10276
+      -1805,
+      4438
     ]
   },
   "czech_fallback_revision": 1
