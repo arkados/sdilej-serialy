@@ -5,9 +5,9 @@
   "prepared_this_run": 0,
   "reserve_total": 37338,
   "queue_total": 45773,
-  "updated_at": "2026-11-24T14:49:11.266155+00:00",
+  "updated_at": "2026-11-24T14:52:16.413928+00:00",
   "workers": 4,
-  "elapsed_seconds": 151.57,
+  "elapsed_seconds": 336.72,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -15,38 +15,38 @@
   "target_stock": 3000,
   "stock": {
     "queue_total": 45773,
-    "ready": 4,
+    "ready": 1,
     "ready_by_account": {
-      "a": 2,
-      "b": 2
+      "a": 1,
+      "b": 0
     },
     "categories": {
-      "completed": 44871,
+      "completed": 44874,
       "allocated": 883,
       "failed": 12,
       "language_review": 3,
-      "ready": 4
+      "ready": 1
     },
     "completed_by_account": {
-      "a": 22430,
-      "b": 22441
+      "a": 22431,
+      "b": 22443
     },
-    "uploads_last_24h": 315,
-    "uploads_per_hour_24h": 13.12,
-    "stock_hours_24h": 0.3
+    "uploads_last_24h": 318,
+    "uploads_per_hour_24h": 13.25,
+    "stock_hours_24h": 0.08
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 109,
-      "b": 354
+      "a": 185,
+      "b": 119
     },
     "preparation_outcomes_last_hour": {
       "inconclusive_audio": 6,
       "source_search_unavailable": 5,
       "no_matches": 11,
-      "transient_search": 5,
+      "transient_search": 4,
       "no_english_czech_subtitles": 2,
       "prepared": 23
     }
@@ -63,12 +63,20 @@
   },
   "cache": {
     "search_miss": 16,
-    "search_seconds": 369.71,
+    "search_seconds": 402.25,
     "search_hit": 2,
-    "media_miss": 1,
-    "media_seconds": 4.44
+    "media_miss": 3,
+    "media_seconds": 16.81,
+    "media_hit": 9,
+    "audio_miss": 3,
+    "audio_seconds": 51.74
   },
-  "audio_pipeline": {},
+  "audio_pipeline": {
+    "sample_count": 6,
+    "download_seconds": 47.05,
+    "inference_wait_seconds": 0.0,
+    "inference_seconds": 18.16
+  },
   "productive_seasons": 117,
   "series_paused_this_run": 7,
   "saved_reviewed_this_run": 0,
