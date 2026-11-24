@@ -540,12 +540,34 @@
       "identity": "5535:1:4",
       "account": "a",
       "target_video_id": "31110881",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 141,
       "detail_url": "https://prehraj.to/zlomove-okamziky-atomova-bomba-a-studena-valka-s01e04-zed-1080p-cz-titulky-titulky-cekaji-mkv/e12efa0dcd930acc",
-      "checked_at": "2026-11-24T02:31:24.500203+00:00",
-      "retry_after": "2026-11-24T02:46:24.500220+00:00"
+      "checked_at": "2026-11-24T12:51:43.293927+00:00",
+      "retry_after": "2026-11-24T13:06:43.293941+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31110924": {
       "identity": "5535:1:5",
@@ -2147,5 +2169,5 @@
       "retry_after": "2026-11-24T03:03:40.732150+00:00"
     }
   },
-  "updated_at": "2026-11-24T12:51:21.718328+00:00"
+  "updated_at": "2026-11-24T12:51:43.293950+00:00"
 }
