@@ -30721,28 +30721,28 @@
       "retry_after": "2026-10-19T13:02:48.728102+00:00"
     },
     "1264:2:3": {
-      "at": "2026-11-24T11:19:47.499966+00:00",
+      "at": "2026-11-24T16:33:28.643087+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 156.41,
-      "consecutive_failures": 39,
-      "retry_after": "2026-11-25T11:22:40.089989+00:00"
+      "elapsed_seconds": 168.32,
+      "consecutive_failures": 40,
+      "retry_after": "2026-11-25T16:36:16.964809+00:00"
     },
     "1264:2:4": {
-      "at": "2026-11-24T13:18:58.261334+00:00",
+      "at": "2026-11-24T16:34:19.178292+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 115.27,
-      "consecutive_failures": 39,
-      "retry_after": "2026-11-25T13:21:26.465684+00:00"
+      "elapsed_seconds": 123.38,
+      "consecutive_failures": 40,
+      "retry_after": "2026-11-25T16:36:22.554847+00:00"
     },
     "1264:2:5": {
       "at": "2026-11-24T13:46:00.914734+00:00",
@@ -1249476,52 +1249476,16 @@
       "queue_rank": 40367
     },
     "4010:1:1": {
-      "at": "2026-11-13T00:44:11.646551+00:00",
+      "at": "2026-11-24T16:36:10.902503+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 10.85,
-      "search_evidence": [
-        {
-          "path": "/freeridge-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216141,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/freeridge/s/-6",
-          "status": 200,
-          "response_bytes": 217542,
-          "boxes": 3,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/freeridge-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216268,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/freeridge/s/-6",
-          "status": 200,
-          "response_bytes": 217505,
-          "boxes": 3,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T00:44:22.501671+00:00"
+      "elapsed_seconds": 15.83,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T16:36:26.745631+00:00"
     },
     "2543:1:5": {
       "at": "2026-11-13T00:42:58.819697+00:00",
@@ -1377963,9 +1377927,23 @@
       "elapsed_seconds": 24.3,
       "source_id": "29806967",
       "queue_rank": 45802
+    },
+    "196:1:12": {
+      "at": "2026-11-24T16:35:23.537235+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9379706978797913,
+      "observed_source_id": "29806989",
+      "elapsed_seconds": 29.22,
+      "source_id": "29806989",
+      "queue_rank": 45803
     }
   },
-  "updated_at": "2026-11-24T16:35:50.306024+00:00",
+  "updated_at": "2026-11-24T16:37:13.970297+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1385624,10 +1385602,12 @@
     },
     "1264": {
       "misses": [
-        "1264:1:8",
-        "1264:1:10"
+        "1264:1:10",
+        "1264:2:3",
+        "1264:2:4"
       ],
-      "updated_at": "2026-11-24T15:35:43.223134+00:00"
+      "updated_at": "2026-11-24T16:36:22.554878+00:00",
+      "retry_after": "2026-11-24T17:06:22.554878+00:00"
     },
     "208": {
       "misses": [],
@@ -1389389,7 +1389369,7 @@
     },
     "196": {
       "misses": [],
-      "updated_at": "2026-11-24T16:35:44.705598+00:00"
+      "updated_at": "2026-11-24T16:36:09.789584+00:00"
     },
     "10017": {
       "misses": [
@@ -1389464,15 +1389444,21 @@
         "4438:1:1"
       ],
       "updated_at": "2026-11-24T16:34:18.249823+00:00"
+    },
+    "4010": {
+      "misses": [
+        "4010:1:1"
+      ],
+      "updated_at": "2026-11-24T16:36:26.745662+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 4438,
+    "last_series": 4010,
     "last_series_order": [
       false,
       -5.7,
-      -1805,
-      4438
+      -1336,
+      4010
     ]
   },
   "czech_fallback_revision": 1
