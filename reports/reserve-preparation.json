@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
-  "run_id": "45416092534",
-  "attempted_this_run": 22,
-  "prepared_this_run": 7,
+  "run_id": "45428756556",
+  "attempted_this_run": 0,
+  "prepared_this_run": 0,
   "reserve_total": 37345,
   "queue_total": 45780,
-  "updated_at": "2026-11-24T15:42:39.441458+00:00",
+  "updated_at": "2026-11-24T15:53:13.342159+00:00",
   "workers": 4,
-  "elapsed_seconds": 3359.75,
-  "prepared_per_hour": 7.5,
-  "available_this_run": 7,
-  "available_per_hour": 7.5,
+  "elapsed_seconds": 68.02,
+  "prepared_per_hour": 0.0,
+  "available_this_run": 0,
+  "available_per_hour": 0.0,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -31,26 +31,26 @@
       "a": 22435,
       "b": 22448
     },
-    "uploads_last_24h": 300,
-    "uploads_per_hour_24h": 12.5,
+    "uploads_last_24h": 296,
+    "uploads_per_hour_24h": 12.33,
     "stock_hours_24h": 0.16
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 194,
-      "b": 244
+      "a": 828,
+      "b": 878
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 8,
       "inconclusive_audio": 2,
+      "transient_original": 5,
       "source_search_unavailable": 3,
-      "no_english_czech_subtitles": 2,
+      "no_english_czech_subtitles": 1,
       "prepared": 7
     }
   },
-  "indexed_candidates_in_scan": 1160,
+  "indexed_candidates_in_scan": 782,
   "discovery_progress": {
     "last_series": 633,
     "last_series_order": [
@@ -61,24 +61,13 @@
     ]
   },
   "cache": {
-    "search_miss": 87,
-    "search_seconds": 3075.12,
-    "search_hit": 3,
-    "media_miss": 48,
-    "media_seconds": 263.54,
-    "media_hit": 82,
-    "audio_miss": 15,
-    "audio_seconds": 427.38,
-    "audio_hit": 6
+    "search_miss": 12,
+    "search_seconds": 162.07,
+    "search_hit": 1
   },
-  "audio_pipeline": {
-    "sample_count": 39,
-    "download_seconds": 307.35,
-    "inference_wait_seconds": 0.0,
-    "inference_seconds": 119.96
-  },
-  "productive_seasons": 118,
-  "series_paused_this_run": 3,
+  "audio_pipeline": {},
+  "productive_seasons": 114,
+  "series_paused_this_run": 4,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
   "repaired_this_run": 0,
@@ -2881,48 +2870,15 @@
     }
   ],
   "search_health": {
-    "status": "paused",
+    "status": "probe_due",
     "consecutive_failures": 2,
-    "retry_seconds": 548,
-    "failed_cycles_this_run": 2,
-    "control_requests": 10,
+    "retry_seconds": 0,
+    "failed_cycles_this_run": 0,
+    "control_requests": 0,
     "request_gap_seconds": 8,
-    "restart_required": true,
+    "restart_required": false,
     "last_request_limit": null,
-    "resume_after": "2026-11-24T15:51:47.120746+00:00",
-    "controls": [
-      {
-        "path": "/teorie-velkeho-tresku/s/-6",
-        "status": 200,
-        "response_bytes": 188635,
-        "parsed_candidates": 0,
-        "body_sha256": "3eb8d9167fad556a5f0a69266a12fd9ca8c53f6eb1a681ad22db3b4317b12ab6",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/teorie-velkeho-tresku/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-24T15:41:39.308207+00:00"
-      },
-      {
-        "path": "/doktor-martin/s/-6",
-        "status": 200,
-        "response_bytes": 188467,
-        "parsed_candidates": 0,
-        "body_sha256": "186875d0b1a9d7a593b551f65761e0f32ea207e931919eeadd55fa5bd3a2d350",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/doktor-martin/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-24T15:41:47.120672+00:00"
-      }
-    ]
+    "resume_after": null,
+    "controls": []
   }
 }
