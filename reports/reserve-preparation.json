@@ -1,30 +1,31 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45474200104",
-  "attempted_this_run": 5,
-  "prepared_this_run": 0,
-  "reserve_total": 37380,
-  "queue_total": 45815,
-  "updated_at": "2026-11-24T20:14:05.543829+00:00",
+  "attempted_this_run": 7,
+  "prepared_this_run": 2,
+  "reserve_total": 37382,
+  "queue_total": 45817,
+  "updated_at": "2026-11-24T20:15:20.981491+00:00",
   "workers": 4,
-  "elapsed_seconds": 1093.92,
-  "prepared_per_hour": 0.0,
-  "available_this_run": 0,
-  "available_per_hour": 0.0,
+  "elapsed_seconds": 1169.36,
+  "prepared_per_hour": 6.16,
+  "available_this_run": 2,
+  "available_per_hour": 6.16,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 45815,
-    "ready": 0,
+    "queue_total": 45817,
+    "ready": 2,
     "ready_by_account": {
-      "a": 0,
-      "b": 0
+      "a": 1,
+      "b": 1
     },
     "categories": {
       "completed": 44920,
       "allocated": 880,
       "failed": 12,
-      "language_review": 3
+      "language_review": 3,
+      "ready": 2
     },
     "completed_by_account": {
       "a": 22454,
@@ -32,14 +33,14 @@
     },
     "uploads_last_24h": 275,
     "uploads_per_hour_24h": 11.46,
-    "stock_hours_24h": 0.0
+    "stock_hours_24h": 0.17
   },
   "health": {
-    "status": "waiting_for_sources",
+    "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1468,
-      "b": 1451
+      "a": 1543,
+      "b": 1527
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 4,
@@ -49,34 +50,34 @@
       "no_matches": 17,
       "no_english_czech_subtitles": 1,
       "inconclusive_subtitles": 2,
-      "prepared": 4
+      "prepared": 6
     }
   },
   "indexed_candidates_in_scan": 578,
   "discovery_progress": {
-    "last_series": 2838,
+    "last_series": 793,
     "last_series_order": [
       false,
       -5.6,
-      -48876,
-      2838
+      -35260,
+      793
     ]
   },
   "cache": {
-    "search_miss": 25,
-    "search_seconds": 639.95,
-    "media_hit": 50,
-    "media_miss": 5,
-    "media_seconds": 133.03,
-    "audio_miss": 3,
+    "search_miss": 30,
+    "search_seconds": 782.63,
+    "media_hit": 51,
+    "media_miss": 7,
+    "media_seconds": 136.93,
+    "audio_miss": 4,
     "search_hit": 1,
-    "audio_seconds": 105.21
+    "audio_seconds": 126.61
   },
   "audio_pipeline": {
-    "sample_count": 8,
-    "download_seconds": 84.53,
+    "sample_count": 10,
+    "download_seconds": 101.45,
     "inference_wait_seconds": 0.0,
-    "inference_seconds": 20.61
+    "inference_seconds": 25.1
   },
   "productive_seasons": 109,
   "series_paused_this_run": 4,
@@ -88,7 +89,7 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 37380,
+    "prepared": 37382,
     "deferred": 38811
   },
   "requested_series": [
