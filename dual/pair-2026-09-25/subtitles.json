@@ -1122,12 +1122,34 @@
       "identity": "659:2:5",
       "account": "a",
       "target_video_id": "31128954",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 132,
       "detail_url": "https://prehraj.to/nocni-recepcni-s02e05-5-epizoda-4k-cz-titulky-titulky-cekaji-mkv/9dbb38c7aa2a0c83",
-      "checked_at": "2026-11-24T12:53:23.244568+00:00",
-      "retry_after": "2026-11-24T13:08:23.244582+00:00"
+      "checked_at": "2026-11-24T23:17:03.774443+00:00",
+      "retry_after": "2026-11-24T23:32:03.774461+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31133523": {
       "identity": "827:1:4",
@@ -2496,5 +2518,5 @@
       "retry_after": "2026-11-24T13:24:40.612780+00:00"
     }
   },
-  "updated_at": "2026-11-24T23:16:39.491260+00:00"
+  "updated_at": "2026-11-24T23:17:03.774468+00:00"
 }
