@@ -1248207,52 +1248207,16 @@
       "queue_rank": 40291
     },
     "10132:1:2": {
-      "at": "2026-11-12T22:00:57.023127+00:00",
+      "at": "2026-11-24T12:36:01.476996+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 157.54,
-      "search_evidence": [
-        {
-          "path": "/tatinkove-na-zavolani-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216183,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tatinkove-na-zavolani/s/-6",
-          "status": 200,
-          "response_bytes": 216146,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/daddies-on-request-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216101,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/daddies-on-request/s/-6",
-          "status": 200,
-          "response_bytes": 216019,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T22:03:42.222964+00:00"
+      "elapsed_seconds": 62.58,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T12:37:20.909558+00:00"
     },
     "417:1:2": {
       "at": "2026-11-12T22:07:35.959845+00:00",
@@ -1362769,16 +1362733,16 @@
       "queue_rank": 44740
     },
     "2892:1:4": {
-      "at": "2026-11-24T11:24:54.219972+00:00",
+      "at": "2026-11-24T12:36:02.189538+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 352.23,
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-24T11:40:46.449732+00:00"
+      "reason": "no_matches",
+      "elapsed_seconds": 65.14,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-25T12:37:20.909649+00:00"
     },
     "1573:1:18": {
       "at": "2026-11-21T17:52:31.138630+00:00",
@@ -1377841,9 +1377805,37 @@
       "elapsed_seconds": 56.22,
       "source_id": "25692738",
       "queue_rank": 45738
+    },
+    "33:1:6": {
+      "at": "2026-11-24T12:37:21.585043+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9746143221855164,
+      "observed_source_id": "25692761",
+      "elapsed_seconds": 41.61,
+      "source_id": "25692761",
+      "queue_rank": 45739
+    },
+    "33:1:7": {
+      "at": "2026-11-24T12:37:22.241353+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.961590051651001,
+      "observed_source_id": "25692764",
+      "elapsed_seconds": 44.9,
+      "source_id": "25692764",
+      "queue_rank": 45740
     }
   },
-  "updated_at": "2026-11-24T12:37:05.596580+00:00",
+  "updated_at": "2026-11-24T12:38:25.535331+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386796,7 +1386788,7 @@
       "misses": [
         "2892:1:4"
       ],
-      "updated_at": "2026-11-22T18:19:34.557752+00:00"
+      "updated_at": "2026-11-24T12:37:20.909671+00:00"
     },
     "778": {
       "misses": [],
@@ -1387923,7 +1387915,7 @@
     },
     "33": {
       "misses": [],
-      "updated_at": "2026-11-24T12:36:01.471824+00:00"
+      "updated_at": "2026-11-24T12:38:07.140089+00:00"
     },
     "138": {
       "misses": [],
@@ -1389216,6 +1389208,12 @@
         "380:1:1"
       ],
       "updated_at": "2026-11-24T12:36:19.951100+00:00"
+    },
+    "10132": {
+      "misses": [
+        "10132:1:2"
+      ],
+      "updated_at": "2026-11-24T12:37:20.909597+00:00"
     }
   },
   "discovery_progress": {
