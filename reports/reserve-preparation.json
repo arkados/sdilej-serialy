@@ -1,31 +1,31 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45303760102",
-  "attempted_this_run": 13,
+  "attempted_this_run": 14,
   "prepared_this_run": 4,
   "reserve_total": 37194,
   "queue_total": 45629,
-  "updated_at": "2026-11-24T01:54:42.033010+00:00",
+  "updated_at": "2026-11-24T01:56:00.867055+00:00",
   "workers": 4,
-  "elapsed_seconds": 2214.5,
-  "prepared_per_hour": 6.5,
+  "elapsed_seconds": 2293.34,
+  "prepared_per_hour": 6.28,
   "available_this_run": 4,
-  "available_per_hour": 6.5,
+  "available_per_hour": 6.28,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 45629,
-    "ready": 3,
+    "ready": 2,
     "ready_by_account": {
       "a": 2,
-      "b": 1
+      "b": 0
     },
     "categories": {
       "completed": 44731,
-      "allocated": 880,
+      "allocated": 881,
       "failed": 12,
       "language_review": 3,
-      "ready": 3
+      "ready": 2
     },
     "completed_by_account": {
       "a": 22360,
@@ -33,19 +33,20 @@
     },
     "uploads_last_24h": 415,
     "uploads_per_hour_24h": 17.29,
-    "stock_hours_24h": 0.17
+    "stock_hours_24h": 0.12
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 2656,
-      "b": 3886
+      "a": 2735,
+      "b": 3964
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 6,
       "no_matches": 1,
       "inconclusive_audio": 2,
+      "no_acceptable_original": 1,
       "prepared": 4
     }
   },
@@ -60,14 +61,14 @@
     ]
   },
   "cache": {
-    "search_miss": 56,
-    "search_seconds": 1511.28,
+    "search_miss": 60,
+    "search_seconds": 1633.43,
     "search_hit": 5,
-    "media_hit": 73,
+    "media_hit": 74,
     "audio_miss": 8,
     "audio_seconds": 182.57,
-    "media_miss": 30,
-    "media_seconds": 253.12
+    "media_miss": 32,
+    "media_seconds": 259.24
   },
   "audio_pipeline": {
     "sample_count": 17,
@@ -2885,7 +2886,7 @@
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
     "control_requests": 3,
-    "request_gap_seconds": 8,
+    "request_gap_seconds": 4.0,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
