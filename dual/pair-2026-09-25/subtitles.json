@@ -386,12 +386,34 @@
       "identity": "1629:1:6",
       "account": "a",
       "target_video_id": "31108757",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 153,
       "detail_url": "https://prehraj.to/damsky-gambit-s01e06-odroceni-1080p-cz-titulky-titulky-cekaji-mkv/e843fa0a67b8ad1a",
-      "checked_at": "2026-11-24T23:10:32.193167+00:00",
-      "retry_after": "2026-11-24T23:25:32.193184+00:00"
+      "checked_at": "2026-11-25T05:33:58.356993+00:00",
+      "retry_after": "2026-11-25T05:48:58.357007+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31109182": {
       "identity": "1341:1:6",
@@ -2535,5 +2557,5 @@
       "retry_after": "2026-11-24T23:37:52.318567+00:00"
     }
   },
-  "updated_at": "2026-11-25T05:33:37.059328+00:00"
+  "updated_at": "2026-11-25T05:33:58.357015+00:00"
 }
