@@ -1254319,16 +1254319,16 @@
       "queue_rank": 40676
     },
     "5620:1:3": {
-      "at": "2026-11-25T07:15:49.547247+00:00",
+      "at": "2026-11-25T08:06:31.648508+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 173.4,
-      "consecutive_failures": 10,
-      "retry_after": "2026-11-26T07:18:42.944785+00:00"
+      "elapsed_seconds": 303.04,
+      "consecutive_failures": 11,
+      "retry_after": "2026-11-26T08:11:34.689421+00:00"
     },
     "5620:1:5": {
       "at": "2026-11-13T10:29:43.732993+00:00",
@@ -1376655,9 +1376655,21 @@
       "elapsed_seconds": 119.78,
       "consecutive_failures": 1,
       "retry_after": "2026-11-26T08:10:38.845139+00:00"
+    },
+    "4141:1:7": {
+      "at": "2026-11-25T08:10:32.259867+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 90.55,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-26T08:12:02.810564+00:00"
     }
   },
-  "updated_at": "2026-11-25T08:11:04.942718+00:00",
+  "updated_at": "2026-11-25T08:12:17.404664+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388535,7 +1388547,7 @@
       "misses": [
         "5620:1:3"
       ],
-      "updated_at": "2026-11-25T07:18:42.944822+00:00"
+      "updated_at": "2026-11-25T08:11:34.689450+00:00"
     },
     "10426": {
       "misses": [],
@@ -1388783,9 +1388795,11 @@
     "4141": {
       "misses": [
         "4141:1:3",
-        "4141:1:4"
+        "4141:1:4",
+        "4141:1:7"
       ],
-      "updated_at": "2026-11-25T08:10:38.845177+00:00"
+      "updated_at": "2026-11-25T08:12:02.810591+00:00",
+      "retry_after": "2026-11-25T12:12:02.810591+00:00"
     },
     "1012": {
       "misses": [],
@@ -1388949,12 +1388963,12 @@
     }
   },
   "discovery_progress": {
-    "last_series": 2235,
+    "last_series": 8091,
     "last_series_order": [
       false,
       -5,
-      -1882,
-      2235
+      -1145,
+      8091
     ]
   },
   "czech_fallback_revision": 1
