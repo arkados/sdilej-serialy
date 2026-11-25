@@ -1295559,68 +1295559,16 @@
       "retry_after": "2026-11-16T00:48:15.064390+00:00"
     },
     "1976:1:21": {
-      "at": "2026-11-15T00:48:54.321234+00:00",
+      "at": "2026-11-25T16:04:41.503333+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 64.45,
-      "search_evidence": [
-        {
-          "path": "/kralovska-dvojcata-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 216149,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pair-of-kings-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 215967,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kralovska-dvojcata-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 216169,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/kralovska-dvojcata/s/-6",
-          "status": 200,
-          "response_bytes": 227214,
-          "boxes": 9,
-          "parsed_candidates": 9,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pair-of-kings-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 216065,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/pair-of-kings/s/-6",
-          "status": 200,
-          "response_bytes": 217404,
-          "boxes": 2,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-16T00:49:58.771468+00:00"
+      "elapsed_seconds": 145.03,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T16:07:06.536308+00:00"
     },
     "981:1:2": {
       "at": "2026-11-15T00:49:00.681962+00:00",
@@ -1376045,9 +1375993,33 @@
       "elapsed_seconds": 32.8,
       "consecutive_failures": 1,
       "retry_after": "2026-11-26T16:02:54.368581+00:00"
+    },
+    "2168:1:11": {
+      "at": "2026-11-25T16:07:07.350684+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 31.69,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-26T16:07:39.044296+00:00"
+    },
+    "2168:1:12": {
+      "at": "2026-11-25T16:07:39.738563+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 15.3,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-26T16:07:55.040159+00:00"
     }
   },
-  "updated_at": "2026-11-25T16:06:44.277170+00:00",
+  "updated_at": "2026-11-25T16:08:11.579066+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1387072,9 +1387044,11 @@
     "1976": {
       "misses": [
         "1976:1:19",
-        "1976:1:20"
+        "1976:1:20",
+        "1976:1:21"
       ],
-      "updated_at": "2026-11-25T16:03:14.060639+00:00"
+      "updated_at": "2026-11-25T16:07:06.536337+00:00",
+      "retry_after": "2026-11-25T20:07:06.536337+00:00"
     },
     "10497": {
       "misses": [
@@ -1387774,12 +1387748,10 @@
     },
     "2168": {
       "misses": [
-        "2168:1:8",
-        "2168:1:9",
-        "2168:1:10"
+        "2168:1:11",
+        "2168:1:12"
       ],
-      "updated_at": "2026-11-25T11:56:35.460542+00:00",
-      "retry_after": "2026-11-25T15:56:35.460542+00:00"
+      "updated_at": "2026-11-25T16:07:55.040184+00:00"
     },
     "985": {
       "misses": [],
@@ -1388781,12 +1388753,12 @@
     }
   },
   "discovery_progress": {
-    "last_series": 547,
+    "last_series": 899,
     "last_series_order": [
       true,
       0,
       0,
-      547
+      899
     ]
   },
   "czech_fallback_revision": 1
