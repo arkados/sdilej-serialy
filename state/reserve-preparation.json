@@ -154771,21 +154771,19 @@
       "queue_rank": 38828
     },
     "1239:4:12": {
-      "at": "2026-11-13T16:47:02.916120+00:00",
+      "at": "2026-11-25T18:36:03.748845+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.984749436378479,
+      "observed_language_probability": 0.9851325750350952,
       "observed_source_id": "27936764",
-      "elapsed_seconds": 214.26,
-      "consecutive_failures": 11,
-      "retry_after": "2026-11-14T16:50:38.563956+00:00"
+      "reason": "transient_search",
+      "elapsed_seconds": 580.6,
+      "consecutive_failures": 12,
+      "retry_after": "2026-11-26T00:45:44.345571+00:00"
     },
     "1951:2:20": {
       "at": "2026-10-16T00:13:23.336783+00:00",
@@ -1375835,9 +1375833,21 @@
       "elapsed_seconds": 141.96,
       "source_id": "33939327",
       "queue_rank": 46124
+    },
+    "1:10:5": {
+      "at": "2026-11-25T18:39:12.243254+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 392.1,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-25T18:55:44.344454+00:00"
     }
   },
-  "updated_at": "2026-11-25T18:44:15.353782+00:00",
+  "updated_at": "2026-11-25T18:45:57.464845+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388698,6 +1388708,12 @@
         "2634:1:1"
       ],
       "updated_at": "2026-11-25T18:37:52.756158+00:00"
+    },
+    "1239": {
+      "misses": [
+        "1239:4:12"
+      ],
+      "updated_at": "2026-11-25T18:45:44.345590+00:00"
     }
   },
   "discovery_progress": {
