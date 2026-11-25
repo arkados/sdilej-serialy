@@ -204966,14 +204966,16 @@
       "queue_rank": 20504
     },
     "4190:1:1": {
-      "at": "2026-10-13T16:46:16.128306+00:00",
+      "at": "2026-11-25T21:01:27.292453+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 10.67,
-      "consecutive_failures": 1,
-      "retry_after": "2026-10-14T16:46:26.802224+00:00"
+      "elapsed_seconds": 7.34,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T21:01:34.637574+00:00"
     },
     "38:1:11": {
       "at": "2026-10-13T16:44:46.327008+00:00",
@@ -1260057,52 +1260059,16 @@
       "queue_rank": 41020
     },
     "4081:1:1": {
-      "at": "2026-11-13T22:30:27.405847+00:00",
+      "at": "2026-11-25T21:01:11.048302+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 132.11,
-      "search_evidence": [
-        {
-          "path": "/intimni-zpovedi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216051,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/intimni-zpovedi/s/-6",
-          "status": 200,
-          "response_bytes": 215886,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/intimni-zpovedi-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216034,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/intimni-zpovedi/s/-6",
-          "status": 200,
-          "response_bytes": 216005,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T22:32:39.520082+00:00"
+      "elapsed_seconds": 15.58,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T21:01:26.631285+00:00"
     },
     "9790:1:5": {
       "at": "2026-11-13T22:39:14.286311+00:00",
@@ -1369177,16 +1369143,16 @@
       "retry_after": "2026-11-26T05:34:54.096236+00:00"
     },
     "96:1:9": {
-      "at": "2026-11-24T19:18:01.998327+00:00",
+      "at": "2026-11-25T20:58:43.600546+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 207.49,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-25T19:21:29.501415+00:00"
+      "elapsed_seconds": 51.1,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T21:00:39.425924+00:00"
     },
     "96:1:12": {
       "at": "2026-11-24T19:18:03.057881+00:00",
@@ -1376059,9 +1376025,37 @@
       "elapsed_seconds": 44.04,
       "source_id": "26001978",
       "queue_rank": 46170
+    },
+    "4048:1:3": {
+      "at": "2026-11-25T21:00:39.426018+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9648452997207642,
+      "observed_source_id": "26001981",
+      "elapsed_seconds": 28.69,
+      "source_id": "26001981",
+      "queue_rank": 46171
+    },
+    "4048:1:4": {
+      "at": "2026-11-25T21:00:40.096884+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9785722494125366,
+      "observed_source_id": "26001984",
+      "elapsed_seconds": 30.28,
+      "source_id": "26001984",
+      "queue_rank": 46172
     }
   },
-  "updated_at": "2026-11-25T20:59:35.784998+00:00",
+  "updated_at": "2026-11-25T21:01:38.432982+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386191,12 +1386185,9 @@
     },
     "96": {
       "misses": [
-        "96:1:7",
-        "96:1:8",
-        "96:1:14"
+        "96:1:9"
       ],
-      "updated_at": "2026-11-25T05:34:54.096267+00:00",
-      "retry_after": "2026-11-25T09:34:54.096267+00:00"
+      "updated_at": "2026-11-25T21:00:39.425945+00:00"
     },
     "10318": {
       "misses": [
@@ -1389052,16 +1389043,28 @@
     },
     "4048": {
       "misses": [],
-      "updated_at": "2026-11-25T20:59:32.903442+00:00"
+      "updated_at": "2026-11-25T21:01:10.380230+00:00"
+    },
+    "4081": {
+      "misses": [
+        "4081:1:1"
+      ],
+      "updated_at": "2026-11-25T21:01:26.631306+00:00"
+    },
+    "4190": {
+      "misses": [
+        "4190:1:1"
+      ],
+      "updated_at": "2026-11-25T21:01:34.637601+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 4048,
+    "last_series": 4190,
     "last_series_order": [
       true,
       0,
       0,
-      4048
+      4190
     ]
   },
   "czech_fallback_revision": 1
