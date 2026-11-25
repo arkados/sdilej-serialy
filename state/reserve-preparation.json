@@ -204987,14 +204987,16 @@
       "queue_rank": 20505
     },
     "4612:1:1": {
-      "at": "2026-10-13T16:46:27.088484+00:00",
+      "at": "2026-11-25T21:30:20.146920+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 45.75,
-      "consecutive_failures": 1,
-      "retry_after": "2026-10-14T16:47:12.842323+00:00"
+      "elapsed_seconds": 53.2,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T21:31:13.343103+00:00"
     },
     "38:1:12": {
       "at": "2026-10-13T16:45:57.164809+00:00",
@@ -1376005,9 +1376007,23 @@
       "elapsed_seconds": 231.65,
       "consecutive_failures": 1,
       "retry_after": "2026-11-25T22:29:09.242627+00:00"
+    },
+    "1:2:2": {
+      "at": "2026-11-25T21:26:49.462901+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9923444390296936,
+      "observed_source_id": "34296756",
+      "elapsed_seconds": 209.93,
+      "source_id": "34296756",
+      "queue_rank": 46180
     }
   },
-  "updated_at": "2026-11-25T21:30:10.960550+00:00",
+  "updated_at": "2026-11-25T21:31:22.840878+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381239,7 +1381255,7 @@
     },
     "1": {
       "misses": [],
-      "updated_at": "2026-11-25T21:20:51.423123+00:00"
+      "updated_at": "2026-11-25T21:30:19.388781+00:00"
     },
     "796": {
       "misses": [],
@@ -1389071,15 +1389087,21 @@
         "4440:1:1"
       ],
       "updated_at": "2026-11-25T21:29:09.242653+00:00"
+    },
+    "4612": {
+      "misses": [
+        "4612:1:1"
+      ],
+      "updated_at": "2026-11-25T21:31:13.343127+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 4510,
+    "last_series": 4708,
     "last_series_order": [
       true,
       0,
       0,
-      4510
+      4708
     ]
   },
   "czech_fallback_revision": 1
