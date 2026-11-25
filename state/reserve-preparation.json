@@ -230144,16 +230144,16 @@
       "retry_after": "2026-11-26T13:19:27.684077+00:00"
     },
     "9667:1:5": {
-      "at": "2026-11-25T11:29:33.314394+00:00",
+      "at": "2026-11-25T13:17:00.619129+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 213.76,
-      "consecutive_failures": 38,
-      "retry_after": "2026-11-26T11:33:17.220876+00:00"
+      "elapsed_seconds": 173.68,
+      "consecutive_failures": 39,
+      "retry_after": "2026-11-26T13:20:39.512850+00:00"
     },
     "9671:2:1": {
       "at": "2026-10-14T16:55:28.201232+00:00",
@@ -521185,53 +521185,17 @@
       "queue_rank": 31480
     },
     "2:1:1": {
-      "at": "2026-11-02T21:14:34.918865+00:00",
+      "at": "2026-11-25T13:19:24.026913+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
+      "czech_fallback_revision": 1,
       "request_probe_revision": 1,
-      "method": "discovery",
       "reason": "no_matches",
-      "elapsed_seconds": 126.98,
-      "search_evidence": [
-        {
-          "path": "/nemocnica-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 229203,
-          "boxes": 11,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nemocnica/s/-6",
-          "status": 200,
-          "response_bytes": 533252,
-          "boxes": 276,
-          "parsed_candidates": 269,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nemocnica-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 229152,
-          "boxes": 11,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nemocnica/s/-6",
-          "status": 200,
-          "response_bytes": 533234,
-          "boxes": 276,
-          "parsed_candidates": 269,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-03T21:16:41.898129+00:00"
+      "elapsed_seconds": 13.4,
+      "consecutive_failures": 4,
+      "retry_after": "2026-11-26T13:20:39.513392+00:00"
     },
     "10474:1:1": {
       "at": "2026-11-05T01:34:34.503262+00:00",
@@ -1257656,21 +1257620,19 @@
       "queue_rank": 40902
     },
     "9441:1:1": {
-      "at": "2026-11-13T16:53:32.391033+00:00",
+      "at": "2026-11-25T13:19:15.410196+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.9445909261703491,
+      "observed_language_probability": 0.9381458163261414,
       "observed_source_id": "24653661",
-      "elapsed_seconds": 36.77,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T16:54:09.160749+00:00"
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 89.35,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T15:20:44.756396+00:00"
     },
     "6491:1:11": {
       "at": "2026-11-13T16:54:38.595177+00:00",
@@ -1376189,7 +1376151,7 @@
       "queue_rank": 46069
     }
   },
-  "updated_at": "2026-11-25T13:19:33.445590+00:00",
+  "updated_at": "2026-11-25T13:21:43.964841+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381361,9 +1381323,11 @@
     "9667": {
       "misses": [
         "9667:1:2",
-        "9667:1:3"
+        "9667:1:3",
+        "9667:1:5"
       ],
-      "updated_at": "2026-11-25T13:19:27.684101+00:00"
+      "updated_at": "2026-11-25T13:20:39.512876+00:00",
+      "retry_after": "2026-11-25T13:50:39.512876+00:00"
     },
     "702": {
       "misses": [
@@ -1388820,6 +1388784,18 @@
     "9810": {
       "misses": [],
       "updated_at": "2026-11-25T13:16:59.547675+00:00"
+    },
+    "2": {
+      "misses": [
+        "2:1:1"
+      ],
+      "updated_at": "2026-11-25T13:20:39.513409+00:00"
+    },
+    "9441": {
+      "misses": [
+        "9441:1:1"
+      ],
+      "updated_at": "2026-11-25T13:20:44.756423+00:00"
     }
   },
   "discovery_progress": {
