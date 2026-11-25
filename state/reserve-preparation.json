@@ -1260675,52 +1260675,16 @@
       "queue_rank": 41056
     },
     "5053:1:1": {
-      "at": "2026-11-13T23:01:04.424465+00:00",
+      "at": "2026-11-25T22:49:48.519084+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 20.82,
-      "search_evidence": [
-        {
-          "path": "/lego-masters-korea-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216127,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/lego-masters-korea/s/-6",
-          "status": 200,
-          "response_bytes": 215950,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/lego-masters-korea-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216124,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/lego-masters-korea/s/-6",
-          "status": 200,
-          "response_bytes": 215995,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T23:01:25.243649+00:00"
+      "elapsed_seconds": 55.33,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T22:50:43.846743+00:00"
     },
     "5276:1:1": {
       "at": "2026-11-13T23:01:24.622898+00:00",
@@ -1376045,9 +1376009,51 @@
       "elapsed_seconds": 942.62,
       "consecutive_failures": 1,
       "retry_after": "2026-11-25T22:57:45.362002+00:00"
+    },
+    "1:2:15": {
+      "at": "2026-11-25T22:41:54.020599+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9601383805274963,
+      "observed_source_id": "34296820",
+      "elapsed_seconds": 462.18,
+      "source_id": "34296820",
+      "queue_rank": 46187
+    },
+    "1:2:16": {
+      "at": "2026-11-25T22:42:46.244406+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9288333654403687,
+      "observed_source_id": "34296824",
+      "elapsed_seconds": 415.97,
+      "source_id": "34296824",
+      "queue_rank": 46188
+    },
+    "1:2:18": {
+      "at": "2026-11-25T22:43:42.653315+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9324242472648621,
+      "observed_source_id": "32394654",
+      "elapsed_seconds": 372.68,
+      "source_id": "32394654",
+      "queue_rank": 46189
     }
   },
-  "updated_at": "2026-11-25T22:49:38.869136+00:00",
+  "updated_at": "2026-11-25T22:50:52.892513+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381275,13 +1381281,8 @@
       "updated_at": "2026-11-25T10:11:40.759408+00:00"
     },
     "1": {
-      "misses": [
-        "1:2:10",
-        "1:2:11",
-        "1:2:13"
-      ],
-      "updated_at": "2026-11-25T22:42:45.362026+00:00",
-      "retry_after": "2026-11-25T23:12:45.362026+00:00"
+      "misses": [],
+      "updated_at": "2026-11-25T22:49:55.336028+00:00"
     },
     "796": {
       "misses": [],
@@ -1389130,15 +1389131,21 @@
         "5048:1:2"
       ],
       "updated_at": "2026-11-25T22:35:15.676831+00:00"
+    },
+    "5053": {
+      "misses": [
+        "5053:1:1"
+      ],
+      "updated_at": "2026-11-25T22:50:43.846793+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 5048,
+    "last_series": 5276,
     "last_series_order": [
       true,
       0,
       0,
-      5048
+      5276
     ]
   },
   "czech_fallback_revision": 1
