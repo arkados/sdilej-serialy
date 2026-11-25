@@ -1212,12 +1212,34 @@
       "identity": "827:1:5",
       "account": "a",
       "target_video_id": "31139736",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 130,
       "detail_url": "https://prehraj.to/nedostatek-dukazu-s01e05-predehra-4k-cz-titulky-titulky-cekaji-mkv/9ebc7b9bea672204",
-      "checked_at": "2026-11-24T23:17:34.864247+00:00",
-      "retry_after": "2026-11-24T23:32:34.864262+00:00"
+      "checked_at": "2026-11-25T05:39:26.188042+00:00",
+      "retry_after": "2026-11-25T05:54:26.188055+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31119895": {
       "identity": "702:1:6",
@@ -2601,5 +2623,5 @@
       "retry_after": "2026-11-24T23:37:52.318567+00:00"
     }
   },
-  "updated_at": "2026-11-25T05:39:06.130905+00:00"
+  "updated_at": "2026-11-25T05:39:26.188063+00:00"
 }
