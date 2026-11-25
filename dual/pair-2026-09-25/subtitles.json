@@ -584,12 +584,34 @@
       "identity": "5535:1:2",
       "account": "a",
       "target_video_id": "31109835",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 152,
       "detail_url": "https://prehraj.to/zlomove-okamziky-atomova-bomba-a-studena-valka-s01e02-otrava-pudy-1080p-cz-titulky-titulky-cekaji-mkv/c43c637a24c4a302",
-      "checked_at": "2026-11-24T23:13:54.021812+00:00",
-      "retry_after": "2026-11-24T23:28:54.021829+00:00"
+      "checked_at": "2026-11-25T05:36:23.537454+00:00",
+      "retry_after": "2026-11-25T05:51:23.537466+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31109957": {
       "identity": "5535:1:6",
@@ -2535,5 +2557,5 @@
       "retry_after": "2026-11-24T23:37:52.318567+00:00"
     }
   },
-  "updated_at": "2026-11-25T05:36:02.584292+00:00"
+  "updated_at": "2026-11-25T05:36:23.537474+00:00"
 }
