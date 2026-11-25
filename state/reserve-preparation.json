@@ -1258404,69 +1258404,31 @@
       "queue_rank": 40951
     },
     "1011:1:1": {
-      "at": "2026-11-13T18:42:53.152377+00:00",
+      "at": "2026-11-25T17:03:17.242252+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 12.87,
-      "search_evidence": [
-        {
-          "path": "/parizski-mohykani-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216060,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/parizski-mohykani/s/-6",
-          "status": 200,
-          "response_bytes": 227925,
-          "boxes": 12,
-          "parsed_candidates": 12,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/parizski-mohykani-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216087,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/parizski-mohykani/s/-6",
-          "status": 200,
-          "response_bytes": 227967,
-          "boxes": 12,
-          "parsed_candidates": 12,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T18:43:06.019038+00:00"
+      "elapsed_seconds": 87.91,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T17:06:24.428155+00:00"
     },
     "996:1:1": {
-      "at": "2026-11-13T18:42:43.950216+00:00",
+      "at": "2026-11-25T17:02:28.904430+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
       "observed_language_probability": 0.966447651386261,
       "observed_source_id": "13393402",
-      "elapsed_seconds": 47.41,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T18:43:42.945974+00:00"
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 222.87,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T19:06:24.428086+00:00"
     },
     "3553:1:13": {
       "at": "2026-11-13T18:42:11.254431+00:00",
@@ -1376028,9 +1375990,37 @@
       "elapsed_seconds": 349.09,
       "source_id": "33116579",
       "queue_rank": 46111
+    },
+    "167:1:16": {
+      "at": "2026-11-25T16:55:51.662278+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9596355557441711,
+      "observed_source_id": "22113539",
+      "elapsed_seconds": 514.7,
+      "source_id": "22113539",
+      "queue_rank": 46112
+    },
+    "167:1:18": {
+      "at": "2026-11-25T17:00:01.950880+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9039333462715149,
+      "observed_source_id": "22113592",
+      "elapsed_seconds": 323.88,
+      "source_id": "22113592",
+      "queue_rank": 46113
     }
   },
-  "updated_at": "2026-11-25T17:04:21.284075+00:00",
+  "updated_at": "2026-11-25T17:07:29.090215+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388773,7 +1388763,19 @@
     },
     "167": {
       "misses": [],
-      "updated_at": "2026-11-25T17:03:16.387451+00:00"
+      "updated_at": "2026-11-25T17:06:24.428033+00:00"
+    },
+    "996": {
+      "misses": [
+        "996:1:1"
+      ],
+      "updated_at": "2026-11-25T17:06:24.428104+00:00"
+    },
+    "1011": {
+      "misses": [
+        "1011:1:1"
+      ],
+      "updated_at": "2026-11-25T17:06:24.428164+00:00"
     }
   },
   "discovery_progress": {
