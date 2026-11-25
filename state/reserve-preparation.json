@@ -1256564,52 +1256564,16 @@
       "queue_rank": 40831
     },
     "1895:1:9": {
-      "at": "2026-11-13T15:11:32.907075+00:00",
+      "at": "2026-11-25T11:22:16.166439+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 24.38,
-      "search_evidence": [
-        {
-          "path": "/nasi-s01e09/s/-6",
-          "status": 200,
-          "response_bytes": 247198,
-          "boxes": 24,
-          "parsed_candidates": 24,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nasi/s/-6",
-          "status": 200,
-          "response_bytes": 538450,
-          "boxes": 299,
-          "parsed_candidates": 244,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nasi-s01e09/s/-6",
-          "status": 200,
-          "response_bytes": 247151,
-          "boxes": 24,
-          "parsed_candidates": 24,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/nasi/s/-6",
-          "status": 200,
-          "response_bytes": 538413,
-          "boxes": 299,
-          "parsed_candidates": 244,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T15:11:57.285640+00:00"
+      "elapsed_seconds": 90.48,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T11:24:01.701256+00:00"
     },
     "4837:1:10": {
       "at": "2026-11-13T15:11:31.894144+00:00",
@@ -1373946,16 +1373910,16 @@
       "retry_after": "2026-11-25T08:30:59.835164+00:00"
     },
     "81:1:17": {
-      "at": "2026-11-25T02:27:01.965856+00:00",
+      "at": "2026-11-25T11:23:14.102786+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 315.67,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-25T02:42:17.638853+00:00"
+      "reason": "no_matches",
+      "elapsed_seconds": 80.25,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-26T11:24:34.351730+00:00"
     },
     "81:1:18": {
       "at": "2026-11-25T02:58:04.675339+00:00",
@@ -1376305,9 +1376269,23 @@
       "elapsed_seconds": 318.75,
       "source_id": "35431058",
       "queue_rank": 46025
+    },
+    "9720:1:8": {
+      "at": "2026-11-25T11:18:43.835523+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.950934648513794,
+      "observed_source_id": "35431060",
+      "elapsed_seconds": 332.76,
+      "source_id": "35431060",
+      "queue_rank": 46026
     }
   },
-  "updated_at": "2026-11-25T11:23:46.119636+00:00",
+  "updated_at": "2026-11-25T11:25:06.159591+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1387245,12 +1387223,9 @@
     },
     "81": {
       "misses": [
-        "81:1:23",
-        "81:1:24",
-        "81:1:25"
+        "81:1:17"
       ],
-      "updated_at": "2026-11-25T07:19:00.471718+00:00",
-      "retry_after": "2026-11-25T11:19:00.471718+00:00"
+      "updated_at": "2026-11-25T11:24:34.351768+00:00"
     },
     "4460": {
       "misses": [
@@ -1388752,7 +1388727,7 @@
     },
     "9720": {
       "misses": [],
-      "updated_at": "2026-11-25T11:23:13.379837+00:00"
+      "updated_at": "2026-11-25T11:24:16.596891+00:00"
     },
     "7400": {
       "misses": [
@@ -1388769,6 +1388744,12 @@
     "4837": {
       "misses": [],
       "updated_at": "2026-11-25T11:22:15.429265+00:00"
+    },
+    "1895": {
+      "misses": [
+        "1895:1:9"
+      ],
+      "updated_at": "2026-11-25T11:24:01.701299+00:00"
     }
   },
   "discovery_progress": {
