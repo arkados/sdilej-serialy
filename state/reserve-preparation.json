@@ -220898,16 +220898,16 @@
       "retry_after": "2026-10-15T08:51:55.436589+00:00"
     },
     "9667:1:2": {
-      "at": "2026-11-24T22:03:08.308981+00:00",
+      "at": "2026-11-25T01:08:02.550185+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 324.03,
-      "consecutive_failures": 34,
-      "retry_after": "2026-11-25T22:08:32.334799+00:00"
+      "elapsed_seconds": 115.62,
+      "consecutive_failures": 35,
+      "retry_after": "2026-11-26T01:10:24.075690+00:00"
     },
     "1198:5:5": {
       "at": "2026-10-14T08:51:56.544930+00:00",
@@ -231429,16 +231429,16 @@
       "retry_after": "2026-11-26T01:06:35.303501+00:00"
     },
     "9667:1:11": {
-      "at": "2026-11-24T22:00:52.831028+00:00",
+      "at": "2026-11-25T01:08:01.466064+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 330.09,
-      "consecutive_failures": 33,
-      "retry_after": "2026-11-25T22:06:41.508750+00:00"
+      "elapsed_seconds": 139.98,
+      "consecutive_failures": 34,
+      "retry_after": "2026-11-26T01:10:24.075576+00:00"
     },
     "9667:1:12": {
       "at": "2026-11-16T13:36:41.556696+00:00",
@@ -1252388,52 +1252388,16 @@
       "retry_after": "2026-11-26T01:07:04.004270+00:00"
     },
     "4023:1:1": {
-      "at": "2026-11-13T06:05:12.351695+00:00",
+      "at": "2026-11-25T01:10:27.236728+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 122.69,
-      "search_evidence": [
-        {
-          "path": "/camino-a-arcadia-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216344,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/camino-a-arcadia/s/-6",
-          "status": 200,
-          "response_bytes": 230444,
-          "boxes": 12,
-          "parsed_candidates": 12,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/camino-a-arcadia-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216338,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/camino-a-arcadia/s/-6",
-          "status": 200,
-          "response_bytes": 230509,
-          "boxes": 12,
-          "parsed_candidates": 12,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T06:07:23.286320+00:00"
+      "elapsed_seconds": 26.47,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T01:10:53.705844+00:00"
     },
     "3082:1:10": {
       "at": "2026-11-13T06:07:31.328544+00:00",
@@ -1377048,9 +1377012,37 @@
       "elapsed_seconds": 61.29,
       "source_id": "29600625",
       "queue_rank": 45891
+    },
+    "326:1:15": {
+      "at": "2026-11-25T01:08:21.116588+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8963112235069275,
+      "observed_source_id": "29600646",
+      "elapsed_seconds": 53.82,
+      "source_id": "29600646",
+      "queue_rank": 45892
+    },
+    "326:1:16": {
+      "at": "2026-11-25T01:08:26.103516+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9545240998268127,
+      "observed_source_id": "29600652",
+      "elapsed_seconds": 58.36,
+      "source_id": "29600652",
+      "queue_rank": 45893
     }
   },
-  "updated_at": "2026-11-25T01:09:06.664388+00:00",
+  "updated_at": "2026-11-25T01:10:57.714892+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1382223,9 +1382215,12 @@
     },
     "9667": {
       "misses": [
-        "9667:1:10"
+        "9667:1:10",
+        "9667:1:11",
+        "9667:1:2"
       ],
-      "updated_at": "2026-11-25T01:06:35.303520+00:00"
+      "updated_at": "2026-11-25T01:10:24.075705+00:00",
+      "retry_after": "2026-11-25T01:40:24.075705+00:00"
     },
     "702": {
       "misses": [
@@ -1388951,7 +1388946,7 @@
     },
     "326": {
       "misses": [],
-      "updated_at": "2026-11-25T01:07:59.472851+00:00"
+      "updated_at": "2026-11-25T01:10:24.075860+00:00"
     },
     "3110": {
       "misses": [
@@ -1388994,15 +1388989,21 @@
         "10047:1:1"
       ],
       "updated_at": "2026-11-25T01:08:25.084596+00:00"
+    },
+    "4023": {
+      "misses": [
+        "4023:1:1"
+      ],
+      "updated_at": "2026-11-25T01:10:53.705867+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 9812,
+    "last_series": 286,
     "last_series_order": [
       false,
       -5.5,
-      -140,
-      9812
+      -35,
+      286
     ]
   },
   "czech_fallback_revision": 1
