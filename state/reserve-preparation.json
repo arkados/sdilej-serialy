@@ -30721,16 +30721,16 @@
       "retry_after": "2026-10-19T13:02:48.728102+00:00"
     },
     "1264:2:3": {
-      "at": "2026-11-25T02:26:51.890846+00:00",
+      "at": "2026-11-25T02:57:56.421800+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 325.75,
-      "consecutive_failures": 42,
-      "retry_after": "2026-11-25T02:42:17.638854+00:00"
+      "reason": "inconclusive_audio",
+      "elapsed_seconds": 331.05,
+      "consecutive_failures": 43,
+      "retry_after": "2026-11-26T03:03:44.241724+00:00"
     },
     "1264:2:4": {
       "at": "2026-11-25T02:26:57.583278+00:00",
@@ -1252964,52 +1252964,16 @@
       "queue_rank": 40586
     },
     "1469:1:1": {
-      "at": "2026-11-13T07:11:30.408737+00:00",
+      "at": "2026-11-25T03:02:33.124936+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 30.75,
-      "search_evidence": [
-        {
-          "path": "/thirst-trap-the-fame-the-fantasy-the-fallout-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216716,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/thirst-trap-the-fame-the-fantasy-the-fallout/s/-6",
-          "status": 200,
-          "response_bytes": 216519,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/thirst-trap-the-fame-the-fantasy-the-fallout-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216687,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/thirst-trap-the-fame-the-fantasy-the-fallout/s/-6",
-          "status": 200,
-          "response_bytes": 216499,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T07:12:13.164835+00:00"
+      "elapsed_seconds": 131.05,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T03:04:44.178108+00:00"
     },
     "10201:1:1": {
       "at": "2026-11-13T07:12:14.072739+00:00",
@@ -1376795,7 +1376759,7 @@
       "retry_after": "2026-11-26T03:03:00.261714+00:00"
     }
   },
-  "updated_at": "2026-11-25T03:03:29.312248+00:00",
+  "updated_at": "2026-11-25T03:04:50.645584+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1384460,9 +1384424,11 @@
     "1264": {
       "misses": [
         "1264:1:8",
-        "1264:1:10"
+        "1264:1:10",
+        "1264:2:3"
       ],
-      "updated_at": "2026-11-25T02:26:35.866279+00:00"
+      "updated_at": "2026-11-25T03:03:44.241769+00:00",
+      "retry_after": "2026-11-25T03:33:44.241769+00:00"
     },
     "208": {
       "misses": [],
@@ -1388815,6 +1388781,12 @@
         "3341:1:1"
       ],
       "updated_at": "2026-11-25T02:26:23.440906+00:00"
+    },
+    "1469": {
+      "misses": [
+        "1469:1:1"
+      ],
+      "updated_at": "2026-11-25T03:04:44.178139+00:00"
     }
   },
   "discovery_progress": {
