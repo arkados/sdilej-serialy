@@ -1260778,52 +1260778,16 @@
       "queue_rank": 41060
     },
     "5286:1:1": {
-      "at": "2026-11-13T23:10:20.785609+00:00",
+      "at": "2026-11-25T22:56:56.957249+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 26.52,
-      "search_evidence": [
-        {
-          "path": "/obchod-so-stastim-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216124,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/obchod-so-stastim/s/-6",
-          "status": 200,
-          "response_bytes": 215920,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/obchod-so-stastim-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216103,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/obchod-so-stastim/s/-6",
-          "status": 200,
-          "response_bytes": 216003,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T23:10:47.309561+00:00"
+      "elapsed_seconds": 28.25,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T22:57:25.212118+00:00"
     },
     "5311:1:1": {
       "at": "2026-11-13T23:10:21.739911+00:00",
@@ -1376029,9 +1375993,23 @@
       "elapsed_seconds": 406.76,
       "source_id": "32394657",
       "queue_rank": 46190
+    },
+    "1:2:20": {
+      "at": "2026-11-25T22:53:02.123669+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9510625004768372,
+      "observed_source_id": "34296845",
+      "elapsed_seconds": 230.89,
+      "source_id": "34296845",
+      "queue_rank": 46191
     }
   },
-  "updated_at": "2026-11-25T22:56:16.476073+00:00",
+  "updated_at": "2026-11-25T22:58:01.143385+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381260,7 +1381238,7 @@
     },
     "1": {
       "misses": [],
-      "updated_at": "2026-11-25T22:55:11.544788+00:00"
+      "updated_at": "2026-11-25T22:56:56.036448+00:00"
     },
     "796": {
       "misses": [],
@@ -1389121,15 +1389099,21 @@
         "5276:1:1"
       ],
       "updated_at": "2026-11-25T22:51:33.883320+00:00"
+    },
+    "5286": {
+      "misses": [
+        "5286:1:1"
+      ],
+      "updated_at": "2026-11-25T22:57:25.212145+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 5276,
+    "last_series": 5311,
     "last_series_order": [
       true,
       0,
       0,
-      5276
+      5311
     ]
   },
   "czech_fallback_revision": 1
