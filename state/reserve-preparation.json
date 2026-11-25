@@ -1256244,52 +1256244,16 @@
       "queue_rank": 40812
     },
     "6444:1:1": {
-      "at": "2026-11-13T14:22:14.109091+00:00",
+      "at": "2026-11-25T10:24:56.937394+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 29.9,
-      "search_evidence": [
-        {
-          "path": "/cukrarna-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215820,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cukrarna/s/-6",
-          "status": 200,
-          "response_bytes": 305300,
-          "boxes": 74,
-          "parsed_candidates": 66,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cukrarna-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215974,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/cukrarna/s/-6",
-          "status": 200,
-          "response_bytes": 305306,
-          "boxes": 74,
-          "parsed_candidates": 66,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T14:22:44.013072+00:00"
+      "elapsed_seconds": 63.22,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T10:26:00.157567+00:00"
     },
     "6426:1:6": {
       "at": "2026-11-13T14:22:13.293991+00:00",
@@ -1376363,9 +1376327,23 @@
       "elapsed_seconds": 270.94,
       "consecutive_failures": 1,
       "retry_after": "2026-11-26T10:22:43.878186+00:00"
+    },
+    "3553:1:2": {
+      "at": "2026-11-25T10:24:09.226371+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.972347617149353,
+      "observed_source_id": "34347319",
+      "elapsed_seconds": 75.14,
+      "source_id": "34347319",
+      "queue_rank": 46008
     }
   },
-  "updated_at": "2026-11-25T10:25:05.113543+00:00",
+  "updated_at": "2026-11-25T10:26:23.557440+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388797,6 +1388775,16 @@
     "5606": {
       "misses": [],
       "updated_at": "2026-11-25T10:13:45.304844+00:00"
+    },
+    "3553": {
+      "misses": [],
+      "updated_at": "2026-11-25T10:25:24.361689+00:00"
+    },
+    "6444": {
+      "misses": [
+        "6444:1:1"
+      ],
+      "updated_at": "2026-11-25T10:26:00.157597+00:00"
     }
   },
   "discovery_progress": {
