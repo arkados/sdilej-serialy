@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
-  "run_id": "45525665827",
-  "attempted_this_run": 60,
-  "prepared_this_run": 15,
+  "run_id": "45533743141",
+  "attempted_this_run": 0,
+  "prepared_this_run": 0,
   "reserve_total": 37480,
   "queue_total": 45915,
-  "updated_at": "2026-11-25T02:32:37.818277+00:00",
+  "updated_at": "2026-11-25T02:43:44.233565+00:00",
   "workers": 4,
-  "elapsed_seconds": 3432.41,
-  "prepared_per_hour": 15.73,
-  "available_this_run": 15,
-  "available_per_hour": 15.73,
+  "elapsed_seconds": 68.71,
+  "prepared_per_hour": 0.0,
+  "available_this_run": 0,
+  "available_per_hour": 0.0,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -30,28 +30,27 @@
       "a": 22526,
       "b": 22532
     },
-    "uploads_last_24h": 317,
-    "uploads_per_hour_24h": 13.21,
+    "uploads_last_24h": 316,
+    "uploads_per_hour_24h": 13.17,
     "stock_hours_24h": 0.0
   },
   "health": {
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 572,
-      "b": 694
+      "a": 1238,
+      "b": 1360
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 4,
       "inconclusive_audio": 7,
       "source_search_unavailable": 5,
-      "inconclusive_subtitles": 7,
+      "inconclusive_subtitles": 6,
       "no_acceptable_original": 1,
       "no_matches": 21,
-      "prepared": 15
+      "prepared": 13
     }
   },
-  "indexed_candidates_in_scan": 1397,
+  "indexed_candidates_in_scan": 1310,
   "discovery_progress": {
     "last_series": 7078,
     "last_series_order": [
@@ -62,23 +61,11 @@
     ]
   },
   "cache": {
-    "search_miss": 347,
-    "search_seconds": 5803.7,
-    "search_hit": 7,
-    "media_miss": 39,
-    "media_seconds": 224.96,
-    "media_hit": 82,
-    "audio_miss": 36,
-    "audio_seconds": 705.6,
-    "audio_hit": 11
+    "search_miss": 12,
+    "search_seconds": 172.47
   },
-  "audio_pipeline": {
-    "sample_count": 81,
-    "download_seconds": 528.72,
-    "inference_wait_seconds": 10.05,
-    "inference_seconds": 166.75
-  },
-  "productive_seasons": 108,
+  "audio_pipeline": {},
+  "productive_seasons": 104,
   "series_paused_this_run": 8,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
@@ -2890,48 +2877,15 @@
     }
   ],
   "search_health": {
-    "status": "paused",
+    "status": "probe_due",
     "consecutive_failures": 2,
-    "retry_seconds": 580,
-    "failed_cycles_this_run": 2,
-    "control_requests": 23,
+    "retry_seconds": 0,
+    "failed_cycles_this_run": 0,
+    "control_requests": 0,
     "request_gap_seconds": 8,
-    "restart_required": true,
+    "restart_required": false,
     "last_request_limit": null,
-    "resume_after": "2026-11-25T02:42:17.638860+00:00",
-    "controls": [
-      {
-        "path": "/teorie-velkeho-tresku/s/-6",
-        "status": 200,
-        "response_bytes": 188633,
-        "parsed_candidates": 0,
-        "body_sha256": "7ffcc1682cd8fff3c8b96621363183b7fdf14e4bd609945aefa0727508abda99",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/teorie-velkeho-tresku/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-25T02:32:13.498028+00:00"
-      },
-      {
-        "path": "/doktor-martin/s/-6",
-        "status": 200,
-        "response_bytes": 188465,
-        "parsed_candidates": 0,
-        "body_sha256": "1f2c7fd313f798147afe0a89a61626a3a79cd9a4b7156faf69a651c94b5d0318",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/doktor-martin/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-25T02:32:17.638772+00:00"
-      }
-    ]
+    "resume_after": null,
+    "controls": []
   }
 }
