@@ -27129,16 +27129,16 @@
       "retry_after": "2026-11-26T14:57:05.695643+00:00"
     },
     "1264:1:7": {
-      "at": "2026-11-25T10:06:45.681200+00:00",
+      "at": "2026-11-25T14:56:55.864394+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 391.89,
-      "consecutive_failures": 45,
-      "retry_after": "2026-11-26T10:13:28.994919+00:00"
+      "elapsed_seconds": 151.19,
+      "consecutive_failures": 46,
+      "retry_after": "2026-11-26T15:00:59.895081+00:00"
     },
     "3687:1:1": {
       "at": "2026-10-19T00:20:32.349475+00:00",
@@ -1258045,52 +1258045,16 @@
       "retry_after": "2026-11-26T14:55:34.199562+00:00"
     },
     "2757:1:17": {
-      "at": "2026-11-13T18:10:51.797065+00:00",
+      "at": "2026-11-25T15:01:00.777796+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 123.33,
-      "search_evidence": [
-        {
-          "path": "/policajti-z-predmesti-s01e17/s/-6",
-          "status": 200,
-          "response_bytes": 216181,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/policajti-z-predmesti/s/-6",
-          "status": 200,
-          "response_bytes": 247603,
-          "boxes": 26,
-          "parsed_candidates": 26,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/policajti-z-predmesti-s01e17/s/-6",
-          "status": 200,
-          "response_bytes": 216229,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/policajti-z-predmesti/s/-6",
-          "status": 200,
-          "response_bytes": 247607,
-          "boxes": 26,
-          "parsed_candidates": 26,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T18:12:55.124654+00:00"
+      "elapsed_seconds": 26.74,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T15:01:27.515947+00:00"
     },
     "3088:1:8": {
       "at": "2026-11-13T18:22:47.064618+00:00",
@@ -1376065,9 +1376029,51 @@
       "elapsed_seconds": 51.03,
       "source_id": "34453908",
       "queue_rank": 46093
+    },
+    "9810:1:25": {
+      "at": "2026-11-25T14:56:58.132460+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.949830949306488,
+      "observed_source_id": "34453910",
+      "elapsed_seconds": 60.58,
+      "source_id": "34453910",
+      "queue_rank": 46094
+    },
+    "9810:1:26": {
+      "at": "2026-11-25T14:57:06.562444+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9771137833595276,
+      "observed_source_id": "34453911",
+      "elapsed_seconds": 57.67,
+      "source_id": "34453911",
+      "queue_rank": 46095
+    },
+    "9810:1:27": {
+      "at": "2026-11-25T14:57:48.978371+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9486433267593384,
+      "observed_source_id": "34453912",
+      "elapsed_seconds": 33.72,
+      "source_id": "34453912",
+      "queue_rank": 46096
     }
   },
-  "updated_at": "2026-11-25T14:58:02.301736+00:00",
+  "updated_at": "2026-11-25T15:01:31.799683+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1383733,9 +1383739,11 @@
     "1264": {
       "misses": [
         "1264:2:5",
-        "1264:1:6"
+        "1264:1:6",
+        "1264:1:7"
       ],
-      "updated_at": "2026-11-25T14:57:05.695680+00:00"
+      "updated_at": "2026-11-25T15:00:59.895120+00:00",
+      "retry_after": "2026-11-25T15:30:59.895120+00:00"
     },
     "208": {
       "misses": [],
@@ -1388694,7 +1388702,7 @@
     },
     "9810": {
       "misses": [],
-      "updated_at": "2026-11-25T14:57:48.107248+00:00"
+      "updated_at": "2026-11-25T15:00:59.895331+00:00"
     },
     "2": {
       "misses": [
@@ -1388755,15 +1388763,21 @@
         "5573:1:1"
       ],
       "updated_at": "2026-11-25T14:55:34.199595+00:00"
+    },
+    "2757": {
+      "misses": [
+        "2757:1:17"
+      ],
+      "updated_at": "2026-11-25T15:01:27.515981+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 5573,
+    "last_series": 4953,
     "last_series_order": [
       false,
       -2.6,
-      -73,
-      5573
+      -10,
+      4953
     ]
   },
   "czech_fallback_revision": 1
