@@ -1259966,52 +1259966,16 @@
       "retry_after": "2026-11-15T23:55:00.733499+00:00"
     },
     "3821:1:1": {
-      "at": "2026-11-13T22:21:28.150669+00:00",
+      "at": "2026-11-25T20:52:14.337791+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 135.31,
-      "search_evidence": [
-        {
-          "path": "/replica-revenge-of-the-ex-wife-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216299,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/replica-revenge-of-the-ex-wife/s/-6",
-          "status": 200,
-          "response_bytes": 216177,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/replica-revenge-of-the-ex-wife-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216381,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/replica-revenge-of-the-ex-wife/s/-6",
-          "status": 200,
-          "response_bytes": 216176,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T22:23:43.460975+00:00"
+      "elapsed_seconds": 32.64,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T20:53:26.276301+00:00"
     },
     "4014:1:1": {
       "at": "2026-11-13T22:21:29.082918+00:00",
@@ -1369153,28 +1369117,28 @@
       "queue_rank": 45811
     },
     "138:1:9": {
-      "at": "2026-11-24T18:37:52.383304+00:00",
+      "at": "2026-11-25T20:53:26.281660+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 83.31,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-25T18:39:22.553215+00:00"
+      "elapsed_seconds": 41.12,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T20:54:07.406273+00:00"
     },
     "138:1:17": {
-      "at": "2026-11-24T18:39:23.170503+00:00",
+      "at": "2026-11-25T20:53:26.933285+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 48.57,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-25T18:40:11.744782+00:00"
+      "elapsed_seconds": 40.57,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T20:54:08.110546+00:00"
     },
     "138:1:20": {
       "at": "2026-11-24T18:39:23.817321+00:00",
@@ -1376019,9 +1375983,23 @@
       "elapsed_seconds": 110.78,
       "source_id": "20779071",
       "queue_rank": 46162
+    },
+    "1:10:17": {
+      "at": "2026-11-25T20:52:13.016942+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9828822612762451,
+      "observed_source_id": "21457564",
+      "elapsed_seconds": 88.23,
+      "source_id": "21457564",
+      "queue_rank": 46163
     }
   },
-  "updated_at": "2026-11-25T20:52:39.961112+00:00",
+  "updated_at": "2026-11-25T20:54:30.551819+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381251,7 +1381229,7 @@
     },
     "1": {
       "misses": [],
-      "updated_at": "2026-11-25T20:52:11.707076+00:00"
+      "updated_at": "2026-11-25T20:53:41.250600+00:00"
     },
     "796": {
       "misses": [],
@@ -1386109,10 +1386087,12 @@
     },
     "138": {
       "misses": [
-        "138:1:34",
-        "138:1:35"
+        "138:1:35",
+        "138:1:9",
+        "138:1:17"
       ],
-      "updated_at": "2026-11-25T05:39:40.174572+00:00"
+      "updated_at": "2026-11-25T20:54:08.110567+00:00",
+      "retry_after": "2026-11-26T00:54:08.110567+00:00"
     },
     "8765": {
       "misses": [
@@ -1388993,6 +1388973,12 @@
         "3715:2:1"
       ],
       "updated_at": "2026-11-25T20:52:37.147000+00:00"
+    },
+    "3821": {
+      "misses": [
+        "3821:1:1"
+      ],
+      "updated_at": "2026-11-25T20:53:26.276338+00:00"
     }
   },
   "discovery_progress": {
