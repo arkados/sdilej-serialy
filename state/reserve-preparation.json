@@ -1260573,52 +1260573,16 @@
       "queue_rank": 41050
     },
     "4982:1:1": {
-      "at": "2026-11-13T22:58:08.939650+00:00",
+      "at": "2026-11-25T22:30:16.034417+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 22.92,
-      "search_evidence": [
-        {
-          "path": "/chrocht-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216135,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chrocht/s/-6",
-          "status": 200,
-          "response_bytes": 285495,
-          "boxes": 58,
-          "parsed_candidates": 55,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chrocht-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216195,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/chrocht/s/-6",
-          "status": 200,
-          "response_bytes": 285513,
-          "boxes": 58,
-          "parsed_candidates": 55,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T22:58:31.862023+00:00"
+      "elapsed_seconds": 107.48,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T22:32:03.514727+00:00"
     },
     "5048:1:2": {
       "at": "2026-11-13T22:58:09.901600+00:00",
@@ -1376083,7 +1376047,7 @@
       "retry_after": "2026-11-25T23:30:15.176254+00:00"
     }
   },
-  "updated_at": "2026-11-25T22:31:20.833839+00:00",
+  "updated_at": "2026-11-25T22:32:32.403641+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389156,15 +1389120,21 @@
         "4708:1:1"
       ],
       "updated_at": "2026-11-25T21:31:38.213133+00:00"
+    },
+    "4982": {
+      "misses": [
+        "4982:1:1"
+      ],
+      "updated_at": "2026-11-25T22:32:03.514774+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 4982,
+    "last_series": 5048,
     "last_series_order": [
       true,
       0,
       0,
-      4982
+      5048
     ]
   },
   "czech_fallback_revision": 1
