@@ -1258109,52 +1258109,16 @@
       "queue_rank": 40934
     },
     "4953:1:1": {
-      "at": "2026-11-13T18:24:47.072289+00:00",
+      "at": "2026-11-25T15:01:01.647000+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 48.23,
-      "search_evidence": [
-        {
-          "path": "/rudyho-ma-kazdy-rad-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216155,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/rudyho-ma-kazdy-rad/s/-6",
-          "status": 200,
-          "response_bytes": 216030,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/rudyho-ma-kazdy-rad-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216182,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/rudyho-ma-kazdy-rad/s/-6",
-          "status": 200,
-          "response_bytes": 215964,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T18:26:18.742951+00:00"
+      "elapsed_seconds": 28.22,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T15:01:50.062390+00:00"
     },
     "319:1:1": {
       "at": "2026-11-13T18:26:19.525154+00:00",
@@ -1374508,16 +1374472,16 @@
       "retry_after": "2026-11-25T12:28:10.875362+00:00"
     },
     "5592:1:3": {
-      "at": "2026-11-25T09:35:30.843260+00:00",
+      "at": "2026-11-25T15:01:03.385956+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 331.45,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-25T09:51:02.297375+00:00"
+      "reason": "no_matches",
+      "elapsed_seconds": 30.43,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-26T15:01:50.062665+00:00"
     },
     "5592:1:4": {
       "at": "2026-11-25T09:35:52.491145+00:00",
@@ -1375362,7 +1375326,7 @@
       "queue_rank": 46054
     },
     "1644:1:5": {
-      "at": "2026-11-25T12:13:43.985238+00:00",
+      "at": "2026-11-25T15:01:02.517641+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
@@ -1375372,9 +1375336,9 @@
       "observed_language_probability": 0.7108953595161438,
       "observed_source_id": "32205533",
       "reason": "no_english_czech_subtitles",
-      "elapsed_seconds": 56.26,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-25T12:45:29.817385+00:00"
+      "elapsed_seconds": 50.82,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T16:01:53.337670+00:00"
     },
     "1644:1:6": {
       "at": "2026-11-25T12:14:21.651780+00:00",
@@ -1376073,7 +1376037,7 @@
       "queue_rank": 46096
     }
   },
-  "updated_at": "2026-11-25T15:01:31.799683+00:00",
+  "updated_at": "2026-11-25T15:02:55.704241+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388482,12 +1388446,9 @@
     },
     "5592": {
       "misses": [
-        "5592:1:6",
-        "5592:1:8",
-        "5592:1:10"
+        "5592:1:3"
       ],
-      "updated_at": "2026-11-25T10:10:52.557102+00:00",
-      "retry_after": "2026-11-25T14:10:52.557102+00:00"
+      "updated_at": "2026-11-25T15:01:50.062676+00:00"
     },
     "4683": {
       "misses": [
@@ -1388636,8 +1388597,10 @@
       "updated_at": "2026-11-25T12:04:57.732918+00:00"
     },
     "1644": {
-      "misses": [],
-      "updated_at": "2026-11-25T13:16:59.547779+00:00"
+      "misses": [
+        "1644:1:5"
+      ],
+      "updated_at": "2026-11-25T15:01:53.337695+00:00"
     },
     "10025": {
       "misses": [
@@ -1388769,6 +1388732,12 @@
         "2757:1:17"
       ],
       "updated_at": "2026-11-25T15:01:27.515981+00:00"
+    },
+    "4953": {
+      "misses": [
+        "4953:1:1"
+      ],
+      "updated_at": "2026-11-25T15:01:50.062435+00:00"
     }
   },
   "discovery_progress": {
