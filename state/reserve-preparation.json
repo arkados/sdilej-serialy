@@ -1259332,52 +1259332,16 @@
       "retry_after": "2026-11-26T19:26:31.867506+00:00"
     },
     "2798:1:1": {
-      "at": "2026-11-13T20:34:49.380597+00:00",
+      "at": "2026-11-25T19:31:36.416926+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "transient_search",
-      "elapsed_seconds": 67.73,
-      "search_evidence": [
-        {
-          "path": "/guvernerka-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216343,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/guvernerka/s/-6",
-          "status": 200,
-          "response_bytes": 258831,
-          "boxes": 37,
-          "parsed_candidates": 29,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/miss-governor-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216059,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/miss-governor/s/-6",
-          "status": 200,
-          "response_bytes": 215973,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-13T20:50:57.107679+00:00"
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 56.2,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T19:34:06.152031+00:00"
     },
     "10425:2:13": {
       "at": "2026-11-13T20:33:49.884817+00:00",
@@ -1375607,7 +1375571,7 @@
       "retry_after": "2026-11-26T18:11:49.649743+00:00"
     },
     "2350:1:2": {
-      "at": "2026-11-25T18:15:56.399754+00:00",
+      "at": "2026-11-25T19:31:37.743094+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
@@ -1375617,9 +1375581,9 @@
       "observed_language_probability": 0.7188422679901123,
       "observed_source_id": "30054584",
       "reason": "inconclusive_subtitles",
-      "elapsed_seconds": 132.31,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-25T19:18:08.714074+00:00"
+      "elapsed_seconds": 106.66,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-25T21:34:06.152068+00:00"
     },
     "2415:1:3": {
       "at": "2026-11-25T18:23:57.092611+00:00",
@@ -1375874,9 +1375838,24 @@
       "elapsed_seconds": 42.84,
       "source_id": "26253546",
       "queue_rank": 46137
+    },
+    "2712:1:4": {
+      "at": "2026-11-25T19:31:35.755697+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "sk",
+      "observed_language_probability": 0.8280658721923828,
+      "observed_source_id": "20957900",
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 82.81,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-25T20:34:06.151948+00:00"
     }
   },
-  "updated_at": "2026-11-25T19:32:23.547677+00:00",
+  "updated_at": "2026-11-25T19:35:11.005098+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388691,7 +1388670,7 @@
       "misses": [
         "2350:1:2"
       ],
-      "updated_at": "2026-11-25T18:18:08.714103+00:00"
+      "updated_at": "2026-11-25T19:34:06.152075+00:00"
     },
     "2386": {
       "misses": [
@@ -1388752,8 +1388731,10 @@
       "updated_at": "2026-11-25T19:20:32.183970+00:00"
     },
     "2712": {
-      "misses": [],
-      "updated_at": "2026-11-25T19:31:35.083844+00:00"
+      "misses": [
+        "2712:1:4"
+      ],
+      "updated_at": "2026-11-25T19:34:06.151972+00:00"
     },
     "2729": {
       "misses": [
@@ -1388770,6 +1388751,12 @@
     "2842": {
       "misses": [],
       "updated_at": "2026-11-25T19:32:19.929644+00:00"
+    },
+    "2798": {
+      "misses": [
+        "2798:1:1"
+      ],
+      "updated_at": "2026-11-25T19:34:06.152038+00:00"
     }
   },
   "discovery_progress": {
