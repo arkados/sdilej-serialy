@@ -1034,12 +1034,34 @@
       "identity": "362:1:3",
       "account": "b",
       "target_video_id": "31109533",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 151,
       "detail_url": "https://prehraj.to/becoming-karl-lagerfeld-s01e03-v-posteli-s-karlem-1080p-cz-titulky-titulky-cekaji-mkv/b25f123f97d5f6cf",
-      "checked_at": "2026-11-24T23:26:20.711211+00:00",
-      "retry_after": "2026-11-24T23:41:20.711228+00:00"
+      "checked_at": "2026-11-25T05:47:39.843947+00:00",
+      "retry_after": "2026-11-25T06:02:39.843961+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31110920": {
       "identity": "1778:1:1",
@@ -2735,5 +2757,5 @@
       "title_updated": true
     }
   },
-  "updated_at": "2026-11-25T05:47:17.766164+00:00"
+  "updated_at": "2026-11-25T05:47:39.843969+00:00"
 }
