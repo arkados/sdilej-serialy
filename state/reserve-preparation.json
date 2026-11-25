@@ -1254685,84 +1254685,16 @@
       "queue_rank": 40705
     },
     "10118:1:1": {
-      "at": "2026-11-13T11:28:40.901608+00:00",
+      "at": "2026-11-25T07:02:55.456543+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 303.66,
-      "search_evidence": [
-        {
-          "path": "/lovci-prizraku-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216090,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/lovci-prizraku/s/-6",
-          "status": 200,
-          "response_bytes": 215592,
-          "boxes": 1,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ghost-force-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216318,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ghost-force/s/-6",
-          "status": 200,
-          "response_bytes": 227515,
-          "boxes": 9,
-          "parsed_candidates": 9,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/lovci-prizraku-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216084,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/lovci-prizraku/s/-6",
-          "status": 200,
-          "response_bytes": 215730,
-          "boxes": 1,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ghost-force-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216281,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/ghost-force/s/-6",
-          "status": 200,
-          "response_bytes": 227545,
-          "boxes": 9,
-          "parsed_candidates": 9,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T11:33:44.560515+00:00"
+      "elapsed_seconds": 175.08,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T07:05:50.535699+00:00"
     },
     "952:1:6": {
       "at": "2026-11-13T11:27:30.968029+00:00",
@@ -1376546,9 +1376478,36 @@
       "elapsed_seconds": 272.25,
       "source_id": "24299811",
       "queue_rank": 45968
+    },
+    "760:1:6": {
+      "at": "2026-11-25T06:59:24.232539+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "pt",
+      "observed_language_probability": 0.9814611077308655,
+      "observed_source_id": "13070426",
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 380.74,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-25T08:05:44.975672+00:00"
+    },
+    "9716:1:14": {
+      "at": "2026-11-25T07:01:08.868295+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 285.69,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-26T07:05:54.560818+00:00"
     }
   },
-  "updated_at": "2026-11-25T07:05:28.322922+00:00",
+  "updated_at": "2026-11-25T07:06:40.433440+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386845,9 +1386804,11 @@
     "760": {
       "misses": [
         "760:1:4",
-        "760:1:5"
+        "760:1:5",
+        "760:1:6"
       ],
-      "updated_at": "2026-11-24T23:20:42.905095+00:00"
+      "updated_at": "2026-11-25T07:05:44.975701+00:00",
+      "retry_after": "2026-11-25T07:35:44.975701+00:00"
     },
     "3196": {
       "misses": [],
@@ -1386956,12 +1386917,9 @@
     },
     "9716": {
       "misses": [
-        "9716:1:11",
-        "9716:1:12",
-        "9716:1:13"
+        "9716:1:14"
       ],
-      "updated_at": "2026-11-25T02:22:25.392421+00:00",
-      "retry_after": "2026-11-25T06:22:25.392421+00:00"
+      "updated_at": "2026-11-25T07:05:54.560846+00:00"
     },
     "2960": {
       "misses": [
@@ -1388775,6 +1388733,12 @@
         "100:1:1"
       ],
       "updated_at": "2026-11-25T07:04:46.724057+00:00"
+    },
+    "10118": {
+      "misses": [
+        "10118:1:1"
+      ],
+      "updated_at": "2026-11-25T07:05:50.535729+00:00"
     }
   },
   "discovery_progress": {
