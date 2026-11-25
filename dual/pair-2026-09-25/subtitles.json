@@ -2457,8 +2457,39 @@
         "before_ids": [],
         "created_at": "2026-11-23T15:12:58.606258+00:00"
       },
-      "checked_at": "2026-11-25T05:43:30.757463+00:00",
-      "retry_after": "2026-11-25T05:58:30.757478+00:00"
+      "checked_at": "2026-11-25T17:44:25.216686+00:00",
+      "retry_after": "2026-11-25T17:59:25.216701+00:00",
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      }
     },
     "31278715": {
       "identity": "3196:1:1",
@@ -2891,5 +2922,5 @@
       "retry_after": "2026-11-25T06:10:57.683741+00:00"
     }
   },
-  "updated_at": "2026-11-25T17:42:39.736621+00:00"
+  "updated_at": "2026-11-25T17:44:25.216709+00:00"
 }
