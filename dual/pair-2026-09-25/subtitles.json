@@ -1523,12 +1523,34 @@
       "identity": "827:1:6",
       "account": "b",
       "target_video_id": "31138473",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 132,
       "detail_url": "https://prehraj.to/nedostatek-dukazu-s01e06-elementy-4k-cz-titulky-titulky-cekaji-mkv/5939983b9d992340",
-      "checked_at": "2026-11-24T23:28:38.119454+00:00",
-      "retry_after": "2026-11-24T23:43:38.119468+00:00"
+      "checked_at": "2026-11-25T05:50:01.307345+00:00",
+      "retry_after": "2026-11-25T06:05:01.307358+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31138985": {
       "identity": "360:1:4",
@@ -2779,5 +2801,5 @@
       "title_updated": true
     }
   },
-  "updated_at": "2026-11-25T05:49:40.352008+00:00"
+  "updated_at": "2026-11-25T05:50:01.307366+00:00"
 }
