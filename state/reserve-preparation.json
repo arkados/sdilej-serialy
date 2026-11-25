@@ -1257966,84 +1257966,16 @@
       "retry_after": "2026-11-14T17:19:33.173882+00:00"
     },
     "3156:1:1": {
-      "at": "2026-11-13T17:18:58.260505+00:00",
+      "at": "2026-11-25T14:48:34.673853+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 45.27,
-      "search_evidence": [
-        {
-          "path": "/damy-nedamy-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 224426,
-          "boxes": 7,
-          "parsed_candidates": 7,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/damy-nedamy/s/-6",
-          "status": 200,
-          "response_bytes": 534503,
-          "boxes": 256,
-          "parsed_candidates": 230,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/work-it-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215886,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/work-it/s/-6",
-          "status": 200,
-          "response_bytes": 224779,
-          "boxes": 11,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/damy-nedamy-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 224472,
-          "boxes": 7,
-          "parsed_candidates": 7,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/damy-nedamy/s/-6",
-          "status": 200,
-          "response_bytes": 534588,
-          "boxes": 256,
-          "parsed_candidates": 230,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/work-it-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215909,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/work-it/s/-6",
-          "status": 200,
-          "response_bytes": 224728,
-          "boxes": 11,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T17:20:06.147853+00:00"
+      "elapsed_seconds": 100.64,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T14:50:35.168190+00:00"
     },
     "397:1:4": {
       "at": "2026-11-13T17:20:07.349450+00:00",
@@ -1375997,16 +1375929,18 @@
       "retry_after": "2026-11-25T14:17:28.921446+00:00"
     },
     "9810:1:10": {
-      "at": "2026-11-25T14:04:03.770606+00:00",
-      "status": "deferred",
+      "at": "2026-11-25T14:48:36.454602+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 205.15,
-      "consecutive_failures": 0,
-      "retry_after": "2026-11-25T14:17:28.921445+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9582114815711975,
+      "observed_source_id": "34453894",
+      "elapsed_seconds": 118.68,
+      "source_id": "34453894",
+      "queue_rank": 46087
     },
     "9810:1:12": {
       "at": "2026-11-25T14:33:08.337532+00:00",
@@ -1376133,7 +1376067,7 @@
       "queue_rank": 46086
     }
   },
-  "updated_at": "2026-11-25T14:49:38.640176+00:00",
+  "updated_at": "2026-11-25T14:51:41.924112+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388759,7 +1388693,7 @@
     },
     "9810": {
       "misses": [],
-      "updated_at": "2026-11-25T14:48:33.808343+00:00"
+      "updated_at": "2026-11-25T14:50:35.168317+00:00"
     },
     "2": {
       "misses": [
@@ -1388802,6 +1388736,12 @@
         "6443:1:1"
       ],
       "updated_at": "2026-11-25T14:48:33.808403+00:00"
+    },
+    "3156": {
+      "misses": [
+        "3156:1:1"
+      ],
+      "updated_at": "2026-11-25T14:50:35.168230+00:00"
     }
   },
   "discovery_progress": {
