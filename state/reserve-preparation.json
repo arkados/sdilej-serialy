@@ -1376551,9 +1376551,51 @@
       "elapsed_seconds": 136.9,
       "source_id": "29103502",
       "queue_rank": 45920
+    },
+    "2504:2:5": {
+      "at": "2026-11-25T03:22:34.465179+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "error": {
+        "type": "SearchUnavailable",
+        "frames": [
+          {
+            "file": "episodes.py",
+            "function": "_inspect",
+            "line": 356
+          },
+          {
+            "file": "source_audit.py",
+            "function": "_get",
+            "line": 118
+          },
+          {
+            "file": "episodes.py",
+            "function": "_get",
+            "line": 244
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 202
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 84
+          }
+        ]
+      },
+      "elapsed_seconds": 452.49,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-25T03:39:49.413530+00:00"
     }
   },
-  "updated_at": "2026-11-25T03:30:07.742017+00:00",
+  "updated_at": "2026-11-25T03:30:19.599138+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
