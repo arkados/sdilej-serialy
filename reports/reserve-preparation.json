@@ -1,46 +1,46 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45541844501",
-  "attempted_this_run": 25,
+  "attempted_this_run": 26,
   "prepared_this_run": 9,
   "reserve_total": 37494,
   "queue_total": 45929,
-  "updated_at": "2026-11-25T04:34:22.433520+00:00",
+  "updated_at": "2026-11-25T04:35:50.114893+00:00",
   "workers": 4,
-  "elapsed_seconds": 3010.37,
-  "prepared_per_hour": 10.76,
+  "elapsed_seconds": 3098.05,
+  "prepared_per_hour": 10.46,
   "available_this_run": 9,
-  "available_per_hour": 10.76,
+  "available_per_hour": 10.46,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 45929,
-    "ready": 2,
+    "ready": 0,
     "ready_by_account": {
-      "a": 1,
-      "b": 1
+      "a": 0,
+      "b": 0
     },
     "categories": {
-      "completed": 45069,
-      "allocated": 843,
+      "completed": 45070,
+      "allocated": 842,
       "failed": 12,
       "language_review": 3,
-      "ready": 2
+      "in_flight": 2
     },
     "completed_by_account": {
-      "a": 22531,
+      "a": 22532,
       "b": 22538
     },
-    "uploads_last_24h": 295,
-    "uploads_per_hour_24h": 12.29,
-    "stock_hours_24h": 0.16
+    "uploads_last_24h": 296,
+    "uploads_per_hour_24h": 12.33,
+    "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "buffered",
+    "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 415,
-      "b": 85
+      "a": 94,
+      "b": 173
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 10,
@@ -48,6 +48,7 @@
       "no_acceptable_original": 1,
       "transient_search": 2,
       "inconclusive_audio": 1,
+      "inconclusive_subtitles": 1,
       "prepared": 9
     }
   },
@@ -62,10 +63,10 @@
     ]
   },
   "cache": {
-    "search_miss": 116,
+    "search_miss": 117,
     "search_seconds": 2425.78,
     "search_hit": 4,
-    "media_hit": 111,
+    "media_hit": 112,
     "media_miss": 72,
     "media_seconds": 341.97,
     "audio_miss": 13,
@@ -2892,13 +2893,13 @@
   "search_health": {
     "status": "paused",
     "consecutive_failures": 1,
-    "retry_seconds": 296,
+    "retry_seconds": 208,
     "failed_cycles_this_run": 1,
     "control_requests": 11,
     "request_gap_seconds": 4,
     "restart_required": false,
     "last_request_limit": null,
-    "resume_after": "2026-11-25T04:39:17.673125+00:00",
+    "resume_after": "2026-11-25T04:39:17.673126+00:00",
     "controls": [
       {
         "path": "/teorie-velkeho-tresku/s/-6",
