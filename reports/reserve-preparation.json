@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45706650193",
-  "attempted_this_run": 39,
+  "attempted_this_run": 43,
   "prepared_this_run": 11,
   "reserve_total": 37759,
   "queue_total": 46194,
-  "updated_at": "2026-11-25T23:04:30.699826+00:00",
+  "updated_at": "2026-11-25T23:05:20.189538+00:00",
   "workers": 4,
-  "elapsed_seconds": 4459.73,
-  "prepared_per_hour": 8.88,
+  "elapsed_seconds": 4509.22,
+  "prepared_per_hour": 8.78,
   "available_this_run": 11,
-  "available_per_hour": 8.88,
+  "available_per_hour": 8.78,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -22,30 +22,31 @@
     },
     "categories": {
       "completed": 45336,
-      "allocated": 842,
+      "allocated": 843,
       "failed": 12,
-      "language_review": 3,
-      "in_flight": 1
+      "language_review": 3
     },
     "completed_by_account": {
       "a": 22665,
       "b": 22671
     },
-    "uploads_last_24h": 386,
-    "uploads_per_hour_24h": 16.08,
+    "uploads_last_24h": 385,
+    "uploads_per_hour_24h": 16.04,
     "stock_hours_24h": 0.0
   },
   "health": {
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 96,
-      "b": 89
+      "a": 145,
+      "b": 138
     },
     "preparation_outcomes_last_hour": {
       "inconclusive_audio": 4,
       "transient_original": 7,
+      "source_search_unavailable": 3,
       "no_matches": 11,
+      "transient_search": 1,
       "inconclusive_subtitles": 2,
       "prepared": 9
     }
@@ -61,8 +62,8 @@
     ]
   },
   "cache": {
-    "search_miss": 205,
-    "search_seconds": 3787.39,
+    "search_miss": 207,
+    "search_seconds": 5032.07,
     "search_hit": 7,
     "media_hit": 68,
     "media_miss": 181,
@@ -78,7 +79,7 @@
     "inference_seconds": 113.06
   },
   "productive_seasons": 91,
-  "series_paused_this_run": 6,
+  "series_paused_this_run": 7,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
   "repaired_this_run": 0,
@@ -88,7 +89,7 @@
   },
   "statuses": {
     "prepared": 37759,
-    "deferred": 38966
+    "deferred": 38968
   },
   "requested_series": [
     {
@@ -2882,21 +2883,21 @@
   ],
   "search_health": {
     "status": "paused",
-    "consecutive_failures": 1,
-    "retry_seconds": 16,
-    "failed_cycles_this_run": 1,
-    "control_requests": 12,
-    "request_gap_seconds": 4,
-    "restart_required": false,
+    "consecutive_failures": 2,
+    "retry_seconds": 595,
+    "failed_cycles_this_run": 2,
+    "control_requests": 16,
+    "request_gap_seconds": 8,
+    "restart_required": true,
     "last_request_limit": null,
-    "resume_after": "2026-11-25T23:04:46.039521+00:00",
+    "resume_after": "2026-11-25T23:15:14.638641+00:00",
     "controls": [
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 188635,
+        "response_bytes": 188633,
         "parsed_candidates": 0,
-        "body_sha256": "20f3c61677474fc823079417d1eb119deff6287182de8788b75d6f314f7897c3",
+        "body_sha256": "9fd1a713a046147454d7e7c13e36d616a259fd3ba32135da45f22fdc6fd1a95f",
         "video_box_count": 0,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2905,14 +2906,14 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-25T22:59:43.894257+00:00"
+        "checked_at": "2026-11-25T23:05:10.414989+00:00"
       },
       {
         "path": "/doktor-martin/s/-6",
         "status": 200,
-        "response_bytes": 188467,
+        "response_bytes": 188465,
         "parsed_candidates": 0,
-        "body_sha256": "ada6c4d0262b62939fd3c298eee55ceaf518903d8a105cc7c746970f62e50a7a",
+        "body_sha256": "733808f6b587ed7c6267545b37eb4074766f5578895306612017076f4a5437f3",
         "video_box_count": 0,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2921,7 +2922,7 @@
         "cache_age_seconds": null,
         "response_path": "/doktor-martin/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-25T22:59:46.039447+00:00"
+        "checked_at": "2026-11-25T23:05:14.638566+00:00"
       }
     ]
   }
