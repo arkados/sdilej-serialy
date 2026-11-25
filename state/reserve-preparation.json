@@ -29069,28 +29069,28 @@
       "retry_after": "2026-10-19T03:40:40.893196+00:00"
     },
     "1264:1:8": {
-      "at": "2026-11-25T15:01:50.067895+00:00",
+      "at": "2026-11-25T20:53:42.067239+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 153.55,
-      "consecutive_failures": 46,
-      "retry_after": "2026-11-26T15:04:23.621519+00:00"
+      "elapsed_seconds": 160.76,
+      "consecutive_failures": 47,
+      "retry_after": "2026-11-26T20:56:54.069291+00:00"
     },
     "1264:1:10": {
-      "at": "2026-11-25T15:01:50.940515+00:00",
+      "at": "2026-11-25T20:54:08.110631+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 191.38,
-      "consecutive_failures": 46,
-      "retry_after": "2026-11-26T15:06:03.022093+00:00"
+      "elapsed_seconds": 201.37,
+      "consecutive_failures": 47,
+      "retry_after": "2026-11-26T20:57:29.477279+00:00"
     },
     "1264:1:11": {
       "at": "2026-11-22T09:46:20.411820+00:00",
@@ -1259978,52 +1259978,16 @@
       "retry_after": "2026-11-26T20:53:26.276301+00:00"
     },
     "4014:1:1": {
-      "at": "2026-11-13T22:21:29.082918+00:00",
+      "at": "2026-11-25T20:56:55.393738+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 157.76,
-      "search_evidence": [
-        {
-          "path": "/sest-smyslu-berlina-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216152,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sest-smyslu-berlina/s/-6",
-          "status": 200,
-          "response_bytes": 216010,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sest-smyslu-berlina-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216174,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sest-smyslu-berlina/s/-6",
-          "status": 200,
-          "response_bytes": 216072,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T22:24:06.846636+00:00"
+      "elapsed_seconds": 25.85,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T20:57:21.244602+00:00"
     },
     "331:1:11": {
       "at": "2026-11-15T03:55:02.381587+00:00",
@@ -1376025,9 +1375989,23 @@
       "elapsed_seconds": 114.79,
       "source_id": "34298172",
       "queue_rank": 46165
+    },
+    "1:10:20": {
+      "at": "2026-11-25T20:55:10.283459+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.8599774837493896,
+      "observed_source_id": "34298194",
+      "elapsed_seconds": 91.9,
+      "source_id": "34298194",
+      "queue_rank": 46166
     }
   },
-  "updated_at": "2026-11-25T20:56:13.393641+00:00",
+  "updated_at": "2026-11-25T20:57:58.162919+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1381257,7 +1381235,7 @@
     },
     "1": {
       "misses": [],
-      "updated_at": "2026-11-25T20:56:03.541811+00:00"
+      "updated_at": "2026-11-25T20:56:54.069401+00:00"
     },
     "796": {
       "misses": [],
@@ -1383690,10 +1383668,12 @@
     },
     "1264": {
       "misses": [
-        "1264:1:6",
-        "1264:1:7"
+        "1264:1:7",
+        "1264:1:8",
+        "1264:1:10"
       ],
-      "updated_at": "2026-11-25T20:52:11.706980+00:00"
+      "updated_at": "2026-11-25T20:57:29.477303+00:00",
+      "retry_after": "2026-11-25T21:27:29.477303+00:00"
     },
     "208": {
       "misses": [],
@@ -1389007,15 +1388987,21 @@
         "3821:1:1"
       ],
       "updated_at": "2026-11-25T20:53:26.276338+00:00"
+    },
+    "4014": {
+      "misses": [
+        "4014:1:1"
+      ],
+      "updated_at": "2026-11-25T20:57:21.244624+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 3821,
+    "last_series": 4048,
     "last_series_order": [
       true,
       0,
       0,
-      3821
+      4048
     ]
   },
   "czech_fallback_revision": 1
