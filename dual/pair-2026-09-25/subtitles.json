@@ -551,12 +551,34 @@
       "identity": "1410:2:43",
       "account": "a",
       "target_video_id": "31109768",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 152,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e43-slavnostni-pruvod-1080p-cz-titulky-titulky-cekaji-mkv/eeb8c7abff14c00f",
-      "checked_at": "2026-11-24T23:13:32.730825+00:00",
-      "retry_after": "2026-11-24T23:28:32.730843+00:00"
+      "checked_at": "2026-11-25T05:36:02.584271+00:00",
+      "retry_after": "2026-11-25T05:51:02.584284+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31109835": {
       "identity": "5535:1:2",
@@ -2513,5 +2535,5 @@
       "retry_after": "2026-11-24T23:37:52.318567+00:00"
     }
   },
-  "updated_at": "2026-11-25T05:35:42.553029+00:00"
+  "updated_at": "2026-11-25T05:36:02.584292+00:00"
 }
