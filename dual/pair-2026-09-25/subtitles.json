@@ -2991,7 +2991,47 @@
       },
       "checked_at": "2026-11-25T17:47:58.278851+00:00",
       "retry_after": "2026-11-25T18:02:58.278865+00:00"
+    },
+    "31361116": {
+      "identity": "4961:1:4",
+      "account": "a",
+      "target_video_id": "31361116",
+      "status": "deferred",
+      "processing_guard_revision": 1,
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
+      },
+      "checked_at": "2026-11-25T17:49:39.529969+00:00",
+      "retry_after": "2026-11-25T18:04:39.529983+00:00"
     }
   },
-  "updated_at": "2026-11-25T17:47:58.278873+00:00"
+  "updated_at": "2026-11-25T17:49:39.529991+00:00"
 }
