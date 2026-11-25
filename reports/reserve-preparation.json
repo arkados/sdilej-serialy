@@ -1,30 +1,31 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45689074897",
-  "attempted_this_run": 95,
-  "prepared_this_run": 33,
-  "reserve_total": 37743,
-  "queue_total": 46178,
-  "updated_at": "2026-11-25T21:19:50.593339+00:00",
+  "attempted_this_run": 100,
+  "prepared_this_run": 34,
+  "reserve_total": 37744,
+  "queue_total": 46179,
+  "updated_at": "2026-11-25T21:21:07.376005+00:00",
   "workers": 4,
-  "elapsed_seconds": 4783.01,
-  "prepared_per_hour": 24.84,
-  "available_this_run": 33,
-  "available_per_hour": 24.84,
+  "elapsed_seconds": 4859.79,
+  "prepared_per_hour": 25.19,
+  "available_this_run": 34,
+  "available_per_hour": 25.19,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 46178,
-    "ready": 0,
+    "queue_total": 46179,
+    "ready": 1,
     "ready_by_account": {
-      "a": 0,
+      "a": 1,
       "b": 0
     },
     "categories": {
       "completed": 45321,
       "allocated": 842,
       "failed": 12,
-      "language_review": 3
+      "language_review": 3,
+      "ready": 1
     },
     "completed_by_account": {
       "a": 22657,
@@ -32,22 +33,22 @@
     },
     "uploads_last_24h": 401,
     "uploads_per_hour_24h": 16.71,
-    "stock_hours_24h": 0.0
+    "stock_hours_24h": 0.06
   },
   "health": {
-    "status": "waiting_for_sources",
+    "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 325,
-      "b": 315
+      "a": 401,
+      "b": 391
     },
     "preparation_outcomes_last_hour": {
       "inconclusive_audio": 13,
-      "no_matches": 30,
-      "transient_original": 5,
+      "no_matches": 33,
+      "transient_original": 6,
       "no_english_czech_subtitles": 2,
       "inconclusive_subtitles": 3,
-      "prepared": 32
+      "prepared": 31
     }
   },
   "indexed_candidates_in_scan": 940,
@@ -61,25 +62,25 @@
     ]
   },
   "cache": {
-    "search_miss": 437,
-    "search_seconds": 4405.12,
-    "media_hit": 137,
-    "media_miss": 168,
-    "audio_miss": 80,
-    "media_seconds": 1363.89,
-    "audio_seconds": 2513.54,
+    "search_miss": 452,
+    "search_seconds": 4454.73,
+    "media_hit": 141,
+    "media_miss": 172,
+    "audio_miss": 85,
+    "media_seconds": 1444.44,
+    "audio_seconds": 2610.48,
     "audio_hit": 16,
-    "search_hit": 24
+    "search_hit": 26
   },
   "audio_pipeline": {
-    "sample_count": 216,
-    "download_seconds": 2092.64,
-    "inference_wait_seconds": 18.4,
-    "inference_seconds": 401.62,
+    "sample_count": 228,
+    "download_seconds": 2199.0,
+    "inference_wait_seconds": 19.47,
+    "inference_seconds": 419.03,
     "failures": 2
   },
-  "productive_seasons": 93,
-  "series_paused_this_run": 13,
+  "productive_seasons": 94,
+  "series_paused_this_run": 14,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
   "repaired_this_run": 0,
@@ -88,8 +89,8 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 37743,
-    "deferred": 38957
+    "prepared": 37744,
+    "deferred": 38960
   },
   "requested_series": [
     {
@@ -2886,7 +2887,7 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 19,
+    "control_requests": 20,
     "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
@@ -2895,9 +2896,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724016,
+        "response_bytes": 723952,
         "parsed_candidates": 412,
-        "body_sha256": "d07b67b06e1f5c075f4c66f21b6db04351777e55423fad678e37f50da544f10c",
+        "body_sha256": "0cd2d3c3e4050536aa47fcf9fecea80b8516e41f27ded61f2e98676af782128a",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2906,7 +2907,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-25T21:19:08.596844+00:00"
+        "checked_at": "2026-11-25T21:20:36.423014+00:00"
       }
     ]
   }
