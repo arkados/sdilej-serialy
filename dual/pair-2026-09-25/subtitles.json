@@ -1569,12 +1569,34 @@
       "identity": "827:1:7",
       "account": "b",
       "target_video_id": "31140742",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 130,
       "detail_url": "https://prehraj.to/nedostatek-dukazu-s01e07-svedek-4k-cz-titulky-titulky-cekaji-mkv/212bef3ef95f8bdf",
-      "checked_at": "2026-11-24T23:29:02.816409+00:00",
-      "retry_after": "2026-11-24T23:44:02.816426+00:00"
+      "checked_at": "2026-11-25T05:50:24.491116+00:00",
+      "retry_after": "2026-11-25T06:05:24.491129+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31140823": {
       "identity": "827:1:8",
@@ -2801,5 +2823,5 @@
       "title_updated": true
     }
   },
-  "updated_at": "2026-11-25T05:50:01.307366+00:00"
+  "updated_at": "2026-11-25T05:50:24.491138+00:00"
 }
