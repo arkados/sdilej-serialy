@@ -1252271,44 +1252271,16 @@
       "queue_rank": 40547
     },
     "3023:1:1": {
-      "at": "2026-11-13T05:39:55.872384+00:00",
+      "at": "2026-11-25T01:00:14.664101+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 14.63,
-      "search_evidence": [
-        {
-          "path": "/sex-life-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215922,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sex-life-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215955,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sex-life/s/-6",
-          "status": 200,
-          "response_bytes": 188360,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-14T05:40:10.503898+00:00"
+      "elapsed_seconds": 69.56,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-26T01:01:51.633398+00:00"
     },
     "10047:1:1": {
       "at": "2026-11-13T05:40:06.508663+00:00",
@@ -1377081,9 +1377053,49 @@
       "elapsed_seconds": 142.39,
       "source_id": "29600591",
       "queue_rank": 45885
+    },
+    "326:1:9": {
+      "at": "2026-11-25T01:00:11.502253+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9033344984054565,
+      "observed_source_id": "29600599",
+      "elapsed_seconds": 107.38,
+      "source_id": "29600599",
+      "queue_rank": 45886
+    },
+    "326:1:10": {
+      "at": "2026-11-25T01:00:12.582313+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9608737230300903,
+      "observed_source_id": "29600602",
+      "elapsed_seconds": 110.08,
+      "source_id": "29600602",
+      "queue_rank": 45887
+    },
+    "10026:1:2": {
+      "at": "2026-11-25T01:00:13.632170+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 118.76,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-26T01:02:12.388167+00:00"
     }
   },
-  "updated_at": "2026-11-25T01:01:14.790388+00:00",
+  "updated_at": "2026-11-25T01:02:56.460067+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388987,7 +1388999,7 @@
     },
     "326": {
       "misses": [],
-      "updated_at": "2026-11-25T01:00:10.433288+00:00"
+      "updated_at": "2026-11-25T01:02:02.659080+00:00"
     },
     "3110": {
       "misses": [
@@ -1389000,6 +1389012,18 @@
         "6220:1:1"
       ],
       "updated_at": "2026-11-25T00:48:56.445957+00:00"
+    },
+    "3023": {
+      "misses": [
+        "3023:1:1"
+      ],
+      "updated_at": "2026-11-25T01:01:51.633436+00:00"
+    },
+    "10026": {
+      "misses": [
+        "10026:1:2"
+      ],
+      "updated_at": "2026-11-25T01:02:12.388191+00:00"
     }
   },
   "discovery_progress": {
