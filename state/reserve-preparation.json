@@ -205289,14 +205289,16 @@
       "queue_rank": 20533
     },
     "10213:1:1": {
-      "at": "2026-10-13T17:11:33.014001+00:00",
+      "at": "2026-11-26T16:20:18.302389+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 9.96,
-      "consecutive_failures": 1,
-      "retry_after": "2026-10-14T17:11:42.971923+00:00"
+      "elapsed_seconds": 23.75,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T16:21:07.921426+00:00"
     },
     "1461:4:23": {
       "at": "2026-10-13T17:34:26.597795+00:00",
@@ -521000,53 +521002,17 @@
       "retry_after": "2026-11-26T13:20:39.513392+00:00"
     },
     "10474:1:1": {
-      "at": "2026-11-05T01:34:34.503262+00:00",
+      "at": "2026-11-26T16:21:09.121873+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
+      "czech_fallback_revision": 1,
       "request_probe_revision": 1,
-      "method": "discovery",
       "reason": "no_matches",
-      "elapsed_seconds": 142.71,
-      "search_evidence": [
-        {
-          "path": "/farmagia-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201910,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/farmagia/s/-6",
-          "status": 200,
-          "response_bytes": 302544,
-          "boxes": 62,
-          "parsed_candidates": 60,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/farmagia-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 201927,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/farmagia/s/-6",
-          "status": 200,
-          "response_bytes": 302433,
-          "boxes": 62,
-          "parsed_candidates": 60,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-06T01:36:57.208853+00:00"
+      "elapsed_seconds": 17.04,
+      "consecutive_failures": 4,
+      "retry_after": "2026-11-27T16:21:26.166505+00:00"
     },
     "357:1:2": {
       "at": "2026-10-23T15:11:26.726981+00:00",
@@ -1373845,9 +1373811,51 @@
       "elapsed_seconds": 188.62,
       "source_id": "10903933",
       "queue_rank": 46342
+    },
+    "1:5:17": {
+      "at": "2026-11-26T16:17:43.184206+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9515100717544556,
+      "observed_source_id": "32403173",
+      "elapsed_seconds": 207.85,
+      "source_id": "32403173",
+      "queue_rank": 46343
+    },
+    "1:5:16": {
+      "at": "2026-11-26T16:17:36.134243+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9245385527610779,
+      "observed_source_id": "33928118",
+      "elapsed_seconds": 220.29,
+      "source_id": "33928118",
+      "queue_rank": 46344
+    },
+    "1:5:18": {
+      "at": "2026-11-26T16:18:16.782662+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9826074242591858,
+      "observed_source_id": "34297275",
+      "elapsed_seconds": 200.53,
+      "source_id": "34297275",
+      "queue_rank": 46345
     }
   },
-  "updated_at": "2026-11-26T16:20:33.405458+00:00",
+  "updated_at": "2026-11-26T16:21:41.534409+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379075,7 +1379083,7 @@
     },
     "1": {
       "misses": [],
-      "updated_at": "2026-11-26T16:20:17.229263+00:00"
+      "updated_at": "2026-11-26T16:21:37.315818+00:00"
     },
     "796": {
       "misses": [],
@@ -1387555,15 +1387563,27 @@
         "10192:1:2"
       ],
       "updated_at": "2026-11-26T16:13:57.599056+00:00"
+    },
+    "10213": {
+      "misses": [
+        "10213:1:1"
+      ],
+      "updated_at": "2026-11-26T16:21:07.921463+00:00"
+    },
+    "10474": {
+      "misses": [
+        "10474:1:1"
+      ],
+      "updated_at": "2026-11-26T16:21:26.166538+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 10213,
+    "last_series": 10474,
     "last_series_order": [
       true,
       0,
       0,
-      10213
+      10474
     ]
   },
   "czech_fallback_revision": 1
