@@ -721798,19 +721798,19 @@
       "retry_after": "2026-10-28T18:10:44.845984+00:00"
     },
     "1410:5:6": {
-      "at": "2026-11-25T08:07:43.386565+00:00",
+      "at": "2026-11-26T08:49:41.053622+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.990558385848999,
+      "observed_language_probability": 0.9919691681861877,
       "observed_source_id": "34450669",
       "reason": "inconclusive_subtitles",
-      "elapsed_seconds": 466.98,
-      "consecutive_failures": 17,
-      "retry_after": "2026-11-26T08:16:41.478136+00:00"
+      "elapsed_seconds": 231.18,
+      "consecutive_failures": 18,
+      "retry_after": "2026-11-27T08:53:32.234730+00:00"
     },
     "1303:5:1": {
       "at": "2026-10-31T05:20:19.001765+00:00",
@@ -1262828,52 +1262828,16 @@
       "queue_rank": 41179
     },
     "8365:1:1": {
-      "at": "2026-11-14T03:42:42.630835+00:00",
+      "at": "2026-11-26T08:53:08.892862+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 27.16,
-      "search_evidence": [
-        {
-          "path": "/les-avions-du-bout-du-monde-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216354,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/les-avions-du-bout-du-monde/s/-6",
-          "status": 200,
-          "response_bytes": 216207,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/les-avions-du-bout-du-monde-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216322,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/les-avions-du-bout-du-monde/s/-6",
-          "status": 200,
-          "response_bytes": 216240,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T03:43:10.446736+00:00"
+      "elapsed_seconds": 12.95,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T08:53:21.846250+00:00"
     },
     "8349:1:1": {
       "at": "2026-11-26T08:48:50.691671+00:00",
@@ -1374860,9 +1374824,49 @@
       "elapsed_seconds": 155.8,
       "source_id": "26801958",
       "queue_rank": 46269
+    },
+    "230:3:6": {
+      "at": "2026-11-26T08:51:39.660754+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9895193576812744,
+      "observed_source_id": "28187723",
+      "elapsed_seconds": 71.78,
+      "source_id": "28187723",
+      "queue_rank": 46270
+    },
+    "230:3:7": {
+      "at": "2026-11-26T08:51:40.736413+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9910441637039185,
+      "observed_source_id": "26771515",
+      "elapsed_seconds": 102.26,
+      "source_id": "26771515",
+      "queue_rank": 46271
+    },
+    "230:3:10": {
+      "at": "2026-11-26T08:52:21.077166+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_acceptable_original",
+      "elapsed_seconds": 61.95,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-27T08:53:23.140135+00:00"
     }
   },
-  "updated_at": "2026-11-26T08:52:44.381302+00:00",
+  "updated_at": "2026-11-26T08:53:36.445788+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379610,12 +1379614,12 @@
     },
     "1410": {
       "misses": [
-        "1410:5:14",
         "1410:5:13",
-        "1410:5:16"
+        "1410:5:16",
+        "1410:5:6"
       ],
-      "updated_at": "2026-11-26T08:49:37.540436+00:00",
-      "retry_after": "2026-11-26T09:19:37.540436+00:00"
+      "updated_at": "2026-11-26T08:53:32.234763+00:00",
+      "retry_after": "2026-11-26T09:23:32.234763+00:00"
     },
     "9670": {
       "misses": [
@@ -1388035,8 +1388039,10 @@
       "updated_at": "2026-11-26T01:23:45.280544+00:00"
     },
     "230": {
-      "misses": [],
-      "updated_at": "2026-11-26T08:52:20.007613+00:00"
+      "misses": [
+        "230:3:10"
+      ],
+      "updated_at": "2026-11-26T08:53:23.140156+00:00"
     },
     "5929": {
       "misses": [
@@ -1388272,15 +1388278,21 @@
         "8349:1:1"
       ],
       "updated_at": "2026-11-26T08:49:37.540609+00:00"
+    },
+    "8365": {
+      "misses": [
+        "8365:1:1"
+      ],
+      "updated_at": "2026-11-26T08:53:21.846302+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 8349,
+    "last_series": 8375,
     "last_series_order": [
       true,
       0,
       0,
-      8349
+      8375
     ]
   },
   "czech_fallback_revision": 1
