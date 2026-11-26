@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45720053180",
-  "attempted_this_run": 12,
+  "attempted_this_run": 17,
   "prepared_this_run": 0,
   "reserve_total": 37764,
   "queue_total": 46199,
-  "updated_at": "2026-11-26T01:14:39.583698+00:00",
+  "updated_at": "2026-11-26T01:15:34.684234+00:00",
   "workers": 4,
-  "elapsed_seconds": 2327.1,
+  "elapsed_seconds": 2382.2,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -30,42 +30,45 @@
       "a": 22668,
       "b": 22674
     },
-    "uploads_last_24h": 309,
-    "uploads_per_hour_24h": 12.88,
+    "uploads_last_24h": 308,
+    "uploads_per_hour_24h": 12.83,
     "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "waiting_for_sources",
-    "starved_accounts": [],
+    "status": "starved",
+    "starved_accounts": [
+      "a",
+      "b"
+    ],
     "seconds_since_upload": {
-      "a": 3590,
-      "b": 3596
+      "a": 3645,
+      "b": 3651
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 5,
       "inconclusive_audio": 9,
-      "no_matches": 3,
-      "inconclusive_subtitles": 2,
+      "no_matches": 5,
+      "inconclusive_subtitles": 4,
       "source_search_unavailable": 3
     }
   },
-  "indexed_candidates_in_scan": 765,
+  "indexed_candidates_in_scan": 769,
   "discovery_progress": {
-    "last_series": 5764,
+    "last_series": 5792,
     "last_series_order": [
       true,
       0,
       0,
-      5764
+      5792
     ]
   },
   "cache": {
-    "search_miss": 73,
-    "search_seconds": 1725.04,
+    "search_miss": 86,
+    "search_seconds": 1800.02,
     "search_hit": 11,
     "media_hit": 101,
     "media_miss": 14,
-    "media_seconds": 218.7,
+    "media_seconds": 278.75,
     "audio_miss": 16,
     "audio_hit": 10,
     "audio_seconds": 592.04
@@ -2885,7 +2888,7 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 6,
+    "control_requests": 7,
     "request_gap_seconds": 4.0,
     "restart_required": false,
     "last_request_limit": null,
@@ -2894,9 +2897,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724079,
+        "response_bytes": 723969,
         "parsed_candidates": 412,
-        "body_sha256": "9efa462e73aadc19961b8a92f3439b022d006db3f31529cd973920085b2d9155",
+        "body_sha256": "ac283c430e79ad8ffa77ab1429fe4214bcd08118ecfb0ea317fbb29db426fafe",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2905,7 +2908,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-26T01:13:36.786691+00:00"
+        "checked_at": "2026-11-26T01:14:44.933542+00:00"
       }
     ]
   }
