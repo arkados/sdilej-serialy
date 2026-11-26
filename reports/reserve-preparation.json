@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45896485565",
-  "attempted_this_run": 10,
+  "attempted_this_run": 11,
   "prepared_this_run": 1,
   "reserve_total": 37970,
   "queue_total": 46405,
-  "updated_at": "2026-11-26T21:47:28.158803+00:00",
+  "updated_at": "2026-11-26T21:48:51.069721+00:00",
   "workers": 4,
-  "elapsed_seconds": 1517.75,
-  "prepared_per_hour": 2.37,
+  "elapsed_seconds": 1600.66,
+  "prepared_per_hour": 2.25,
   "available_this_run": 1,
-  "available_per_hour": 2.37,
+  "available_per_hour": 2.25,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -23,7 +23,8 @@
     "categories": {
       "completed": 45548,
       "allocated": 842,
-      "failed": 12,
+      "failed": 10,
+      "in_flight": 2,
       "language_review": 3
     },
     "completed_by_account": {
@@ -40,16 +41,17 @@
       "b"
     ],
     "seconds_since_upload": {
-      "a": 412,
-      "b": 2080
+      "a": 495,
+      "b": 2163
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 5,
       "no_matches": 8,
-      "source_search_unavailable": 2,
-      "inconclusive_audio": 8,
-      "inconclusive_subtitles": 3,
-      "prepared": 11
+      "source_search_unavailable": 1,
+      "inconclusive_audio": 7,
+      "inconclusive_subtitles": 2,
+      "prepared": 9,
+      "no_english_czech_subtitles": 1
     }
   },
   "indexed_candidates_in_scan": 582,
@@ -63,15 +65,15 @@
     ]
   },
   "cache": {
-    "search_miss": 60,
-    "search_seconds": 1407.67,
+    "search_miss": 64,
+    "search_seconds": 1457.83,
     "search_hit": 4,
-    "media_hit": 84,
+    "media_hit": 94,
     "media_miss": 6,
     "media_seconds": 141.12,
     "audio_miss": 8,
     "audio_seconds": 351.28,
-    "audio_hit": 1
+    "audio_hit": 2
   },
   "audio_pipeline": {
     "sample_count": 29,
@@ -2888,7 +2890,7 @@
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
     "control_requests": 2,
-    "request_gap_seconds": 4.0,
+    "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
