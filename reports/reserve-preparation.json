@@ -5,9 +5,9 @@
   "prepared_this_run": 0,
   "reserve_total": 37841,
   "queue_total": 46276,
-  "updated_at": "2026-11-26T09:19:55.743257+00:00",
+  "updated_at": "2026-11-26T09:21:12.245331+00:00",
   "workers": 4,
-  "elapsed_seconds": 69.26,
+  "elapsed_seconds": 145.77,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -30,24 +30,24 @@
       "a": 22706,
       "b": 22713
     },
-    "uploads_last_24h": 287,
-    "uploads_per_hour_24h": 11.96,
+    "uploads_last_24h": 285,
+    "uploads_per_hour_24h": 11.88,
     "stock_hours_24h": 0.0
   },
   "health": {
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 860,
-      "b": 813
+      "a": 937,
+      "b": 889
     },
     "preparation_outcomes_last_hour": {
       "inconclusive_audio": 10,
       "source_search_unavailable": 4,
       "inconclusive_subtitles": 4,
-      "prepared": 13,
       "no_matches": 29,
       "no_english_czech_subtitles": 1,
+      "prepared": 12,
       "no_acceptable_original": 1
     }
   },
@@ -62,13 +62,15 @@
     ]
   },
   "cache": {
-    "search_miss": 11,
-    "search_seconds": 139.11,
-    "search_hit": 2
+    "search_miss": 12,
+    "search_seconds": 297.79,
+    "search_hit": 4,
+    "media_miss": 2,
+    "media_seconds": 6.87
   },
   "audio_pipeline": {},
   "productive_seasons": 78,
-  "series_paused_this_run": 11,
+  "series_paused_this_run": 9,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
   "repaired_this_run": 0,
@@ -2871,15 +2873,32 @@
     }
   ],
   "search_health": {
-    "status": "probe_due",
-    "consecutive_failures": 2,
+    "status": "healthy",
+    "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 0,
+    "control_requests": 1,
     "request_gap_seconds": 8,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
-    "controls": []
+    "controls": [
+      {
+        "path": "/teorie-velkeho-tresku/s/-6",
+        "status": 200,
+        "response_bytes": 724023,
+        "parsed_candidates": 412,
+        "body_sha256": "c7e838824e7ccc9b68e32f73c3b42dfd2f2ffe71de2ed3ea8160e9ac3a1f4a5f",
+        "video_box_count": 465,
+        "heading_matches_query": true,
+        "password_field_present": false,
+        "fallback_notice_present": false,
+        "request_limit_notice_present": false,
+        "cache_age_seconds": null,
+        "response_path": "/teorie-velkeho-tresku/s/-6",
+        "unexpected_origin": false,
+        "checked_at": "2026-11-26T09:19:58.997253+00:00"
+      }
+    ]
   }
 }
