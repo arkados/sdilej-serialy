@@ -326967,21 +326967,19 @@
       "retry_after": "2026-10-20T14:12:10.230846+00:00"
     },
     "9667:1:33": {
-      "at": "2026-11-13T10:05:40.200916+00:00",
+      "at": "2026-11-26T05:23:22.639508+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.7968992590904236,
+      "observed_language_probability": 0.8307055234909058,
       "observed_source_id": "32473283",
-      "elapsed_seconds": 210.32,
-      "consecutive_failures": 11,
-      "retry_after": "2026-11-14T10:09:12.539856+00:00"
+      "reason": "transient_search",
+      "elapsed_seconds": 493.5,
+      "consecutive_failures": 12,
+      "retry_after": "2026-11-26T11:31:36.135876+00:00"
     },
     "9667:1:34": {
       "at": "2026-11-13T10:05:41.174884+00:00",
@@ -1262261,52 +1262259,16 @@
       "queue_rank": 41140
     },
     "7107:1:1": {
-      "at": "2026-11-14T02:11:11.676804+00:00",
+      "at": "2026-11-26T05:25:58.443249+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 34.43,
-      "search_evidence": [
-        {
-          "path": "/bauhaus-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215885,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/bauhaus/s/-6",
-          "status": 200,
-          "response_bytes": 222135,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/bauhaus-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 215904,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/bauhaus/s/-6",
-          "status": 200,
-          "response_bytes": 222110,
-          "boxes": 5,
-          "parsed_candidates": 5,
-          "heading_matches_query": true
-        }
-      ],
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 337.69,
       "consecutive_failures": 1,
-      "retry_after": "2026-11-15T02:11:46.102445+00:00"
+      "retry_after": "2026-11-26T05:41:36.133878+00:00"
     },
     "7065:1:1": {
       "at": "2026-11-14T02:11:10.925945+00:00",
@@ -1375596,9 +1375558,33 @@
       "elapsed_seconds": 37.79,
       "consecutive_failures": 1,
       "retry_after": "2026-11-27T05:25:56.852279+00:00"
+    },
+    "6871:1:4": {
+      "at": "2026-11-26T05:25:54.937106+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 341.2,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-26T05:41:36.133879+00:00"
+    },
+    "6871:1:5": {
+      "at": "2026-11-26T05:25:56.747645+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 339.39,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-26T05:41:36.133879+00:00"
     }
   },
-  "updated_at": "2026-11-26T05:30:41.666758+00:00",
+  "updated_at": "2026-11-26T05:31:40.368786+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1380771,12 +1380757,12 @@
     },
     "9667": {
       "misses": [
-        "9667:1:30",
         "9667:1:31",
-        "9667:1:28"
+        "9667:1:28",
+        "9667:1:33"
       ],
-      "updated_at": "2026-11-26T05:25:16.871528+00:00",
-      "retry_after": "2026-11-26T05:55:16.871528+00:00"
+      "updated_at": "2026-11-26T05:31:36.135897+00:00",
+      "retry_after": "2026-11-26T06:01:36.135897+00:00"
     },
     "702": {
       "misses": [
