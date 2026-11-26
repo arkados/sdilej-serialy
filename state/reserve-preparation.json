@@ -329711,18 +329711,16 @@
       "retry_after": "2026-11-11T16:53:40.179793+00:00"
     },
     "9667:1:40": {
-      "at": "2026-11-13T16:13:49.443515+00:00",
+      "at": "2026-11-26T08:36:37.212915+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 179.62,
-      "consecutive_failures": 11,
-      "retry_after": "2026-11-14T16:16:49.060539+00:00"
+      "elapsed_seconds": 220.98,
+      "consecutive_failures": 12,
+      "retry_after": "2026-11-27T08:40:29.798288+00:00"
     },
     "1126:3:3": {
       "at": "2026-10-19T16:12:38.873350+00:00",
@@ -1262692,84 +1262690,16 @@
       "retry_after": "2026-11-27T08:34:17.687777+00:00"
     },
     "8107:1:1": {
-      "at": "2026-11-14T03:28:06.915335+00:00",
+      "at": "2026-11-26T08:39:48.148149+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 222.9,
-      "search_evidence": [
-        {
-          "path": "/imhotep-stavitel-dzoserovy-pyramidy-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216610,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/imhotep-stavitel-dzoserovy-pyramidy/s/-6",
-          "status": 200,
-          "response_bytes": 216335,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tombs-of-egypt-imhotep-the-pyramid-creator-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216703,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tombs-of-egypt-imhotep-the-pyramid-creator/s/-6",
-          "status": 200,
-          "response_bytes": 216435,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/imhotep-stavitel-dzoserovy-pyramidy-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216573,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/imhotep-stavitel-dzoserovy-pyramidy/s/-6",
-          "status": 200,
-          "response_bytes": 216401,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tombs-of-egypt-imhotep-the-pyramid-creator-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216757,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/tombs-of-egypt-imhotep-the-pyramid-creator/s/-6",
-          "status": 200,
-          "response_bytes": 216462,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T03:32:35.918656+00:00"
+      "elapsed_seconds": 74.52,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T08:41:02.664128+00:00"
     },
     "3339:1:7": {
       "at": "2026-11-14T03:32:41.703091+00:00",
@@ -1375004,7 +1374934,7 @@
       "retry_after": "2026-11-27T08:31:37.896898+00:00"
     }
   },
-  "updated_at": "2026-11-26T08:40:13.378276+00:00",
+  "updated_at": "2026-11-26T08:41:34.925506+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1380181,9 +1380111,11 @@
     "9667": {
       "misses": [
         "9667:2:8",
-        "9667:1:38"
+        "9667:1:38",
+        "9667:1:40"
       ],
-      "updated_at": "2026-11-26T08:39:47.049281+00:00"
+      "updated_at": "2026-11-26T08:40:29.798316+00:00",
+      "retry_after": "2026-11-26T09:10:29.798316+00:00"
     },
     "702": {
       "misses": [
@@ -1388394,15 +1388326,21 @@
         "8097:1:1"
       ],
       "updated_at": "2026-11-26T08:34:25.826949+00:00"
+    },
+    "8107": {
+      "misses": [
+        "8107:1:1"
+      ],
+      "updated_at": "2026-11-26T08:41:02.664161+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 8107,
+    "last_series": 8115,
     "last_series_order": [
       true,
       0,
       0,
-      8107
+      8115
     ]
   },
   "czech_fallback_revision": 1
