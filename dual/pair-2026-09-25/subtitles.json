@@ -1986,12 +1986,34 @@
       "identity": "675:1:5",
       "account": "b",
       "target_video_id": "31206453",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
-      "checked_at": "2026-11-25T05:51:12.601548+00:00",
-      "retry_after": "2026-11-25T06:06:12.601562+00:00",
+      "checked_at": "2026-11-26T01:26:08.149924+00:00",
+      "retry_after": "2026-11-26T01:41:08.149939+00:00",
       "listing_page": 85,
-      "detail_url": "https://prehraj.to/nejzazsi-hranice-s01e05-arnaq-4k-cz-titulky-titulky-cekaji-mkv/cde8bd7af05902b1"
+      "detail_url": "https://prehraj.to/nejzazsi-hranice-s01e05-arnaq-4k-cz-titulky-titulky-cekaji-mkv/cde8bd7af05902b1",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31212751": {
       "identity": "4303:1:1",
@@ -2793,5 +2815,5 @@
       "retry_after": "2026-11-26T01:34:13.301591+00:00"
     }
   },
-  "updated_at": "2026-11-26T01:25:47.233281+00:00"
+  "updated_at": "2026-11-26T01:26:08.149948+00:00"
 }
