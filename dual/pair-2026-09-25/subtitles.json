@@ -124,8 +124,30 @@
         "before_ids": [],
         "created_at": "2026-11-17T04:02:05.337868+00:00"
       },
-      "checked_at": "2026-11-26T01:19:33.946852+00:00",
-      "retry_after": "2026-11-26T01:34:33.946867+00:00"
+      "checked_at": "2026-11-26T09:55:48.779315+00:00",
+      "retry_after": "2026-11-26T10:10:48.779329+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31103941": {
       "identity": "4333:1:4",
@@ -2716,5 +2738,5 @@
       "retry_after": "2026-11-26T10:10:28.109364+00:00"
     }
   },
-  "updated_at": "2026-11-26T09:55:28.109374+00:00"
+  "updated_at": "2026-11-26T09:55:48.779338+00:00"
 }
