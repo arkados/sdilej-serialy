@@ -41537,16 +41537,46 @@
       "queue_rank": 26220
     },
     "1003:1:1": {
-      "at": "2026-11-26T11:32:37.424359+00:00",
+      "at": "2026-11-26T12:37:35.240506+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "transient_original",
-      "elapsed_seconds": 930.78,
+      "reason": "source_search_unavailable",
+      "error": {
+        "type": "SearchUnavailable",
+        "frames": [
+          {
+            "file": "episodes.py",
+            "function": "_inspect",
+            "line": 356
+          },
+          {
+            "file": "source_audit.py",
+            "function": "_get",
+            "line": 118
+          },
+          {
+            "file": "episodes.py",
+            "function": "_get",
+            "line": 244
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 202
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 84
+          }
+        ]
+      },
+      "elapsed_seconds": 735.3,
       "consecutive_failures": 121,
-      "retry_after": "2026-11-26T17:48:08.207915+00:00"
+      "retry_after": "2026-11-26T12:58:52.461878+00:00"
     },
     "1003:1:2": {
       "at": "2026-11-10T17:57:35.016673+00:00",
@@ -176869,16 +176899,16 @@
       "retry_after": "2026-11-27T10:55:13.738865+00:00"
     },
     "1410:5:18": {
-      "at": "2026-11-26T12:06:36.843928+00:00",
+      "at": "2026-11-26T12:42:58.880914+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "source_search_unavailable",
-      "elapsed_seconds": 321.84,
+      "elapsed_seconds": 353.63,
       "consecutive_failures": 24,
-      "retry_after": "2026-11-26T12:21:58.679916+00:00"
+      "retry_after": "2026-11-26T12:58:52.461872+00:00"
     },
     "2209:6:14": {
       "at": "2026-10-12T16:45:46.232598+00:00",
@@ -1253978,16 +1254008,16 @@
       "queue_rank": 40676
     },
     "5620:1:3": {
-      "at": "2026-11-26T12:06:37.564851+00:00",
+      "at": "2026-11-26T12:43:55.248480+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "source_search_unavailable",
-      "elapsed_seconds": 321.12,
+      "elapsed_seconds": 297.28,
       "consecutive_failures": 25,
-      "retry_after": "2026-11-26T12:21:58.679915+00:00"
+      "retry_after": "2026-11-26T12:58:52.461871+00:00"
     },
     "5620:1:5": {
       "at": "2026-11-13T10:29:43.732993+00:00",
@@ -1264152,84 +1264182,16 @@
       "queue_rank": 41255
     },
     "9155:1:2": {
-      "at": "2026-11-14T05:56:54.534476+00:00",
+      "at": "2026-11-26T12:42:51.321978+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 54.23,
-      "search_evidence": [
-        {
-          "path": "/revoluce-ktere-zmenily-svet-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216361,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/revoluce-ktere-zmenily-svet/s/-6",
-          "status": 200,
-          "response_bytes": 216165,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/die-gro-ten-revolutionen-der-geschichte-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216549,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": false
-        },
-        {
-          "path": "/die-gro-ten-revolutionen-der-geschichte/s/-6",
-          "status": 200,
-          "response_bytes": 216392,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": false
-        },
-        {
-          "path": "/revoluce-ktere-zmenily-svet-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216258,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/revoluce-ktere-zmenily-svet/s/-6",
-          "status": 200,
-          "response_bytes": 216097,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/die-gro-ten-revolutionen-der-geschichte-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216622,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": false
-        },
-        {
-          "path": "/die-gro-ten-revolutionen-der-geschichte/s/-6",
-          "status": 200,
-          "response_bytes": 216413,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": false
-        }
-      ],
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 361.22,
       "consecutive_failures": 1,
-      "retry_after": "2026-11-15T05:57:48.764427+00:00"
+      "retry_after": "2026-11-26T12:58:52.461888+00:00"
     },
     "6024:1:14": {
       "at": "2026-11-14T05:57:28.872394+00:00",
@@ -1374148,7 +1374110,7 @@
       "queue_rank": 46298
     }
   },
-  "updated_at": "2026-11-26T12:48:53.761262+00:00",
+  "updated_at": "2026-11-26T12:49:53.973677+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
