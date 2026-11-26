@@ -205056,14 +205056,16 @@
       "retry_after": "2026-11-27T00:19:08.804951+00:00"
     },
     "6096:1:1": {
-      "at": "2026-10-13T16:50:14.770508+00:00",
+      "at": "2026-11-26T02:41:54.306612+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 15.17,
-      "consecutive_failures": 1,
-      "retry_after": "2026-10-14T16:50:29.944347+00:00"
+      "elapsed_seconds": 66.2,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T02:43:09.370215+00:00"
     },
     "38:2:2": {
       "at": "2026-10-13T16:49:21.378107+00:00",
@@ -1375140,16 +1375142,18 @@
       "queue_rank": 46199
     },
     "1:2:11": {
-      "at": "2026-11-26T00:35:58.547543+00:00",
-      "status": "deferred",
+      "at": "2026-11-26T02:36:01.444834+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "inconclusive_audio",
-      "elapsed_seconds": 942.3,
-      "consecutive_failures": 3,
-      "retry_after": "2026-11-26T04:51:40.849253+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9595175385475159,
+      "observed_source_id": "32394620",
+      "elapsed_seconds": 416.89,
+      "source_id": "32394620",
+      "queue_rank": 46221
     },
     "1:2:13": {
       "at": "2026-11-26T02:19:12.275960+00:00",
@@ -1375723,7 +1375727,7 @@
       "queue_rank": 46220
     }
   },
-  "updated_at": "2026-11-26T02:42:53.265710+00:00",
+  "updated_at": "2026-11-26T02:44:13.517245+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1380956,10 +1380960,8 @@
       "updated_at": "2026-11-25T10:11:40.759408+00:00"
     },
     "1": {
-      "misses": [
-        "1:2:13"
-      ],
-      "updated_at": "2026-11-26T02:35:14.920310+00:00"
+      "misses": [],
+      "updated_at": "2026-11-26T02:43:09.370124+00:00"
     },
     "796": {
       "misses": [],
@@ -1388926,6 +1388928,12 @@
         "6078:1:1"
       ],
       "updated_at": "2026-11-26T02:36:54.108241+00:00"
+    },
+    "6096": {
+      "misses": [
+        "6096:1:1"
+      ],
+      "updated_at": "2026-11-26T02:43:09.370236+00:00"
     }
   },
   "discovery_progress": {
