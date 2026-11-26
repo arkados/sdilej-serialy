@@ -1361,14 +1361,16 @@
       "retry_after": "2026-10-19T09:53:01.656755+00:00"
     },
     "1611:1:1": {
-      "at": "2026-10-18T15:32:20.407216+00:00",
+      "at": "2026-11-26T17:43:44.462354+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 13.39,
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 298.21,
       "consecutive_failures": 7,
-      "retry_after": "2026-10-19T15:32:35.728016+00:00"
+      "retry_after": "2026-11-26T17:58:42.673860+00:00"
     },
     "1611:1:2": {
       "at": "2026-10-18T15:36:50.024403+00:00",
@@ -1265121,84 +1265123,16 @@
       "retry_after": "2026-11-16T18:09:30.187817+00:00"
     },
     "5797:1:5": {
-      "at": "2026-11-14T07:25:11.909094+00:00",
+      "at": "2026-11-26T17:43:45.215387+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 97.89,
-      "search_evidence": [
-        {
-          "path": "/zachranari-norsko-s01e05/s/-6",
-          "status": 200,
-          "response_bytes": 216060,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zachranari-norsko/s/-6",
-          "status": 200,
-          "response_bytes": 246213,
-          "boxes": 21,
-          "parsed_candidates": 21,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/reddet-s01e05/s/-6",
-          "status": 200,
-          "response_bytes": 215832,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/reddet/s/-6",
-          "status": 200,
-          "response_bytes": 241364,
-          "boxes": 43,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zachranari-norsko-s01e05/s/-6",
-          "status": 200,
-          "response_bytes": 216017,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zachranari-norsko/s/-6",
-          "status": 200,
-          "response_bytes": 246201,
-          "boxes": 21,
-          "parsed_candidates": 21,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/reddet-s01e05/s/-6",
-          "status": 200,
-          "response_bytes": 215923,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/reddet/s/-6",
-          "status": 200,
-          "response_bytes": 241408,
-          "boxes": 43,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        }
-      ],
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 297.46,
       "consecutive_failures": 1,
-      "retry_after": "2026-11-15T07:26:49.796078+00:00"
+      "retry_after": "2026-11-26T17:58:42.673860+00:00"
     },
     "1:1:20": {
       "at": "2026-11-17T14:20:30.139887+00:00",
@@ -1373968,9 +1373902,21 @@
       "elapsed_seconds": 149.34,
       "source_id": "34297330",
       "queue_rank": 46363
+    },
+    "1:6:16": {
+      "at": "2026-11-26T17:42:34.127815+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 368.55,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-26T17:58:42.673862+00:00"
     }
   },
-  "updated_at": "2026-11-26T17:47:45.573360+00:00",
+  "updated_at": "2026-11-26T17:49:00.502948+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
