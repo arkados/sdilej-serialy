@@ -1369600,16 +1369600,16 @@
       "retry_after": "2026-11-26T18:57:35.573237+00:00"
     },
     "5109:1:16": {
-      "at": "2026-11-25T17:17:08.631977+00:00",
+      "at": "2026-11-26T18:52:36.299396+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "no_matches",
-      "elapsed_seconds": 14.46,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 331.69,
       "consecutive_failures": 1,
-      "retry_after": "2026-11-26T17:17:23.091809+00:00"
+      "retry_after": "2026-11-26T19:08:07.990610+00:00"
     },
     "5109:1:17": {
       "at": "2026-11-25T17:17:45.973180+00:00",
@@ -1374100,9 +1374100,79 @@
       "elapsed_seconds": 138.6,
       "source_id": "32406486",
       "queue_rank": 46374
+    },
+    "1:7:9": {
+      "at": "2026-11-26T18:49:44.968406+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "error": {
+        "type": "SearchUnavailable",
+        "frames": [
+          {
+            "file": "episodes.py",
+            "function": "_inspect",
+            "line": 356
+          },
+          {
+            "file": "source_audit.py",
+            "function": "_get",
+            "line": 118
+          },
+          {
+            "file": "episodes.py",
+            "function": "_get",
+            "line": 244
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 202
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 84
+          }
+        ]
+      },
+      "elapsed_seconds": 506.14,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-26T19:08:07.990624+00:00"
+    },
+    "1:7:15": {
+      "at": "2026-11-26T18:49:46.364882+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9370119571685791,
+      "observed_source_id": "11119193",
+      "elapsed_seconds": 508.07,
+      "source_id": "11119193",
+      "queue_rank": 46375
+    },
+    "1:7:10": {
+      "at": "2026-11-26T18:49:45.663182+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9333354234695435,
+      "observed_source_id": "33937802",
+      "elapsed_seconds": 514.11,
+      "source_id": "33937802",
+      "queue_rank": 46376
     }
   },
-  "updated_at": "2026-11-26T18:58:05.619782+00:00",
+  "updated_at": "2026-11-26T18:58:22.799265+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379332,7 +1379402,7 @@
     },
     "1": {
       "misses": [],
-      "updated_at": "2026-11-26T18:49:44.265744+00:00"
+      "updated_at": "2026-11-26T18:58:19.775275+00:00"
     },
     "796": {
       "misses": [],
