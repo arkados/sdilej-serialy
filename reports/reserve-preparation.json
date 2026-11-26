@@ -1,50 +1,50 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45745742988",
-  "attempted_this_run": 16,
+  "attempted_this_run": 17,
   "prepared_this_run": 5,
   "reserve_total": 37795,
   "queue_total": 46230,
-  "updated_at": "2026-11-26T03:55:14.332636+00:00",
+  "updated_at": "2026-11-26T03:56:36.183973+00:00",
   "workers": 4,
-  "elapsed_seconds": 2939.11,
-  "prepared_per_hour": 6.12,
+  "elapsed_seconds": 3020.96,
+  "prepared_per_hour": 5.96,
   "available_this_run": 5,
-  "available_per_hour": 6.12,
+  "available_per_hour": 5.96,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 46230,
-    "ready": 1,
+    "ready": 0,
     "ready_by_account": {
       "a": 0,
-      "b": 1
+      "b": 0
     },
     "categories": {
-      "completed": 45371,
+      "completed": 45372,
       "allocated": 843,
       "failed": 12,
-      "language_review": 3,
-      "ready": 1
+      "language_review": 3
     },
     "completed_by_account": {
-      "a": 22682,
+      "a": 22683,
       "b": 22689
     },
-    "uploads_last_24h": 308,
-    "uploads_per_hour_24h": 12.83,
-    "stock_hours_24h": 0.08
+    "uploads_last_24h": 309,
+    "uploads_per_hour_24h": 12.88,
+    "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "buffered",
+    "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 360,
-      "b": 211
+      "a": 112,
+      "b": 293
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 6,
       "inconclusive_audio": 3,
+      "no_english_czech_subtitles": 1,
       "no_matches": 2,
       "prepared": 5
     }
@@ -60,15 +60,15 @@
     ]
   },
   "cache": {
-    "search_miss": 83,
-    "search_seconds": 2327.84,
+    "search_miss": 88,
+    "search_seconds": 2386.54,
     "search_hit": 7,
-    "media_hit": 87,
+    "media_hit": 91,
     "audio_miss": 11,
     "audio_seconds": 346.56,
-    "media_miss": 45,
-    "media_seconds": 412.94,
-    "audio_hit": 2
+    "media_miss": 47,
+    "media_seconds": 533.3,
+    "audio_hit": 3
   },
   "audio_pipeline": {
     "sample_count": 29,
@@ -2886,7 +2886,7 @@
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
     "control_requests": 2,
-    "request_gap_seconds": 8,
+    "request_gap_seconds": 4.0,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
