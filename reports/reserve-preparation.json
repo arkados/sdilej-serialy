@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45880131333",
-  "attempted_this_run": 12,
+  "attempted_this_run": 13,
   "prepared_this_run": 1,
   "reserve_total": 37942,
   "queue_total": 46377,
-  "updated_at": "2026-11-26T19:32:22.437015+00:00",
+  "updated_at": "2026-11-26T19:33:39.462624+00:00",
   "workers": 4,
-  "elapsed_seconds": 1439.96,
-  "prepared_per_hour": 2.5,
+  "elapsed_seconds": 1516.99,
+  "prepared_per_hour": 2.37,
   "available_this_run": 1,
-  "available_per_hour": 2.5,
+  "available_per_hour": 2.37,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -23,33 +23,34 @@
     "categories": {
       "completed": 45520,
       "allocated": 842,
-      "failed": 9,
-      "in_flight": 3,
+      "failed": 12,
       "language_review": 3
     },
     "completed_by_account": {
       "a": 22757,
       "b": 22763
     },
-    "uploads_last_24h": 245,
-    "uploads_per_hour_24h": 10.21,
+    "uploads_last_24h": 244,
+    "uploads_per_hour_24h": 10.17,
     "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "waiting_for_sources",
-    "starved_accounts": [],
+    "status": "starved",
+    "starved_accounts": [
+      "b"
+    ],
     "seconds_since_upload": {
-      "a": 498,
-      "b": 1752
+      "a": 575,
+      "b": 1829
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 7,
+      "transient_original": 8,
       "no_matches": 11,
       "inconclusive_subtitles": 3,
       "no_acceptable_original": 1,
       "inconclusive_audio": 8,
       "source_search_unavailable": 2,
-      "prepared": 7
+      "prepared": 6
     }
   },
   "indexed_candidates_in_scan": 494,
@@ -63,12 +64,12 @@
     ]
   },
   "cache": {
-    "search_miss": 75,
-    "search_seconds": 1450.9,
+    "search_miss": 80,
+    "search_seconds": 1477.21,
     "search_hit": 7,
-    "media_hit": 114,
-    "media_miss": 7,
-    "media_seconds": 186.72,
+    "media_hit": 120,
+    "media_miss": 16,
+    "media_seconds": 285.73,
     "audio_miss": 11,
     "audio_seconds": 410.94,
     "audio_hit": 2
