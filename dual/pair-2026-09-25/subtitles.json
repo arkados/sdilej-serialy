@@ -628,11 +628,12 @@
       "processing_guard_revision": 1,
       "listing_page": 168,
       "detail_url": "https://prehraj.to/constantine-s01e06-6-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/e5afd995b2c128fe",
-      "checked_at": "2026-11-26T09:43:22.868185+00:00",
-      "retry_after": "2026-11-26T09:58:22.868201+00:00",
+      "checked_at": "2026-11-26T19:54:26.882266+00:00",
+      "retry_after": "2026-11-26T20:09:26.882282+00:00",
       "listing_search_offset": 4,
       "error": {
-        "type": "TargetUnavailable",
+        "type": "HTTPError",
+        "http_status": 504,
         "frames": [
           {
             "file": "episode_subtitles.py",
@@ -647,7 +648,17 @@
           {
             "file": "episode_subtitles.py",
             "function": "owned_listing",
-            "line": 98
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
           }
         ]
       },
@@ -2965,5 +2976,5 @@
       "retry_after": "2026-11-26T10:10:28.109364+00:00"
     }
   },
-  "updated_at": "2026-11-26T19:52:40.541094+00:00"
+  "updated_at": "2026-11-26T19:54:26.882289+00:00"
 }
