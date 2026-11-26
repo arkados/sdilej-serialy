@@ -463,12 +463,34 @@
       "identity": "4333:1:5",
       "account": "a",
       "target_video_id": "31108524",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 165,
       "detail_url": "https://prehraj.to/lov-s01e05-bez-ukrytu-1080p-cz-titulky-titulky-cekaji-mp4/83229d084233f12d",
-      "checked_at": "2026-11-25T17:29:09.090221+00:00",
-      "retry_after": "2026-11-25T17:44:09.090236+00:00"
+      "checked_at": "2026-11-26T01:07:02.747293+00:00",
+      "retry_after": "2026-11-26T01:22:02.747308+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31108757": {
       "identity": "1629:1:6",
@@ -3015,5 +3037,5 @@
       "retry_after": "2026-11-25T18:06:26.673624+00:00"
     }
   },
-  "updated_at": "2026-11-26T01:06:43.773079+00:00"
+  "updated_at": "2026-11-26T01:07:02.747317+00:00"
 }
