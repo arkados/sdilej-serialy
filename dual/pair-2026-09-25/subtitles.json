@@ -456,11 +456,12 @@
       "processing_guard_revision": 1,
       "listing_page": 169,
       "detail_url": "https://prehraj.to/lov-s01e02-v-moci-rocnich-obdobi-1080p-cz-titulky-titulky-cekaji-mp4/f8ebd239920b5f22",
-      "checked_at": "2026-11-26T09:41:55.636289+00:00",
-      "retry_after": "2026-11-26T09:56:55.636304+00:00",
+      "checked_at": "2026-11-26T19:47:16.354193+00:00",
+      "retry_after": "2026-11-26T20:02:16.354209+00:00",
       "listing_search_offset": 4,
       "error": {
-        "type": "TargetUnavailable",
+        "type": "HTTPError",
+        "http_status": 504,
         "frames": [
           {
             "file": "episode_subtitles.py",
@@ -475,7 +476,17 @@
           {
             "file": "episode_subtitles.py",
             "function": "owned_listing",
-            "line": 98
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
           }
         ]
       },
@@ -2881,5 +2892,5 @@
       "retry_after": "2026-11-26T10:10:28.109364+00:00"
     }
   },
-  "updated_at": "2026-11-26T19:45:25.837285+00:00"
+  "updated_at": "2026-11-26T19:47:16.354217+00:00"
 }
