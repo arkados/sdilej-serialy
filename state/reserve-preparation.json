@@ -1183928,46 +1183928,16 @@
       "queue_rank": 36313
     },
     "979:1:1": {
-      "at": "2026-11-26T14:57:28.646211+00:00",
+      "at": "2026-11-26T15:39:38.566125+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "error": {
-        "type": "SearchUnavailable",
-        "frames": [
-          {
-            "file": "episodes.py",
-            "function": "_inspect",
-            "line": 356
-          },
-          {
-            "file": "source_audit.py",
-            "function": "_get",
-            "line": 118
-          },
-          {
-            "file": "episodes.py",
-            "function": "_get",
-            "line": 244
-          },
-          {
-            "file": "search_health.py",
-            "function": "wait",
-            "line": 202
-          },
-          {
-            "file": "search_health.py",
-            "function": "wait",
-            "line": 84
-          }
-        ]
-      },
-      "elapsed_seconds": 411.78,
-      "consecutive_failures": 45,
-      "retry_after": "2026-11-26T15:14:05.965334+00:00"
+      "reason": "transient_original",
+      "elapsed_seconds": 678.58,
+      "consecutive_failures": 46,
+      "retry_after": "2026-11-26T21:50:57.150763+00:00"
     },
     "1369:1:1": {
       "at": "2026-11-08T03:13:24.345549+00:00",
@@ -1373889,7 +1373859,7 @@
       "queue_rank": 46332
     }
   },
-  "updated_at": "2026-11-26T15:50:33.084363+00:00",
+  "updated_at": "2026-11-26T15:51:47.001632+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1378526,9 +1378496,11 @@
     "979": {
       "misses": [
         "979:1:7",
-        "979:1:8"
+        "979:1:8",
+        "979:1:1"
       ],
-      "updated_at": "2026-11-26T14:54:41.038292+00:00"
+      "updated_at": "2026-11-26T15:50:57.150791+00:00",
+      "retry_after": "2026-11-26T16:20:57.150791+00:00"
     },
     "2976": {
       "misses": [],
