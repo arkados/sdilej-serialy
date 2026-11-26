@@ -2366,12 +2366,34 @@
       "identity": "1602:1:2",
       "account": "a",
       "target_video_id": "31227641",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 73,
       "detail_url": "https://prehraj.to/cerny-rytir-muz-ktery-me-hlida-s01e02-2-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/78888dece7870a8f",
-      "checked_at": "2026-11-25T17:37:37.122088+00:00",
-      "retry_after": "2026-11-25T17:52:37.122102+00:00"
+      "checked_at": "2026-11-26T01:16:41.771239+00:00",
+      "retry_after": "2026-11-26T01:31:41.771254+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31227774": {
       "identity": "4479:1:1",
@@ -3169,5 +3191,5 @@
       "retry_after": "2026-11-25T18:06:26.673624+00:00"
     }
   },
-  "updated_at": "2026-11-26T01:16:22.876652+00:00"
+  "updated_at": "2026-11-26T01:16:41.771263+00:00"
 }
