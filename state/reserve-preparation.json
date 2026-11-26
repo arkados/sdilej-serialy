@@ -121656,16 +121656,16 @@
       "queue_rank": 23708
     },
     "1105:2:2": {
-      "at": "2026-11-26T13:25:34.687744+00:00",
+      "at": "2026-11-26T14:59:36.733784+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "inconclusive_audio",
-      "elapsed_seconds": 318.76,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 269.23,
       "consecutive_failures": 61,
-      "retry_after": "2026-11-27T13:30:53.452397+00:00"
+      "retry_after": "2026-11-26T15:14:05.965319+00:00"
     },
     "2650:1:1": {
       "at": "2026-10-10T12:50:55.863517+00:00",
@@ -1373747,16 +1373747,16 @@
       "queue_rank": 46325
     },
     "1:4:24": {
-      "at": "2026-11-26T14:11:27.530259+00:00",
+      "at": "2026-11-26T14:57:29.706058+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "source_search_unavailable",
-      "elapsed_seconds": 343.76,
+      "elapsed_seconds": 396.26,
       "consecutive_failures": 0,
-      "retry_after": "2026-11-26T14:27:11.286103+00:00"
+      "retry_after": "2026-11-26T15:14:05.965323+00:00"
     },
     "1:5:4": {
       "at": "2026-11-26T14:32:57.869483+00:00",
@@ -1373841,9 +1373841,51 @@
       "elapsed_seconds": 158.3,
       "source_id": "10903906",
       "queue_rank": 46331
+    },
+    "1:5:14": {
+      "at": "2026-11-26T14:56:44.896196+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "source_search_unavailable",
+      "error": {
+        "type": "SearchUnavailable",
+        "frames": [
+          {
+            "file": "episodes.py",
+            "function": "_inspect",
+            "line": 356
+          },
+          {
+            "file": "source_audit.py",
+            "function": "_get",
+            "line": 118
+          },
+          {
+            "file": "episodes.py",
+            "function": "_get",
+            "line": 244
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 202
+          },
+          {
+            "file": "search_health.py",
+            "function": "wait",
+            "line": 84
+          }
+        ]
+      },
+      "elapsed_seconds": 442.42,
+      "consecutive_failures": 0,
+      "retry_after": "2026-11-26T15:14:05.965323+00:00"
     }
   },
-  "updated_at": "2026-11-26T15:00:39.921535+00:00",
+  "updated_at": "2026-11-26T15:04:14.442858+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
