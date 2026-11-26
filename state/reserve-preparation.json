@@ -205200,14 +205200,16 @@
       "queue_rank": 20522
     },
     "8690:1:1": {
-      "at": "2026-10-13T16:56:49.676562+00:00",
+      "at": "2026-11-26T09:53:15.219112+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 47.07,
-      "consecutive_failures": 1,
-      "retry_after": "2026-10-14T16:57:36.748030+00:00"
+      "elapsed_seconds": 28.61,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T09:53:43.830070+00:00"
     },
     "8994:1:1": {
       "at": "2026-10-13T16:56:54.837706+00:00",
@@ -1263417,84 +1263419,16 @@
       "queue_rank": 41214
     },
     "8681:1:2": {
-      "at": "2026-11-14T04:46:19.465943+00:00",
+      "at": "2026-11-26T09:52:34.338721+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 131.59,
-      "search_evidence": [
-        {
-          "path": "/jak-tovarny-zmenily-svet-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216298,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jak-tovarny-zmenily-svet/s/-6",
-          "status": 200,
-          "response_bytes": 216067,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/how-factories-changed-the-world-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216352,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/how-factories-changed-the-world/s/-6",
-          "status": 200,
-          "response_bytes": 216274,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jak-tovarny-zmenily-svet-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216265,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/jak-tovarny-zmenily-svet/s/-6",
-          "status": 200,
-          "response_bytes": 216183,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/how-factories-changed-the-world-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216409,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/how-factories-changed-the-world/s/-6",
-          "status": 200,
-          "response_bytes": 216325,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T04:48:31.053646+00:00"
+      "elapsed_seconds": 35.71,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T09:53:15.218998+00:00"
     },
     "10425:4:9": {
       "at": "2026-11-14T04:49:12.816645+00:00",
@@ -1369339,16 +1369273,16 @@
       "retry_after": "2026-11-27T09:51:28.527867+00:00"
     },
     "1012:1:5": {
-      "at": "2026-11-25T08:22:03.440514+00:00",
+      "at": "2026-11-26T09:53:16.287954+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 50.99,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-26T08:22:55.601177+00:00"
+      "elapsed_seconds": 29.64,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T09:53:45.925065+00:00"
     },
     "1012:1:6": {
       "at": "2026-11-25T08:22:55.601302+00:00",
@@ -1374710,7 +1374644,7 @@
       "retry_after": "2026-11-27T09:52:53.473447+00:00"
     }
   },
-  "updated_at": "2026-11-26T09:52:57.664161+00:00",
+  "updated_at": "2026-11-26T09:54:20.239941+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386869,9 +1386803,11 @@
     "1012": {
       "misses": [
         "1012:1:3",
-        "1012:1:4"
+        "1012:1:4",
+        "1012:1:5"
       ],
-      "updated_at": "2026-11-26T09:51:28.527888+00:00"
+      "updated_at": "2026-11-26T09:53:45.925094+00:00",
+      "retry_after": "2026-11-26T13:53:45.925094+00:00"
     },
     "10304": {
       "misses": [
@@ -1388203,15 +1388139,27 @@
         "8484:1:2"
       ],
       "updated_at": "2026-11-26T09:51:04.756117+00:00"
+    },
+    "8681": {
+      "misses": [
+        "8681:1:2"
+      ],
+      "updated_at": "2026-11-26T09:53:15.219020+00:00"
+    },
+    "8690": {
+      "misses": [
+        "8690:1:1"
+      ],
+      "updated_at": "2026-11-26T09:53:43.830097+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 8681,
+    "last_series": 8690,
     "last_series_order": [
       true,
       0,
       0,
-      8681
+      8690
     ]
   },
   "czech_fallback_revision": 1
