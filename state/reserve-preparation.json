@@ -1263453,52 +1263453,16 @@
       "queue_rank": 41216
     },
     "8731:1:1": {
-      "at": "2026-11-14T04:52:11.919550+00:00",
+      "at": "2026-11-26T09:56:00.181092+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 16.92,
-      "search_evidence": [
-        {
-          "path": "/zazrak-ze-zapadu-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216074,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zazrak-ze-zapadu/s/-6",
-          "status": 200,
-          "response_bytes": 215914,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zazrak-ze-zapadu-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216140,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zazrak-ze-zapadu/s/-6",
-          "status": 200,
-          "response_bytes": 215903,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T04:52:38.082854+00:00"
+      "elapsed_seconds": 27.1,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T09:56:27.284430+00:00"
     },
     "10425:4:11": {
       "at": "2026-11-14T04:51:48.171654+00:00",
@@ -1374638,9 +1374602,57 @@
       "elapsed_seconds": 44.27,
       "consecutive_failures": 1,
       "retry_after": "2026-11-27T09:52:53.473447+00:00"
+    },
+    "9670:1:16": {
+      "at": "2026-11-26T09:55:12.505237+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_acceptable_original",
+      "elapsed_seconds": 41.35,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-27T09:55:53.856042+00:00"
+    },
+    "9670:1:19": {
+      "at": "2026-11-26T09:55:13.586810+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_acceptable_original",
+      "elapsed_seconds": 45.52,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-27T09:55:59.103277+00:00"
+    },
+    "9670:1:23": {
+      "at": "2026-11-26T09:55:20.536129+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_acceptable_original",
+      "elapsed_seconds": 45.17,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-27T09:56:05.701502+00:00"
+    },
+    "9670:1:26": {
+      "at": "2026-11-26T09:55:54.938020+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_acceptable_original",
+      "elapsed_seconds": 41.76,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-27T09:56:36.695887+00:00"
     }
   },
-  "updated_at": "2026-11-26T09:55:37.447129+00:00",
+  "updated_at": "2026-11-26T09:56:40.765790+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379397,12 +1379409,12 @@
     },
     "9670": {
       "misses": [
-        "9670:1:1",
-        "9670:1:14",
-        "9670:1:15"
+        "9670:1:19",
+        "9670:1:23",
+        "9670:1:26"
       ],
-      "updated_at": "2026-11-26T09:52:53.473476+00:00",
-      "retry_after": "2026-11-26T13:52:53.473476+00:00"
+      "updated_at": "2026-11-26T09:56:36.695913+00:00",
+      "retry_after": "2026-11-26T13:56:36.695913+00:00"
     },
     "5329": {
       "misses": [
@@ -1388154,15 +1388166,21 @@
         "1333:1:9"
       ],
       "updated_at": "2026-11-26T09:55:19.507714+00:00"
+    },
+    "8731": {
+      "misses": [
+        "8731:1:1"
+      ],
+      "updated_at": "2026-11-26T09:56:27.284456+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 8690,
+    "last_series": 8743,
     "last_series_order": [
       true,
       0,
       0,
-      8690
+      8743
     ]
   },
   "czech_fallback_revision": 1
