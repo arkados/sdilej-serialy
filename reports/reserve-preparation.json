@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45907083289",
-  "attempted_this_run": 8,
+  "attempted_this_run": 9,
   "prepared_this_run": 0,
   "reserve_total": 37974,
   "queue_total": 46409,
-  "updated_at": "2026-11-26T23:18:49.647422+00:00",
+  "updated_at": "2026-11-26T23:20:06.688732+00:00",
   "workers": 4,
-  "elapsed_seconds": 1246.07,
+  "elapsed_seconds": 1323.12,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -35,11 +35,14 @@
     "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "waiting_for_sources",
-    "starved_accounts": [],
+    "status": "starved",
+    "starved_accounts": [
+      "a",
+      "b"
+    ],
     "seconds_since_upload": {
-      "a": 4418,
-      "b": 4425
+      "a": 4495,
+      "b": 4502
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 5,
@@ -60,9 +63,9 @@
     ]
   },
   "cache": {
-    "search_miss": 54,
-    "search_seconds": 1247.47,
-    "media_hit": 77,
+    "search_miss": 58,
+    "search_seconds": 1308.2,
+    "media_hit": 86,
     "audio_miss": 6,
     "audio_seconds": 264.96,
     "search_hit": 2,
@@ -2884,7 +2887,7 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 2,
+    "control_requests": 3,
     "request_gap_seconds": 4.0,
     "restart_required": false,
     "last_request_limit": null,
@@ -2893,9 +2896,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724048,
+        "response_bytes": 723925,
         "parsed_candidates": 412,
-        "body_sha256": "f137f60c8a90a9a4d84ba4da700187ef9f34afe908e0d65952dd61efd0b2f5c5",
+        "body_sha256": "6add6631d327a787ebfe62af08691b849cff9d0cbd8dc33b187b3003fc844daf",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2904,7 +2907,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-26T23:02:59.605779+00:00"
+        "checked_at": "2026-11-26T23:19:31.291832+00:00"
       }
     ]
   }
