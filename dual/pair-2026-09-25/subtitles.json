@@ -364,12 +364,34 @@
       "identity": "4333:1:3",
       "account": "a",
       "target_video_id": "31108494",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 169,
       "detail_url": "https://prehraj.to/lov-s01e03-hra-na-schovavanou-1080p-cz-titulky-titulky-cekaji-mp4/151c1d8801aa144a",
-      "checked_at": "2026-11-26T01:06:43.773054+00:00",
-      "retry_after": "2026-11-26T01:21:43.773068+00:00"
+      "checked_at": "2026-11-26T09:42:14.851466+00:00",
+      "retry_after": "2026-11-26T09:57:14.851481+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31108524": {
       "identity": "4333:1:5",
@@ -2859,5 +2881,5 @@
       "retry_after": "2026-11-26T01:34:13.301591+00:00"
     }
   },
-  "updated_at": "2026-11-26T09:41:55.636314+00:00"
+  "updated_at": "2026-11-26T09:42:14.851491+00:00"
 }
