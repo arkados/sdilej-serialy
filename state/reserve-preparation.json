@@ -496260,16 +496260,16 @@
       "retry_after": "2026-10-24T02:30:04.360517+00:00"
     },
     "9667:2:8": {
-      "at": "2026-11-26T08:34:18.732741+00:00",
+      "at": "2026-11-26T13:31:32.084550+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 288.94,
-      "consecutive_failures": 5,
-      "retry_after": "2026-11-27T00:39:08.572101+00:00"
+      "elapsed_seconds": 218.14,
+      "consecutive_failures": 6,
+      "retry_after": "2026-11-27T13:35:19.725703+00:00"
     },
     "2853:1:20": {
       "at": "2026-10-23T02:29:50.743149+00:00",
@@ -1264349,52 +1264349,16 @@
       "queue_rank": 41267
     },
     "9392:1:1": {
-      "at": "2026-11-14T06:03:08.090410+00:00",
+      "at": "2026-11-26T13:34:41.236042+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 27.7,
-      "search_evidence": [
-        {
-          "path": "/muzi-s-plnou-mocou-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216166,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/muzi-s-plnou-mocou/s/-6",
-          "status": 200,
-          "response_bytes": 216291,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/muzi-s-plnou-mocou-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216142,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/muzi-s-plnou-mocou/s/-6",
-          "status": 200,
-          "response_bytes": 216321,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T06:03:35.787049+00:00"
+      "elapsed_seconds": 44.78,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T13:35:26.018533+00:00"
     },
     "9383:1:1": {
       "at": "2026-11-26T13:29:59.423912+00:00",
@@ -1374073,9 +1374037,33 @@
       "elapsed_seconds": 86.71,
       "consecutive_failures": 1,
       "retry_after": "2026-11-27T13:34:08.488382+00:00"
+    },
+    "9670:2:21": {
+      "at": "2026-11-26T13:33:57.577077+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 76.28,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-27T13:35:19.725789+00:00"
+    },
+    "9670:2:22": {
+      "at": "2026-11-26T13:34:09.429405+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 88.65,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-27T13:35:38.074785+00:00"
     }
   },
-  "updated_at": "2026-11-26T13:35:01.845796+00:00",
+  "updated_at": "2026-11-26T13:36:24.048788+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1378821,9 +1378809,12 @@
     },
     "9670": {
       "misses": [
-        "9670:2:19"
+        "9670:2:19",
+        "9670:2:21",
+        "9670:2:22"
       ],
-      "updated_at": "2026-11-26T13:34:08.488412+00:00"
+      "updated_at": "2026-11-26T13:35:38.074813+00:00",
+      "retry_after": "2026-11-26T17:35:38.074813+00:00"
     },
     "5329": {
       "misses": [
@@ -1379239,12 +1379230,9 @@
     },
     "9667": {
       "misses": [
-        "9667:6:20",
-        "9667:1:8",
-        "9667:1:16"
+        "9667:2:8"
       ],
-      "updated_at": "2026-11-26T12:02:37.759245+00:00",
-      "retry_after": "2026-11-26T12:32:37.759245+00:00"
+      "updated_at": "2026-11-26T13:35:19.725733+00:00"
     },
     "702": {
       "misses": [
@@ -1387672,15 +1387660,21 @@
         "9383:1:1"
       ],
       "updated_at": "2026-11-26T13:31:31.193454+00:00"
+    },
+    "9392": {
+      "misses": [
+        "9392:1:1"
+      ],
+      "updated_at": "2026-11-26T13:35:26.018560+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 9392,
+    "last_series": 9418,
     "last_series_order": [
       true,
       0,
       0,
-      9392
+      9418
     ]
   },
   "czech_fallback_revision": 1
