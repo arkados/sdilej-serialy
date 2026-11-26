@@ -1265199,52 +1265199,16 @@
       "retry_after": "2026-11-27T16:12:45.278392+00:00"
     },
     "10192:1:2": {
-      "at": "2026-11-14T07:13:24.878487+00:00",
+      "at": "2026-11-26T16:12:46.362157+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 174.46,
-      "search_evidence": [
-        {
-          "path": "/arpo-robot-babysitter-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216126,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/arpo-robot-babysitter/s/-6",
-          "status": 200,
-          "response_bytes": 216109,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/arpo-robot-babysitter-s01e02/s/-6",
-          "status": 200,
-          "response_bytes": 216102,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/arpo-robot-babysitter/s/-6",
-          "status": 200,
-          "response_bytes": 216042,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T07:16:22.956131+00:00"
+      "elapsed_seconds": 69.17,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T16:13:57.599025+00:00"
     },
     "1:1:15": {
       "at": "2026-11-14T07:10:53.873912+00:00",
@@ -1373825,9 +1373789,23 @@
       "elapsed_seconds": 324.14,
       "source_id": "34481766",
       "queue_rank": 46338
+    },
+    "1:5:11": {
+      "at": "2026-11-26T16:08:46.720303+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9455344676971436,
+      "observed_source_id": "35552921",
+      "elapsed_seconds": 317.92,
+      "source_id": "35552921",
+      "queue_rank": 46339
     }
   },
-  "updated_at": "2026-11-26T16:13:49.458946+00:00",
+  "updated_at": "2026-11-26T16:15:01.778435+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379058,7 +1379036,7 @@
     },
     "1": {
       "misses": [],
-      "updated_at": "2026-11-26T16:11:21.770057+00:00"
+      "updated_at": "2026-11-26T16:14:04.643655+00:00"
     },
     "796": {
       "misses": [],
@@ -1387532,6 +1387510,12 @@
         "10191:1:1"
       ],
       "updated_at": "2026-11-26T16:12:45.278432+00:00"
+    },
+    "10192": {
+      "misses": [
+        "10192:1:2"
+      ],
+      "updated_at": "2026-11-26T16:13:57.599056+00:00"
     }
   },
   "discovery_progress": {
