@@ -870,12 +870,34 @@
       "identity": "1341:1:13",
       "account": "a",
       "target_video_id": "31111323",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 161,
       "detail_url": "https://prehraj.to/constantine-s01e13-13-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/5e01331b6f29698a",
-      "checked_at": "2026-11-25T17:33:45.359421+00:00",
-      "retry_after": "2026-11-25T17:48:45.359437+00:00"
+      "checked_at": "2026-11-26T01:12:31.349730+00:00",
+      "retry_after": "2026-11-26T01:27:31.349746+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31112367": {
       "identity": "1301:1:5",
@@ -3081,5 +3103,5 @@
       "retry_after": "2026-11-25T18:06:26.673624+00:00"
     }
   },
-  "updated_at": "2026-11-26T01:12:09.059373+00:00"
+  "updated_at": "2026-11-26T01:12:31.349756+00:00"
 }
