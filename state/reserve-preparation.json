@@ -336291,21 +336291,19 @@
       "queue_rank": 28404
     },
     "9667:6:9": {
-      "at": "2026-11-13T18:40:04.762400+00:00",
+      "at": "2026-11-26T10:37:44.448609+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "en",
-      "observed_language_probability": 0.6978366176287333,
+      "observed_language_probability": 0.6794712444146475,
       "observed_source_id": "34437201",
-      "elapsed_seconds": 236.56,
-      "consecutive_failures": 11,
-      "retry_after": "2026-11-14T18:44:01.323231+00:00"
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 694.88,
+      "consecutive_failures": 12,
+      "retry_after": "2026-11-27T10:49:19.326714+00:00"
     },
     "2423:2:2": {
       "at": "2026-10-19T20:00:05.008039+00:00",
@@ -1263628,84 +1263626,16 @@
       "retry_after": "2026-11-15T04:59:18.838793+00:00"
     },
     "8754:1:1": {
-      "at": "2026-11-14T04:58:25.881949+00:00",
+      "at": "2026-11-26T10:45:48.584868+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 58.12,
-      "search_evidence": [
-        {
-          "path": "/skenovani-nilu-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216034,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/skenovani-nilu/s/-6",
-          "status": 200,
-          "response_bytes": 219946,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/scanning-the-nile-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216134,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/scanning-the-nile/s/-6",
-          "status": 200,
-          "response_bytes": 220117,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/skenovani-nilu-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216075,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/skenovani-nilu/s/-6",
-          "status": 200,
-          "response_bytes": 219925,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/scanning-the-nile-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216133,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/scanning-the-nile/s/-6",
-          "status": 200,
-          "response_bytes": 220060,
-          "boxes": 3,
-          "parsed_candidates": 3,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T04:59:36.961043+00:00"
+      "elapsed_seconds": 187.96,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T10:48:56.547119+00:00"
     },
     "10425:4:19": {
       "at": "2026-11-14T04:59:38.534081+00:00",
@@ -1374577,7 +1374507,7 @@
       "retry_after": "2026-11-27T09:56:36.695887+00:00"
     }
   },
-  "updated_at": "2026-11-26T10:48:32.839597+00:00",
+  "updated_at": "2026-11-26T10:49:46.256561+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379756,9 +1379686,11 @@
     "9667": {
       "misses": [
         "9667:6:12",
-        "9667:6:13"
+        "9667:6:13",
+        "9667:6:9"
       ],
-      "updated_at": "2026-11-26T10:47:39.839629+00:00"
+      "updated_at": "2026-11-26T10:49:19.326767+00:00",
+      "retry_after": "2026-11-26T11:19:19.326767+00:00"
     },
     "702": {
       "misses": [
@@ -1388097,6 +1388029,12 @@
         "8731:1:1"
       ],
       "updated_at": "2026-11-26T09:56:27.284456+00:00"
+    },
+    "8754": {
+      "misses": [
+        "8754:1:1"
+      ],
+      "updated_at": "2026-11-26T10:48:56.547163+00:00"
     }
   },
   "discovery_progress": {
