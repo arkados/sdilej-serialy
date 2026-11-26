@@ -1,53 +1,53 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45817463056",
-  "attempted_this_run": 14,
+  "attempted_this_run": 15,
   "prepared_this_run": 5,
   "reserve_total": 37863,
   "queue_total": 46298,
-  "updated_at": "2026-11-26T12:43:09.167604+00:00",
+  "updated_at": "2026-11-26T12:44:59.654464+00:00",
   "workers": 4,
-  "elapsed_seconds": 1256.27,
-  "prepared_per_hour": 14.33,
+  "elapsed_seconds": 1366.75,
+  "prepared_per_hour": 13.17,
   "available_this_run": 5,
-  "available_per_hour": 14.33,
+  "available_per_hour": 13.17,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 46298,
-    "ready": 4,
+    "ready": 3,
     "ready_by_account": {
-      "a": 2,
+      "a": 1,
       "b": 2
     },
     "categories": {
-      "completed": 45437,
+      "completed": 45438,
       "allocated": 842,
       "failed": 12,
       "language_review": 3,
-      "ready": 4
+      "ready": 3
     },
     "completed_by_account": {
-      "a": 22715,
+      "a": 22716,
       "b": 22722
     },
-    "uploads_last_24h": 239,
-    "uploads_per_hour_24h": 9.96,
-    "stock_hours_24h": 0.4
+    "uploads_last_24h": 240,
+    "uploads_per_hour_24h": 10.0,
+    "stock_hours_24h": 0.3
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1967,
-      "b": 487
+      "a": 92,
+      "b": 598
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 6,
       "inconclusive_audio": 7,
       "inconclusive_subtitles": 3,
-      "source_search_unavailable": 4,
-      "no_matches": 19,
+      "source_search_unavailable": 5,
+      "no_matches": 17,
       "no_acceptable_original": 1,
       "prepared": 12
     }
@@ -63,10 +63,10 @@
     ]
   },
   "cache": {
-    "search_miss": 67,
-    "search_seconds": 1179.83,
+    "search_miss": 68,
+    "search_seconds": 1201.79,
     "search_hit": 5,
-    "media_hit": 55,
+    "media_hit": 57,
     "media_miss": 31,
     "media_seconds": 218.0,
     "audio_miss": 12,
@@ -2882,23 +2882,23 @@
     }
   ],
   "search_health": {
-    "status": "healthy",
-    "consecutive_failures": 0,
-    "retry_seconds": 0,
-    "failed_cycles_this_run": 0,
-    "control_requests": 5,
-    "request_gap_seconds": 2,
+    "status": "paused",
+    "consecutive_failures": 1,
+    "retry_seconds": 201,
+    "failed_cycles_this_run": 1,
+    "control_requests": 9,
+    "request_gap_seconds": 4,
     "restart_required": false,
     "last_request_limit": null,
-    "resume_after": null,
+    "resume_after": "2026-11-26T12:48:19.940759+00:00",
     "controls": [
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724042,
-        "parsed_candidates": 412,
-        "body_sha256": "bbace7ca05131a4d9e4430b9ffeb35a1b7b915d949e883e6d9045a1059bfc7b9",
-        "video_box_count": 465,
+        "response_bytes": 188635,
+        "parsed_candidates": 0,
+        "body_sha256": "9a8e39f8674b5b7a0d774cff85755a270b2c4ec32dcc7e6be06e7040141effac",
+        "video_box_count": 0,
         "heading_matches_query": true,
         "password_field_present": false,
         "fallback_notice_present": false,
@@ -2906,7 +2906,23 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-26T12:42:01.884912+00:00"
+        "checked_at": "2026-11-26T12:43:18.171808+00:00"
+      },
+      {
+        "path": "/doktor-martin/s/-6",
+        "status": 200,
+        "response_bytes": 188467,
+        "parsed_candidates": 0,
+        "body_sha256": "b6a3492f34d86989cc48ad9314bf54deae5b6a6987c9cc26b4486928df785dc4",
+        "video_box_count": 0,
+        "heading_matches_query": true,
+        "password_field_present": false,
+        "fallback_notice_present": false,
+        "request_limit_notice_present": false,
+        "cache_age_seconds": null,
+        "response_path": "/doktor-martin/s/-6",
+        "unexpected_origin": false,
+        "checked_at": "2026-11-26T12:43:19.940681+00:00"
       }
     ]
   }
