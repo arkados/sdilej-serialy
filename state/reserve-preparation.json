@@ -1261443,84 +1261443,16 @@
       "retry_after": "2026-11-15T00:16:53.151952+00:00"
     },
     "6061:2:1": {
-      "at": "2026-11-14T00:16:25.133562+00:00",
+      "at": "2026-11-26T01:39:20.590366+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 56.71,
-      "search_evidence": [
-        {
-          "path": "/sto-divu-sveta-s02e01/s/-6",
-          "status": 200,
-          "response_bytes": 216019,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sto-divu-sveta/s/-6",
-          "status": 200,
-          "response_bytes": 230475,
-          "boxes": 14,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/les-100-merveilles-du-monde-s02e01/s/-6",
-          "status": 200,
-          "response_bytes": 216398,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/les-100-merveilles-du-monde/s/-6",
-          "status": 200,
-          "response_bytes": 216151,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sto-divu-sveta-s02e01/s/-6",
-          "status": 200,
-          "response_bytes": 216168,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/sto-divu-sveta/s/-6",
-          "status": 200,
-          "response_bytes": 230479,
-          "boxes": 14,
-          "parsed_candidates": 14,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/les-100-merveilles-du-monde-s02e01/s/-6",
-          "status": 200,
-          "response_bytes": 216325,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/les-100-merveilles-du-monde/s/-6",
-          "status": 200,
-          "response_bytes": 216141,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T00:17:21.845274+00:00"
+      "elapsed_seconds": 55.0,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T01:40:15.593928+00:00"
     },
     "1101:6:16": {
       "at": "2026-11-16T00:52:25.962274+00:00",
@@ -1374393,19 +1374325,16 @@
       "queue_rank": 46135
     },
     "2712:1:2": {
-      "at": "2026-11-25T20:42:24.697891+00:00",
+      "at": "2026-11-26T01:39:47.468624+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "observed_audio_language": "sk",
-      "observed_language_probability": 0.7500699758529663,
-      "observed_source_id": "20753693",
-      "reason": "inconclusive_subtitles",
-      "elapsed_seconds": 83.3,
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-25T22:43:48.000486+00:00"
+      "reason": "transient_search",
+      "elapsed_seconds": 26.11,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-26T02:40:13.583325+00:00"
     },
     "2712:1:3": {
       "at": "2026-11-25T19:29:42.143638+00:00",
@@ -1375711,9 +1375640,51 @@
       "elapsed_seconds": 129.12,
       "source_id": "26771339",
       "queue_rank": 46207
+    },
+    "230:1:7": {
+      "at": "2026-11-26T01:36:41.752714+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9904685616493225,
+      "observed_source_id": "22236325",
+      "elapsed_seconds": 117.24,
+      "source_id": "22236325",
+      "queue_rank": 46208
+    },
+    "230:1:8": {
+      "at": "2026-11-26T01:37:30.394536+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9838383197784424,
+      "observed_source_id": "22238297",
+      "elapsed_seconds": 112.73,
+      "source_id": "22238297",
+      "queue_rank": 46209
+    },
+    "230:1:9": {
+      "at": "2026-11-26T01:37:56.611043+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9926255345344543,
+      "observed_source_id": "12661596",
+      "elapsed_seconds": 109.94,
+      "source_id": "12661596",
+      "queue_rank": 46210
     }
   },
-  "updated_at": "2026-11-26T01:38:34.364175+00:00",
+  "updated_at": "2026-11-26T01:40:20.182257+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388597,9 +1388568,10 @@
     },
     "2712": {
       "misses": [
-        "2712:1:8"
+        "2712:1:8",
+        "2712:1:2"
       ],
-      "updated_at": "2026-11-26T01:18:45.156910+00:00"
+      "updated_at": "2026-11-26T01:40:13.583351+00:00"
     },
     "2729": {
       "misses": [
@@ -1388877,7 +1388849,7 @@
     },
     "230": {
       "misses": [],
-      "updated_at": "2026-11-26T01:38:27.658566+00:00"
+      "updated_at": "2026-11-26T01:39:46.550270+00:00"
     },
     "5929": {
       "misses": [
@@ -1388890,15 +1388862,21 @@
         "5962:1:1"
       ],
       "updated_at": "2026-11-26T01:33:51.421850+00:00"
+    },
+    "6061": {
+      "misses": [
+        "6061:2:1"
+      ],
+      "updated_at": "2026-11-26T01:40:15.593958+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 6024,
+    "last_series": 6061,
     "last_series_order": [
       true,
       0,
       0,
-      6024
+      6061
     ]
   },
   "czech_fallback_revision": 1
