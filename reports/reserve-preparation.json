@@ -1,31 +1,30 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45839786691",
-  "attempted_this_run": 19,
+  "attempted_this_run": 20,
   "prepared_this_run": 5,
   "reserve_total": 37896,
   "queue_total": 46331,
-  "updated_at": "2026-11-26T15:04:15.770387+00:00",
+  "updated_at": "2026-11-26T15:04:34.310856+00:00",
   "workers": 4,
-  "elapsed_seconds": 1885.02,
-  "prepared_per_hour": 9.55,
+  "elapsed_seconds": 1903.56,
+  "prepared_per_hour": 9.46,
   "available_this_run": 5,
-  "available_per_hour": 9.55,
+  "available_per_hour": 9.46,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 46331,
-    "ready": 1,
+    "ready": 0,
     "ready_by_account": {
-      "a": 1,
+      "a": 0,
       "b": 0
     },
     "categories": {
       "completed": 45473,
-      "allocated": 842,
+      "allocated": 843,
       "failed": 12,
-      "language_review": 3,
-      "ready": 1
+      "language_review": 3
     },
     "completed_by_account": {
       "a": 22733,
@@ -33,21 +32,21 @@
     },
     "uploads_last_24h": 238,
     "uploads_per_hour_24h": 9.92,
-    "stock_hours_24h": 0.1
+    "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "buffered",
+    "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 227,
-      "b": 214
+      "a": 246,
+      "b": 233
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 5,
       "inconclusive_audio": 3,
-      "source_search_unavailable": 3,
+      "source_search_unavailable": 4,
       "no_matches": 7,
-      "prepared": 12
+      "prepared": 10
     }
   },
   "indexed_candidates_in_scan": 519,
@@ -64,7 +63,7 @@
     "search_miss": 93,
     "search_seconds": 1909.73,
     "search_hit": 4,
-    "media_hit": 74,
+    "media_hit": 75,
     "media_miss": 64,
     "media_seconds": 471.03,
     "audio_miss": 11,
@@ -2883,7 +2882,7 @@
   "search_health": {
     "status": "paused",
     "consecutive_failures": 2,
-    "retry_seconds": 590,
+    "retry_seconds": 572,
     "failed_cycles_this_run": 2,
     "control_requests": 10,
     "request_gap_seconds": 8,
