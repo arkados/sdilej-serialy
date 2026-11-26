@@ -128270,16 +128270,16 @@
       "queue_rank": 21904
     },
     "121:2:6": {
-      "at": "2026-11-26T01:23:46.468946+00:00",
+      "at": "2026-11-26T07:40:12.338078+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "transient_original",
-      "elapsed_seconds": 277.4,
+      "reason": "source_search_unavailable",
+      "elapsed_seconds": 53.88,
       "consecutive_failures": 31,
-      "retry_after": "2026-11-26T07:32:19.395416+00:00"
+      "retry_after": "2026-11-26T07:46:06.215473+00:00"
     },
     "121:2:7": {
       "at": "2026-10-18T08:55:47.849984+00:00",
@@ -379179,14 +379179,18 @@
       "retry_after": "2026-10-21T20:35:30.603388+00:00"
     },
     "920:4:8": {
-      "at": "2026-10-23T10:07:34.638689+00:00",
-      "status": "deferred",
-      "preparation_revision": 5,
+      "at": "2026-11-26T07:38:35.756962+00:00",
+      "status": "prepared",
       "method": "discovery",
-      "reason": "no_matches",
-      "elapsed_seconds": 49.68,
-      "consecutive_failures": 3,
-      "retry_after": "2026-10-24T10:08:25.593631+00:00"
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.957098662853241,
+      "observed_source_id": "35212899",
+      "elapsed_seconds": 153.0,
+      "source_id": "35212899",
+      "queue_rank": 46263
     },
     "920:4:9": {
       "at": "2026-10-23T14:09:58.563879+00:00",
@@ -1262706,84 +1262710,16 @@
       "queue_rank": 41166
     },
     "8087:1:1": {
-      "at": "2026-11-14T03:02:22.389566+00:00",
+      "at": "2026-11-26T07:39:48.143071+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 57.19,
-      "search_evidence": [
-        {
-          "path": "/monteri-na-lane-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216106,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monteri-na-lane/s/-6",
-          "status": 200,
-          "response_bytes": 215850,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/engineering-on-the-edge-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216345,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/engineering-on-the-edge/s/-6",
-          "status": 200,
-          "response_bytes": 216096,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monteri-na-lane-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216082,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/monteri-na-lane/s/-6",
-          "status": 200,
-          "response_bytes": 215931,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/engineering-on-the-edge-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 188822,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/engineering-on-the-edge/s/-6",
-          "status": 200,
-          "response_bytes": 188675,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T03:03:19.575095+00:00"
+      "elapsed_seconds": 59.68,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T07:41:08.438691+00:00"
     },
     "8097:1:1": {
       "at": "2026-11-14T03:02:44.252422+00:00",
@@ -1375300,7 +1375236,7 @@
       "queue_rank": 46259
     }
   },
-  "updated_at": "2026-11-26T07:40:47.095303+00:00",
+  "updated_at": "2026-11-26T07:42:12.058537+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388638,7 +1388574,7 @@
     },
     "920": {
       "misses": [],
-      "updated_at": "2026-11-26T07:39:46.725716+00:00"
+      "updated_at": "2026-11-26T07:41:10.119264+00:00"
     },
     "7760": {
       "misses": [
@@ -1388663,6 +1388599,12 @@
         "8079:1:1"
       ],
       "updated_at": "2026-11-26T07:40:11.684153+00:00"
+    },
+    "8087": {
+      "misses": [
+        "8087:1:1"
+      ],
+      "updated_at": "2026-11-26T07:41:08.438732+00:00"
     }
   },
   "discovery_progress": {
