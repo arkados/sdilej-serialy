@@ -1,86 +1,85 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45720053180",
-  "attempted_this_run": 29,
-  "prepared_this_run": 3,
-  "reserve_total": 37767,
-  "queue_total": 46202,
-  "updated_at": "2026-11-26T01:27:27.806934+00:00",
+  "attempted_this_run": 33,
+  "prepared_this_run": 5,
+  "reserve_total": 37769,
+  "queue_total": 46204,
+  "updated_at": "2026-11-26T01:33:25.126249+00:00",
   "workers": 4,
-  "elapsed_seconds": 3095.32,
-  "prepared_per_hour": 3.49,
-  "available_this_run": 3,
-  "available_per_hour": 3.49,
+  "elapsed_seconds": 3452.64,
+  "prepared_per_hour": 5.21,
+  "available_this_run": 5,
+  "available_per_hour": 5.21,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
-    "queue_total": 46202,
-    "ready": 2,
+    "queue_total": 46204,
+    "ready": 3,
     "ready_by_account": {
       "a": 1,
-      "b": 1
+      "b": 2
     },
     "categories": {
-      "completed": 45342,
+      "completed": 45344,
       "allocated": 842,
-      "failed": 9,
-      "in_flight": 4,
+      "failed": 12,
       "language_review": 3,
-      "ready": 2
+      "ready": 3
     },
     "completed_by_account": {
-      "a": 22668,
-      "b": 22674
+      "a": 22669,
+      "b": 22675
     },
-    "uploads_last_24h": 299,
-    "uploads_per_hour_24h": 12.46,
-    "stock_hours_24h": 0.16
+    "uploads_last_24h": 301,
+    "uploads_per_hour_24h": 12.54,
+    "stock_hours_24h": 0.24
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 4358,
-      "b": 4365
+      "a": 128,
+      "b": 283
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 9,
+      "transient_original": 11,
       "inconclusive_audio": 6,
       "inconclusive_subtitles": 6,
       "no_matches": 5,
-      "prepared": 3
+      "prepared": 5
     }
   },
   "indexed_candidates_in_scan": 820,
   "discovery_progress": {
-    "last_series": 5835,
+    "last_series": 5962,
     "last_series_order": [
       true,
       0,
       0,
-      5835
+      5962
     ]
   },
   "cache": {
-    "search_miss": 149,
-    "search_seconds": 2299.68,
-    "search_hit": 13,
-    "media_hit": 149,
-    "media_miss": 63,
-    "media_seconds": 698.13,
-    "audio_miss": 19,
+    "search_miss": 173,
+    "search_seconds": 2461.36,
+    "search_hit": 15,
+    "media_hit": 153,
+    "media_miss": 80,
+    "media_seconds": 783.83,
+    "audio_miss": 21,
     "audio_hit": 23,
-    "audio_seconds": 619.7
+    "audio_seconds": 640.6
   },
   "audio_pipeline": {
-    "sample_count": 59,
-    "download_seconds": 453.58,
+    "sample_count": 61,
+    "download_seconds": 468.93,
     "inference_wait_seconds": 23.93,
-    "inference_seconds": 141.99,
+    "inference_seconds": 147.54,
     "failures": 2
   },
   "productive_seasons": 89,
-  "series_paused_this_run": 4,
+  "series_paused_this_run": 3,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
   "repaired_this_run": 0,
@@ -89,7 +88,7 @@
     "deferred": 38
   },
   "statuses": {
-    "prepared": 37767,
+    "prepared": 37769,
     "deferred": 38973
   },
   "requested_series": [
@@ -2887,7 +2886,7 @@
     "consecutive_failures": 0,
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
-    "control_requests": 8,
+    "control_requests": 9,
     "request_gap_seconds": 2,
     "restart_required": false,
     "last_request_limit": null,
@@ -2896,9 +2895,9 @@
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 724037,
+        "response_bytes": 724050,
         "parsed_candidates": 412,
-        "body_sha256": "88bc489b82928a8dc343dd09b63370f27d98cd33e3a6f0288203bbf2e12b5878",
+        "body_sha256": "313bc33d95bf4a3aafa38dcff564d02498eaa0f97ccd2dbb1dec7a3356216627",
         "video_box_count": 465,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2907,7 +2906,7 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-26T01:22:51.728555+00:00"
+        "checked_at": "2026-11-26T01:32:35.519445+00:00"
       }
     ]
   }
