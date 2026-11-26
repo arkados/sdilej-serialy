@@ -1261395,52 +1261395,16 @@
       "queue_rank": 41098
     },
     "6077:1:1": {
-      "at": "2026-11-14T00:16:25.733682+00:00",
+      "at": "2026-11-26T02:31:52.409657+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 27.42,
-      "search_evidence": [
-        {
-          "path": "/hurikan-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216404,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hurikan/s/-6",
-          "status": 200,
-          "response_bytes": 430932,
-          "boxes": 187,
-          "parsed_candidates": 162,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hurikan-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216326,
-          "boxes": 1,
-          "parsed_candidates": 1,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/hurikan/s/-6",
-          "status": 200,
-          "response_bytes": 431029,
-          "boxes": 187,
-          "parsed_candidates": 162,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T00:16:53.151952+00:00"
+      "elapsed_seconds": 113.23,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T02:33:59.061767+00:00"
     },
     "6061:2:1": {
       "at": "2026-11-26T01:39:20.590366+00:00",
@@ -1375757,7 +1375721,7 @@
       "queue_rank": 46214
     }
   },
-  "updated_at": "2026-11-26T02:33:44.023357+00:00",
+  "updated_at": "2026-11-26T02:35:03.107487+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1388949,15 +1388913,21 @@
         "6024:1:2"
       ],
       "updated_at": "2026-11-26T01:41:16.182485+00:00"
+    },
+    "6077": {
+      "misses": [
+        "6077:1:1"
+      ],
+      "updated_at": "2026-11-26T02:33:59.061798+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 6077,
+    "last_series": 6078,
     "last_series_order": [
       true,
       0,
       0,
-      6077
+      6078
     ]
   },
   "czech_fallback_revision": 1
