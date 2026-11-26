@@ -176869,16 +176869,19 @@
       "retry_after": "2026-11-27T10:55:13.738865+00:00"
     },
     "1410:5:18": {
-      "at": "2026-11-26T12:42:58.880914+00:00",
+      "at": "2026-11-26T13:09:28.020307+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 353.63,
-      "consecutive_failures": 24,
-      "retry_after": "2026-11-26T12:58:52.461872+00:00"
+      "observed_audio_language": "en",
+      "observed_language_probability": 0.9891568422317505,
+      "observed_source_id": "34450611",
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 874.77,
+      "consecutive_failures": 25,
+      "retry_after": "2026-11-27T13:24:02.787956+00:00"
     },
     "2209:6:14": {
       "at": "2026-10-12T16:45:46.232598+00:00",
@@ -1264203,52 +1264206,16 @@
       "queue_rank": 41258
     },
     "9326:1:1": {
-      "at": "2026-11-14T05:59:20.287265+00:00",
+      "at": "2026-11-26T13:21:06.523783+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 26.48,
-      "search_evidence": [
-        {
-          "path": "/guerre-d-algerie-la-dechirure-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216354,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/guerre-d-algerie-la-dechirure/s/-6",
-          "status": 200,
-          "response_bytes": 216274,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/guerre-d-algerie-la-dechirure-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216438,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/guerre-d-algerie-la-dechirure/s/-6",
-          "status": 200,
-          "response_bytes": 216216,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T05:59:46.764806+00:00"
+      "elapsed_seconds": 123.31,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T13:23:18.656039+00:00"
     },
     "1465:2:2": {
       "at": "2026-11-14T05:59:17.134953+00:00",
@@ -1374102,9 +1374069,21 @@
       "elapsed_seconds": 306.11,
       "consecutive_failures": 1,
       "retry_after": "2026-11-27T13:20:22.180290+00:00"
+    },
+    "9670:2:15": {
+      "at": "2026-11-26T13:19:42.523791+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 272.46,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-27T13:24:14.987968+00:00"
     }
   },
-  "updated_at": "2026-11-26T13:23:01.532997+00:00",
+  "updated_at": "2026-11-26T13:24:23.824908+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1378843,16 +1378822,19 @@
     },
     "1410": {
       "misses": [
-        "1410:2:55"
+        "1410:2:55",
+        "1410:5:18"
       ],
-      "updated_at": "2026-11-26T12:06:35.993467+00:00"
+      "updated_at": "2026-11-26T13:24:02.787983+00:00"
     },
     "9670": {
       "misses": [
         "9670:2:13",
-        "9670:2:14"
+        "9670:2:14",
+        "9670:2:15"
       ],
-      "updated_at": "2026-11-26T13:20:22.180337+00:00"
+      "updated_at": "2026-11-26T13:24:14.987996+00:00",
+      "retry_after": "2026-11-26T17:24:14.987996+00:00"
     },
     "5329": {
       "misses": [
@@ -1387675,15 +1387657,21 @@
         "9136:1:1"
       ],
       "updated_at": "2026-11-26T12:06:35.993711+00:00"
+    },
+    "9326": {
+      "misses": [
+        "9326:1:1"
+      ],
+      "updated_at": "2026-11-26T13:23:18.656077+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 9326,
+    "last_series": 9347,
     "last_series_order": [
       true,
       0,
       0,
-      9326
+      9347
     ]
   },
   "czech_fallback_revision": 1
