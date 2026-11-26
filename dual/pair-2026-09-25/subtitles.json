@@ -8,11 +8,12 @@
       "target_video_id": "30460648",
       "status": "deferred",
       "detail_url": "https://prehraj.to/kral-tulsy-s04e01-1-epizoda-4k-cz-titulky-titulky-cekaji-mkv/fddbc8b73e44e72f",
-      "checked_at": "2026-11-26T09:41:34.142872+00:00",
-      "retry_after": "2026-11-26T09:56:34.142889+00:00",
+      "checked_at": "2026-11-26T19:45:25.837260+00:00",
+      "retry_after": "2026-11-26T20:00:25.837277+00:00",
       "processing_guard_revision": 1,
       "error": {
-        "type": "TargetUnavailable",
+        "type": "HTTPError",
+        "http_status": 504,
         "frames": [
           {
             "file": "episode_subtitles.py",
@@ -27,7 +28,17 @@
           {
             "file": "episode_subtitles.py",
             "function": "owned_listing",
-            "line": 98
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
           }
         ]
       },
@@ -2870,5 +2881,5 @@
       "retry_after": "2026-11-26T10:10:28.109364+00:00"
     }
   },
-  "updated_at": "2026-11-26T10:04:51.006361+00:00"
+  "updated_at": "2026-11-26T19:45:25.837285+00:00"
 }
