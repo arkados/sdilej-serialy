@@ -5,12 +5,12 @@
   "prepared_this_run": 6,
   "reserve_total": 37847,
   "queue_total": 46282,
-  "updated_at": "2026-11-26T09:59:25.601125+00:00",
+  "updated_at": "2026-11-26T10:01:00.498368+00:00",
   "workers": 4,
-  "elapsed_seconds": 2439.12,
-  "prepared_per_hour": 8.86,
+  "elapsed_seconds": 2534.02,
+  "prepared_per_hour": 8.52,
   "available_this_run": 6,
-  "available_per_hour": 8.86,
+  "available_per_hour": 8.52,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -23,7 +23,8 @@
     "categories": {
       "completed": 45425,
       "allocated": 842,
-      "failed": 12,
+      "failed": 9,
+      "in_flight": 3,
       "language_review": 3
     },
     "completed_by_account": {
@@ -38,8 +39,8 @@
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 482,
-      "b": 434
+      "a": 577,
+      "b": 529
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 8,
@@ -50,7 +51,7 @@
       "transient_search": 1,
       "no_acceptable_original": 10,
       "source_already_assigned": 1,
-      "prepared": 7
+      "prepared": 6
     }
   },
   "indexed_candidates_in_scan": 649,
@@ -2887,7 +2888,7 @@
   "search_health": {
     "status": "paused",
     "consecutive_failures": 1,
-    "retry_seconds": 140,
+    "retry_seconds": 45,
     "failed_cycles_this_run": 1,
     "control_requests": 18,
     "request_gap_seconds": 4,
