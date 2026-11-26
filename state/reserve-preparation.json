@@ -15747,14 +15747,16 @@
       "retry_after": "2026-10-19T08:18:25.450299+00:00"
     },
     "3498:1:2": {
-      "at": "2026-10-18T16:05:16.646757+00:00",
+      "at": "2026-11-26T23:23:15.252715+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 22.04,
-      "consecutive_failures": 8,
-      "retry_after": "2026-10-19T16:06:12.808868+00:00"
+      "elapsed_seconds": 64.02,
+      "consecutive_failures": 9,
+      "retry_after": "2026-11-27T23:24:19.277606+00:00"
     },
     "3498:1:3": {
       "at": "2026-10-18T16:06:12.808529+00:00",
@@ -16147,14 +16149,16 @@
       "retry_after": "2026-10-22T03:06:28.143663+00:00"
     },
     "7288:1:1": {
-      "at": "2026-10-19T06:04:15.369590+00:00",
+      "at": "2026-11-26T23:23:26.399521+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 43.93,
-      "consecutive_failures": 9,
-      "retry_after": "2026-10-20T06:05:18.506197+00:00"
+      "elapsed_seconds": 62.81,
+      "consecutive_failures": 10,
+      "retry_after": "2026-11-27T23:24:29.208900+00:00"
     },
     "7288:1:2": {
       "at": "2026-10-19T06:11:23.495587+00:00",
@@ -1370635,16 +1370639,16 @@
       "retry_after": "2026-11-27T21:55:43.762226+00:00"
     },
     "2712:1:6": {
-      "at": "2026-11-25T21:11:14.502617+00:00",
+      "at": "2026-11-26T23:24:20.338254+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 16.93,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-26T21:11:31.432245+00:00"
+      "elapsed_seconds": 29.12,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T23:24:49.460758+00:00"
     },
     "2842:2:11": {
       "at": "2026-11-25T21:11:15.729484+00:00",
@@ -1374477,9 +1374481,21 @@
       "elapsed_seconds": 40.04,
       "consecutive_failures": 1,
       "retry_after": "2026-11-27T23:23:25.322275+00:00"
+    },
+    "9670:2:33": {
+      "at": "2026-11-26T23:23:07.492583+00:00",
+      "status": "deferred",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "reason": "no_matches",
+      "elapsed_seconds": 59.65,
+      "consecutive_failures": 1,
+      "retry_after": "2026-11-27T23:24:07.141154+00:00"
     }
   },
-  "updated_at": "2026-11-26T23:23:48.665815+00:00",
+  "updated_at": "2026-11-26T23:25:02.659947+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379233,12 +1379249,12 @@
     },
     "9670": {
       "misses": [
-        "9670:2:30",
         "9670:2:31",
-        "9670:2:32"
+        "9670:2:32",
+        "9670:2:33"
       ],
-      "updated_at": "2026-11-26T23:23:25.322308+00:00",
-      "retry_after": "2026-11-27T03:23:25.322308+00:00"
+      "updated_at": "2026-11-26T23:24:07.141182+00:00",
+      "retry_after": "2026-11-27T03:24:07.141182+00:00"
     },
     "5329": {
       "misses": [
@@ -1387377,9 +1387393,10 @@
     },
     "2712": {
       "misses": [
-        "2712:1:5"
+        "2712:1:5",
+        "2712:1:6"
       ],
-      "updated_at": "2026-11-26T21:55:43.762255+00:00"
+      "updated_at": "2026-11-26T23:24:49.460786+00:00"
     },
     "2729": {
       "misses": [
@@ -1388423,6 +1388440,18 @@
         "4328:1:7"
       ],
       "updated_at": "2026-11-26T21:55:39.848265+00:00"
+    },
+    "3498": {
+      "misses": [
+        "3498:1:2"
+      ],
+      "updated_at": "2026-11-26T23:24:19.277635+00:00"
+    },
+    "7288": {
+      "misses": [
+        "7288:1:1"
+      ],
+      "updated_at": "2026-11-26T23:24:29.208930+00:00"
     }
   },
   "discovery_progress": {
