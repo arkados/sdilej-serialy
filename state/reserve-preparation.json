@@ -121656,16 +121656,16 @@
       "queue_rank": 23708
     },
     "1105:2:2": {
-      "at": "2026-11-26T11:47:39.258125+00:00",
+      "at": "2026-11-26T13:25:34.687744+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "inconclusive_audio",
-      "elapsed_seconds": 301.76,
-      "consecutive_failures": 60,
-      "retry_after": "2026-11-27T11:52:41.019198+00:00"
+      "elapsed_seconds": 318.76,
+      "consecutive_failures": 61,
+      "retry_after": "2026-11-27T13:30:53.452397+00:00"
     },
     "2650:1:1": {
       "at": "2026-10-10T12:50:55.863517+00:00",
@@ -1264259,52 +1264259,16 @@
       "queue_rank": 41261
     },
     "9361:1:1": {
-      "at": "2026-11-14T06:00:08.097969+00:00",
+      "at": "2026-11-26T13:29:19.426686+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 17.95,
-      "search_evidence": [
-        {
-          "path": "/toulky-ceskem-budoucnosti-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216264,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toulky-ceskem-budoucnosti/s/-6",
-          "status": 200,
-          "response_bytes": 216093,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toulky-ceskem-budoucnosti-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216240,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/toulky-ceskem-budoucnosti/s/-6",
-          "status": 200,
-          "response_bytes": 216145,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T06:00:26.050282+00:00"
+      "elapsed_seconds": 52.04,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T13:30:11.467654+00:00"
     },
     "1465:2:3": {
       "at": "2026-11-14T06:00:23.107531+00:00",
@@ -1374123,9 +1374087,37 @@
       "elapsed_seconds": 112.65,
       "source_id": "6327066",
       "queue_rank": 46300
+    },
+    "9670:6:5": {
+      "at": "2026-11-26T13:28:17.294969+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9812057018280029,
+      "observed_source_id": "10622725",
+      "elapsed_seconds": 98.12,
+      "source_id": "10622725",
+      "queue_rank": 46301
+    },
+    "9670:6:7": {
+      "at": "2026-11-26T13:29:01.947552+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9324448704719543,
+      "observed_source_id": "10622731",
+      "elapsed_seconds": 87.07,
+      "source_id": "10622731",
+      "queue_rank": 46302
     }
   },
-  "updated_at": "2026-11-26T13:29:43.615860+00:00",
+  "updated_at": "2026-11-26T13:31:03.226526+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1378871,7 +1378863,7 @@
     },
     "9670": {
       "misses": [],
-      "updated_at": "2026-11-26T13:29:18.557628+00:00"
+      "updated_at": "2026-11-26T13:30:29.016691+00:00"
     },
     "5329": {
       "misses": [
@@ -1385956,7 +1385948,7 @@
         "1105:2:6",
         "1105:2:2"
       ],
-      "updated_at": "2026-11-26T11:52:41.019230+00:00"
+      "updated_at": "2026-11-26T13:30:53.452422+00:00"
     },
     "568": {
       "misses": [],
@@ -1387705,15 +1387697,21 @@
         "9347:1:2"
       ],
       "updated_at": "2026-11-26T13:25:33.810027+00:00"
+    },
+    "9361": {
+      "misses": [
+        "9361:1:1"
+      ],
+      "updated_at": "2026-11-26T13:30:11.467687+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 9361,
+    "last_series": 9383,
     "last_series_order": [
       true,
       0,
       0,
-      9361
+      9383
     ]
   },
   "czech_fallback_revision": 1
