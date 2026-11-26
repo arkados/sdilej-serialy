@@ -1265121,84 +1265121,16 @@
       "queue_rank": 41291
     },
     "9488:1:1": {
-      "at": "2026-11-14T06:47:23.132011+00:00",
+      "at": "2026-11-26T14:07:36.934149+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 53.49,
-      "search_evidence": [
-        {
-          "path": "/apokalypsa-doby-bronzove-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216262,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/apokalypsa-doby-bronzove/s/-6",
-          "status": 200,
-          "response_bytes": 216087,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/bronze-age-apocalypse-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216199,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/bronze-age-apocalypse/s/-6",
-          "status": 200,
-          "response_bytes": 216082,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/apokalypsa-doby-bronzove-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216198,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/apokalypsa-doby-bronzove/s/-6",
-          "status": 200,
-          "response_bytes": 216087,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/bronze-age-apocalypse-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216199,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/bronze-age-apocalypse/s/-6",
-          "status": 200,
-          "response_bytes": 216093,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T06:48:16.621058+00:00"
+      "elapsed_seconds": 55.75,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-27T14:08:32.680976+00:00"
     },
     "9485:1:1": {
       "at": "2026-11-14T06:47:21.490972+00:00",
@@ -1373833,9 +1373765,37 @@
       "elapsed_seconds": 184.68,
       "source_id": "32402455",
       "queue_rank": 46319
+    },
+    "1:4:9": {
+      "at": "2026-11-26T14:04:20.941782+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9736332297325134,
+      "observed_source_id": "34297054",
+      "elapsed_seconds": 182.22,
+      "source_id": "34297054",
+      "queue_rank": 46320
+    },
+    "1:4:12": {
+      "at": "2026-11-26T14:04:30.147667+00:00",
+      "status": "prepared",
+      "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9603742957115173,
+      "observed_source_id": "34297069",
+      "elapsed_seconds": 170.71,
+      "source_id": "34297069",
+      "queue_rank": 46321
     }
   },
-  "updated_at": "2026-11-26T14:07:10.490730+00:00",
+  "updated_at": "2026-11-26T14:08:40.496913+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1379065,7 +1379025,7 @@
     },
     "1": {
       "misses": [],
-      "updated_at": "2026-11-26T14:04:28.438180+00:00"
+      "updated_at": "2026-11-26T14:07:35.143631+00:00"
     },
     "796": {
       "misses": [],
@@ -1387499,15 +1387459,21 @@
         "9482:1:2"
       ],
       "updated_at": "2026-11-26T14:02:36.508463+00:00"
+    },
+    "9488": {
+      "misses": [
+        "9488:1:1"
+      ],
+      "updated_at": "2026-11-26T14:08:32.681003+00:00"
     }
   },
   "discovery_progress": {
-    "last_series": 9482,
+    "last_series": 9488,
     "last_series_order": [
       true,
       0,
       0,
-      9482
+      9488
     ]
   },
   "czech_fallback_revision": 1
