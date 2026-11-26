@@ -5,42 +5,42 @@
   "prepared_this_run": 7,
   "reserve_total": 37858,
   "queue_total": 46293,
-  "updated_at": "2026-11-26T12:07:40.301208+00:00",
+  "updated_at": "2026-11-26T12:09:01.728115+00:00",
   "workers": 4,
-  "elapsed_seconds": 3054.02,
-  "prepared_per_hour": 8.25,
+  "elapsed_seconds": 3135.45,
+  "prepared_per_hour": 8.04,
   "available_this_run": 7,
-  "available_per_hour": 8.25,
+  "available_per_hour": 8.04,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 46293,
-    "ready": 3,
+    "ready": 0,
     "ready_by_account": {
-      "a": 2,
-      "b": 1
+      "a": 0,
+      "b": 0
     },
     "categories": {
-      "completed": 45432,
-      "allocated": 843,
+      "completed": 45433,
+      "allocated": 842,
       "failed": 12,
       "language_review": 3,
-      "ready": 3
+      "in_flight": 3
     },
     "completed_by_account": {
       "a": 22713,
-      "b": 22719
+      "b": 22720
     },
-    "uploads_last_24h": 243,
-    "uploads_per_hour_24h": 10.12,
-    "stock_hours_24h": 0.3
+    "uploads_last_24h": 242,
+    "uploads_per_hour_24h": 10.08,
+    "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "buffered",
+    "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 192,
-      "b": 498
+      "a": 274,
+      "b": 122
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 6,
@@ -2887,7 +2887,7 @@
   "search_health": {
     "status": "paused",
     "consecutive_failures": 1,
-    "retry_seconds": 230,
+    "retry_seconds": 149,
     "failed_cycles_this_run": 1,
     "control_requests": 20,
     "request_gap_seconds": 4,
