@@ -2215,14 +2215,36 @@
       "processing_guard_revision": 1,
       "listing_page": 96,
       "detail_url": "https://prehraj.to/huste-mraky-vzestup-a-pad-firmy-juul-s01e01-jiskra-1080p-cz-titulky-titulky-cekaji-mp4/9a163cc4182aae70",
-      "checked_at": "2026-11-26T09:52:10.176830+00:00",
-      "retry_after": "2026-11-26T10:07:10.176845+00:00",
+      "checked_at": "2026-11-27T03:08:50.661996+00:00",
+      "retry_after": "2026-11-27T03:23:50.662012+00:00",
       "intent": {
         "filename": "episode-31213271-cs-688f5c3af5f89a3e.srt",
         "sha256": "688f5c3af5f89a3e00cf010c8b6a1554eed013dead166ee25b851ff6990eb4b1",
         "before_ids": [],
         "created_at": "2026-11-21T11:38:00.506062+00:00"
-      }
+      },
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31206453": {
       "identity": "675:1:5",
@@ -3002,5 +3024,5 @@
       "retry_after": "2026-11-26T10:10:28.109364+00:00"
     }
   },
-  "updated_at": "2026-11-27T03:08:30.183307+00:00"
+  "updated_at": "2026-11-27T03:08:50.662022+00:00"
 }
