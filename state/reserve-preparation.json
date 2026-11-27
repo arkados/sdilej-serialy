@@ -110975,14 +110975,16 @@
       "retry_after": "2026-10-11T12:44:03.280066+00:00"
     },
     "9763:1:1": {
-      "at": "2026-10-10T12:44:01.451583+00:00",
+      "at": "2026-11-27T17:53:08.232107+00:00",
       "status": "deferred",
-      "preparation_revision": 3,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 13.82,
-      "consecutive_failures": 1,
-      "retry_after": "2026-10-11T12:44:15.271341+00:00"
+      "elapsed_seconds": 59.88,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-28T17:54:47.629576+00:00"
     },
     "9763:1:2": {
       "at": "2026-10-10T12:44:03.458958+00:00",
@@ -1265865,84 +1265867,16 @@
       "queue_rank": 41306
     },
     "9768:1:1": {
-      "at": "2026-11-14T07:41:04.251529+00:00",
+      "at": "2026-11-27T17:53:09.111949+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 19.37,
-      "search_evidence": [
-        {
-          "path": "/molly-z-denali-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216064,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/molly-z-denali/s/-6",
-          "status": 200,
-          "response_bytes": 228462,
-          "boxes": 13,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/molly-of-denali-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216084,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/molly-of-denali/s/-6",
-          "status": 200,
-          "response_bytes": 215988,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/molly-z-denali-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216048,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/molly-z-denali/s/-6",
-          "status": 200,
-          "response_bytes": 228471,
-          "boxes": 13,
-          "parsed_candidates": 13,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/molly-of-denali-s01e01/s/-6",
-          "status": 200,
-          "response_bytes": 216063,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/molly-of-denali/s/-6",
-          "status": 200,
-          "response_bytes": 215886,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-15T07:41:34.914079+00:00"
+      "elapsed_seconds": 64.33,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-28T17:54:47.629668+00:00"
     },
     "7353:1:4": {
       "at": "2026-11-14T07:41:35.676468+00:00",
@@ -1375643,7 +1375577,7 @@
       "retry_after": "2026-11-28T17:53:06.400549+00:00"
     }
   },
-  "updated_at": "2026-11-27T17:54:11.296560+00:00",
+  "updated_at": "2026-11-27T17:55:51.785038+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1390203,6 +1390137,18 @@
         "5265:1:1"
       ],
       "updated_at": "2026-11-27T16:53:36.831647+00:00"
+    },
+    "9763": {
+      "misses": [
+        "9763:1:1"
+      ],
+      "updated_at": "2026-11-27T17:54:47.629605+00:00"
+    },
+    "9768": {
+      "misses": [
+        "9768:1:1"
+      ],
+      "updated_at": "2026-11-27T17:54:47.629677+00:00"
     }
   },
   "discovery_progress": {
