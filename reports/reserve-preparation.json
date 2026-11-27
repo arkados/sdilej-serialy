@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "45952843585",
-  "attempted_this_run": 6,
+  "attempted_this_run": 7,
   "prepared_this_run": 1,
   "reserve_total": 38043,
   "queue_total": 46478,
-  "updated_at": "2026-11-27T07:07:04.230153+00:00",
+  "updated_at": "2026-11-27T07:08:55.013147+00:00",
   "workers": 4,
-  "elapsed_seconds": 1319.9,
-  "prepared_per_hour": 2.73,
+  "elapsed_seconds": 1430.68,
+  "prepared_per_hour": 2.52,
   "available_this_run": 1,
-  "available_per_hour": 2.73,
+  "available_per_hour": 2.52,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -23,7 +23,8 @@
     "categories": {
       "completed": 45621,
       "allocated": 842,
-      "failed": 12,
+      "failed": 9,
+      "in_flight": 3,
       "language_review": 3
     },
     "completed_by_account": {
@@ -40,17 +41,17 @@
       "a"
     ],
     "seconds_since_upload": {
-      "a": 2934,
-      "b": 422
+      "a": 3044,
+      "b": 532
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 8,
       "no_matches": 6,
-      "inconclusive_audio": 4,
+      "inconclusive_audio": 5,
       "transient_search": 1,
       "no_acceptable_original": 1,
       "no_english_czech_subtitles": 1,
-      "inconclusive_subtitles": 2,
+      "inconclusive_subtitles": 1,
       "prepared": 3,
       "source_search_unavailable": 2
     }
@@ -66,20 +67,21 @@
     ]
   },
   "cache": {
-    "search_miss": 48,
-    "search_seconds": 1388.6,
+    "search_miss": 50,
+    "search_seconds": 1434.38,
     "search_hit": 4,
-    "media_hit": 54,
+    "media_hit": 59,
     "media_miss": 3,
     "media_seconds": 19.56,
-    "audio_miss": 2,
-    "audio_seconds": 12.86
+    "audio_miss": 6,
+    "audio_seconds": 162.99,
+    "audio_hit": 1
   },
   "audio_pipeline": {
-    "sample_count": 2,
-    "download_seconds": 17.08,
-    "inference_wait_seconds": 0.0,
-    "inference_seconds": 9.45
+    "sample_count": 19,
+    "download_seconds": 182.05,
+    "inference_wait_seconds": 15.03,
+    "inference_seconds": 55.99
   },
   "productive_seasons": 62,
   "series_paused_this_run": 6,
@@ -2890,7 +2892,7 @@
     "retry_seconds": 0,
     "failed_cycles_this_run": 0,
     "control_requests": 2,
-    "request_gap_seconds": 8,
+    "request_gap_seconds": 4.0,
     "restart_required": false,
     "last_request_limit": null,
     "resume_after": null,
