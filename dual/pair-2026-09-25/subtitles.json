@@ -595,12 +595,34 @@
       "identity": "1410:2:13",
       "account": "a",
       "target_video_id": "31109712",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 179,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e13-tadeas-a-thor-1080p-cz-titulky-titulky-cekaji-mkv/5d2372db4bc19623",
-      "checked_at": "2026-11-27T03:02:49.737905+00:00",
-      "retry_after": "2026-11-27T03:17:49.737921+00:00"
+      "checked_at": "2026-11-27T12:54:06.755790+00:00",
+      "retry_after": "2026-11-27T13:09:06.755802+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31109745": {
       "identity": "1410:2:18",
@@ -3122,5 +3144,5 @@
       "retry_after": "2026-11-27T03:30:11.977616+00:00"
     }
   },
-  "updated_at": "2026-11-27T12:53:48.257059+00:00"
+  "updated_at": "2026-11-27T12:54:06.755808+00:00"
 }
