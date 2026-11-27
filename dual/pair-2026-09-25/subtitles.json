@@ -2295,14 +2295,36 @@
       "processing_guard_revision": 1,
       "listing_page": 92,
       "detail_url": "https://prehraj.to/nejzazsi-hranice-s01e08-l-air-perdu-1080p-cz-titulky-titulky-cekaji-mp4/d6deda3f9204451f",
-      "checked_at": "2026-11-26T09:52:33.380083+00:00",
-      "retry_after": "2026-11-26T10:07:33.380098+00:00",
+      "checked_at": "2026-11-27T03:09:10.525719+00:00",
+      "retry_after": "2026-11-27T03:24:10.525734+00:00",
       "intent": {
         "filename": "episode-31219537-cs-22a2dbb6626dba6c.srt",
         "sha256": "22a2dbb6626dba6c3ab04cf43c830c66ec735f9a4f6054a1fa4b69028364cd73",
         "before_ids": [],
         "created_at": "2026-11-22T00:37:55.233851+00:00"
-      }
+      },
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31219553": {
       "identity": "675:1:9",
@@ -3024,5 +3046,5 @@
       "retry_after": "2026-11-26T10:10:28.109364+00:00"
     }
   },
-  "updated_at": "2026-11-27T03:08:50.662022+00:00"
+  "updated_at": "2026-11-27T03:09:10.525743+00:00"
 }
