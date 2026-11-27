@@ -1,31 +1,31 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "46010213485",
-  "attempted_this_run": 50,
+  "attempted_this_run": 51,
   "prepared_this_run": 8,
   "reserve_total": 38116,
   "queue_total": 46551,
-  "updated_at": "2026-11-27T14:41:43.080234+00:00",
+  "updated_at": "2026-11-27T14:43:09.251512+00:00",
   "workers": 4,
-  "elapsed_seconds": 2656.76,
-  "prepared_per_hour": 10.84,
+  "elapsed_seconds": 2742.93,
+  "prepared_per_hour": 10.5,
   "available_this_run": 8,
-  "available_per_hour": 10.84,
+  "available_per_hour": 10.5,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 46551,
-    "ready": 6,
+    "ready": 5,
     "ready_by_account": {
       "a": 4,
-      "b": 2
+      "b": 1
     },
     "categories": {
       "completed": 45686,
-      "allocated": 844,
+      "allocated": 845,
       "failed": 12,
       "language_review": 3,
-      "ready": 6
+      "ready": 5
     },
     "completed_by_account": {
       "a": 22839,
@@ -33,18 +33,19 @@
     },
     "uploads_last_24h": 217,
     "uploads_per_hour_24h": 9.04,
-    "stock_hours_24h": 0.66
+    "stock_hours_24h": 0.55
   },
   "health": {
     "status": "buffered",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 3084,
-      "b": 705
+      "a": 3171,
+      "b": 791
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 11,
       "no_matches": 17,
+      "transient_search": 1,
       "inconclusive_audio": 9,
       "inconclusive_subtitles": 5,
       "prepared": 8
@@ -61,14 +62,14 @@
     ]
   },
   "cache": {
-    "search_miss": 278,
-    "search_seconds": 2423.27,
-    "media_miss": 78,
-    "media_seconds": 684.3,
-    "media_hit": 184,
+    "search_miss": 289,
+    "search_seconds": 2489.36,
+    "media_miss": 80,
+    "media_seconds": 691.13,
+    "media_hit": 192,
     "audio_miss": 55,
     "audio_seconds": 1587.37,
-    "audio_hit": 38,
+    "audio_hit": 45,
     "search_hit": 12
   },
   "audio_pipeline": {
@@ -2882,23 +2883,23 @@
     }
   ],
   "search_health": {
-    "status": "healthy",
-    "consecutive_failures": 0,
-    "retry_seconds": 0,
-    "failed_cycles_this_run": 0,
-    "control_requests": 11,
-    "request_gap_seconds": 2,
+    "status": "paused",
+    "consecutive_failures": 1,
+    "retry_seconds": 271,
+    "failed_cycles_this_run": 1,
+    "control_requests": 15,
+    "request_gap_seconds": 4,
     "restart_required": false,
     "last_request_limit": null,
-    "resume_after": null,
+    "resume_after": "2026-11-27T14:47:39.842165+00:00",
     "controls": [
       {
         "path": "/teorie-velkeho-tresku/s/-6",
         "status": 200,
-        "response_bytes": 726335,
-        "parsed_candidates": 412,
-        "body_sha256": "4b16421d3763993ccddb9c400470e47ce8c8698746fad64ceb157bfd08fee65b",
-        "video_box_count": 465,
+        "response_bytes": 190973,
+        "parsed_candidates": 0,
+        "body_sha256": "fa06ed374b91cd51aa2bd01b5466b36fac280c295c8ca4b4438bfff5d2e87503",
+        "video_box_count": 0,
         "heading_matches_query": true,
         "password_field_present": false,
         "fallback_notice_present": false,
@@ -2906,7 +2907,23 @@
         "cache_age_seconds": null,
         "response_path": "/teorie-velkeho-tresku/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-27T14:41:16.240683+00:00"
+        "checked_at": "2026-11-27T14:42:37.947584+00:00"
+      },
+      {
+        "path": "/doktor-martin/s/-6",
+        "status": 200,
+        "response_bytes": 190805,
+        "parsed_candidates": 0,
+        "body_sha256": "a4aee4ed05e0e525f931e5a75a57e556f8779dd5717d995bdfc97397453d475e",
+        "video_box_count": 0,
+        "heading_matches_query": true,
+        "password_field_present": false,
+        "fallback_notice_present": false,
+        "request_limit_notice_present": false,
+        "cache_age_seconds": null,
+        "response_path": "/doktor-martin/s/-6",
+        "unexpected_origin": false,
+        "checked_at": "2026-11-27T14:42:39.842102+00:00"
       }
     ]
   }
