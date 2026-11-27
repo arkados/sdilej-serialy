@@ -19024,14 +19024,16 @@
       "queue_rank": 9298
     },
     "2673:1:1": {
-      "at": "2026-10-18T23:14:49.655046+00:00",
+      "at": "2026-11-27T01:36:51.020185+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 47.89,
-      "consecutive_failures": 8,
-      "retry_after": "2026-10-19T23:15:37.547981+00:00"
+      "elapsed_seconds": 52.81,
+      "consecutive_failures": 9,
+      "retry_after": "2026-11-28T01:37:43.827798+00:00"
     },
     "2673:1:2": {
       "at": "2026-10-18T23:14:55.284111+00:00",
@@ -833752,84 +833754,16 @@
       "retry_after": "2026-10-31T16:19:06.341617+00:00"
     },
     "4704:3:17": {
-      "at": "2026-10-31T16:46:58.874487+00:00",
+      "at": "2026-11-27T01:36:44.122305+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 95.6,
-      "search_evidence": [
-        {
-          "path": "/zapadni-kridlo-s03e17/s/-6",
-          "status": 200,
-          "response_bytes": 217062,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zapadni-kridlo/s/-6",
-          "status": 200,
-          "response_bytes": 534984,
-          "boxes": 240,
-          "parsed_candidates": 240,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-west-wing-s03e17/s/-6",
-          "status": 200,
-          "response_bytes": 216989,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-west-wing/s/-6",
-          "status": 200,
-          "response_bytes": 235910,
-          "boxes": 15,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zapadni-kridlo-s03e17/s/-6",
-          "status": 200,
-          "response_bytes": 217036,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/zapadni-kridlo/s/-6",
-          "status": 200,
-          "response_bytes": 534965,
-          "boxes": 240,
-          "parsed_candidates": 240,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-west-wing-s03e17/s/-6",
-          "status": 200,
-          "response_bytes": 217024,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/the-west-wing/s/-6",
-          "status": 200,
-          "response_bytes": 235906,
-          "boxes": 15,
-          "parsed_candidates": 11,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-01T16:48:34.471408+00:00"
+      "elapsed_seconds": 57.67,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-28T01:37:41.793004+00:00"
     },
     "4704:4:1": {
       "at": "2026-10-30T16:19:35.370337+00:00",
@@ -1369691,16 +1369625,16 @@
       "retry_after": "2026-11-27T19:55:55.673067+00:00"
     },
     "4141:1:14": {
-      "at": "2026-11-26T20:00:15.544217+00:00",
+      "at": "2026-11-27T01:36:55.041667+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "source_search_unavailable",
-      "elapsed_seconds": 35.71,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-26T20:05:51.250125+00:00"
+      "reason": "no_matches",
+      "elapsed_seconds": 65.36,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-28T01:38:00.403803+00:00"
     },
     "4141:1:15": {
       "at": "2026-11-26T20:01:07.658418+00:00",
@@ -1374827,7 +1374761,7 @@
       "queue_rank": 46438
     }
   },
-  "updated_at": "2026-11-27T01:37:12.667603+00:00",
+  "updated_at": "2026-11-27T01:38:39.729536+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1386967,12 +1386901,9 @@
     },
     "4141": {
       "misses": [
-        "4141:1:11",
-        "4141:1:12",
-        "4141:1:13"
+        "4141:1:14"
       ],
-      "updated_at": "2026-11-26T19:55:55.673096+00:00",
-      "retry_after": "2026-11-26T23:55:55.673096+00:00"
+      "updated_at": "2026-11-27T01:38:00.403836+00:00"
     },
     "1012": {
       "misses": [
@@ -1388865,6 +1388796,18 @@
     "2591": {
       "misses": [],
       "updated_at": "2026-11-27T01:33:12.462202+00:00"
+    },
+    "4704": {
+      "misses": [
+        "4704:3:17"
+      ],
+      "updated_at": "2026-11-27T01:37:41.793030+00:00"
+    },
+    "2673": {
+      "misses": [
+        "2673:1:1"
+      ],
+      "updated_at": "2026-11-27T01:37:43.827829+00:00"
     }
   },
   "discovery_progress": {
