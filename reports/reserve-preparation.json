@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "46048766518",
-  "attempted_this_run": 41,
+  "attempted_this_run": 45,
   "prepared_this_run": 8,
   "reserve_total": 38135,
   "queue_total": 46570,
-  "updated_at": "2026-11-27T19:32:15.206970+00:00",
+  "updated_at": "2026-11-27T19:33:01.349911+00:00",
   "workers": 4,
-  "elapsed_seconds": 4180.83,
-  "prepared_per_hour": 6.89,
+  "elapsed_seconds": 4226.97,
+  "prepared_per_hour": 6.81,
   "available_this_run": 8,
-  "available_per_hour": 6.89,
+  "available_per_hour": 6.81,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -38,13 +38,14 @@
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 263,
-      "b": 191
+      "a": 310,
+      "b": 237
     },
     "preparation_outcomes_last_hour": {
       "no_matches": 9,
-      "transient_original": 9,
+      "transient_original": 10,
       "inconclusive_audio": 7,
+      "source_search_unavailable": 3,
       "inconclusive_subtitles": 4,
       "prepared": 8
     }
@@ -60,10 +61,10 @@
     ]
   },
   "cache": {
-    "search_miss": 200,
-    "search_seconds": 2125.41,
+    "search_miss": 201,
+    "search_seconds": 2846.29,
     "search_hit": 10,
-    "media_hit": 267,
+    "media_hit": 271,
     "audio_miss": 104,
     "audio_seconds": 2237.36,
     "audio_hit": 30,
@@ -2881,15 +2882,15 @@
     }
   ],
   "search_health": {
-    "status": "probe_due",
-    "consecutive_failures": 1,
-    "retry_seconds": 0,
-    "failed_cycles_this_run": 1,
-    "control_requests": 16,
-    "request_gap_seconds": 4,
-    "restart_required": false,
+    "status": "paused",
+    "consecutive_failures": 2,
+    "retry_seconds": 564,
+    "failed_cycles_this_run": 2,
+    "control_requests": 17,
+    "request_gap_seconds": 8,
+    "restart_required": true,
     "last_request_limit": null,
-    "resume_after": null,
+    "resume_after": "2026-11-27T19:42:25.292715+00:00",
     "controls": [
       {
         "path": "/teorie-velkeho-tresku/s/-6",
@@ -2912,7 +2913,7 @@
         "status": 200,
         "response_bytes": 191612,
         "parsed_candidates": 0,
-        "body_sha256": "d4222209cb6c4e23b8e960857d16990f2d8f8d0ef529860734bf5200670a0875",
+        "body_sha256": "7c325cc828c4cdfac07f699e9aaeec03df57f54298ff1fc43e1c7f5da2feab0a",
         "video_box_count": 0,
         "heading_matches_query": true,
         "password_field_present": false,
@@ -2921,7 +2922,7 @@
         "cache_age_seconds": null,
         "response_path": "/doktor-martin/s/-6",
         "unexpected_origin": false,
-        "checked_at": "2026-11-27T19:32:01.296327+00:00"
+        "checked_at": "2026-11-27T19:32:25.292639+00:00"
       }
     ]
   }
