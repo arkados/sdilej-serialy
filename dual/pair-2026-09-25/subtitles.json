@@ -382,12 +382,34 @@
       "identity": "1410:2:66",
       "account": "b",
       "target_video_id": "31106940",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 179,
       "detail_url": "https://prehraj.to/phineas-a-ferb-s02e66-jak-to-na-candy-prasklo-1080p-cz-titulky-titulky-cekaji-mkv/b464f9e1d1f9fbc7",
-      "checked_at": "2026-11-27T03:18:05.131295+00:00",
-      "retry_after": "2026-11-27T03:33:05.131312+00:00"
+      "checked_at": "2026-11-27T13:14:15.510197+00:00",
+      "retry_after": "2026-11-27T13:29:15.510208+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31106974": {
       "identity": "5535:1:1",
@@ -3401,5 +3423,5 @@
       "retry_after": "2026-11-27T13:26:43.537392+00:00"
     }
   },
-  "updated_at": "2026-11-27T13:13:54.760068+00:00"
+  "updated_at": "2026-11-27T13:14:15.510214+00:00"
 }
