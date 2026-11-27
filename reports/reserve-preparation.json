@@ -5,27 +5,26 @@
   "prepared_this_run": 8,
   "reserve_total": 38101,
   "queue_total": 46536,
-  "updated_at": "2026-11-27T12:21:29.959676+00:00",
+  "updated_at": "2026-11-27T12:22:50.525468+00:00",
   "workers": 4,
-  "elapsed_seconds": 3831.91,
-  "prepared_per_hour": 7.52,
+  "elapsed_seconds": 3912.47,
+  "prepared_per_hour": 7.36,
   "available_this_run": 8,
-  "available_per_hour": 7.52,
+  "available_per_hour": 7.36,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 46536,
-    "ready": 1,
+    "ready": 0,
     "ready_by_account": {
       "a": 0,
-      "b": 1
+      "b": 0
     },
     "categories": {
       "completed": 45675,
-      "allocated": 845,
+      "allocated": 846,
       "failed": 12,
-      "language_review": 3,
-      "ready": 1
+      "language_review": 3
     },
     "completed_by_account": {
       "a": 22834,
@@ -33,14 +32,14 @@
     },
     "uploads_last_24h": 239,
     "uploads_per_hour_24h": 9.96,
-    "stock_hours_24h": 0.1
+    "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "buffered",
+    "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 270,
-      "b": 995
+      "a": 351,
+      "b": 1075
     },
     "preparation_outcomes_last_hour": {
       "no_matches": 14,
@@ -64,21 +63,21 @@
     ]
   },
   "cache": {
-    "search_miss": 407,
-    "search_seconds": 3248.19,
+    "search_miss": 414,
+    "search_seconds": 3277.65,
     "search_hit": 11,
-    "media_hit": 259,
-    "media_miss": 86,
-    "media_seconds": 934.29,
-    "audio_miss": 81,
-    "audio_seconds": 1868.63,
-    "audio_hit": 50
+    "media_hit": 274,
+    "media_miss": 87,
+    "media_seconds": 938.3,
+    "audio_miss": 86,
+    "audio_seconds": 2004.83,
+    "audio_hit": 51
   },
   "audio_pipeline": {
-    "sample_count": 130,
-    "download_seconds": 1580.76,
-    "inference_wait_seconds": 17.74,
-    "inference_seconds": 293.88,
+    "sample_count": 140,
+    "download_seconds": 1668.4,
+    "inference_wait_seconds": 19.67,
+    "inference_seconds": 315.92,
     "failures": 4
   },
   "productive_seasons": 63,
