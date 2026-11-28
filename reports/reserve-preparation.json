@@ -5,9 +5,9 @@
   "prepared_this_run": 0,
   "reserve_total": 38155,
   "queue_total": 46590,
-  "updated_at": "2026-11-28T00:11:07.453893+00:00",
+  "updated_at": "2026-11-28T00:12:45.321484+00:00",
   "workers": 4,
-  "elapsed_seconds": 152.76,
+  "elapsed_seconds": 250.63,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -23,8 +23,7 @@
     "categories": {
       "completed": 45732,
       "allocated": 843,
-      "in_flight": 3,
-      "failed": 9,
+      "failed": 12,
       "language_review": 3
     },
     "completed_by_account": {
@@ -39,8 +38,8 @@
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 1428,
-      "b": 1434
+      "a": 1526,
+      "b": 1532
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 6,
@@ -64,11 +63,20 @@
     ]
   },
   "cache": {
-    "search_miss": 16,
-    "search_seconds": 430.42,
-    "media_hit": 1
+    "search_miss": 18,
+    "search_seconds": 458.43,
+    "media_hit": 5,
+    "media_miss": 1,
+    "media_seconds": 1.41,
+    "audio_miss": 2,
+    "audio_seconds": 8.15
   },
-  "audio_pipeline": {},
+  "audio_pipeline": {
+    "sample_count": 2,
+    "download_seconds": 12.3,
+    "inference_wait_seconds": 0.0,
+    "inference_seconds": 4.93
+  },
   "productive_seasons": 59,
   "series_paused_this_run": 5,
   "saved_reviewed_this_run": 0,
