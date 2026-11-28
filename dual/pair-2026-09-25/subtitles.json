@@ -2563,12 +2563,34 @@
       "identity": "2635:1:2",
       "account": "a",
       "target_video_id": "31266906",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 65,
       "detail_url": "https://prehraj.to/posuci-s01e02-polamat-a-opravit-1080p-cz-titulky-titulky-cekaji-mkv/9c1e4caf9e847044",
-      "checked_at": "2026-11-27T13:01:23.149032+00:00",
-      "retry_after": "2026-11-27T13:16:23.149042+00:00"
+      "checked_at": "2026-11-28T04:13:35.264882+00:00",
+      "retry_after": "2026-11-28T04:28:35.264897+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31277030": {
       "identity": "8198:1:2",
@@ -3577,5 +3599,5 @@
       "retry_after": "2026-11-27T13:26:43.537392+00:00"
     }
   },
-  "updated_at": "2026-11-28T04:13:14.632816+00:00"
+  "updated_at": "2026-11-28T04:13:35.264906+00:00"
 }
