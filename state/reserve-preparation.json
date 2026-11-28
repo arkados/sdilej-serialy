@@ -136009,8 +136009,8 @@
       "retry_after": "2026-11-16T03:16:08.030551+00:00"
     },
     "1074:4:7": {
-      "at": "2026-11-28T17:28:01.645523+00:00",
-      "status": "deferred",
+      "at": "2026-11-28T19:44:02.252292+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
@@ -136018,10 +136018,9 @@
       "observed_audio_language": "en",
       "observed_language_probability": 0.9152005314826965,
       "observed_source_id": "31646183",
-      "reason": "transient_search",
-      "elapsed_seconds": 463.11,
-      "consecutive_failures": 2,
-      "retry_after": "2026-11-28T18:05:44.760855+00:00"
+      "elapsed_seconds": 160.05,
+      "source_id": "31646183",
+      "queue_rank": 46687
     },
     "1074:4:8": {
       "at": "2026-11-28T17:30:03.722330+00:00",
@@ -140494,14 +140493,19 @@
       "retry_after": "2026-10-11T16:53:57.602756+00:00"
     },
     "2645:1:2": {
-      "at": "2026-10-18T03:30:03.477711+00:00",
+      "at": "2026-11-28T19:43:22.461985+00:00",
       "status": "deferred",
-      "preparation_revision": 4,
       "method": "discovery",
-      "reason": "verified_non_czech",
-      "elapsed_seconds": 83.99,
-      "consecutive_failures": 2,
-      "retry_after": "2026-10-19T03:31:27.470261+00:00"
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
+      "observed_audio_language": "en",
+      "observed_language_probability": 0.8232339024543762,
+      "observed_source_id": "26230263",
+      "reason": "inconclusive_subtitles",
+      "elapsed_seconds": 189.85,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-28T23:46:32.315855+00:00"
     },
     "2645:2:1": {
       "at": "2026-10-18T03:30:09.789349+00:00",
@@ -1376493,7 +1376497,7 @@
       "retry_after": "2026-11-29T19:43:33.596034+00:00"
     }
   },
-  "updated_at": "2026-11-28T19:46:21.713618+00:00",
+  "updated_at": "2026-11-28T19:47:33.279248+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1391582,10 +1391586,8 @@
       "updated_at": "2026-11-28T11:53:42.111018+00:00"
     },
     "1074": {
-      "misses": [
-        "1074:4:7"
-      ],
-      "updated_at": "2026-11-28T17:35:44.760881+00:00"
+      "misses": [],
+      "updated_at": "2026-11-28T19:46:42.489197+00:00"
     },
     "60": {
       "misses": [],
@@ -1391717,6 +1391719,12 @@
         "8610:2:3"
       ],
       "updated_at": "2026-11-28T19:44:01.584338+00:00"
+    },
+    "2645": {
+      "misses": [
+        "2645:1:2"
+      ],
+      "updated_at": "2026-11-28T19:46:32.315883+00:00"
     }
   },
   "discovery_progress": {
