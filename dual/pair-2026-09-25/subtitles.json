@@ -2088,14 +2088,36 @@
       "processing_guard_revision": 1,
       "listing_page": 110,
       "detail_url": "https://prehraj.to/nejzazsi-hranice-s01e06-the-devil-wears-a-suit-and-tie-1080p-cz-titulky-titulky-cekaji-mp4/c3e2fa2b186e88b9",
-      "checked_at": "2026-11-27T12:58:53.103653+00:00",
-      "retry_after": "2026-11-27T13:13:53.103664+00:00",
+      "checked_at": "2026-11-28T04:11:14.583879+00:00",
+      "retry_after": "2026-11-28T04:26:14.583895+00:00",
       "intent": {
         "filename": "episode-31211837-cs-be69d6ba5d128b10.srt",
         "sha256": "be69d6ba5d128b10fe72c2abbbe0ae69c3a8e69e2c6af4c21101a8afc8d38438",
         "before_ids": [],
         "created_at": "2026-11-21T11:36:40.903007+00:00"
-      }
+      },
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31213271": {
       "identity": "6967:1:1",
@@ -3423,5 +3445,5 @@
       "retry_after": "2026-11-27T13:26:43.537392+00:00"
     }
   },
-  "updated_at": "2026-11-28T04:10:50.388508+00:00"
+  "updated_at": "2026-11-28T04:11:14.583903+00:00"
 }
