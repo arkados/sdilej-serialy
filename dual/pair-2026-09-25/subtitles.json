@@ -804,12 +804,34 @@
       "identity": "5535:1:9",
       "account": "a",
       "target_video_id": "31110119",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 181,
       "detail_url": "https://prehraj.to/zlomove-okamziky-atomova-bomba-a-studena-valka-s01e09-jeste-nejsme-mrtvi-1080p-cz-titulky-titulky-cekaji-mkv/0ab245b2df5eafa0",
-      "checked_at": "2026-11-27T12:55:20.953010+00:00",
-      "retry_after": "2026-11-27T13:10:20.953020+00:00"
+      "checked_at": "2026-11-28T04:06:53.916683+00:00",
+      "retry_after": "2026-11-28T04:21:53.916698+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31110277": {
       "identity": "5535:1:8",
@@ -3401,5 +3423,5 @@
       "retry_after": "2026-11-27T13:26:43.537392+00:00"
     }
   },
-  "updated_at": "2026-11-28T04:06:34.045360+00:00"
+  "updated_at": "2026-11-28T04:06:53.916705+00:00"
 }
