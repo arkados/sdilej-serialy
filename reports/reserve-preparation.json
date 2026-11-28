@@ -5,27 +5,28 @@
   "prepared_this_run": 5,
   "reserve_total": 38198,
   "queue_total": 46633,
-  "updated_at": "2026-11-28T10:47:16.891781+00:00",
+  "updated_at": "2026-11-28T10:48:41.719240+00:00",
   "workers": 4,
-  "elapsed_seconds": 3628.7,
-  "prepared_per_hour": 4.96,
+  "elapsed_seconds": 3713.53,
+  "prepared_per_hour": 4.85,
   "available_this_run": 5,
-  "available_per_hour": 4.96,
+  "available_per_hour": 4.85,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
     "queue_total": 46633,
-    "ready": 3,
+    "ready": 1,
     "ready_by_account": {
       "a": 1,
-      "b": 2
+      "b": 0
     },
     "categories": {
       "completed": 45772,
       "allocated": 843,
       "failed": 12,
       "language_review": 3,
-      "ready": 3
+      "in_flight": 2,
+      "ready": 1
     },
     "completed_by_account": {
       "a": 22883,
@@ -33,14 +34,16 @@
     },
     "uploads_last_24h": 109,
     "uploads_per_hour_24h": 4.54,
-    "stock_hours_24h": 0.66
+    "stock_hours_24h": 0.22
   },
   "health": {
-    "status": "buffered",
-    "starved_accounts": [],
+    "status": "starved",
+    "starved_accounts": [
+      "b"
+    ],
     "seconds_since_upload": {
-      "a": 662,
-      "b": 4869
+      "a": 747,
+      "b": 4953
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 12,
@@ -2880,13 +2883,13 @@
   "search_health": {
     "status": "paused",
     "consecutive_failures": 1,
-    "retry_seconds": 140,
+    "retry_seconds": 56,
     "failed_cycles_this_run": 1,
     "control_requests": 16,
     "request_gap_seconds": 4,
     "restart_required": false,
     "last_request_limit": null,
-    "resume_after": "2026-11-28T10:49:37.109154+00:00",
+    "resume_after": "2026-11-28T10:49:37.109155+00:00",
     "controls": [
       {
         "path": "/teorie-velkeho-tresku/s/-6",
