@@ -116073,50 +116073,16 @@
       "retry_after": "2026-11-29T04:35:58.233287+00:00"
     },
     "2122:1:21": {
-      "at": "2026-10-24T06:33:47.411776+00:00",
+      "at": "2026-11-28T09:20:01.677586+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 1,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 13.09,
-      "search_evidence": [
-        {
-          "path": "/friday-night-lights-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 189724,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/friday-night-lights/s/-6",
-          "status": 200,
-          "response_bytes": 189577,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/friday-night-lights-s01e21/s/-6",
-          "status": 200,
-          "response_bytes": 189724,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/friday-night-lights/s/-6",
-          "status": 200,
-          "response_bytes": 189577,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 2,
-      "retry_after": "2026-10-25T06:34:00.501397+00:00"
+      "elapsed_seconds": 31.87,
+      "consecutive_failures": 3,
+      "retry_after": "2026-11-29T09:20:33.544824+00:00"
     },
     "2101:4:2": {
       "at": "2026-10-24T06:34:01.212487+00:00",
@@ -1375976,16 +1375942,18 @@
       "queue_rank": 46624
     },
     "455:3:8": {
-      "at": "2026-11-28T07:38:12.057315+00:00",
-      "status": "deferred",
+      "at": "2026-11-28T09:15:55.915360+00:00",
+      "status": "prepared",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
-      "reason": "transient_original",
-      "elapsed_seconds": 916.92,
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-28T08:08:28.976073+00:00"
+      "observed_audio_language": "cs",
+      "observed_language_probability": 0.9466531872749329,
+      "observed_source_id": "32926014",
+      "elapsed_seconds": 234.66,
+      "source_id": "32926014",
+      "queue_rank": 46628
     },
     "455:3:9": {
       "at": "2026-11-28T08:18:49.776227+00:00",
@@ -1376028,7 +1375996,7 @@
       "retry_after": "2026-11-29T08:29:46.170128+00:00"
     }
   },
-  "updated_at": "2026-11-28T09:19:50.331399+00:00",
+  "updated_at": "2026-11-28T09:21:05.923599+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1390393,12 +1390361,9 @@
     },
     "2122": {
       "misses": [
-        "2122:1:18",
-        "2122:1:19",
-        "2122:1:20"
+        "2122:1:21"
       ],
-      "updated_at": "2026-11-28T04:35:58.233319+00:00",
-      "retry_after": "2026-11-28T08:35:58.233319+00:00"
+      "updated_at": "2026-11-28T09:20:33.544855+00:00"
     },
     "2101": {
       "misses": [
@@ -1390953,7 +1390918,7 @@
     },
     "455": {
       "misses": [],
-      "updated_at": "2026-11-28T08:27:09.338657+00:00"
+      "updated_at": "2026-11-28T09:20:00.956373+00:00"
     },
     "4826": {
       "misses": [
