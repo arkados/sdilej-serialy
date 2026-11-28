@@ -2530,12 +2530,34 @@
       "identity": "4162:1:5",
       "account": "a",
       "target_video_id": "31264864",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 65,
       "detail_url": "https://prehraj.to/tohle-radsi-nerikej-nahlas-s01e05-5-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/f2d4a8510eca8591",
-      "checked_at": "2026-11-27T13:00:47.940408+00:00",
-      "retry_after": "2026-11-27T13:15:47.940418+00:00"
+      "checked_at": "2026-11-28T04:13:14.632791+00:00",
+      "retry_after": "2026-11-28T04:28:14.632807+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31266906": {
       "identity": "2635:1:2",
@@ -3555,5 +3577,5 @@
       "retry_after": "2026-11-27T13:26:43.537392+00:00"
     }
   },
-  "updated_at": "2026-11-28T04:12:55.899806+00:00"
+  "updated_at": "2026-11-28T04:13:14.632816+00:00"
 }
