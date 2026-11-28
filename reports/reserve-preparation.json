@@ -1,16 +1,16 @@
 {
   "generation": "pair-2026-09-25",
-  "run_id": "46188413316",
-  "attempted_this_run": 45,
-  "prepared_this_run": 3,
+  "run_id": "46193925381",
+  "attempted_this_run": 0,
+  "prepared_this_run": 0,
   "reserve_total": 38266,
   "queue_total": 46701,
-  "updated_at": "2026-11-28T21:53:55.972338+00:00",
+  "updated_at": "2026-11-28T22:05:16.793381+00:00",
   "workers": 4,
-  "elapsed_seconds": 3270.09,
-  "prepared_per_hour": 3.3,
-  "available_this_run": 3,
-  "available_per_hour": 3.3,
+  "elapsed_seconds": 69.28,
+  "prepared_per_hour": 0.0,
+  "available_this_run": 0,
+  "available_per_hour": 0.0,
   "low_water": 1000,
   "target_stock": 3000,
   "stock": {
@@ -38,21 +38,21 @@
     "status": "waiting_for_sources",
     "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 215,
-      "b": 313
+      "a": 896,
+      "b": 994
     },
     "preparation_outcomes_last_hour": {
-      "transient_original": 18,
-      "no_matches": 7,
       "inconclusive_audio": 7,
       "transient_search": 2,
+      "transient_original": 15,
       "source_search_unavailable": 3,
+      "no_matches": 5,
       "prepared": 3,
       "inconclusive_subtitles": 4,
       "no_acceptable_original": 1
     }
   },
-  "indexed_candidates_in_scan": 587,
+  "indexed_candidates_in_scan": 559,
   "discovery_progress": {
     "last_series": 4185,
     "last_series_order": [
@@ -63,24 +63,11 @@
     ]
   },
   "cache": {
-    "search_miss": 212,
-    "search_seconds": 2807.94,
-    "media_hit": 200,
-    "audio_miss": 62,
-    "audio_seconds": 1850.04,
-    "search_hit": 4,
-    "audio_hit": 18,
-    "media_miss": 135,
-    "media_seconds": 1842.31
+    "search_miss": 12,
+    "search_seconds": 170.44
   },
-  "audio_pipeline": {
-    "sample_count": 101,
-    "download_seconds": 1543.35,
-    "inference_wait_seconds": 9.1,
-    "inference_seconds": 297.04,
-    "failures": 6
-  },
-  "productive_seasons": 60,
+  "audio_pipeline": {},
+  "productive_seasons": 59,
   "series_paused_this_run": 5,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
@@ -2315,9 +2302,7 @@
             "133:3:9"
           ],
           "hinted_samples": [
-            "133:3:9",
-            "133:3:5",
-            "133:3:10"
+            "133:3:9"
           ]
         }
       ]
@@ -2878,48 +2863,15 @@
     }
   ],
   "search_health": {
-    "status": "paused",
+    "status": "probe_due",
     "consecutive_failures": 2,
-    "retry_seconds": 590,
-    "failed_cycles_this_run": 2,
-    "control_requests": 16,
+    "retry_seconds": 0,
+    "failed_cycles_this_run": 0,
+    "control_requests": 0,
     "request_gap_seconds": 8,
-    "restart_required": true,
+    "restart_required": false,
     "last_request_limit": null,
-    "resume_after": "2026-11-28T22:03:46.244864+00:00",
-    "controls": [
-      {
-        "path": "/teorie-velkeho-tresku/s/-6",
-        "status": 200,
-        "response_bytes": 191780,
-        "parsed_candidates": 0,
-        "body_sha256": "c035cdef48c702a19a5dec6ea4086bea513db9852d950b3a7307250a9796816a",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/teorie-velkeho-tresku/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-28T21:53:42.428996+00:00"
-      },
-      {
-        "path": "/doktor-martin/s/-6",
-        "status": 200,
-        "response_bytes": 191612,
-        "parsed_candidates": 0,
-        "body_sha256": "659e5a3d586770429a5303b493207ead257aa927b817af31a6e075ba3a47bbfd",
-        "video_box_count": 0,
-        "heading_matches_query": true,
-        "password_field_present": false,
-        "fallback_notice_present": false,
-        "request_limit_notice_present": false,
-        "cache_age_seconds": null,
-        "response_path": "/doktor-martin/s/-6",
-        "unexpected_origin": false,
-        "checked_at": "2026-11-28T21:53:46.244779+00:00"
-      }
-    ]
+    "resume_after": null,
+    "controls": []
   }
 }
