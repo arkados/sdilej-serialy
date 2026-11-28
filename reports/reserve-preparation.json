@@ -1,13 +1,13 @@
 {
   "generation": "pair-2026-09-25",
   "run_id": "46116246391",
-  "attempted_this_run": 8,
+  "attempted_this_run": 9,
   "prepared_this_run": 0,
   "reserve_total": 38181,
   "queue_total": 46616,
-  "updated_at": "2026-11-28T06:55:30.436203+00:00",
+  "updated_at": "2026-11-28T06:57:13.030713+00:00",
   "workers": 4,
-  "elapsed_seconds": 1473.34,
+  "elapsed_seconds": 1575.94,
   "prepared_per_hour": 0.0,
   "available_this_run": 0,
   "available_per_hour": 0.0,
@@ -23,8 +23,7 @@
     "categories": {
       "completed": 45758,
       "allocated": 843,
-      "failed": 10,
-      "in_flight": 2,
+      "failed": 12,
       "language_review": 3
     },
     "completed_by_account": {
@@ -36,19 +35,17 @@
     "stock_hours_24h": 0.0
   },
   "health": {
-    "status": "starved",
-    "starved_accounts": [
-      "a"
-    ],
+    "status": "waiting_for_sources",
+    "starved_accounts": [],
     "seconds_since_upload": {
-      "a": 2309,
-      "b": 1652
+      "a": 2413,
+      "b": 1755
     },
     "preparation_outcomes_last_hour": {
       "transient_original": 6,
       "no_matches": 5,
-      "inconclusive_audio": 3,
-      "prepared": 8,
+      "inconclusive_audio": 4,
+      "prepared": 7,
       "inconclusive_subtitles": 1,
       "source_search_unavailable": 2
     }
@@ -64,24 +61,24 @@
     ]
   },
   "cache": {
-    "search_miss": 42,
-    "search_seconds": 1160.65,
+    "search_miss": 44,
+    "search_seconds": 1209.84,
     "search_hit": 6,
-    "media_hit": 68,
+    "media_hit": 73,
     "media_miss": 2,
     "media_seconds": 5.91,
-    "audio_miss": 5,
-    "audio_seconds": 153.51,
+    "audio_miss": 6,
+    "audio_seconds": 239.37,
     "audio_hit": 1
   },
   "audio_pipeline": {
-    "sample_count": 19,
-    "download_seconds": 124.76,
+    "sample_count": 24,
+    "download_seconds": 162.54,
     "inference_wait_seconds": 2.43,
-    "inference_seconds": 55.55
+    "inference_seconds": 74.37
   },
   "productive_seasons": 66,
-  "series_paused_this_run": 4,
+  "series_paused_this_run": 5,
   "saved_reviewed_this_run": 0,
   "saved_prepared_this_run": 0,
   "repaired_this_run": 0,
