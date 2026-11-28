@@ -951,12 +951,34 @@
       "identity": "1778:1:3",
       "account": "a",
       "target_video_id": "31114912",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 180,
       "detail_url": "https://prehraj.to/konflikti-s01e03-3-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/d0dd36d9fbfd155b",
-      "checked_at": "2026-11-28T04:08:51.189398+00:00",
-      "retry_after": "2026-11-28T04:23:51.189414+00:00"
+      "checked_at": "2026-11-28T13:27:46.632042+00:00",
+      "retry_after": "2026-11-28T13:42:46.632055+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31114961": {
       "identity": "1778:1:4",
@@ -3873,5 +3895,5 @@
       "retry_after": "2026-11-28T04:40:08.684641+00:00"
     }
   },
-  "updated_at": "2026-11-28T13:27:25.873353+00:00"
+  "updated_at": "2026-11-28T13:27:46.632063+00:00"
 }
