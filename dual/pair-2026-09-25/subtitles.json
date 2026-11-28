@@ -3406,13 +3406,44 @@
       "processing_guard_revision": 1,
       "listing_page": 4,
       "detail_url": "https://prehraj.to/dark-s01e03-minulost-a-soucasnost-1080p-cz-titulky-titulky-cekaji-mp4/9bce6ac46537b064",
-      "checked_at": "2026-11-28T04:19:49.636339+00:00",
-      "retry_after": "2026-11-28T04:34:49.636352+00:00",
+      "checked_at": "2026-11-28T13:40:19.422105+00:00",
+      "retry_after": "2026-11-28T13:55:19.422119+00:00",
       "intent": {
         "filename": "episode-31464014-cs-11e7a36e356d835e.srt",
         "sha256": "11e7a36e356d835eaf16d5051f939260f7283d5150bfa75b3664628d07d8c417",
         "before_ids": [],
         "created_at": "2026-11-28T04:19:39.159835+00:00"
+      },
+      "error": {
+        "type": "HTTPError",
+        "http_status": 504,
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 89
+          },
+          {
+            "file": "subtitle_target.py",
+            "function": "listing",
+            "line": 200
+          },
+          {
+            "file": "models.py",
+            "function": "raise_for_status",
+            "line": 1167
+          }
+        ]
       }
     },
     "31464169": {
@@ -3737,5 +3768,5 @@
       "retry_after": "2026-11-28T04:40:08.684641+00:00"
     }
   },
-  "updated_at": "2026-11-28T13:38:39.606248+00:00"
+  "updated_at": "2026-11-28T13:40:19.422128+00:00"
 }
