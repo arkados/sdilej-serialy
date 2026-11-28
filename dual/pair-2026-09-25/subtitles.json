@@ -793,12 +793,34 @@
       "identity": "5535:1:8",
       "account": "a",
       "target_video_id": "31110277",
-      "status": "target_processing",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 183,
       "detail_url": "https://prehraj.to/zlomove-okamziky-atomova-bomba-a-studena-valka-s01e08-moskva-nebude-mlcet-1080p-cz-titulky-titulky-cekaji-mkv/a867c77c1e032716",
-      "checked_at": "2026-11-28T04:07:15.833226+00:00",
-      "retry_after": "2026-11-28T04:22:15.833241+00:00"
+      "checked_at": "2026-11-28T13:26:23.010901+00:00",
+      "retry_after": "2026-11-28T13:41:23.010916+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31110881": {
       "identity": "5535:1:4",
@@ -3851,5 +3873,5 @@
       "retry_after": "2026-11-28T04:40:08.684641+00:00"
     }
   },
-  "updated_at": "2026-11-28T13:26:01.865424+00:00"
+  "updated_at": "2026-11-28T13:26:23.010925+00:00"
 }
