@@ -123534,14 +123534,16 @@
       "queue_rank": 16962
     },
     "4756:1:1": {
-      "at": "2026-10-10T12:53:37.577097+00:00",
+      "at": "2026-11-28T03:34:37.047324+00:00",
       "status": "deferred",
-      "preparation_revision": 3,
       "method": "discovery",
+      "preparation_revision": 5,
+      "audio_policy_revision": 1,
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 13.82,
-      "consecutive_failures": 1,
-      "retry_after": "2026-10-11T12:53:51.401883+00:00"
+      "elapsed_seconds": 66.99,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-29T03:36:21.716794+00:00"
     },
     "4756:1:2": {
       "at": "2026-10-10T12:53:39.596091+00:00",
@@ -852517,116 +852519,16 @@
       "queue_rank": 32022
     },
     "2120:7:1": {
-      "at": "2026-10-31T01:03:05.838020+00:00",
+      "at": "2026-11-28T03:34:35.944262+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
+      "czech_fallback_revision": 1,
       "reason": "no_matches",
-      "elapsed_seconds": 131.81,
-      "search_evidence": [
-        {
-          "path": "/vsechny-velke-a-male-bytosti-s07e01/s/-6",
-          "status": 200,
-          "response_bytes": 217400,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vsechny-velke-a-male-bytosti/s/-6",
-          "status": 200,
-          "response_bytes": 525584,
-          "boxes": 225,
-          "parsed_candidates": 225,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/all-creatures-great-small-s07e01/s/-6",
-          "status": 200,
-          "response_bytes": 217229,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/all-creatures-great-small/s/-6",
-          "status": 200,
-          "response_bytes": 276195,
-          "boxes": 43,
-          "parsed_candidates": 43,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/all-creatures-great-and-small-s07e01/s/-6",
-          "status": 200,
-          "response_bytes": 217337,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/all-creatures-great-and-small/s/-6",
-          "status": 200,
-          "response_bytes": 276306,
-          "boxes": 43,
-          "parsed_candidates": 43,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vsechny-velke-a-male-bytosti-s07e01/s/-6",
-          "status": 200,
-          "response_bytes": 217310,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/vsechny-velke-a-male-bytosti/s/-6",
-          "status": 200,
-          "response_bytes": 525553,
-          "boxes": 225,
-          "parsed_candidates": 225,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/all-creatures-great-small-s07e01/s/-6",
-          "status": 200,
-          "response_bytes": 217263,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/all-creatures-great-small/s/-6",
-          "status": 200,
-          "response_bytes": 276324,
-          "boxes": 43,
-          "parsed_candidates": 43,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/all-creatures-great-and-small-s07e01/s/-6",
-          "status": 200,
-          "response_bytes": 217378,
-          "boxes": 0,
-          "parsed_candidates": 0,
-          "heading_matches_query": true
-        },
-        {
-          "path": "/all-creatures-great-and-small/s/-6",
-          "status": 200,
-          "response_bytes": 276322,
-          "boxes": 43,
-          "parsed_candidates": 43,
-          "heading_matches_query": true
-        }
-      ],
-      "consecutive_failures": 1,
-      "retry_after": "2026-11-01T01:05:17.650863+00:00"
+      "elapsed_seconds": 98.17,
+      "consecutive_failures": 2,
+      "retry_after": "2026-11-29T03:36:21.716682+00:00"
     },
     "1996:6:6": {
       "at": "2026-10-31T01:03:44.645140+00:00",
@@ -1375784,7 +1375686,7 @@
       "queue_rank": 46600
     }
   },
-  "updated_at": "2026-11-28T03:35:39.357066+00:00",
+  "updated_at": "2026-11-28T03:37:26.162263+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1390638,6 +1390540,18 @@
         "3401:3:2"
       ],
       "updated_at": "2026-11-28T02:44:08.685056+00:00"
+    },
+    "2120": {
+      "misses": [
+        "2120:7:1"
+      ],
+      "updated_at": "2026-11-28T03:36:21.716718+00:00"
+    },
+    "4756": {
+      "misses": [
+        "4756:1:1"
+      ],
+      "updated_at": "2026-11-28T03:36:21.716808+00:00"
     }
   },
   "discovery_progress": {
