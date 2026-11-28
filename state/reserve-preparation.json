@@ -18177,16 +18177,16 @@
       "queue_rank": 9259
     },
     "1831:2:14": {
-      "at": "2026-11-27T17:54:48.535566+00:00",
+      "at": "2026-11-28T00:41:04.010885+00:00",
       "status": "deferred",
       "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
       "czech_fallback_revision": 1,
       "reason": "transient_original",
-      "elapsed_seconds": 416.23,
-      "consecutive_failures": 64,
-      "retry_after": "2026-11-28T00:01:49.728798+00:00"
+      "elapsed_seconds": 103.29,
+      "consecutive_failures": 65,
+      "retry_after": "2026-11-28T06:42:56.118965+00:00"
     },
     "1831:2:15": {
       "at": "2026-10-02T10:51:30.381679+00:00",
@@ -152670,21 +152670,19 @@
       "queue_rank": 17330
     },
     "1237:6:24": {
-      "at": "2026-11-14T04:19:05.373693+00:00",
+      "at": "2026-11-28T00:41:05.151892+00:00",
       "status": "deferred",
+      "method": "discovery",
       "preparation_revision": 5,
       "audio_policy_revision": 1,
-      "search_recovery_revision": 2,
-      "audio_sampling_revision": 1,
-      "audio_consensus_revision": 3,
-      "method": "discovery",
-      "reason": "verified_non_czech",
+      "czech_fallback_revision": 1,
       "observed_audio_language": "bg",
       "observed_language_probability": 0.846885621547699,
       "observed_source_id": "33415898",
-      "elapsed_seconds": 173.23,
-      "consecutive_failures": 14,
-      "retry_after": "2026-11-15T04:21:58.608545+00:00"
+      "reason": "no_english_czech_subtitles",
+      "elapsed_seconds": 138.71,
+      "consecutive_failures": 15,
+      "retry_after": "2026-11-29T00:43:23.869778+00:00"
     },
     "1237:6:21": {
       "at": "2026-10-11T12:16:16.557982+00:00",
@@ -1375726,7 +1375724,7 @@
       "retry_after": "2026-11-28T22:06:15.700414+00:00"
     }
   },
-  "updated_at": "2026-11-28T00:42:45.382787+00:00",
+  "updated_at": "2026-11-28T00:43:59.830593+00:00",
   "refilling": true,
   "repairs": {
     "673:6:7": {
@@ -1389736,9 +1389734,10 @@
     },
     "1831": {
       "misses": [
-        "1831:1:7"
+        "1831:1:7",
+        "1831:2:14"
       ],
-      "updated_at": "2026-11-27T23:06:12.757682+00:00"
+      "updated_at": "2026-11-28T00:42:56.119008+00:00"
     },
     "178": {
       "misses": [
@@ -1390436,9 +1390435,11 @@
     "1237": {
       "misses": [
         "1237:1:1",
-        "1237:6:4"
+        "1237:6:4",
+        "1237:6:24"
       ],
-      "updated_at": "2026-11-28T00:41:04.478237+00:00"
+      "updated_at": "2026-11-28T00:43:23.869805+00:00",
+      "retry_after": "2026-11-28T01:13:23.869805+00:00"
     },
     "8579": {
       "misses": [
