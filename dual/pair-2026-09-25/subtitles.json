@@ -2484,12 +2484,34 @@
       "identity": "4162:1:1",
       "account": "a",
       "target_video_id": "31258359",
-      "status": "existing_czech_requires_review",
+      "status": "deferred",
       "processing_guard_revision": 1,
       "listing_page": 69,
       "detail_url": "https://prehraj.to/tohle-radsi-nerikej-nahlas-s01e01-1-epizoda-1080p-cz-titulky-titulky-cekaji-mkv/52ed8ae29f048702",
-      "checked_at": "2026-11-27T13:00:19.070884+00:00",
-      "retry_after": "2026-11-27T13:15:19.070894+00:00"
+      "checked_at": "2026-11-28T04:12:55.899783+00:00",
+      "retry_after": "2026-11-28T04:27:55.899797+00:00",
+      "listing_search_offset": 4,
+      "error": {
+        "type": "TargetUnavailable",
+        "frames": [
+          {
+            "file": "episode_subtitles.py",
+            "function": "run",
+            "line": 250
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "refresh",
+            "line": 242
+          },
+          {
+            "file": "episode_subtitles.py",
+            "function": "owned_listing",
+            "line": 98
+          }
+        ]
+      },
+      "reason": "owned_target_not_found_in_bounded_listing"
     },
     "31263657": {
       "identity": "6245:1:1",
@@ -3533,5 +3555,5 @@
       "retry_after": "2026-11-27T13:26:43.537392+00:00"
     }
   },
-  "updated_at": "2026-11-28T04:12:37.163858+00:00"
+  "updated_at": "2026-11-28T04:12:55.899806+00:00"
 }
